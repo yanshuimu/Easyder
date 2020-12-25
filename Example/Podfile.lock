@@ -1,0 +1,16 @@
+PODS:
+  - Easyder (0.1.0)
+
+DEPENDENCIES:
+  - Easyder (from `../`)
+
+EXTERNAL SOURCES:
+  Easyder:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Easyder: 76b0af25a5215c8efb87f6be89f1dec763bbd803
+
+PODFILE CHECKSUM: a36d0904ff6651cd44b95eb703eb9899932c55b1
+
+COCOAPODS: 1.9.1
