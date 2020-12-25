@@ -1,0 +1,17 @@
+//
+//  main.m
+//  Easyder
+//
+//  Created by yanshuimu on 12/25/2020.
+//  Copyright (c) 2020 yanshuimu. All rights reserved.
+//
+
+@import UIKit;
+#import "EDAppDelegate.h"
+
+int main(int argc, char * argv[])
+{
+    @autoreleasepool {
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([EDAppDelegate class]));
+    }
+}
