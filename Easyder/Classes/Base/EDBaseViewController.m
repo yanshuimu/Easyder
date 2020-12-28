@@ -11,7 +11,6 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Photos/PHPhotoLibrary.h>
-#import "AppDelegate.h"
 
 ///系统版本
 #define SystemVersion [[UIDevice currentDevice].systemVersion floatValue]
@@ -429,8 +428,7 @@
 }
 
 - (void)pushToLoginVC{
-    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [appDelegate performSelector:@selector(loginToRoot) withObject:nil afterDelay:0.5];
+    
 }
 
 

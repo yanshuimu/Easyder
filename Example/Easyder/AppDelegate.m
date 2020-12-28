@@ -6,9 +6,9 @@
 //  Copyright (c) 2020 yanshuimu. All rights reserved.
 //
 
-#import "EDAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation EDAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
