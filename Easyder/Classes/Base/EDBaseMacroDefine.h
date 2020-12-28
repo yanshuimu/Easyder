@@ -170,7 +170,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define UserInstance [EDUserCenter sharedManager]
 
 ///弱指针
-#define WeakSelf __weak typeof(self) weakSelf = self;
+#define EDWeakSelf __weak typeof(self) weakSelf = self;
 
 /**
  * 数据类型转换

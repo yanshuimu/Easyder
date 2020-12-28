@@ -40,13 +40,6 @@
     return NO;
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    
-    [super viewWillAppear:animated];
-    
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
         
@@ -434,68 +427,6 @@
 
 - (void)refreshAgain{
     
-}
-
-#pragma mark - 网络请求
-/**
- * 个人中心用户资料
- */
-- (void)customerCenter {
-        
-
-}
-
-#pragma mark - 网络请求
-
-- (void)appVersionRequest {
-    
-    /*
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"type"] = @"ios";
-    params[@"currentVersion"] = kBundleVersion;
-    
-    @weakify(self)
-    [NetApiManager requestGetWithParamDict:params Url:Url_KHY_AppVersion withHandle:^(BOOL isSuccess, id responseObject) {
-        @strongify(self)
-        if (isSuccess) {
-            NSInteger code = kIntValue(responseObject[@"code"]);
-            NSString *msg = responseObject[@"msg"];
-            if (code == 0) {
-                [self.view hideLoading];
-                [self handleAppVersionResponse:responseObject];
-            }else{
-                [self.view showLoadingMeg:msg];
-            }
-        } else {
-            [self.view showLoadingMeg:responseObject];
-        }
-    }];
-     */
-}
-
-- (void)handleAppVersionResponse:(NSDictionary*)responseObject {
-    
-    NSDictionary *data = responseObject[@"data"];
-    NSString *update = data[@"update"];//是否强制更新
-    NSString *downloadUrl = data[@"downloadUrl"];
-    NSString *remark = data[@"remark"];
-    NSString *lastVersion = data[@"lastVersion"];
-    
-    NSString *string = [NSString stringWithFormat:@"最新版本：V%@\n%@", lastVersion, remark];
-}
-
-- (void)gotoAppStore:(NSString*)url {
-    
-    url = kSafeString(url);
-    //url = @"itms-apps://itunes.apple.com/cn/app/xxx?mt=8";
-    if (!kStringIsEmpty(url)) {
-        UIApplication *application = [UIApplication sharedApplication];
-        if (@available(iOS 10.0, *)) {
-            [application openURL:[NSURL URLWithString:url] options:@{} completionHandler:nil];
-        } else {
-            [application openURL:[NSURL URLWithString:url]];
-        }
-    }
 }
 
 #pragma mark - 选择图片

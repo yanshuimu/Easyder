@@ -61,7 +61,6 @@
     if (translation.x <= 0) {
         return NO;
     }
-#warning 开关全屏滑动
     return YES;
 }
 

@@ -7,7 +7,6 @@
 //
 
 #import "EDBaseViewController.h"
-#import "MJRefresh.h"
 
 @interface EDBaseTableViewController : EDBaseViewController<UITableViewDataSource,UITableViewDelegate>
 {

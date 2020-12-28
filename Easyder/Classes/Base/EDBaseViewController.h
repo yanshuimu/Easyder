@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MJRefresh.h"
 #import "UIView+EDLayout.h"
 #import "EDBaseUtil.h"
 #import "EDBaseMacroDefine.h"
@@ -19,14 +18,6 @@
 @property (nonatomic, copy) void (^openCameraCompletion)(UIImage *image);
 
 -(void)ExtendedLayout;
-
-
--(void)addLeftBarButton:(NSString*)title;
-
-/*
- *  设置导航栏返回按钮
- */
--(void)setNavigationleftBarBackButton:(NSString *)image;
 
 - (void)setupNavigationReturnButton:(SEL)selector;
 
@@ -58,11 +49,6 @@
                                     imageName:(NSString *) imageName
                                          left:(BOOL) left;
 
-
-#pragma mark- 空白页
-- (void)showNothingViewCenterY:(CGFloat)centerY;
-- (void)hiddenNothingView;
-
 - (void)goBack;
 
 ///选择照片
@@ -90,16 +76,6 @@
 
 #pragma mark- 跳转到登录界面
 - (void)pushToLoginVC;
-
-/**
- * 个人中心用户资料
- */
-- (void)customerCenter;
-
-/*
- * 检测更新
- */
-- (void)appVersionRequest;
 
 /*
  * 照相

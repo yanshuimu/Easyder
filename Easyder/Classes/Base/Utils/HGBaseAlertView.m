@@ -9,10 +9,10 @@
 #import "HGBaseAlertView.h"
 
 @interface HGBaseAlertView ()
-{
-    UIWindow *_alertWindow;
-    UIButton *_hiddenButton;
-}
+//
+@property (nonatomic, strong) UIWindow *alertWindow;
+//
+@property (nonatomic, strong) UIButton *hiddenButton;
 @end
 
 @implementation HGBaseAlertView
@@ -57,8 +57,9 @@
     
     [superView addSubview:self];
     
+    EDWeakSelf
     [UIView animateWithDuration:0.0 animations:^{
-        _hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:kDefaultBackgroundAlpha];
+        weakSelf.hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:kDefaultBackgroundAlpha];
     }];
 }
 
@@ -73,9 +74,10 @@
     self.frame = view.bounds;
     [view addSubview:self];
     
+    EDWeakSelf
     [UIView animateWithDuration:0.0 animations:^{
         
-        _hiddenButton.alpha = 1;
+        weakSelf.hiddenButton.alpha = 1;
     }];
 }
 

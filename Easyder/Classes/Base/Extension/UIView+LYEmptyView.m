@@ -28,7 +28,7 @@
             return;
         }
         self.alpha = 1.0;
-        NSString *imageName, *titleStr, *tipStr;
+        NSString *imageName, *tipStr;
         NSString *buttonTitle;
         if (hasError) {
             //        加载失败
