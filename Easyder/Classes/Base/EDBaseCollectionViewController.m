@@ -7,6 +7,7 @@
 //
 
 #import "EDBaseCollectionViewController.h"
+#import "EDBaseMacroDefine.h"
 
 #define DefaultCollectionCellID @"DefaultCollectionCellID"
 #define DefaultCollectionSectionHeaderID @"DefaultCollectionSectionHeaderID"
@@ -51,7 +52,7 @@
     _dataArray = [NSMutableArray array];
     [self.view addSubview:self.collectionView];
     [self.view sendSubviewToBack:self.collectionView];
-    self.view.backgroundColor = kDefaultBackgroundColor;
+//    self.view.backgroundColor = kDefaultBackgroundColor;
     self.collectionView.backgroundColor = [UIColor clearColor];
 }
 

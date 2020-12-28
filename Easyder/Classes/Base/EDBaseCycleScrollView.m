@@ -7,7 +7,9 @@
 //
 
 #import "EDBaseCycleScrollView.h"
+#import "UIView+EDLayout.h"
 #import "SDCycleScrollView.h"
+#import "EDBaseMacroDefine.h"
 
 @interface EDBaseCycleScrollView ()<SDCycleScrollViewDelegate>
 //

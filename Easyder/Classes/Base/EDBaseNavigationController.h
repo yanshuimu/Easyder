@@ -10,7 +10,6 @@
 #import "EDBaseUtil.h"
 #import "UIView+EDLayout.h"
 #import "EDBaseMacroDefine.h"
-#import "EDBaseColorDefine.h"
 
 @interface EDBaseNavigationController : UINavigationController
 

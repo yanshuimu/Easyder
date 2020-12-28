@@ -43,7 +43,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    self.view.backgroundColor = kDefaultBackgroundColor;
+    //self.view.backgroundColor = kDefaultBackgroundColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
     //UINavigationBar方法setTranslucent设置为YES时，需要这行代码，UIViewController的view坐标才是从NavigationBar坐下角开始
 //    self.edgesForExtendedLayout = UIRectEdgeNone;

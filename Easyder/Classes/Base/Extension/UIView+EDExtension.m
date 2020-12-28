@@ -7,6 +7,7 @@
 
 #import "UIView+EDExtension.h"
 #import <MBProgressHUD/MBProgressHUD.h>
+#import "EDBaseMacroDefine.h"
 
 #define kDefaultShowTime 1.5
 

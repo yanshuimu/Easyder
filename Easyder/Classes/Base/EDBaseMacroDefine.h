@@ -332,4 +332,46 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
     #define NSLog(FORMAT, ...) fprintf(stderr,"<%s : %d>\n%s\n%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __func__ ,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 #endif
 
+/********************* 颜色 ****************************/
+
+#define EDColorRGB(r,g,b)     [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
+
+#define EDColorA(r, g, b, a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define EDColor(string)  [UIColor whiteColor]
+
+///随机颜色
+#define EDRandomColor EDColorRGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+///白颜色
+#define KWhiteColor [UIColor whiteColor]
+
+///黑色
+#define KBlackColor [UIColor blackColor]
+
+//透明
+#define kClearColor [UIColor clearColor]
+
+//统一背景色
+#define kDefaultBackgroupColor EDColor(@"#F4F4F4")
+
+//统一透明度
+#define kDefaultBackgroundAlpha 0.70
+
+//app主题颜色(粉红色)
+#define kLightThemeColor EDColor(@"#fe5690")
+#define kThemeColor EDColor(@"#fe3379")
+
+//统一浅黑字体颜色
+#define kFontColorLightBlack EDColor(@"#666666")
+
+//统一浅灰字体颜色
+#define kFontColorLightGray EDColor(@"#999999")
+
+//统一线条颜色
+#define kLineColor EDColor(@"#E6E6E6")
+
+//线条颜色（深色）
+#define kDarkLineColor EDColor(@"#D6D6D6")
+
 #endif /* EDBaseDefine_h */

@@ -7,6 +7,7 @@
 //
 
 #import "HGBaseAlertView.h"
+#import "EDBaseMacroDefine.h"
 
 @interface HGBaseAlertView ()
 //
