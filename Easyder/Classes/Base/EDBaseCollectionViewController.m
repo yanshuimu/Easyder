@@ -7,6 +7,7 @@
 //
 
 #import "EDBaseCollectionViewController.h"
+#import <MJRefresh/MJRefresh.h>
 #import "EDBaseMacroDefine.h"
 
 #define DefaultCollectionCellID @"DefaultCollectionCellID"

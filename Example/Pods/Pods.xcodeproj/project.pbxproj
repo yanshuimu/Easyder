@@ -48,11 +48,9 @@
 		04CF36C02599D1E300430BB0 /* EDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF36752599D1E300430BB0 /* EDBaseViewController.h */; };
 		04CF36C12599D1E300430BB0 /* EDBaseWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF36762599D1E300430BB0 /* EDBaseWebViewController.h */; };
 		04CF36C22599D1E300430BB0 /* EDBaseCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF36772599D1E300430BB0 /* EDBaseCollectionViewController.h */; };
-		04CF36C32599D1E300430BB0 /* EDBaseUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF36792599D1E300430BB0 /* EDBaseUtil.m */; };
 		04CF36C42599D1E300430BB0 /* HGBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF367A2599D1E300430BB0 /* HGBaseAlertView.m */; };
 		04CF36C62599D1E300430BB0 /* DropDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF367C2599D1E300430BB0 /* DropDownButton.m */; };
 		04CF36C82599D1E300430BB0 /* HGBaseAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF367E2599D1E300430BB0 /* HGBaseAlertView.h */; };
-		04CF36C92599D1E300430BB0 /* EDBaseUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF367F2599D1E300430BB0 /* EDBaseUtil.h */; };
 		04CF36CA2599D1E300430BB0 /* DropDownButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF36802599D1E300430BB0 /* DropDownButton.h */; };
 		04CF36CB2599D1E300430BB0 /* EDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF36812599D1E300430BB0 /* EDBaseTableViewController.m */; };
 		04CF36CD2599D1E300430BB0 /* EDBaseCycleScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04CF36832599D1E300430BB0 /* EDBaseCycleScrollView.h */; };
@@ -420,11 +418,9 @@
 		04CF36752599D1E300430BB0 /* EDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseViewController.h; sourceTree = "<group>"; };
 		04CF36762599D1E300430BB0 /* EDBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseWebViewController.h; sourceTree = "<group>"; };
 		04CF36772599D1E300430BB0 /* EDBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseCollectionViewController.h; sourceTree = "<group>"; };
-		04CF36792599D1E300430BB0 /* EDBaseUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseUtil.m; sourceTree = "<group>"; };
 		04CF367A2599D1E300430BB0 /* HGBaseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBaseAlertView.m; sourceTree = "<group>"; };
 		04CF367C2599D1E300430BB0 /* DropDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownButton.m; sourceTree = "<group>"; };
 		04CF367E2599D1E300430BB0 /* HGBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBaseAlertView.h; sourceTree = "<group>"; };
-		04CF367F2599D1E300430BB0 /* EDBaseUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseUtil.h; sourceTree = "<group>"; };
 		04CF36802599D1E300430BB0 /* DropDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownButton.h; sourceTree = "<group>"; };
 		04CF36812599D1E300430BB0 /* EDBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseTableViewController.m; sourceTree = "<group>"; };
 		04CF36832599D1E300430BB0 /* EDBaseCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseCycleScrollView.h; sourceTree = "<group>"; };
@@ -861,8 +857,6 @@
 			children = (
 				04CF36802599D1E300430BB0 /* DropDownButton.h */,
 				04CF367C2599D1E300430BB0 /* DropDownButton.m */,
-				04CF367F2599D1E300430BB0 /* EDBaseUtil.h */,
-				04CF36792599D1E300430BB0 /* EDBaseUtil.m */,
 				04CF367E2599D1E300430BB0 /* HGBaseAlertView.h */,
 				04CF367A2599D1E300430BB0 /* HGBaseAlertView.m */,
 			);
@@ -1498,7 +1492,6 @@
 				04CF36BF2599D1E300430BB0 /* EDBaseMacroDefine.h in Headers */,
 				04CF36B42599D1E300430BB0 /* UITextField+Extension.h in Headers */,
 				04CF36C82599D1E300430BB0 /* HGBaseAlertView.h in Headers */,
-				04CF36C92599D1E300430BB0 /* EDBaseUtil.h in Headers */,
 				04CF36CE2599D1E300430BB0 /* EDBaseRefreshTableViewController.h in Headers */,
 				04CF36CA2599D1E300430BB0 /* DropDownButton.h in Headers */,
 				04CF36A22599D1E300430BB0 /* UIView+LSCore.h in Headers */,
@@ -1823,7 +1816,6 @@
 				04CF36D12599D1E300430BB0 /* EDBaseCollectionReusableView.m in Sources */,
 				04CF36B62599D1E300430BB0 /* UIView+LSCore.m in Sources */,
 				04CF36B52599D1E300430BB0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
-				04CF36C32599D1E300430BB0 /* EDBaseUtil.m in Sources */,
 				04CF36A92599D1E300430BB0 /* NSString+PinYin.m in Sources */,
 				04CF36AA2599D1E300430BB0 /* UIAlertController+EDExtension.m in Sources */,
 				04CF36DF2599D1E300430BB0 /* EDBaseCollectionViewController.m in Sources */,

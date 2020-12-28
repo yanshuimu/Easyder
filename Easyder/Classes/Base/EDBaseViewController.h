@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+EDLayout.h"
-#import "EDBaseUtil.h"
 #import "EDBaseMacroDefine.h"
 
 @interface EDBaseViewController : UIViewController

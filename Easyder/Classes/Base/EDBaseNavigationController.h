@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EDBaseUtil.h"
 #import "UIView+EDLayout.h"
 #import "EDBaseMacroDefine.h"
 
