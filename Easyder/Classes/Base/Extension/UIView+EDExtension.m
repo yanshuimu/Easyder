@@ -6,6 +6,7 @@
 //
 
 #import "UIView+EDExtension.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #define kDefaultShowTime 1.5
 
@@ -15,7 +16,7 @@
 
 - (MBProgressHUD*)showLoading
 {
-    [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:@[[MBProgressHUD class]]].color = KWhiteColor;
+    [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:@[[MBProgressHUD class]]].color = [UIColor whiteColor];
     
     MBProgressHUD *hudView = [MBProgressHUD HUDForView:self];
     if (!hudView) {

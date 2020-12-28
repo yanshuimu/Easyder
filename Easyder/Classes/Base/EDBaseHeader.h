@@ -9,7 +9,7 @@
 #ifndef EDBaseHeader_h
 #define EDBaseHeader_h
 
-#import <MBProgressHUD.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 #import "EDBaseMacroDefine.h"
 #import "EDBaseColorDefine.h"

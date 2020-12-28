@@ -1,15 +1,36 @@
 PODS:
-  - Easyder (0.1.0)
+  - Easyder (0.1.0):
+    - MBProgressHUD
+    - MJRefresh
+    - SDCycleScrollView
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.10.1):
+    - SDWebImage/Core (= 5.10.1)
+  - SDWebImage/Core (5.10.1)
 
 DEPENDENCIES:
   - Easyder (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+    - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
 
 EXTERNAL SOURCES:
   Easyder:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: 76b0af25a5215c8efb87f6be89f1dec763bbd803
+  Easyder: ed51779ce43a5d946e357bd2fa6257acef88af51
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: f66a16b95183b92ed6b965ad21d33167bc07612d
 
 PODFILE CHECKSUM: a36d0904ff6651cd44b95eb703eb9899932c55b1
 

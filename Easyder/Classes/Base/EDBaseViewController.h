@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MJRefresh.h>
+#import "MJRefresh.h"
 #import "UIView+EDLayout.h"
 #import "EDBaseUtil.h"
 #import "EDBaseMacroDefine.h"

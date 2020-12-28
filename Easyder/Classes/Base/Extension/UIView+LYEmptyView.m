@@ -69,9 +69,9 @@
         
         LYEmptyView *emptyV = [LYEmptyView emptyActionViewWithImageStr:imageName titleStr:tipStr detailStr:nil btnTitleStr:buttonTitle btnClickBlock:block];
         emptyV.autoShowEmptyView = NO;
-        emptyV.actionBtnBackGroundColor = kThemeColor;
-        emptyV.actionBtnTitleColor = KWhiteColor;
-        emptyV.titleLabFont = kFont(17);
+        emptyV.actionBtnBackGroundColor = [UIColor redColor];
+        emptyV.actionBtnTitleColor = [UIColor whiteColor];
+//        emptyV.titleLabFont = ;
         emptyV.titleLabTextColor = EDColor(@"#B1B1B1");
         self.ly_emptyView = emptyV;
         

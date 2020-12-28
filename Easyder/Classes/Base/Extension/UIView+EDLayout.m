@@ -7,7 +7,6 @@
 //
 
 #import "UIView+EDLayout.h"
-#import "AppDelegate.h"
 
 @implementation UIView (EDLayout)
 

@@ -35,8 +35,10 @@ TODO: Add long description of the pod here.
   # s.resource_bundles = {
   #   'Easyder' => ['Easyder/Assets/*.png']
   # }
-
+  s.prefix_header_contents = '#import "EDBaseHeader.h"'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'MJRefresh'
+  s.dependency 'MBProgressHUD'
+  s.dependency 'SDCycleScrollView'
 end
