@@ -1,21 +1,21 @@
 //
-//  EDManager.m
+//  EasyderManager.m
 //  Easyder
 //
 //  Created by mac on 2020/12/29.
 //
 
-#import "EDManager.h"
+#import "EasyderManager.h"
 
-static EDManager *manager = nil;
+static EasyderManager *manager = nil;
 
-@implementation EDManager
+@implementation EasyderManager
 
 + (instancetype)shareManager
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        manager = [[EDManager alloc] init];
+        manager = [[EasyderManager alloc] init];
         [manager initialize];
     });
     return manager;

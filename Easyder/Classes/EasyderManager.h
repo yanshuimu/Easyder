@@ -1,16 +1,16 @@
 //
-//  EDManager.h
+//  EasyderManager.h
 //  Easyder
 //
 //  Created by mac on 2020/12/29.
 //
 
 #import <Foundation/Foundation.h>
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EDManager : NSObject
+@interface EasyderManager : NSObject
 
 + (instancetype)shareManager;
 

@@ -7,7 +7,7 @@
 //
 
 #import "EDBaseWebViewController.h"
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 @interface EDBaseWebViewController ()<WKNavigationDelegate>
 

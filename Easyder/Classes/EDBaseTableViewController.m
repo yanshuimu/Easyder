@@ -8,7 +8,7 @@
 
 #import "EDBaseTableViewController.h"
 #import <MJRefresh/MJRefresh.h>
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 @interface EDBaseTableViewController ()
 

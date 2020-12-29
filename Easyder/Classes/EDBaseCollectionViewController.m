@@ -8,7 +8,7 @@
 
 #import "EDBaseCollectionViewController.h"
 #import <MJRefresh/MJRefresh.h>
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 #define DefaultCollectionCellID @"DefaultCollectionCellID"
 #define DefaultCollectionSectionHeaderID @"DefaultCollectionSectionHeaderID"

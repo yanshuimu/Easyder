@@ -8,7 +8,7 @@
 
 #import "EDBaseViewController.h"
 #import "UIView+EDLayout.h"
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 @interface EDBaseViewController ()
 

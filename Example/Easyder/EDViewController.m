@@ -7,7 +7,7 @@
 //
 
 #import "EDViewController.h"
-#import <EDManager.h>
+#import <EasyderManager.h>
 
 @interface EDViewController ()
 

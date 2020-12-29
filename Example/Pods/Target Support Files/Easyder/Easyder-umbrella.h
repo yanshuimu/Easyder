@@ -13,7 +13,7 @@
 #import "EDBaseCollectionCell.h"
 #import "EDBaseCollectionReusableView.h"
 #import "EDBaseCollectionViewController.h"
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 #import "EDBaseNavigationController.h"
 #import "EDBaseTableCell.h"
 #import "EDBaseTableViewController.h"

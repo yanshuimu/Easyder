@@ -6,7 +6,7 @@
 //  Copyright © 2020 mac. All rights reserved.
 //
 
-#import "EDManager.h"
+#import <EasyderManager.h>
 
 #ifndef EDBaseMacroDefine_h
 #define EDBaseMacroDefine_h
@@ -119,7 +119,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 #define EDDispatch_Main(block) dispatch_async(dispatch_get_main_queue(),block)
 
-#define EDManagerSingleton [EDManager shareManager]
+#define EDManagerSingleton [EasyderManager shareManager]
 
 ///弱指针
 #define EDWeakSelf __weak typeof(self) weakSelf = self;

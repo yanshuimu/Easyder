@@ -7,7 +7,7 @@
 //
 
 #import "UIView+EDLayout.h"
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 /*
  自动缩放宽高

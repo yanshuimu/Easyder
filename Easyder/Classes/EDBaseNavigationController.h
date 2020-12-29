@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIView+EDLayout.h"
-#import "EDBaseMacroDefine.h"
+#import <EDBaseMacroDefine.h>
 
 @interface EDBaseNavigationController : UINavigationController
 

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import <EDManager.h>
+#import <EasyderManager.h>
 
 @implementation AppDelegate
 
@@ -19,7 +19,7 @@
 
 - (void)setupEDTool {
     
-    EDManager *manager = [EDManager shareManager];
+    EasyderManager *manager = [EasyderManager shareManager];
     manager.themeColor = [UIColor redColor];
 }
 

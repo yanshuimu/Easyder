@@ -239,12 +239,12 @@
 		C62B602E17D8627C3818BA1B42AC9B88 /* MJRefreshAutoFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = EE3FE09DE6322BDFDBAB45506FD60273 /* MJRefreshAutoFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C659C658F314AD54BD9323EBA0384979 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1482A9F08067094E0F96221B61283269 /* NSString+PinYin.m */; };
 		C843DF4EE56E3A0254EE46D811DC638C /* UIImageView+HighlightedWebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9AB42873C2B4B8F7FA974C12853C15 /* UIImageView+HighlightedWebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8B63C0EBDF39B1B68747E495DACEFC4 /* EDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D01949034CA8798A3044CECE774D165 /* EDManager.m */; };
+		C8B63C0EBDF39B1B68747E495DACEFC4 /* EasyderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D01949034CA8798A3044CECE774D165 /* EasyderManager.m */; };
 		C8E302A94BC89D3EA438068ACCFE09ED /* UIImage+ForceDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2476894473F0380AC52447AB27DB51D4 /* UIImage+ForceDecode.m */; };
 		C9A94F905040EEAC8C4D81542A65A117 /* NSArray+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 29899AD6AA9153403E2CE871D766A297 /* NSArray+EDExtension.m */; };
 		CA35327220ACB9D11D8C8C9E666B27F3 /* NSData+ImageContentType.h in Headers */ = {isa = PBXBuildFile; fileRef = 1294327FC8025FBDA112B0B9FCED71A8 /* NSData+ImageContentType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBE6DA28C0132FC4C85ACB777ADC6BD0 /* SDWebImageTransitionInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D235B766895C9FD7BF2124B942822C /* SDWebImageTransitionInternal.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CF156A5D1ED5748400A2F65DED5E58F3 /* EDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05621787BA2B0BE2ACF9DADA84CAD28F /* EDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF156A5D1ED5748400A2F65DED5E58F3 /* EasyderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 05621787BA2B0BE2ACF9DADA84CAD28F /* EasyderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFE160309E164BDFD2B97F0CAA87AC08 /* SDImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 65137036A70545E8D2B9070B38CF7437 /* SDImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0EF8532510655BF3DF0F4666C056FE4 /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 232FD53FE4624F94151D47ED915003E1 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D35AA752BC95E916DB8E07E714923FC5 /* UIView+EDLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BE47726AC124E19162AA7A7794A4589E /* UIView+EDLayout.m */; };
@@ -374,7 +374,7 @@
 		01D776717DF280F871CE4AF3CA2BE351 /* TAAbstractDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAAbstractDotView.m; path = SDCycleScrollView/Lib/SDCycleScrollView/PageControl/TAAbstractDotView.m; sourceTree = "<group>"; };
 		0312FAD2BB53CB3EBF699950C0F4B042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		0481512AC4C3937DBE046CDBC00D4D05 /* HGBaseAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HGBaseAlertView.m; path = Easyder/Classes/HGBaseAlertView.m; sourceTree = "<group>"; };
-		05621787BA2B0BE2ACF9DADA84CAD28F /* EDManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDManager.h; path = Easyder/Classes/EDManager.h; sourceTree = "<group>"; };
+		05621787BA2B0BE2ACF9DADA84CAD28F /* EasyderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EasyderManager.h; path = Easyder/Classes/EasyderManager.h; sourceTree = "<group>"; };
 		0591366060315740836D121228D6F890 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		063C8AD5749E16D34E9ABD492E18AC69 /* MJRefreshTrailer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshTrailer.m; path = MJRefresh/Base/MJRefreshTrailer.m; sourceTree = "<group>"; };
 		064271399E0CA2C7D3B55FC66E6178D2 /* SDImageCacheConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCacheConfig.h; path = SDWebImage/Core/SDImageCacheConfig.h; sourceTree = "<group>"; };
@@ -555,7 +555,7 @@
 		8B74F90C216662B1187BFDF91AA30BAA /* UIAlertController+EDExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAlertController+EDExtension.h"; path = "Easyder/Classes/UIAlertController+EDExtension.h"; sourceTree = "<group>"; };
 		8B8FAB0D627B17EDE1366984278705D9 /* MBProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CF35D31AD99F7EB3124A2AEA0BE628A /* SDAnimatedImagePlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImagePlayer.h; path = SDWebImage/Core/SDAnimatedImagePlayer.h; sourceTree = "<group>"; };
-		8D01949034CA8798A3044CECE774D165 /* EDManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDManager.m; path = Easyder/Classes/EDManager.m; sourceTree = "<group>"; };
+		8D01949034CA8798A3044CECE774D165 /* EasyderManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EasyderManager.m; path = Easyder/Classes/EasyderManager.m; sourceTree = "<group>"; };
 		8D487695D5D1347C832D562A578CE5BF /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+FDFullscreenPopGesture.h"; path = "Easyder/Classes/UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		9199E268E777DEA0286FE361C3F88DB1 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
 		92F36FD8E3A12F2B608B7BB8130A6A77 /* NSBezierPath+SDRoundedCorners.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBezierPath+SDRoundedCorners.m"; path = "SDWebImage/Private/NSBezierPath+SDRoundedCorners.m"; sourceTree = "<group>"; };
@@ -1242,8 +1242,8 @@
 				CC3AEB3E3A41E8A7D95DDA803E2D5850 /* EDBaseWebViewController.m */,
 				776BCD4CB49405C5580B3BAA65E1F6F3 /* EDCycleScrollView.h */,
 				3B4856118C04323AF130C6E55E251CBA /* EDCycleScrollView.m */,
-				05621787BA2B0BE2ACF9DADA84CAD28F /* EDManager.h */,
-				8D01949034CA8798A3044CECE774D165 /* EDManager.m */,
+				05621787BA2B0BE2ACF9DADA84CAD28F /* EasyderManager.h */,
+				8D01949034CA8798A3044CECE774D165 /* EasyderManager.m */,
 				69C24908151A2060D4DA7AA3E70B9328 /* EDTools.h */,
 				AA4BFF67A0821E13B7A0AA305443EA96 /* EDTools.m */,
 				F911278373883FB83D737BA12B1DB0C7 /* HGBaseAlertView.h */,
@@ -1453,7 +1453,7 @@
 				AC6FC41B0F22895EA1B19ECC03252BBE /* EDBaseViewController.h in Headers */,
 				3471FD21BF6D06094B3FC4FE577A2F0F /* EDBaseWebViewController.h in Headers */,
 				575DDDD3E79719AA841E7A951D00885E /* EDCycleScrollView.h in Headers */,
-				CF156A5D1ED5748400A2F65DED5E58F3 /* EDManager.h in Headers */,
+				CF156A5D1ED5748400A2F65DED5E58F3 /* EasyderManager.h in Headers */,
 				120F2DC16102E13C00247DBEF0CAED26 /* EDTools.h in Headers */,
 				B8615EEAE74E6AA3C972EF638F47D022 /* HGBaseAlertView.h in Headers */,
 				1D8AD6B4E653E0117E6D02858AC498BA /* NSArray+EDExtension.h in Headers */,
@@ -1721,7 +1721,7 @@
 				53A53D1FC085C5F4790B2F31DD44C8BB /* EDBaseViewController.m in Sources */,
 				78B87F372A40D79CEAEA7E8E1D0F1872 /* EDBaseWebViewController.m in Sources */,
 				488A4B764099B7FD540C9AB3B692EA01 /* EDCycleScrollView.m in Sources */,
-				C8B63C0EBDF39B1B68747E495DACEFC4 /* EDManager.m in Sources */,
+				C8B63C0EBDF39B1B68747E495DACEFC4 /* EasyderManager.m in Sources */,
 				05E20438577E890D13ADB46E5DA2E4D9 /* EDTools.m in Sources */,
 				02C15835292F65D57B6C7B8B0C5FBCBE /* HGBaseAlertView.m in Sources */,
 				C9A94F905040EEAC8C4D81542A65A117 /* NSArray+EDExtension.m in Sources */,
