@@ -25,6 +25,7 @@
 #import "EDBaseViewController.h"
 #import "EDBaseWebViewController.h"
 #import "EDCycleScrollView.h"
+#import "EDKeyChainUtil.h"
 #import "EDUtils.h"
 #import "NSArray+EDExtension.h"
 #import "NSAttributedString+EDExtension.h"

@@ -20,4 +20,5 @@ Pod::Spec.new do |s|
   s.dependency 'MBProgressHUD'
   s.dependency 'SDCycleScrollView'
   s.dependency 'FDFullscreenPopGesture'
+  s.dependency 'UICKeyChainStore'
 end

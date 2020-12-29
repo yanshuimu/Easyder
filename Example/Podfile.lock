@@ -4,6 +4,7 @@ PODS:
     - MBProgressHUD
     - MJRefresh
     - SDCycleScrollView
+    - UICKeyChainStore
   - FDFullscreenPopGesture (1.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
@@ -12,6 +13,7 @@ PODS:
   - SDWebImage (5.10.1):
     - SDWebImage/Core (= 5.10.1)
   - SDWebImage/Core (5.10.1)
+  - UICKeyChainStore (2.2.1)
 
 DEPENDENCIES:
   - Easyder (from `../`)
@@ -23,18 +25,20 @@ SPEC REPOS:
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
+    - UICKeyChainStore
 
 EXTERNAL SOURCES:
   Easyder:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: de1594ea481fb320485070ed91830c3fb36cab6f
+  Easyder: afaf755ffa00296a54c4e3beeced000d6e128b70
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: f66a16b95183b92ed6b965ad21d33167bc07612d
+  UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
 
 PODFILE CHECKSUM: a36d0904ff6651cd44b95eb703eb9899932c55b1
 
