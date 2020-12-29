@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <EDManager.h>
 
 @implementation AppDelegate
 
@@ -14,6 +15,12 @@
 {
     // Override point for customization after application launch.
     return YES;
+}
+
+- (void)setupEDTool {
+    
+    EDManager *manager = [EDManager shareManager];
+    manager.themeColor = [UIColor redColor];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
