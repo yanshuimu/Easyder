@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSArray (EDExtension)
 
 /**
-  遍历数组元素，获取key对应的所有value
+ * 遍历数组元素，获取key对应的所有value
  */
 - (NSArray*)allValuesWithKey:(NSString*)key;
 

@@ -1,5 +1,5 @@
 //
-//  HGBaseAlertView.h
+//  EDBaseAlertView.h
 //  CraneMachine
 //
 //  Created by mac on 2017/11/9.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HGBaseAlertView : UIView
+@interface EDBaseAlertView : UIView
 
 - (void)show;
 

@@ -10,14 +10,14 @@
 		00733C9EE2DA518CA47C9FF94EB415D7 /* SDWebImageIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AEF355D437C43FBA10987E53394EA2 /* SDWebImageIndicator.m */; };
 		01020CC6E32284DCEED5233C47D37787 /* SDImageGIFCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EF7BC969DBC2D45D9E1E794F3CA6233 /* SDImageGIFCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		01AC79854D037D9D87A5363848BFCAF9 /* UIAlertController+EDExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B74F90C216662B1187BFDF91AA30BAA /* UIAlertController+EDExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		02C15835292F65D57B6C7B8B0C5FBCBE /* HGBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481512AC4C3937DBE046CDBC00D4D05 /* HGBaseAlertView.m */; };
+		02C15835292F65D57B6C7B8B0C5FBCBE /* EDBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481512AC4C3937DBE046CDBC00D4D05 /* EDBaseAlertView.m */; };
 		030169D2EF5BA83A7A0647B82D7A71A6 /* UIView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 229421F62A3C5320AC8C85A0C616FBFA /* UIView+EDExtension.m */; };
 		0354EDE3E7FE81256C2BB29CD315F4AD /* SDImageCacheDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E4E4A2D202F01E1E09B73C4ACFF784E /* SDImageCacheDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E1D54BBFD0F10509C8FD8AEDEDEA79 /* SDImageHEICCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8FFF21E52B95088F0AD559B9C41006 /* SDImageHEICCoder.m */; };
 		03F06B7596F71C5EFBA4B922D190D886 /* SDWebImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA07EEA21D08BD77BBCC915D8E3D40B /* SDWebImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B184B17C248761C2DD61E52F567611 /* UICollectionView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E65DEE721E39A25B01883AE489DC4202 /* UICollectionView+EDExtension.m */; };
 		05269F6D5ECFA12B3F4A6385F6344678 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF418A2D112D0BEAA2D71EFB83FB27 /* MBProgressHUD.m */; };
-		05E20438577E890D13ADB46E5DA2E4D9 /* EDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFF67A0821E13B7A0AA305443EA96 /* EDTools.m */; };
+		05E20438577E890D13ADB46E5DA2E4D9 /* EDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4BFF67A0821E13B7A0AA305443EA96 /* EDUtils.m */; };
 		0688692448341B9C6194918F888E6D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 636799CB82A9C8B80E2E4C3ECC6F7C5E /* Foundation.framework */; };
 		06A6F682C3116B00F73E0ADF111DE73D /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BCB2086EA5DA2E043AA4E58963AA40 /* SDCollectionViewCell.m */; };
 		085F54A8AB8A88378C519D4E1D146561 /* SDImageGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 35B850A353AB19A1D697D3EF48D32ADB /* SDImageGraphics.m */; };
@@ -31,7 +31,7 @@
 		0F1A392B3CB7C7BAFF0BBC2899B6BC1D /* UIButton+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A9193C3D72192876F258409C7B38CBDC /* UIButton+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		108AE1CED3887EDB8CD4C091872C67A4 /* EDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2B89C944764CCC6A9B57B96C554556 /* EDBaseTableViewController.m */; };
 		11C34A0FBA965BA75A6746A4D2E60160 /* UIImage+Metadata.h in Headers */ = {isa = PBXBuildFile; fileRef = 83DEDBDD68734C23E190D4C4E105EFBA /* UIImage+Metadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		120F2DC16102E13C00247DBEF0CAED26 /* EDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 69C24908151A2060D4DA7AA3E70B9328 /* EDTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		120F2DC16102E13C00247DBEF0CAED26 /* EDUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 69C24908151A2060D4DA7AA3E70B9328 /* EDUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12A71FB3B3D876FE09CE274C8A7803E5 /* SDImageFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A8798A57FA0E3E0510261F666682C5 /* SDImageFrame.m */; };
 		12B7381BF905BDCD5A1C069C7F831F0F /* UIColor+SDHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = FA10E22B4DAF92586027745CE572EBDF /* UIColor+SDHexString.m */; };
 		13BAB3066DFB1C768B8D66082DAE4680 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F53ACB2626E3C498584A8ECAA1238C8 /* QuartzCore.framework */; };
@@ -81,7 +81,6 @@
 		3B2E4F6C817571A95D4A40168279747B /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B61CE6EE3E6B38FC2E6E56BF3BC2236 /* UIScrollView+MJExtension.m */; };
 		3D0BAC8B44BED4AC4A9B0CBB9D773DE0 /* UIView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A0108DA9FCDE566BA6D5BDA26E22781 /* UIView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3D2ACBEFD2BD6B7F49AEC48B64ED079F /* SDImageLoadersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A56A40B5E7DA692A16E5B9EE811B0829 /* SDImageLoadersManager.m */; };
-		3E0D6FF7ED11DC3074014CD3817E2AA1 /* UIView+LSCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 10B2283355212039F4F5DE5E6075283E /* UIView+LSCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3FB088950E3144C06ECB7AEB92CD1682 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4890935F199F2C8C64D4E7229518B48A /* MJRefreshAutoFooter.m */; };
 		3FBD7770F7E920356D4D845ABF3778B9 /* SDAnimatedImagePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F9E271CD97D3A6AC6D4396ACB3317BE /* SDAnimatedImagePlayer.m */; };
 		405BF21C230B5FD431F8B70DD2E8E676 /* SDImageCodersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A95F9000BA747CF993600B55026BE180 /* SDImageCodersManager.m */; };
@@ -173,7 +172,6 @@
 		8A7A5B44EA95BEF8DD63FF30C8C1AB70 /* UIImage+GIF.h in Headers */ = {isa = PBXBuildFile; fileRef = EB4AF6F60EB1D3CD50F0B31093A4AA12 /* UIImage+GIF.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B0C6BA9D05B7F85156D14AF8E5601F3 /* SDImageCachesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 169DA6A280F58AB792E74132959D6C92 /* SDImageCachesManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8B670ADEB707EB6E97E2D6CC0E148A9A /* SDWebImageDownloaderConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 693EED98D91593BB9B6CF82BEE93817F /* SDWebImageDownloaderConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B74E48E4D1464460572073C94D48230 /* UIView+LSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB593EAEF012A2465027D4457F489FB /* UIView+LSCore.m */; };
 		8B7F7B7CA75A1C78ACE9C5B79CEA7546 /* SDImageIOCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6658206778E2FAD12E98B6953805B169 /* SDImageIOCoder.m */; };
 		8BFA1F6043919E952C0B864E0F95D6AE /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = D35A4386ED167AA068540C7976EFA1AF /* TAAnimatedDotView.m */; };
 		8C45B06B12E8E22313E0B3AFAFD8335F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BE83794C6B69828F43CDCE31711DBD92 /* UIView+WebCacheOperation.m */; };
@@ -215,7 +213,7 @@
 		B5536CE4DDD1C86B064CEC7D69732F85 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 250731577E86D9B4D9407F78908C8652 /* MJRefreshBackFooter.m */; };
 		B55ED9DF119C990AA6D1A3D89D651581 /* SDAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BFC8D3CE4F26F02A43B5C417F918343D /* SDAnimatedImageView+WebCache.m */; };
 		B746C1E6087791FB949C7A9D4DC46D73 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B220A7583D697A88E86F597A0B13591C /* SDWebImageDownloaderOperation.m */; };
-		B8615EEAE74E6AA3C972EF638F47D022 /* HGBaseAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = F911278373883FB83D737BA12B1DB0C7 /* HGBaseAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8615EEAE74E6AA3C972EF638F47D022 /* EDBaseAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = F911278373883FB83D737BA12B1DB0C7 /* EDBaseAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BB59ADEEE6F2710D2C4A1420FFED58A9 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA66FCDDBC066B4D3632149849644EB /* SDWebImage.framework */; };
 		BBB00B27CB01A6B6A79E2B666F0B4914 /* SDAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F97A9117D11511746838EC6D7FB3DE5A /* SDAssociatedObject.m */; };
 		BD167728A8C7B811DE1EFB5CCA173803 /* EDBaseMacroDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A405E4EBE819BCAEA9717D1D15669A3 /* EDBaseMacroDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -373,7 +371,7 @@
 		00D00638EED098866A77088B38DD3D5C /* SDWebImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDWebImage-Info.plist"; sourceTree = "<group>"; };
 		01D776717DF280F871CE4AF3CA2BE351 /* TAAbstractDotView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAAbstractDotView.m; path = SDCycleScrollView/Lib/SDCycleScrollView/PageControl/TAAbstractDotView.m; sourceTree = "<group>"; };
 		0312FAD2BB53CB3EBF699950C0F4B042 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		0481512AC4C3937DBE046CDBC00D4D05 /* HGBaseAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HGBaseAlertView.m; path = Easyder/Classes/HGBaseAlertView.m; sourceTree = "<group>"; };
+		0481512AC4C3937DBE046CDBC00D4D05 /* EDBaseAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDBaseAlertView.m; path = Easyder/Classes/EDBaseAlertView.m; sourceTree = "<group>"; };
 		05621787BA2B0BE2ACF9DADA84CAD28F /* EasyderManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EasyderManager.h; path = Easyder/Classes/EasyderManager.h; sourceTree = "<group>"; };
 		0591366060315740836D121228D6F890 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		063C8AD5749E16D34E9ABD492E18AC69 /* MJRefreshTrailer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshTrailer.m; path = MJRefresh/Base/MJRefreshTrailer.m; sourceTree = "<group>"; };
@@ -387,7 +385,6 @@
 		0EFC592DE328F1A7D0C93DB99E34EDA5 /* SDWebImageDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDefine.h; path = SDWebImage/Core/SDWebImageDefine.h; sourceTree = "<group>"; };
 		0FBD5143659F68BEFF023586413EE218 /* SDImageLoadersManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageLoadersManager.h; path = SDWebImage/Core/SDImageLoadersManager.h; sourceTree = "<group>"; };
 		101F0F62436C36EBBB40EAEED638DA69 /* Pods-Easyder_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Easyder_Tests-Info.plist"; sourceTree = "<group>"; };
-		10B2283355212039F4F5DE5E6075283E /* UIView+LSCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+LSCore.h"; path = "Easyder/Classes/UIView+LSCore.h"; sourceTree = "<group>"; };
 		10F7DDDBDB6AB754D7C6626610C04C35 /* Pods-Easyder_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Easyder_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		110CAC7D754D96C7327D4F24152E3656 /* Pods-Easyder_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Easyder_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		11AF418A2D112D0BEAA2D71EFB83FB27 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -507,7 +504,7 @@
 		67A01E9B9209B6495FC2A3BB5B69F78B /* SDInternalMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDInternalMacros.h; path = SDWebImage/Private/SDInternalMacros.h; sourceTree = "<group>"; };
 		68EC1DAD4E5AD0482F40EE9D0AA69595 /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
 		693EED98D91593BB9B6CF82BEE93817F /* SDWebImageDownloaderConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderConfig.h; path = SDWebImage/Core/SDWebImageDownloaderConfig.h; sourceTree = "<group>"; };
-		69C24908151A2060D4DA7AA3E70B9328 /* EDTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDTools.h; path = Easyder/Classes/EDTools.h; sourceTree = "<group>"; };
+		69C24908151A2060D4DA7AA3E70B9328 /* EDUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDUtils.h; path = Easyder/Classes/EDUtils.h; sourceTree = "<group>"; };
 		6A2B89C944764CCC6A9B57B96C554556 /* EDBaseTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDBaseTableViewController.m; path = Easyder/Classes/EDBaseTableViewController.m; sourceTree = "<group>"; };
 		6CC338A76FB1497883A4C448397234E6 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+FDFullscreenPopGesture.m"; path = "Easyder/Classes/UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		6CE7CCB17F5C4DEA0DC442E46E9BC6FF /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
@@ -529,7 +526,6 @@
 		783CEB8B20E7884EEEA1BD34EAD8FDA4 /* NSDate+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extension.h"; path = "Easyder/Classes/NSDate+Extension.h"; sourceTree = "<group>"; };
 		7A265B33613CAD3204BC736AD48C39D9 /* EDBaseNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDBaseNavigationController.m; path = Easyder/Classes/EDBaseNavigationController.m; sourceTree = "<group>"; };
 		7A57FEDE5A7F90C4AEFBACE71EF628DF /* SDWebImageCompat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageCompat.m; path = SDWebImage/Core/SDWebImageCompat.m; sourceTree = "<group>"; };
-		7BB593EAEF012A2465027D4457F489FB /* UIView+LSCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+LSCore.m"; path = "Easyder/Classes/UIView+LSCore.m"; sourceTree = "<group>"; };
 		7C1A8B405947A03EDFAEF45AAB11A908 /* SDWebImageOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageOperation.m; path = SDWebImage/Core/SDWebImageOperation.m; sourceTree = "<group>"; };
 		7C96C05BCDBB128F2B1C0CF7365172D9 /* TAAbstractDotView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TAAbstractDotView.h; path = SDCycleScrollView/Lib/SDCycleScrollView/PageControl/TAAbstractDotView.h; sourceTree = "<group>"; };
 		7CC1421BA5B7B1DB0249B79BBC391246 /* MBProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBProgressHUD.modulemap; sourceTree = "<group>"; };
@@ -594,7 +590,7 @@
 		A8A83207138E1B3D7AE427DA090654F0 /* UITextField+Extension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+Extension.h"; path = "Easyder/Classes/UITextField+Extension.h"; sourceTree = "<group>"; };
 		A9193C3D72192876F258409C7B38CBDC /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		A95F9000BA747CF993600B55026BE180 /* SDImageCodersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCodersManager.m; path = SDWebImage/Core/SDImageCodersManager.m; sourceTree = "<group>"; };
-		AA4BFF67A0821E13B7A0AA305443EA96 /* EDTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDTools.m; path = Easyder/Classes/EDTools.m; sourceTree = "<group>"; };
+		AA4BFF67A0821E13B7A0AA305443EA96 /* EDUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = EDUtils.m; path = Easyder/Classes/EDUtils.m; sourceTree = "<group>"; };
 		ABDC318224F91E683CB9A0469E8A7AF0 /* UITableView+EDExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+EDExtension.m"; path = "Easyder/Classes/UITableView+EDExtension.m"; sourceTree = "<group>"; };
 		ACA4DE1CF6ABC1D245D30BC38B372364 /* SDWebImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageManager.h; path = SDWebImage/Core/SDWebImageManager.h; sourceTree = "<group>"; };
 		ACB44B1C2433ECC81AFF5B2A815F8580 /* NSArray+EDExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+EDExtension.h"; path = "Easyder/Classes/NSArray+EDExtension.h"; sourceTree = "<group>"; };
@@ -692,7 +688,7 @@
 		F44CEA0BE6A451174F342953AE9E309B /* MJRefreshStateTrailer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateTrailer.m; path = MJRefresh/Custom/Trailer/MJRefreshStateTrailer.m; sourceTree = "<group>"; };
 		F79F4CD6A2CBE99686312AADEB55D638 /* UITextField+Extension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+Extension.m"; path = "Easyder/Classes/UITextField+Extension.m"; sourceTree = "<group>"; };
 		F8C6CECC8B514785E01775A575EF7B7B /* UIView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCache.m"; path = "SDWebImage/Core/UIView+WebCache.m"; sourceTree = "<group>"; };
-		F911278373883FB83D737BA12B1DB0C7 /* HGBaseAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HGBaseAlertView.h; path = Easyder/Classes/HGBaseAlertView.h; sourceTree = "<group>"; };
+		F911278373883FB83D737BA12B1DB0C7 /* EDBaseAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDBaseAlertView.h; path = Easyder/Classes/EDBaseAlertView.h; sourceTree = "<group>"; };
 		F97A9117D11511746838EC6D7FB3DE5A /* SDAssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAssociatedObject.m; path = SDWebImage/Private/SDAssociatedObject.m; sourceTree = "<group>"; };
 		FA10E22B4DAF92586027745CE572EBDF /* UIColor+SDHexString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+SDHexString.m"; path = "SDWebImage/Private/UIColor+SDHexString.m"; sourceTree = "<group>"; };
 		FA7A2D075E204D64AAB206BF3E6F0A92 /* SDWebImageOptionsProcessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageOptionsProcessor.m; path = SDWebImage/Core/SDWebImageOptionsProcessor.m; sourceTree = "<group>"; };
@@ -1244,10 +1240,10 @@
 				3B4856118C04323AF130C6E55E251CBA /* EDCycleScrollView.m */,
 				05621787BA2B0BE2ACF9DADA84CAD28F /* EasyderManager.h */,
 				8D01949034CA8798A3044CECE774D165 /* EasyderManager.m */,
-				69C24908151A2060D4DA7AA3E70B9328 /* EDTools.h */,
-				AA4BFF67A0821E13B7A0AA305443EA96 /* EDTools.m */,
-				F911278373883FB83D737BA12B1DB0C7 /* HGBaseAlertView.h */,
-				0481512AC4C3937DBE046CDBC00D4D05 /* HGBaseAlertView.m */,
+				69C24908151A2060D4DA7AA3E70B9328 /* EDUtils.h */,
+				AA4BFF67A0821E13B7A0AA305443EA96 /* EDUtils.m */,
+				F911278373883FB83D737BA12B1DB0C7 /* EDBaseAlertView.h */,
+				0481512AC4C3937DBE046CDBC00D4D05 /* EDBaseAlertView.m */,
 				ACB44B1C2433ECC81AFF5B2A815F8580 /* NSArray+EDExtension.h */,
 				29899AD6AA9153403E2CE871D766A297 /* NSArray+EDExtension.m */,
 				783CEB8B20E7884EEEA1BD34EAD8FDA4 /* NSDate+Extension.h */,
@@ -1272,8 +1268,6 @@
 				229421F62A3C5320AC8C85A0C616FBFA /* UIView+EDExtension.m */,
 				A743D60454C45BFFD2F261B53B9C5EAC /* UIView+EDLayout.h */,
 				BE47726AC124E19162AA7A7794A4589E /* UIView+EDLayout.m */,
-				10B2283355212039F4F5DE5E6075283E /* UIView+LSCore.h */,
-				7BB593EAEF012A2465027D4457F489FB /* UIView+LSCore.m */,
 				6E19F3AA7905C6DAF967239776C00A3F /* Pod */,
 				2230FFC618A6EAAEF8F774DBBFE4AE8C /* Support Files */,
 			);
@@ -1454,8 +1448,8 @@
 				3471FD21BF6D06094B3FC4FE577A2F0F /* EDBaseWebViewController.h in Headers */,
 				575DDDD3E79719AA841E7A951D00885E /* EDCycleScrollView.h in Headers */,
 				CF156A5D1ED5748400A2F65DED5E58F3 /* EasyderManager.h in Headers */,
-				120F2DC16102E13C00247DBEF0CAED26 /* EDTools.h in Headers */,
-				B8615EEAE74E6AA3C972EF638F47D022 /* HGBaseAlertView.h in Headers */,
+				120F2DC16102E13C00247DBEF0CAED26 /* EDUtils.h in Headers */,
+				B8615EEAE74E6AA3C972EF638F47D022 /* EDBaseAlertView.h in Headers */,
 				1D8AD6B4E653E0117E6D02858AC498BA /* NSArray+EDExtension.h in Headers */,
 				68974C073C86596DC0C20CFA2A473E0B /* NSDate+Extension.h in Headers */,
 				4F160E16415B7B0366392CF7F7A903B8 /* NSDictionary+EDExtension.h in Headers */,
@@ -1468,7 +1462,6 @@
 				49C6DE7BAC213C3D43921A28B885FA30 /* UITextView+Placeholder.h in Headers */,
 				09056056383CC0D9E168C468062D0F2B /* UIView+EDExtension.h in Headers */,
 				AAADEB91105A3A0DC76546B163F666EB /* UIView+EDLayout.h in Headers */,
-				3E0D6FF7ED11DC3074014CD3817E2AA1 /* UIView+LSCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1722,8 +1715,8 @@
 				78B87F372A40D79CEAEA7E8E1D0F1872 /* EDBaseWebViewController.m in Sources */,
 				488A4B764099B7FD540C9AB3B692EA01 /* EDCycleScrollView.m in Sources */,
 				C8B63C0EBDF39B1B68747E495DACEFC4 /* EasyderManager.m in Sources */,
-				05E20438577E890D13ADB46E5DA2E4D9 /* EDTools.m in Sources */,
-				02C15835292F65D57B6C7B8B0C5FBCBE /* HGBaseAlertView.m in Sources */,
+				05E20438577E890D13ADB46E5DA2E4D9 /* EDUtils.m in Sources */,
+				02C15835292F65D57B6C7B8B0C5FBCBE /* EDBaseAlertView.m in Sources */,
 				C9A94F905040EEAC8C4D81542A65A117 /* NSArray+EDExtension.m in Sources */,
 				5ABF65CC943EF1BE7303B8EA9ABA6B17 /* NSDate+Extension.m in Sources */,
 				E39BC40FE174CE6574F3C3E84AD74258 /* NSDictionary+EDExtension.m in Sources */,
@@ -1736,7 +1729,6 @@
 				714CA9B4DC08E949ED2EC20005F740D5 /* UITextView+Placeholder.m in Sources */,
 				030169D2EF5BA83A7A0647B82D7A71A6 /* UIView+EDExtension.m in Sources */,
 				D35AA752BC95E916DB8E07E714923FC5 /* UIView+EDLayout.m in Sources */,
-				8B74E48E4D1464460572073C94D48230 /* UIView+LSCore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

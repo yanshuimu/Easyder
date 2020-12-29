@@ -7,6 +7,7 @@
 //
 
 #import <EasyderManager.h>
+#import <EDUtils.h>
 
 #ifndef EDBaseMacroDefine_h
 #define EDBaseMacroDefine_h
@@ -246,7 +247,7 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 
 #define EDColorA(r, g, b, a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
-#define EDColor(string)  [UIColor whiteColor]
+#define EDHexColor(string)  [EDUtils colorWithHexString:string alpha:1.0]
 
 //随机颜色
 #define EDRandomColor EDColorRGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
@@ -261,21 +262,21 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 #define EDClearColor [UIColor clearColor]
 
 //背景色
-#define EDDefaultBackgroudColor EDColor(@"#F5F5F5")
+#define EDDefaultBackgroudColor EDHexColor(@"#F5F5F5")
 
 //线条颜色
-#define EDLineColor EDColor(@"#E6E6E6")
+#define EDLineColor EDHexColor(@"#E6E6E6")
 
 //主题颜色
 #define EDThemeColor [EDManagerSingleton themeColor]
 
 //黑色字体，默认字体颜色
-#define kFontColorBlack EDColor(@"#333333")
+#define kFontColorBlack EDHexColor(@"#333333")
 
 //浅黑字体，偏次要字体颜色
-#define EDFontColorLightBlack EDColor(@"#666666")
+#define EDFontColorLightBlack EDHexColor(@"#666666")
 
 //浅灰字体，次要字体颜色，如备注、日期等
-#define EDFontColorLightGray EDColor(@"#999999")
+#define EDFontColorLightGray EDHexColor(@"#999999")
 
 #endif /* EDBaseDefine_h */

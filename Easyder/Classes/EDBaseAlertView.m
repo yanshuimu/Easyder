@@ -1,22 +1,22 @@
 //
-//  HGBaseAlertView.m
+//  EDBaseAlertView.m
 //  CraneMachine
 //
 //  Created by mac on 2017/11/9.
 //  Copyright © 2017年 itdlc. All rights reserved.
 //
 
-#import "HGBaseAlertView.h"
+#import "EDBaseAlertView.h"
 #import <EDBaseMacroDefine.h>
 
-@interface HGBaseAlertView ()
+@interface EDBaseAlertView ()
 //
 @property (nonatomic, strong) UIWindow *alertWindow;
 //
 @property (nonatomic, strong) UIButton *hiddenButton;
 @end
 
-@implementation HGBaseAlertView
+@implementation EDBaseAlertView
 
 - (void)show
 {
