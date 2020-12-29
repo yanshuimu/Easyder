@@ -8,7 +8,7 @@
 
 #import "UICollectionView+EDExtension.h"
 
-@implementation UICollectionView (EDExtension)
+@implementation UICollectionView (EDUtils)
 
 - (void)registerForCellWithClass:(Class)clazz
 {

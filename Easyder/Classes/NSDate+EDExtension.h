@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (Extension)
+@interface NSDate (EDUtils)
 
 /**
  *  获取当前时间戳

@@ -8,7 +8,7 @@
 
 #import "UIAlertController+EDExtension.h"
 
-@implementation UIAlertController (EDExtension)
+@implementation UIAlertController (EDUtils)
 
 + (UIAlertController*)alertControllerWithTitle:(NSString*)title
                                        message:(nullable NSString*)message

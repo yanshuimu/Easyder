@@ -8,7 +8,7 @@
 
 #import "UITextView+EDExtension.h"
 
-@implementation UITextView (Placeholder)
+@implementation UITextView (EDUtils)
 
 -(void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor
 {

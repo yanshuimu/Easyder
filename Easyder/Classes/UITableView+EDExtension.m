@@ -8,7 +8,7 @@
 
 #import "UITableView+EDExtension.h"
 
-@implementation UITableView (EDExtension)
+@implementation UITableView (EDUtils)
 
 - (void)registerForCellWithClass:(Class)clazz {
     

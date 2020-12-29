@@ -15,6 +15,7 @@
 #import <UIAlertController+EDExtension.h>
 #import <UITextField+EDExtension.h>
 #import <UITextView+EDExtension.h>
+#import <UIScrollView+EDExtension.h>
 
 #import <EDBaseView.h>
 #import <EDBaseTableCell.h>

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITableView (EDExtension)
+@interface UITableView (EDUtils)
 
 - (void)registerForCellWithClass:(Class)clazz;
 

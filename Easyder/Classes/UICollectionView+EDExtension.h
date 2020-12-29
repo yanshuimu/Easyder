@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UICollectionView (EDExtension)
+@interface UICollectionView (EDUtils)
 
 - (void)registerForCellWithClass:(Class)clazz;
 

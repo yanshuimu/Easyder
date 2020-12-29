@@ -9,7 +9,7 @@
 #import "NSArray+EDExtension.h"
 #import <NSString+EDExtension.h>
 
-@implementation NSArray (EDExtension)
+@implementation NSArray (EDUtils)
 
 - (NSArray*)allValuesWithKey:(NSString*)key {
     

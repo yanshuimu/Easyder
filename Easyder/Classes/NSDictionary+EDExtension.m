@@ -8,7 +8,7 @@
 
 #import "NSDictionary+EDExtension.h"
 
-@implementation NSDictionary (EDExtension)
+@implementation NSDictionary (EDUtils)
 
 - (NSDictionary*)replaceNullValueWithWhiteString
 {

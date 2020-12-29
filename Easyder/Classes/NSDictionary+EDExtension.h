@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSDictionary (EDExtension)
+@interface NSDictionary (EDUtils)
 
 - (NSDictionary*)replaceNullValueWithWhiteString;
 

@@ -8,7 +8,7 @@
 
 #import "UITextField+EDExtension.h"
 
-@implementation UITextField (EDExtension)
+@implementation UITextField (EDUtils)
 
 - (void)setPlaceholder:(NSString*)placeholder color:(UIColor*)color
 {

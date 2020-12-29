@@ -10,7 +10,7 @@
 
 #pragma mark - 占位符
 
-@interface UITextView (Placeholder)
+@interface UITextView (EDUtils)
 
 - (void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor;
 

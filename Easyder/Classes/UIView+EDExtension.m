@@ -169,6 +169,60 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #define kDefaultShowTime 1.5
 
 #pragma mark - Loading
@@ -292,9 +346,69 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #pragma mark - 其他
 
-@implementation UIView (Utils)
+@implementation UIView (EDUtils)
 
 - (UIViewController*)viewController{
     for (UIView* next = [self superview]; next; next = next.superview) {

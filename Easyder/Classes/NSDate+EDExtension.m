@@ -6,9 +6,9 @@
 //  Copyright © 2017年 DLC. All rights reserved.
 //
 
-#import "NSDate+Extension.h"
+#import "NSDate+EDExtension.h"
 
-@implementation NSDate (Extension)
+@implementation NSDate (EDUtils)
 
 + (NSString*)getCurrentTimestamp
 {

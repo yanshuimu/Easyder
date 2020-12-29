@@ -96,7 +96,7 @@ CGFloat CGHeightAutoMake(CGFloat height);
 
 #pragma mark - 其他
 
-@interface UIView (Utils)
+@interface UIView (EDUtils)
 
 /**
  * 获取该视图的控制器

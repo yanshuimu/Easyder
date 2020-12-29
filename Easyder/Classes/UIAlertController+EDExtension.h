@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^alertControllerBlock)(void);
 
-@interface UIAlertController (EDExtension)
+@interface UIAlertController (EDUtils)
 
 + (UIAlertController*)alertControllerWithTitle:(NSString*)title
                                        message:(nullable NSString*)message
