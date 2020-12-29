@@ -20,4 +20,75 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UITextField (EDCreate)
+
+/**
+ * font
+ */
++ (instancetype)textFieldWithFont:(UIFont*)font;
+
+/**
+ * font、placeholder
+ */
++ (instancetype)textFieldWithFont:(UIFont*)font placeholder:(NSString*)placeholder;
+
++ (instancetype)textFieldWithFrame:(CGRect)frame font:(UIFont*)font;
+
+/**
+ * frame、font、placeholder
+ */
++ (instancetype)textFieldWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder;
+
+@end
+
 NS_ASSUME_NONNULL_END

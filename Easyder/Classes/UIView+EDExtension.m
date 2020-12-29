@@ -6,7 +6,10 @@
 //
 
 #import "UIView+EDExtension.h"
+#import <SDWebImage/SDWebImage.h>
 #import <EDBaseMacroDefine.h>
+#import <EDBaseModel.h>
+#import <UIImage+EDExtension.h>
 
 @implementation UIView (EDLayout)
 
@@ -219,10 +222,6 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 
 
-
-
-
-
 #define kDefaultShowTime 1.5
 
 #pragma mark - Loading
@@ -305,6 +304,57 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - 设置圆角
 
@@ -437,6 +487,480 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 - (CGSize)getAutoFitSize {
     [self sizeToFit];
     return self.frame.size;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@implementation UIView (EDOptimize)
+
+@end
+
+#pragma mark - UILabel
+
+@implementation UILabel (EDOptimize)
+
+- (void)optimize_setBlendedLayersWithBackgroundColor:(UIColor*)backgroundColor  {
+    
+    self.backgroundColor = backgroundColor;
+    self.layer.masksToBounds = YES;
+}
+
+@end
+
+#pragma mark - UIImageView
+
+@implementation UIImageView (EDOptimize)
+
++ (void)optimize_setImageWithURL:(NSString*)url radius:(CGFloat)radius imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    [self optimize_setImageWithURL:url placeholder:[UIImage imageNamed:DEFAULT_IMAGE_SQUARE] corners:UIRectCornerAllCorners radius:radius cornersColor:[UIColor whiteColor] imageDownloader:imageDownloader imageShowView:imageShowView model:model];
+}
+
++ (void)optimize_setImageWithURL:(NSString*)url placeholder:(UIImage*)placeholder radius:(CGFloat)radius imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    [self optimize_setImageWithURL:url placeholder:placeholder corners:UIRectCornerAllCorners radius:radius cornersColor:[UIColor whiteColor] imageDownloader:imageDownloader imageShowView:imageShowView model:model];
+}
+
++ (void)optimize_setImageWithURL:(NSString*)url radius:(CGFloat)radius cornersColor:(UIColor*)cornersColor imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    [self optimize_setImageWithURL:url placeholder:[UIImage imageNamed:DEFAULT_IMAGE_SQUARE] corners:UIRectCornerAllCorners radius:radius cornersColor:cornersColor imageDownloader:imageDownloader imageShowView:imageShowView model:model];
+}
+
++ (void)optimize_setImageWithURL:(NSString*)url corners:(UIRectCorner)corners radius:(CGFloat)radius imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    [self optimize_setImageWithURL:url placeholder:[UIImage imageNamed:DEFAULT_IMAGE_SQUARE] corners:corners radius:radius cornersColor:[UIColor whiteColor] imageDownloader:imageDownloader imageShowView:imageShowView model:model];
+}
+
++ (void)optimize_setImageWithURL:(NSString*)url corners:(UIRectCorner)corners radius:(CGFloat)radius cornersColor:(UIColor*)cornersColor imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    [self optimize_setImageWithURL:url placeholder:[UIImage imageNamed:DEFAULT_IMAGE_SQUARE] corners:corners radius:radius cornersColor:cornersColor imageDownloader:imageDownloader imageShowView:imageShowView model:model];
+}
+
++ (void)optimize_setImageWithURL:(NSString*)url placeholder:(UIImage*)placeholder corners:(UIRectCorner)corners radius:(CGFloat)radius cornersColor:(UIColor*)cornersColor imageDownloader:(UIImageView*)imageDownloader imageShowView:(UIImageView*)imageShowView model:(EDBaseModel*)model {
+    
+    if (EDStringIsEmpty(url)) {
+        
+        imageShowView.image = placeholder;
+        return;
+    }
+    
+    if (model.clipedImage) {
+        
+        imageShowView.image = model.clipedImage;
+    }
+    else {
+        
+        //imageShowView.image = placeholder;
+        
+        [imageDownloader optimize_setImageWithURL:url targetSize:imageShowView.size parentColor:cornersColor radius:radius complete:^(UIImage * _Nonnull sourceImage, UIImage * _Nonnull clipedImage, NSError * _Nullable error) {
+            
+            if (error) {
+                
+                imageShowView.image = placeholder;
+            }
+            else if (clipedImage) {
+                
+                model.clipedImage = clipedImage;
+                imageShowView.image = model.clipedImage;
+            }
+        }];
+    }
+}
+
+- (void)optimize_setBackgoundColor:(UIColor*)backgroundColor parentColor:(UIColor*)parentColor corners:(UIRectCorner)corners radius:(CGFloat)radius  {
+    
+    //生成背景图片
+    CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
+        
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        CGRect rect = CGRectMake(0.0f, 0.0f, width, height);
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, [backgroundColor CGColor]);
+        CGContextFillRect(context, rect);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        UIImage *circleImage = [image redrawWithRoundedCorners:corners
+                                                        radius:radius
+                                               backgroundColor:parentColor];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = circleImage;
+        });
+    });
+}
+
+- (void)optimize_setRedrawAlphaImage:(UIImage*)image parentColor:(UIColor*)parentColor corners:(UIRectCorner)corners radius:(CGFloat)radius  {
+            
+    if (!image) {
+        return;
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+        UIImage *circleImage = [image redrawWithRoundedCorners:corners
+                                                        radius:radius
+                                               backgroundColor:parentColor];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = circleImage;
+        });
+    });
+}
+
+- (void)optimize_setRedrawAlphaImage:(UIImage*)image parentColor:(UIColor*)parentColor {
+         
+    if (!image) {
+        return;
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+        UIImage *circleImage = [image redrawWithBackgroundColor:parentColor];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = circleImage;
+        });
+    });
+}
+
+- (void)optimize_setRedrawImage:(UIImage*)image parentColor:(UIColor*)parentColor corners:(UIRectCorner)corners radius:(CGFloat)radius {
+        
+    if (!image) {
+        return;
+    }
+    
+    CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        CGFloat actualRadius = 0.0;
+        
+        if (image.size.width > image.size.height) {
+            
+            actualRadius = radius * image.size.height/height;
+        }
+        else {
+            
+            actualRadius = radius * image.size.width/width;
+        }
+        
+        UIImage *circleImage = [image imageWithRoundedSize:CGSizeMake(width, height) backgroundColor:parentColor corners:corners
+                                                    radius:actualRadius];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.image = circleImage;
+        });
+    });
+}
+
+- (void)optimize_setImageWithURL:(NSString*)url parentColor:(UIColor*)parentColor radius:(CGFloat)radius {
+    
+    EDWeakSelf
+        
+    [self sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    
+        if (image) {
+            
+            CGFloat width = self.frame.size.width;
+            CGFloat height = self.frame.size.height;
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                CGFloat actualRadius = 0.0;
+                
+                if (image.size.width > image.size.height) {
+                    
+                    actualRadius = radius * image.size.height/height;
+                }
+                else {
+                    
+                    actualRadius = radius * image.size.width/width;
+                }
+                
+                UIImage *circleImage = [image imageWithRoundedSize:CGSizeMake(width, height) backgroundColor:parentColor
+                                                           corners:UIRectCornerAllCorners radius:actualRadius];
+                                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.image = circleImage;
+                });
+            });
+        }
+    }];
+}
+
+- (void)optimize_setImageWithURL:(NSString*)url targetSize:(CGSize)targetSize parentColor:(UIColor*)parentColor  corners:(UIRectCorner)corners radius:(CGFloat)radius complete:(OptimizeCompletionBlock)complete {
+    
+    if (EDStringIsEmpty(url)) {
+        return;
+    }
+            
+    [self sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    
+        if (image) {
+            
+            CGFloat width = targetSize.width;
+            CGFloat height = targetSize.height;
+            
+            if (height == MAXFLOAT) {
+                height = image.size.height * width/image.size.width;
+            }
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                CGFloat actualRadius = 0.0;
+                
+                if (image.size.width > image.size.height) {
+                    
+                    actualRadius = radius * image.size.height/height;
+                }
+                else {
+                    
+                    actualRadius = radius * image.size.width/width;
+                }
+                
+                UIImage *circleImage = [image imageWithRoundedSize:CGSizeMake(width, height)
+                                                   backgroundColor:parentColor
+                                                           corners:corners radius:actualRadius];
+                                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (complete) complete(image ,circleImage, error);
+                });
+            });
+        }
+        else {
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (complete) complete(image, nil, error);
+            });
+        }
+    }];
+}
+
+- (void)optimize_setImageWithURL:(NSString*)url targetSize:(CGSize)targetSize parentColor:(UIColor*)parentColor radius:(CGFloat)radius complete:(OptimizeCompletionBlock)complete {
+    
+    [self optimize_setImageWithURL:url targetSize:targetSize parentColor:parentColor corners:UIRectCornerAllCorners radius:radius complete:complete];
+}
+
+- (void)optimize_setImageWithURL:(NSString*)url placeholderImage:(UIImage*)image parentColor:(UIColor*)parentColor radius:(CGFloat)radius {
+    
+    EDWeakSelf
+    
+    [self sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:image completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    
+        if (image) {
+            
+            CGFloat width = weakSelf.frame.size.width;
+            CGFloat height = weakSelf.frame.size.height;
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                CGFloat actualRadius = 0.0;
+                
+                if (image.size.width > image.size.height) {
+                    
+                    actualRadius = radius * image.size.height/height;
+                }
+                else {
+                    
+                    actualRadius = radius * image.size.width/width;
+                }
+            
+                UIImage *circleImage = [image imageWithRoundedSize:CGSizeMake(width, height)
+                                                   backgroundColor:parentColor
+                                                           corners:UIRectCornerAllCorners radius:actualRadius];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.image = circleImage;
+                });
+            });
+        }
+    }];
+}
+
+- (void)optimize_setBorderRoundedImageWithURL:(NSString*)url parentColor:(UIColor*)parentColor borderColor:(UIColor*)borderColor borderWidth:(CGFloat)borderWidth {
+    
+    EDWeakSelf
+    
+    [self sd_setImageWithURL:[NSURL URLWithString:url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+    
+        if (image) {
+            
+            CGFloat width = weakSelf.frame.size.width;
+            CGFloat height = weakSelf.frame.size.height;
+            CGFloat radius = height/2;
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                CGFloat actualRadius = 0.0;
+                
+                if (image.size.width > image.size.height) {
+                    
+                    actualRadius = radius * image.size.height/height;
+                }
+                else {
+                    
+                    actualRadius = radius * image.size.width/width;
+                }
+            
+                UIImage *circleImage = [image imageWithRoundedSize:CGSizeMake(width, height)
+                                                   backgroundColor:parentColor
+                                                           corners:UIRectCornerAllCorners radius:actualRadius];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    weakSelf.image = circleImage;
+                });
+            });
+        }
+    }];
+}
+
+- (CAShapeLayer*)optimize_roundedBorderWithRadius:(CGFloat)radius borderColor:(UIColor*)borderColor borderWidth:(CGFloat)borderWidth {
+            
+    //边框
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(radius, radius) radius:radius - 20 startAngle:0 endAngle:M_PI * 2 clockwise:YES];
+    path.lineWidth = borderWidth;
+    
+    CAShapeLayer *shapeLayer = [CAShapeLayer layer];
+    shapeLayer.path = path.CGPath;
+    shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    shapeLayer.strokeColor = borderColor.CGColor;
+    
+    return shapeLayer;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@implementation UIView (EDCreate)
+
++ (instancetype)viewWithFrame:(CGRect)frame {
+    
+    EDBaseView *view = [[self alloc] initWithFrame:frame];
+    return view;
+}
+
++ (instancetype)viewWithBackgroundColor:(UIColor*)backgroundColor {
+    
+    EDBaseView *view = [[self alloc] init];
+    view.backgroundColor = backgroundColor;
+    return view;
+}
+
++ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor {
+    
+    EDBaseView *view = [[self alloc] initWithFrame:frame];
+    view.backgroundColor = backgroundColor;
+    
+    return view;
+}
+
++ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius {
+    
+    EDBaseView *view = [[self alloc] initWithFrame:frame];
+    view.backgroundColor = backgroundColor;
+    [view addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
+    
+    return view;
 }
 
 @end

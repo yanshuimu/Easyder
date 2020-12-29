@@ -7,6 +7,7 @@
 //
 
 #import "UITextView+EDExtension.h"
+#import <EDBaseMacroDefine.h>
 
 @implementation UITextView (EDUtils)
 
@@ -25,6 +26,89 @@
      ps: KVC键值编码，对UITextView的私有属性进行修改
      */
     [self setValue:placeHolderLabel forKey:@"_placeholderLabel"];
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@implementation UITextView (EDCreate)
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font {
+    
+    UITextView *textView = [[self alloc] initWithFrame:frame];
+    textView.font = font;
+    textView.textColor = kFontColorBlack;
+    
+    return textView;
+}
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder {
+    
+    UITextView *textView = [[self alloc] initWithFrame:frame];
+    textView.font = font;
+    textView.textColor = kFontColorBlack;
+    [textView setPlaceholder:placeholder placeholdColor:EDHexColor(@"#CCCCCC")];
+    
+    return textView;
+}
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder placeholderColor:(UIColor*)placeholderColor {
+    
+    UITextView *textView = [[self alloc] initWithFrame:frame];
+    textView.font = font;
+    textView.textColor = kFontColorBlack;
+    [textView setPlaceholder:placeholder placeholdColor:placeholderColor];
+    
+    return textView;
 }
 
 @end

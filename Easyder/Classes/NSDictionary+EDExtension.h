@@ -16,4 +16,60 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark - 防止删除崩溃
+
+@interface NSDictionary (DeleteNull)
+
++ (id)changeType:(id)myObj;
+
+@end
+
 NS_ASSUME_NONNULL_END

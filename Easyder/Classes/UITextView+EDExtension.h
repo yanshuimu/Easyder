@@ -15,3 +15,63 @@
 - (void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor;
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface UITextView (EDCreate)
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font;
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder;
+
++ (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder placeholderColor:(UIColor*)placeholderColor;
+
+@end
