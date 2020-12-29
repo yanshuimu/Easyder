@@ -10,19 +10,19 @@
 
 @implementation UICollectionView (EDExtension)
 
-- (void)registerForCellWithClass:(Class)class
+- (void)registerForCellWithClass:(Class)clazz
 {
-    [self registerClass:class forCellWithReuseIdentifier:NSStringFromClass(class.class)];
+    [self registerClass:clazz forCellWithReuseIdentifier:NSStringFromClass(clazz.class)];
 }
 
-- (void)registerForSectionHeaderWithClass:(Class)class
+- (void)registerForSectionHeaderWithClass:(Class)clazz
 {
-    [self registerClass:class forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass(class.class)];
+    [self registerClass:clazz forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass(clazz.class)];
 }
 
-- (void)registerForSectionFooterWithClass:(Class)class
+- (void)registerForSectionFooterWithClass:(Class)clazz
 {
-    [self registerClass:class forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass(class.class)];
+    [self registerClass:clazz forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:NSStringFromClass(clazz.class)];
 }
 
 @end

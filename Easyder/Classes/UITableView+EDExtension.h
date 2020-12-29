@@ -16,9 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerForNibWithClass:(Class)clazz;
 
-- (UIView*)createHeaderViewWithHeight:(CGFloat)height;
-
-- (UIView*)createFooterViewWithHeight:(CGFloat)height;
+- (void)registerForHeaderFooterClass:(Class)clazz;
 
 @end
 

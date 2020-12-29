@@ -10,29 +10,21 @@
 
 @implementation UITableView (EDExtension)
 
-- (void)registerForCellWithClass:(Class)class {
+- (void)registerForCellWithClass:(Class)clazz {
     
-    [self registerClass:class forCellReuseIdentifier:NSStringFromClass(class)];
+    [self registerClass:clazz forCellReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (void)registerForNibWithClass:(Class)class {
+- (void)registerForNibWithClass:(Class)clazz {
     
-    NSString *className = NSStringFromClass(class);
+    NSString *className = NSStringFromClass(clazz);
     UINib *nib = [UINib nibWithNibName:className bundle:nil];
     [self registerNib:nib forCellReuseIdentifier:className];
 }
 
-- (UIView*)createHeaderViewWithHeight:(CGFloat)height
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, height)];
-    self.tableHeaderView = view;
-    return view;
+- (void)registerForHeaderFooterClass:(Class)clazz {
+    
+    [self registerClass:clazz forHeaderFooterViewReuseIdentifier:NSStringFromClass(clazz)];
 }
 
-- (UIView*)createFooterViewWithHeight:(CGFloat)height
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, height)];
-    self.tableFooterView = view;
-    return view;
-}
 @end

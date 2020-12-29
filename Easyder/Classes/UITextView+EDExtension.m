@@ -6,7 +6,7 @@
 //  Copyright © 2018年 mac. All rights reserved.
 //
 
-#import "UITextView+Placeholder.h"
+#import "UITextView+EDExtension.h"
 
 @implementation UITextView (Placeholder)
 

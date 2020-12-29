@@ -19,5 +19,5 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh'
   s.dependency 'MBProgressHUD'
   s.dependency 'SDCycleScrollView'
-  
+  s.dependency 'FDFullscreenPopGesture'
 end

@@ -6,14 +6,64 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+#pragma mark - 布局
+
+/*
+自动缩放宽高
+*/
+CGSize CGSizeAutoMake(CGFloat width, CGFloat height);
+
+/*
+自动缩放宽度
+*/
+CGFloat CGWidthAutoMake(CGFloat width);
+
+/*
+自动缩放高度
+*/
+CGFloat CGHeightAutoMake(CGFloat height);
+
+@interface UIView (EDLayout)
+
+@property (assign, nonatomic) CGFloat top;
+
+@property (assign, nonatomic) CGFloat bottom;
+
+@property (assign, nonatomic) CGFloat left;
+
+@property (assign, nonatomic) CGFloat right;
+
+@property (assign, nonatomic) CGPoint origin;
+
+@property (assign, nonatomic) CGFloat centerX;
+
+@property (assign, nonatomic) CGFloat centerY;
+
+@property (assign, nonatomic) CGFloat width;
+
+@property (assign, nonatomic) CGFloat height;
+
+@property (assign, nonatomic) CGSize size;
+
+@end
 
 #pragma mark - Loading
 
 @interface UIView (Loading)
 
+- (MBProgressHUD*)showLoading;
 
+- (MBProgressHUD*)showLoadingMeg:(NSString *)meg;
+
+- (MBProgressHUD*)showLoadingMeg:(NSString *)meg time:(NSUInteger)time;
+
+- (void)hideLoading;
+
+- (void)hideLoadingAfterDelay:(NSTimeInterval)delay;
 
 @end
 
@@ -44,18 +94,29 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+#pragma mark - 其他
 
-@interface UIView (EDExtension)
+@interface UIView (Utils)
 
 /**
- * 添加线条
+ * 获取该视图的控制器
  */
-- (UIView*)addLineWithFrame:(CGRect)frame backgroundColor:(UIColor*)color;
+- (UIViewController*)viewController;
+
+/**
+ * 添加触碰事件
+ */
+- (void)addTarget:(id)target action:(SEL)action;
 
 /**
  * 移除所有子视图
  */
 - (void)removeChildViews;
+
+/**
+ * 自适应大小
+ */
+- (CGSize)getAutoFitSize;
 
 @end
 

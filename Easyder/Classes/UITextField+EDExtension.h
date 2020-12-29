@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITextField (Extension)
-
-- (void)setPlaceholderColor:(UIColor*)color;
+@interface UITextField (EDExtension)
 
 - (void)setPlaceholder:(NSString*)placeholder color:(UIColor*)color;
 

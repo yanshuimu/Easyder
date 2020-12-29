@@ -6,14 +6,9 @@
 //  Copyright © 2019 mac. All rights reserved.
 //
 
-#import "UITextField+Extension.h"
+#import "UITextField+EDExtension.h"
 
-@implementation UITextField (Extension)
-
-- (void)setPlaceholderColor:(UIColor*)color
-{
-    //[self setValue:color forKeyPath:@"_placeholderLabel.textColor"];
-}
+@implementation UITextField (EDExtension)
 
 - (void)setPlaceholder:(NSString*)placeholder color:(UIColor*)color
 {

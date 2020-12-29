@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#pragma mark - 占位符
+
 @interface UITextView (Placeholder)
 
--(void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor;
+- (void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor;
 
 @end

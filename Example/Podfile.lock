@@ -1,8 +1,10 @@
 PODS:
   - Easyder (0.1.2):
+    - FDFullscreenPopGesture
     - MBProgressHUD
     - MJRefresh
     - SDCycleScrollView
+  - FDFullscreenPopGesture (1.1)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - SDCycleScrollView (1.82):
@@ -16,6 +18,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FDFullscreenPopGesture
     - MBProgressHUD
     - MJRefresh
     - SDCycleScrollView
@@ -26,7 +29,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: 164927841a813468fc3f879e30641672f8adcda8
+  Easyder: de1594ea481fb320485070ed91830c3fb36cab6f
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf

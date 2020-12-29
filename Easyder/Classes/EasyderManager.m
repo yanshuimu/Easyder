@@ -6,6 +6,7 @@
 //
 
 #import "EasyderManager.h"
+#import <EDBaseMacroDefine.h>
 
 static EasyderManager *manager = nil;
 

@@ -10,10 +10,12 @@
 #endif
 #endif
 
+#import "EasyderManager.h"
+#import "EDBaseAlertView.h"
 #import "EDBaseCollectionCell.h"
 #import "EDBaseCollectionReusableView.h"
 #import "EDBaseCollectionViewController.h"
-#import <EDBaseMacroDefine.h>
+#import "EDBaseMacroDefine.h"
 #import "EDBaseNavigationController.h"
 #import "EDBaseTableCell.h"
 #import "EDBaseTableViewController.h"
@@ -21,23 +23,19 @@
 #import "EDBaseViewController.h"
 #import "EDBaseWebViewController.h"
 #import "EDCycleScrollView.h"
-#import "EDTool.h"
-#import "EDTools.h"
-#import "HGBaseAlertView.h"
+#import "EDUtils.h"
 #import "NSArray+EDExtension.h"
 #import "NSDate+Extension.h"
 #import "NSDictionary+EDExtension.h"
-#import "NSLog+EDExtension.h"
 #import "NSString+PinYin.h"
 #import "UIAlertController+EDExtension.h"
-#import "UICollectionView+Extension.h"
+#import "UICollectionView+EDExtension.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "UITableView+Extension.h"
+#import "UITableView+EDExtension.h"
 #import "UITextField+Extension.h"
 #import "UITextView+Placeholder.h"
 #import "UIView+EDExtension.h"
 #import "UIView+EDLayout.h"
-#import "UIView+LSCore.h"
 
 FOUNDATION_EXPORT double EasyderVersionNumber;
 FOUNDATION_EXPORT const unsigned char EasyderVersionString[];
