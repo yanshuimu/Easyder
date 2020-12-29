@@ -215,7 +215,7 @@
 		B3839FB73D0552EA2E2B90269560E998 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDD188034BFF7CF3C1F758B3E7EFA0A /* UIView+SDExtension.m */; };
 		B57C7EE93A167C14181AB93C03B4DBE7 /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5D59BF1D8098067159812F64F1EE11 /* MJRefreshGifHeader.m */; };
 		B5801E67B261BCD684AF9909EFADDF7E /* UIColor+SDHexString.h in Headers */ = {isa = PBXBuildFile; fileRef = C16303F4C56F2BDB781B78162CF4D30A /* UIColor+SDHexString.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B65BE6A28675A2DF907514A250858B7C /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5112A2DD1132FF1E677774BB8C84D8ED /* NSString+PinYin.m */; };
+		B65BE6A28675A2DF907514A250858B7C /* NSString+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5112A2DD1132FF1E677774BB8C84D8ED /* NSString+EDExtension.m */; };
 		B6797E1FC00DB954D32F49E83146E6C7 /* SDImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A972056801C4B90CB49469933A0BC1 /* SDImageCoder.m */; };
 		B758D1AF8AF79888BB01FC4A27997328 /* MJRefreshConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 404DB8A1E98126DB506DE17C445FB7B1 /* MJRefreshConfig.m */; };
 		B849C7133DB0CE202121834C0D63DB90 /* SDWebImageCacheKeyFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C1E58F166EB7C74A2066EBE971B924F /* SDWebImageCacheKeyFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -250,7 +250,7 @@
 		D576358E4D059773701EE0CE0D7E01A3 /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2CC50EE93DD4AD9EA46AD1439F2E0 /* MJRefreshBackNormalFooter.m */; };
 		D5DA1FDC5201319A2701DAF6EB8B238D /* EasyderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 274FD0FF9D9F1216957CF0E271C024DC /* EasyderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6CCD62112F0C7DEBCBD13741B4D4ADF /* SDImageAPNGCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DB7F4B3D39F9EEFDA6911624350050 /* SDImageAPNGCoder.m */; };
-		D6D0EB95045E395E3F4C667FB2F64187 /* NSString+PinYin.h in Headers */ = {isa = PBXBuildFile; fileRef = 572F458C3471542F911F8C013B5A9C14 /* NSString+PinYin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6D0EB95045E395E3F4C667FB2F64187 /* NSString+EDExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 572F458C3471542F911F8C013B5A9C14 /* NSString+EDExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D6E4F9C4D582DF1259948F0F898CA48D /* MJRefreshAutoNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DBAE04EB026F608072BC32CA2A6580B /* MJRefreshAutoNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D839E688D7D5B1EB1C3D4ED45C1BA372 /* NSImage+Compatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE3F7678330A059740AB884F483FEDE /* NSImage+Compatibility.m */; };
 		D83E9714DD6520DC5409CB6398DCAEC9 /* MJRefreshConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F2BF5A30942972243173DAAD3E53F52 /* MJRefreshConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -500,7 +500,7 @@
 		5073EB72192F5ACAF1B03736BF1175B2 /* SDImageCachesManagerOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManagerOperation.h; path = SDWebImage/Private/SDImageCachesManagerOperation.h; sourceTree = "<group>"; };
 		509772AFB1293043C2E7B1FABE3FC52F /* SDAsyncBlockOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAsyncBlockOperation.m; path = SDWebImage/Private/SDAsyncBlockOperation.m; sourceTree = "<group>"; };
 		50C6F05CAF3F91069C59370C558815D9 /* MJRefreshTrailer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshTrailer.h; path = MJRefresh/Base/MJRefreshTrailer.h; sourceTree = "<group>"; };
-		5112A2DD1132FF1E677774BB8C84D8ED /* NSString+PinYin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PinYin.m"; path = "Easyder/Classes/NSString+PinYin.m"; sourceTree = "<group>"; };
+		5112A2DD1132FF1E677774BB8C84D8ED /* NSString+EDExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+EDExtension.m"; path = "Easyder/Classes/NSString+EDExtension.m"; sourceTree = "<group>"; };
 		516DA7233871C15E9D1789A0B40862EA /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloaderOperation.m; path = SDWebImage/Core/SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
 		51B7B54E227F4C9E9B076695D5D5B6BC /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
 		52577A04ED19B904ACECD2D6275FC4D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -510,7 +510,7 @@
 		5670B7067F9B05552DC630F1EB3012BE /* FDFullscreenPopGesture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FDFullscreenPopGesture.debug.xcconfig; sourceTree = "<group>"; };
 		56B18E8869D2A746BB52DDAD52AF366C /* TAPageControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TAPageControl.m; path = SDCycleScrollView/Lib/SDCycleScrollView/PageControl/TAPageControl.m; sourceTree = "<group>"; };
 		56F8F27DDCDF27493C85F1D4E442CFE9 /* FDFullscreenPopGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDFullscreenPopGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		572F458C3471542F911F8C013B5A9C14 /* NSString+PinYin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PinYin.h"; path = "Easyder/Classes/NSString+PinYin.h"; sourceTree = "<group>"; };
+		572F458C3471542F911F8C013B5A9C14 /* NSString+EDExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+EDExtension.h"; path = "Easyder/Classes/NSString+EDExtension.h"; sourceTree = "<group>"; };
 		57D9DB660F0FD133E3501ABEF020EF6A /* SDCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDCycleScrollView.release.xcconfig; sourceTree = "<group>"; };
 		586D037CFA7D6F97D3851420684F5BF6 /* EDBaseCollectionReusableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EDBaseCollectionReusableView.h; path = Easyder/Classes/EDBaseCollectionReusableView.h; sourceTree = "<group>"; };
 		58CDA9DDE1B0676D7A12322CFDB29F80 /* SDImageAssetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAssetManager.h; path = SDWebImage/Private/SDImageAssetManager.h; sourceTree = "<group>"; };
@@ -1240,8 +1240,8 @@
 				C58BAF82D267E32A6C7041EB9ED0A762 /* NSDate+Extension.m */,
 				779BAAEDDB537A0BC878DF3955DD3F2F /* NSDictionary+EDExtension.h */,
 				0A7CFB63DE7E47CB26928C26C28E635F /* NSDictionary+EDExtension.m */,
-				572F458C3471542F911F8C013B5A9C14 /* NSString+PinYin.h */,
-				5112A2DD1132FF1E677774BB8C84D8ED /* NSString+PinYin.m */,
+				572F458C3471542F911F8C013B5A9C14 /* NSString+EDExtension.h */,
+				5112A2DD1132FF1E677774BB8C84D8ED /* NSString+EDExtension.m */,
 				DDDDDF4B41D49094125892372486BEAB /* UIAlertController+EDExtension.h */,
 				7FBE9B7EC508099F8CE039E47BF81685 /* UIAlertController+EDExtension.m */,
 				BB1E36388954C7A5016DCDFCF4F10104 /* UICollectionView+EDExtension.h */,
@@ -1363,7 +1363,7 @@
 				6A2040CDFABFB5E8CFC9AD777D2A2705 /* NSDate+Extension.h in Headers */,
 				04CF390B259B0B3900430BB0 /* EDBaseTableHeaderFooterView.h in Headers */,
 				DCCDF3213F13AAFE8836740EF8BE8B28 /* NSDictionary+EDExtension.h in Headers */,
-				D6D0EB95045E395E3F4C667FB2F64187 /* NSString+PinYin.h in Headers */,
+				D6D0EB95045E395E3F4C667FB2F64187 /* NSString+EDExtension.h in Headers */,
 				D971B0C427A544CA5FA67FD3F1F153AC /* UIAlertController+EDExtension.h in Headers */,
 				F314F1D9B667DC3ABF3E4BA7A4EA9FDB /* UICollectionView+EDExtension.h in Headers */,
 				182878B537914770F244408A7445CFC4 /* UITableView+EDExtension.h in Headers */,
@@ -1953,7 +1953,7 @@
 				4A8E99458C1BF109B36DCD908AE42CE1 /* NSArray+EDExtension.m in Sources */,
 				5AF3192635C3535911549A138877A56E /* NSDate+Extension.m in Sources */,
 				4AF0FA7B5436A49B689B7F7677F77218 /* NSDictionary+EDExtension.m in Sources */,
-				B65BE6A28675A2DF907514A250858B7C /* NSString+PinYin.m in Sources */,
+				B65BE6A28675A2DF907514A250858B7C /* NSString+EDExtension.m in Sources */,
 				47DDDDA75AA6579E2A8644C5B8962F03 /* UIAlertController+EDExtension.m in Sources */,
 				24B42F2D8351CECB8802080CF6EE145B /* UICollectionView+EDExtension.m in Sources */,
 				4F326BE92D014715F081486F9FA93EB3 /* UITableView+EDExtension.m in Sources */,
