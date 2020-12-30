@@ -122,7 +122,7 @@ typedef NS_ENUM(NSInteger, TimeAccuracy) {
 //view 按比例缩放
 +(void)viewTransform:(UIView*)view proportion:(float)p;
 
-+ (void) shakeToShow:(UIView*)aView Block:(void(^)())block;
++ (void) shakeToShow:(UIView*)aView Block:(void(^)(void))block;
 
 + (void)changeSpaceForLabel:(UILabel *)label withLineSpace:(float)lineSpace WordSpace:(float)wordSpace Alignment:(NSTextAlignment)alignment;
 

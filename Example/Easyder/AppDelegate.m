@@ -47,6 +47,7 @@
     //配置EDBaseAlertView属性
     [manager makeAlertViewConfiguration:^(EDConfiguration * _Nullable configuration) {
         configuration.backgroundColorAlpha = 0.7;
+        configuration.alertViewClickMaskOnTheHidden = YES;
     }];
 }
 
