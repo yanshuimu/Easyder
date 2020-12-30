@@ -38,4 +38,14 @@ static EasyderManager *manager = nil;
     }
 }
 
+- (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock {
+    
+    _alertViewConfiguration = [[EDConfiguration alloc] init];
+    _alertViewConfiguration.alertViewAnimated = YES;
+    
+    if (configurationBlock) {
+        configurationBlock(_alertViewConfiguration);
+    }
+}
+
 @end

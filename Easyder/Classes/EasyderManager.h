@@ -24,8 +24,12 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 @property (nonatomic, strong) UIColor *themeColor;
 //
 @property (nonatomic, strong) EDConfiguration *navigationConfiguration;
+//
+@property (nonatomic, strong) EDConfiguration *alertViewConfiguration;
 
 - (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;
+
+- (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock;
 
 @end
 

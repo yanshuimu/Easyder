@@ -7,13 +7,27 @@
 //
 
 #import "EDBaseAlertView.h"
+#import <objc/runtime.h>
 #import <EDBaseMacroDefine.h>
+#import <UIView+EDExtension.h>
 
 @interface EDBaseAlertView ()
 //
 @property (nonatomic, strong) UIWindow *alertWindow;
 //
-@property (nonatomic, strong) UIButton *hiddenButton;
+@property (nonatomic, strong) UIView *maskView;
+//
+@property (nonatomic, strong) UIButton *hiddenBtn;
+//
+@property (nonatomic, strong) UIView *backView;
+//容器
+@property (nonatomic, strong) UIView *container;
+//内容位置
+@property (nonatomic, assign) CGFloat contentOffsetY;
+//
+@property (nonatomic, assign) CGFloat backgroundColorAlpha;
+//
+@property (nonatomic, assign) CGFloat animationDuration;
 @end
 
 @implementation EDBaseAlertView
@@ -27,38 +41,76 @@
 }
 
 - (void)initialize {
+        
+    [self configuration];
+
     [self setupSubviews];
 }
 
 - (void)setupSubviews {
-    //子类实现
+    //子类重写
+}
+
+- (void)configuration {
+    
+    EDConfiguration *configuration = EDManagerSingleton.alertViewConfiguration;
+    
+    _contentOffsetY = -1;
+    _contentVerticalAlignment = EDAlertViewContentVerticalAlignmentCenter;
+    _animationDuration = 0.4;
+    _backgroundColorAlpha = configuration.backgroundColorAlpha > 0 ? configuration.backgroundColorAlpha : EDDefaultBackgroundAlpha;
+    _animated = configuration.alertViewAnimated;
+    _clickMaskOnTheHidden = configuration.alertViewClickMaskOnTheHidden;
 }
 
 - (void)show
 {
-    //隐藏状态
     if (self.hidden)
     {
-        _hiddenButton.hidden = NO;
+        _maskView.hidden = NO;
         self.hidden = NO;
     }
     else
     {
         UIView *superView = [UIApplication sharedApplication].delegate.window.rootViewController.view;
         
-        _hiddenButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _hiddenButton.alpha = 1.0;
-        _hiddenButton.frame = CGRectMake(0, 0, SCREEN_W, SCREEN_H);
-        _hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:EDDefaultBackgroundAlpha];
-        //[_hiddenButton addTarget:self action:@selector(hiddenBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _hiddenButton.userInteractionEnabled = YES;
-        [superView addSubview:_hiddenButton];
-        
+        _maskView = [[UIView alloc] initWithFrame:self.bounds];
+        _maskView.backgroundColor = EDColorA(0, 0, 0, _backgroundColorAlpha);
+        [superView addSubview:_maskView];
         [superView addSubview:self];
         
-        [UIView animateWithDuration:0.0 animations:^{
-            //_hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:kDefaultBackgroundAlpha];
-        }];
+        _container = [[UIView alloc] initWithFrame:self.bounds];
+        _container.alpha = 0.0;
+        [self insertSubview:_container atIndex:0];
+        
+        _hiddenBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _hiddenBtn.frame = _container.bounds;
+        [_container insertSubview:_hiddenBtn atIndex:0];
+        
+        [self transferSubviewsToContainer];
+        
+        [self resetContainerFrame];
+        
+        [self calcContentOffsetY];
+        
+        if (_animated) {
+            
+            EDWeakSelf
+            [UIView animateWithDuration:_animationDuration animations:^{
+                
+                weakSelf.container.top = self.contentOffsetY;
+                weakSelf.container.alpha = 1.0;
+            }];
+        }
+        else {
+            
+            _container.top = self.contentOffsetY;
+            _container.alpha = 1.0;
+        }
+        
+        if (_clickMaskOnTheHidden) {
+            [_hiddenBtn addTarget:self action:@selector(hiddenBtnClick) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
 }
 
@@ -66,27 +118,23 @@
 {
     UIView *superView = [UIApplication sharedApplication].delegate.window.rootViewController.view;
     
-    _hiddenButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _hiddenButton.alpha = 0;
-    _hiddenButton.frame = CGRectMake(0, 0, SCREEN_W, SCREEN_H);
-    _hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:alpha];
-    [superView addSubview:_hiddenButton];
+    _maskView = [[UIView alloc] initWithFrame:self.bounds];
+    _maskView.backgroundColor = EDColorA(0, 0, 0, alpha);
+    [superView addSubview:_maskView];
     
     [superView addSubview:self];
     
     EDWeakSelf
     [UIView animateWithDuration:0.0 animations:^{
-        weakSelf.hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:EDDefaultBackgroundAlpha];
+        weakSelf.maskView.backgroundColor = EDColorA(0, 0, 0, weakSelf.backgroundColorAlpha);
     }];
 }
 
 - (void)showInView:(UIView *)view {
     
-    _hiddenButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _hiddenButton.alpha = 0;
-    _hiddenButton.frame = view.bounds;
-    _hiddenButton.backgroundColor = [self colorWithHexString:@"000000" alpha:EDDefaultBackgroundAlpha];
-    [view addSubview:_hiddenButton];
+    _maskView = [[UIView alloc] initWithFrame:view.bounds];
+    _maskView.backgroundColor = EDColorA(0, 0, 0, _backgroundColorAlpha);
+    [view addSubview:_maskView];
     
     self.frame = view.bounds;
     [view addSubview:self];
@@ -94,19 +142,19 @@
     EDWeakSelf
     [UIView animateWithDuration:0.0 animations:^{
         
-        weakSelf.hiddenButton.alpha = 1;
+        weakSelf.maskView.alpha = 1;
     }];
 }
 
 - (void)hidden
 {
-    _hiddenButton.hidden = YES;
+    _maskView.hidden = YES;
     self.hidden = YES;
 }
 
 - (void)hiddenWithRemove
 {
-    [_hiddenButton removeFromSuperview];
+    [_maskView removeFromSuperview];
     [self removeFromSuperview];
 }
 
@@ -117,44 +165,52 @@
     });
 }
 
-- (UIColor *)colorWithHexString:(NSString*)stringToConvert alpha:(CGFloat)alpha {
-    
-    NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
-    
-    // String should be 6 or 8 characters
-    if ([cString length] < 6) return [UIColor blackColor];
-    
-    // strip 0X if it appears
-    if ([cString hasPrefix:@"0X"]) cString = [cString substringFromIndex:2];
-    if ([cString hasPrefix:@"#"]) cString = [cString substringFromIndex:1];
-    if ([cString length] != 6) return [UIColor blackColor];
-    
-    // Separate into r, g, b substrings
-    NSRange range;
-    range.location = 0;
-    range.length = 2;
-    NSString *rString = [cString substringWithRange:range];
-    
-    range.location = 2;
-    NSString *gString = [cString substringWithRange:range];
-    
-    range.location = 4;
-    NSString *bString = [cString substringWithRange:range];
-    
-    // Scan values
-    unsigned int r, g, b;
-    [[NSScanner scannerWithString:rString] scanHexInt:&r];
-    [[NSScanner scannerWithString:gString] scanHexInt:&g];
-    [[NSScanner scannerWithString:bString] scanHexInt:&b];
-    
-    return [UIColor colorWithRed:((float) r / 255.0f)
-                           green:((float) g / 255.0f)
-                            blue:((float) b / 255.0f)
-                           alpha:alpha];
+- (void)hiddenBtnClick {
+    [self hiddenWithRemove];
 }
 
-- (void)hiddenBtnClick {
+- (void)calcContentOffsetY
+{
+    if (_contentOffsetY != -1) {
+        return;
+    }
     
+    switch (_contentVerticalAlignment) {
+        case EDAlertViewContentVerticalAlignmentTop:
+        {
+            _contentOffsetY =  0.0;
+        }
+            break;
+        case EDAlertViewContentVerticalAlignmentCenter:
+        {
+            _contentOffsetY = SCREEN_H/2 - _container.height/2;
+        }
+            break;
+        case EDAlertViewContentVerticalAlignmentBottom:
+        {
+            _contentOffsetY = SCREEN_H - _container.height - EDViewBottom_H;
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)resetContainerFrame
+{
+    CGRect frame = _container.frame;
+    frame.origin.y = SCREEN_H;
+    _container.frame = frame;
+}
+
+- (void)transferSubviewsToContainer {
+    
+    for (UIView *view in self.subviews) {
+        if (view != _container) {
+            [view removeFromSuperview];
+            [_container addSubview:view];
+        }
+    }
 }
 
 @end

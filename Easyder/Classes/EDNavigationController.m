@@ -75,13 +75,10 @@
     
     EDConfiguration *configuration = EDManagerSingleton.navigationConfiguration;
     
-    if (EDISNIL(configuration) == false) {
-        
-        _barTintColor = EDISNIL(configuration.barTintColor) ? EDThemeColor : configuration.barTintColor;
-        _titleFont = EDISNIL(configuration.barTitleFont) ? EDFont(17) : configuration.barTitleFont;
-        _titleColor = EDISNIL(configuration.barTitleColor) ? EDFontColorBlack : configuration.barTitleColor;
-        _bottomLineHidden = configuration.barBottomLineHidden;
-    }
+    _barTintColor = EDISNIL(configuration.barTintColor) ? EDThemeColor : configuration.barTintColor;
+    _titleFont = EDISNIL(configuration.barTitleFont) ? EDFont(17) : configuration.barTitleFont;
+    _titleColor = EDISNIL(configuration.barTitleColor) ? EDFontColorBlack : configuration.barTitleColor;
+    _bottomLineHidden = configuration.barBottomLineHidden;
 }
 
 //重写nav的push方法

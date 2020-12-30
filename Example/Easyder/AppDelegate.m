@@ -43,6 +43,11 @@
         configuration.barTintColor = EDHexColor(@"#303642");
         configuration.barTitleColor = EDWhiteColor;
     }];
+    
+    //配置EDBaseAlertView属性
+    [manager makeAlertViewConfiguration:^(EDConfiguration * _Nullable configuration) {
+        configuration.backgroundColorAlpha = 0.7;
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

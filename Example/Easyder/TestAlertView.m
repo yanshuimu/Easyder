@@ -26,7 +26,18 @@
     y = backView.height - height - x;
     UIButton *sureBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) title:@"确定" titleColor:EDWhiteColor font:EDAutoFont(16) backgroundColor:EDThemeColor cornerRadius:4];
     [backView addSubview:sureBtn];
-    [sureBtn addTarget:self action:@selector(hiddenWithRemove) forControlEvents:UIControlEventTouchUpInside];
+    [sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    width = height = CGWidthAutoMake(44);
+    x = backView.right - width;
+    y = backView.top - height;
+    UIButton *closeBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) imageName:@"btn_contactus_cancel"];
+    [closeBtn addTarget:self action:@selector(hiddenWithRemove) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:closeBtn];
+}
+
+- (void)sureBtnClick {
+    NSLog(@"sureBtnClick");
 }
 
 @end

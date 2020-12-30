@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 全局配置，优先级比示例属性低
 @interface EDConfiguration : NSObject
 
 #pragma mark - EDNavigationController
@@ -20,6 +21,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIFont *barTitleFont;
 //导航栏底部线条是否隐藏，默认NO
 @property (nonatomic, assign) BOOL barBottomLineHidden;
+
+#pragma mark - EDBaseAlertView
+//背景颜色透明度
+@property (nonatomic, assign) CGFloat backgroundColorAlpha;
+//是否有动画，默认NO
+@property (nonatomic, assign) BOOL alertViewAnimated;
+//点击蒙版是否隐藏，默认NO
+@property (nonatomic, assign) BOOL alertViewClickMaskOnTheHidden;
 @end
 
 NS_ASSUME_NONNULL_END
