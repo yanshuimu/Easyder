@@ -3,7 +3,7 @@
 //  CraneMachine
 //
 //  Created by mac on 2017/11/9.
-//  Copyright © 2017年 itdlc. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
 #import "EDBaseAlertView.h"
@@ -101,7 +101,7 @@
     });
 }
 
-- (UIColor *) colorWithHexString: (NSString *) stringToConvert alpha:(CGFloat)alpha{
+- (UIColor *)colorWithHexString:(NSString*)stringToConvert alpha:(CGFloat)alpha {
     
     NSString *cString = [[stringToConvert stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
     

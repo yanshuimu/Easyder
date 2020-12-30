@@ -3,7 +3,7 @@
 //  MusiciansAndMuslns
 //
 //  Created by huabing jiang on 2017/5/24.
-//  Copyright © 2017年 DLC. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
 #import "EDUtils.h"
@@ -11,6 +11,7 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import <MJRefresh/MJRefresh.h>
 #import <EDBaseMacroDefine.h>
+#import <UIView+EDExtension.h>
 
 /* Base64加密表 */
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

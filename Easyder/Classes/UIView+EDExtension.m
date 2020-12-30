@@ -10,6 +10,7 @@
 #import <EDBaseMacroDefine.h>
 #import <EDBaseModel.h>
 #import <UIImage+EDExtension.h>
+#import <EDBaseView.h>
 
 @implementation UIView (EDLayout)
 

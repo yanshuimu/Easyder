@@ -7,6 +7,7 @@
 //
 
 #import "UIImageView+EDExtension.h"
+#import <UIView+EDExtension.h>
 #import <EDBaseMacroDefine.h>
 
 @implementation UIImageView (EDCreate)

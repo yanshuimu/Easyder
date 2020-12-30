@@ -3,7 +3,7 @@
 //  MusiciansAndMuslns
 //
 //  Created by mac on 2017/5/24.
-//  Copyright © 2017年 DLC. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
 #import "EDBaseViewController.h"

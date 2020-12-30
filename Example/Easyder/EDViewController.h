@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import <Easyder.h>
 
-@interface EDViewController : UIViewController
+@interface EDViewController : EDBaseTableViewController
 
 @end

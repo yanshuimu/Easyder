@@ -7,39 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
-
-#import <UIView+EDExtension.h>
-#import <UITableView+EDExtension.h>
-#import <UICollectionView+EDExtension.h>
-#import <UIAlertController+EDExtension.h>
-#import <UITextField+EDExtension.h>
-#import <UITextView+EDExtension.h>
-#import <UIScrollView+EDExtension.h>
-#import <NSArray+EDExtension.h>
-#import <NSDictionary+EDExtension.h>
-#import <NSAttributedString+EDExtension.h>
-#import <NSDate+EDExtension.h>
-#import <NSString+EDExtension.h>
-#import <UIButton+EDExtension.h>
-#import <UIImageView+EDExtension.h>
-#import <UIImage+EDExtension.h>
-#import <UILabel+EDExtension.h>
-
-#import <EDUtils.h>
-
-#import <EDBaseView.h>
-#import <EDBaseTableCell.h>
-#import <EDBaseCollectionCell.h>
-#import <EDBaseCollectionReusableView.h>
-#import <EDBaseTableHeaderFooterView.h>
-#import <EDBaseViewController.h>
-#import <EDBaseTableViewController.h>
-#import <EDBaseCollectionViewController.h>
-#import <EDBaseNavigationController.h>
-#import <EDCycleScrollView.h>
-
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EasyderManager : NSObject
@@ -50,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat widthRatio;
 //垂直缩放比例
 @property (nonatomic, assign) CGFloat heightRatio;
-//主题色
+//主题色，默认白色
 @property (nonatomic, strong) UIColor *themeColor;
 
 @end

@@ -3,16 +3,16 @@
 //  MusiciansAndMuslns
 //
 //  Created by mac on 2017/5/24.
-//  Copyright © 2017年 DLC. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
-#import "EDBaseNavigationController.h"
+#import "EDNavigationController.h"
 
-@interface EDBaseNavigationController ()
+@interface EDNavigationController ()
 
 @end
 
-@implementation EDBaseNavigationController
+@implementation EDNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,7 +20,12 @@
     [self initialize];
 }
 
-- (void)initialize{
+- (void)initialize {
+    
+    [self configStyle];
+}
+
+- (void)configStyle {
     
     //设置为不透明
     [[UINavigationBar appearance] setTranslucent:NO];
@@ -51,12 +56,10 @@
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     
-    /*
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, SCREEN_W, 0.5)];
-    lineView.backgroundColor = kLineColor;
+    lineView.backgroundColor = EDLineColor;
     [self.navigationBar addSubview:lineView];
     _lineView = lineView;
-     */
 }
 
 - (UIImage *)imageWithBgColor:(UIColor *)color

@@ -3,7 +3,7 @@
 //  DYLRopeSkipping
 //
 //  Created by mac on 2017/8/23.
-//  Copyright © 2017年 DLC. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

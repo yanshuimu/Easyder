@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Easyder.h"
 #import "EasyderManager.h"
 #import "EDBaseAlertView.h"
 #import "EDBaseCollectionCell.h"

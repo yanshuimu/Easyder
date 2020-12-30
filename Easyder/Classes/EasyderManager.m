@@ -26,6 +26,7 @@ static EasyderManager *manager = nil;
     
     _widthRatio = SCREEN_W/375.0;
     _heightRatio = SCREEN_H/667.0;
+    _themeColor = EDWhiteColor;
 }
 
 @end

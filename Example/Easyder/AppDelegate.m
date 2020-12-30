@@ -7,20 +7,36 @@
 //
 
 #import "AppDelegate.h"
-#import <EasyderManager.h>
+#import <Easyder.h>
+#import "EDViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor clearColor];
+    
+    [self setupEasyder];
+    
+    [self gotoHome];
+    
     return YES;
 }
 
-- (void)setupEDTool {
+- (void)gotoHome {
+    
+    EDNavigationController *nav = [[EDNavigationController alloc]initWithRootViewController:[[EDViewController alloc] init]];
+    self.window.rootViewController = nav;
+    self.window.backgroundColor = EDWhiteColor;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)setupEasyder {
     
     EasyderManager *manager = [EasyderManager shareManager];
-    manager.themeColor = [UIColor redColor];
+    manager.themeColor = [UIColor whiteColor];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

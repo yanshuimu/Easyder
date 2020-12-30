@@ -3,7 +3,7 @@
 //  NewtonFitness
 //
 //  Created by mac on 2017/7/10.
-//  Copyright © 2017年 DLC. All rights reserved.
+//  Copyright © 2017年 easyder. All rights reserved.
 //
 
 #import "EDBaseViewController.h"
