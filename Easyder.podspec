@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Easyder'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '提高项目开发效率的工具包'
   s.homepage         = 'https://github.com/yanshuimu/Easyder'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
