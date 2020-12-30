@@ -289,7 +289,7 @@ CGFloat CGHeightAutoMake(CGFloat height);
 /**
  * frame、backgroundColor、cornerRadius
  */
-+ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius;
++ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius;
 
 @end
 

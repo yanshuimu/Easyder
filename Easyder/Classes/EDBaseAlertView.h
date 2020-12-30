@@ -10,6 +10,10 @@
 
 @interface EDBaseAlertView : UIView
 
+- (void)initialize;
+
+- (void)setupSubviews;
+
 - (void)show;
 
 - (void)hidden;

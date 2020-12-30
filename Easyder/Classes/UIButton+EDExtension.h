@@ -69,7 +69,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * frame、title、titleColor、font、backgroundColor、cornerRadius
  */
-+ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius;
++ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius;
 
 /**
  * frame、title、titleColor、font、imageName、backgroundImageName

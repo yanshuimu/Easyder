@@ -36,7 +36,7 @@
 - (void)setupEasyder {
     
     EasyderManager *manager = [EasyderManager shareManager];
-    manager.themeColor = [UIColor whiteColor];
+    manager.themeColor = EDHexColor(@"#303642");
     
     //配置EDNavigationController属性
     [manager makeNavigationConfiguration:^(EDConfiguration * _Nullable configuration) {

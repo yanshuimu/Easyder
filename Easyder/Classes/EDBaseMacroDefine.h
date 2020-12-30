@@ -37,6 +37,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 //常用线宽
 #define APPCONFIG_UNIT_LINE_WIDTH (1/[UIScreen mainScreen].scale)
 
+//初始化定义
+#define EDRectDefine CGFloat x = 0; CGFloat y = 0; CGFloat width = 0; CGFloat height = 0;
+
 #define EDUrlWithString(string) [NSURL URLWithString:string]
 
 //默认正方形图片

@@ -18,6 +18,22 @@
 
 @implementation EDBaseAlertView
 
+- (instancetype)init {
+    
+    if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)]) {
+        [self initialize];
+    }
+    return self;
+}
+
+- (void)initialize {
+    [self setupSubviews];
+}
+
+- (void)setupSubviews {
+    //子类实现
+}
+
 - (void)show
 {
     //隐藏状态

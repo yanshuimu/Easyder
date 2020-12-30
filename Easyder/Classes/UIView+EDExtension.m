@@ -955,11 +955,11 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     return view;
 }
 
-+ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius {
++ (instancetype)viewWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius {
     
     EDBaseView *view = [[self alloc] initWithFrame:frame];
     view.backgroundColor = backgroundColor;
-    [view addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
+    [view addRoundedCorners:UIRectCornerAllCorners withRadii:CGSizeMake(cornerRadius, cornerRadius)];
     
     return view;
 }

@@ -110,7 +110,7 @@
     return btn;
 }
 
-+ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius {
++ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius {
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = frame;
@@ -118,7 +118,7 @@
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     btn.titleLabel.font = font;
     btn.backgroundColor = backgroundColor;
-    [btn addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
+    [btn addRoundedCorners:UIRectCornerAllCorners withRadii:CGSizeMake(cornerRadius, cornerRadius)];
     
     return btn;
 }
