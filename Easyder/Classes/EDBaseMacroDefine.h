@@ -271,7 +271,7 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 #define EDThemeColor [EDManagerSingleton themeColor]
 
 //黑色字体，默认字体颜色
-#define kFontColorBlack EDHexColor(@"#333333")
+#define EDFontColorBlack EDHexColor(@"#333333")
 
 //浅黑字体，偏次要字体颜色
 #define EDFontColorLightBlack EDHexColor(@"#666666")

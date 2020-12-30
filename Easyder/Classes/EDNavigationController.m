@@ -7,9 +7,19 @@
 //
 
 #import "EDNavigationController.h"
+#import <EDConfiguration.h>
 
 @interface EDNavigationController ()
-
+//底部横线
+@property (nonatomic, strong) UIView *lineView;
+//
+@property (nonatomic, strong) UIColor *barTintColor;
+//
+@property (nonatomic, strong) UIColor *titleColor;
+//
+@property (nonatomic, strong) UIFont *titleFont;
+//
+@property (nonatomic, assign) BOOL bottomLineHidden;
 @end
 
 @implementation EDNavigationController
@@ -22,33 +32,30 @@
 
 - (void)initialize {
     
-    [self configStyle];
-}
-
-- (void)configStyle {
+    [self configuration];
     
     //设置为不透明
     [[UINavigationBar appearance] setTranslucent:NO];
     
     //设置导航栏背景颜色
-    [UINavigationBar appearance].barTintColor = EDThemeColor;
+    [UINavigationBar appearance].barTintColor = _barTintColor;
     
     //设置导航栏标题文字颜色
     NSMutableDictionary *color = [NSMutableDictionary dictionary];
-    color[NSFontAttributeName] = EDFont(17);
+    color[NSFontAttributeName] = _titleFont;
     
-    color[NSForegroundColorAttributeName] = EDWhiteColor;
+    color[NSForegroundColorAttributeName] = _titleColor;
     
     [[UINavigationBar appearance] setTitleTextAttributes:color];
     
     //拿到整个导航控制器的外观
     UIBarButtonItem * item = [UIBarButtonItem appearance];
-    item.tintColor = EDWhiteColor;
+    item.tintColor = _barTintColor;
     //设置字典的字体大小
     NSMutableDictionary * atts = [NSMutableDictionary dictionary];
     
-    atts[NSFontAttributeName] = [UIFont systemFontOfSize:17];
-    atts[NSForegroundColorAttributeName] = EDBlackColor;
+    atts[NSFontAttributeName] = _titleFont;
+    atts[NSForegroundColorAttributeName] = _titleColor;
     
     //将字典给item
     [item setTitleTextAttributes:atts forState:UIControlStateNormal];
@@ -60,18 +67,21 @@
     lineView.backgroundColor = EDLineColor;
     [self.navigationBar addSubview:lineView];
     _lineView = lineView;
+    
+    _lineView.hidden = _bottomLineHidden;
 }
 
-- (UIImage *)imageWithBgColor:(UIColor *)color
-{
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
+- (void)configuration {
+    
+    EDConfiguration *configuration = EDManagerSingleton.navigationConfiguration;
+    
+    if (EDISNIL(configuration) == false) {
+        
+        _barTintColor = EDISNIL(configuration.barTintColor) ? EDThemeColor : configuration.barTintColor;
+        _titleFont = EDISNIL(configuration.barTitleFont) ? EDFont(17) : configuration.barTitleFont;
+        _titleColor = EDISNIL(configuration.barTitleColor) ? EDFontColorBlack : configuration.barTitleColor;
+        _bottomLineHidden = configuration.barBottomLineHidden;
+    }
 }
 
 //重写nav的push方法

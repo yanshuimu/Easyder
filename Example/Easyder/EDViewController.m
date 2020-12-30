@@ -8,6 +8,7 @@
 
 #import "EDViewController.h"
 #import <Easyder.h>
+#import "TestAlertView.h"
 
 @interface EDViewController ()
 //
@@ -45,11 +46,27 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
     cell.textLabel.text = self.titleArray[indexPath.row];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            TestAlertView *view = [[TestAlertView alloc] init];
+            [view show];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (NSArray*)titleArray {

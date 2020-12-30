@@ -86,7 +86,7 @@
     
     UITextView *textView = [[self alloc] initWithFrame:frame];
     textView.font = font;
-    textView.textColor = kFontColorBlack;
+    textView.textColor = EDFontColorBlack;
     
     return textView;
 }
@@ -95,7 +95,7 @@
     
     UITextView *textView = [[self alloc] initWithFrame:frame];
     textView.font = font;
-    textView.textColor = kFontColorBlack;
+    textView.textColor = EDFontColorBlack;
     [textView setPlaceholder:placeholder placeholdColor:EDHexColor(@"#CCCCCC")];
     
     return textView;
@@ -105,7 +105,7 @@
     
     UITextView *textView = [[self alloc] initWithFrame:frame];
     textView.font = font;
-    textView.textColor = kFontColorBlack;
+    textView.textColor = EDFontColorBlack;
     [textView setPlaceholder:placeholder placeholdColor:placeholderColor];
     
     return textView;

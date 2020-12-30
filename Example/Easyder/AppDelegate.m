@@ -37,6 +37,12 @@
     
     EasyderManager *manager = [EasyderManager shareManager];
     manager.themeColor = [UIColor whiteColor];
+    
+    //配置EDNavigationController属性
+    [manager makeNavigationConfiguration:^(EDConfiguration * _Nullable configuration) {
+        configuration.barTintColor = EDHexColor(@"#303642");
+        configuration.barTitleColor = EDWhiteColor;
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

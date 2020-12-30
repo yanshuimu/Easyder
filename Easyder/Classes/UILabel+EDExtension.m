@@ -14,7 +14,7 @@
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font {
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.textColor = kFontColorBlack;
+    label.textColor = EDFontColorBlack;
     label.font = font;
     return label;
 }
@@ -30,7 +30,7 @@
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor {
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.textColor = kFontColorBlack;
+    label.textColor = EDFontColorBlack;
     label.font = font;
     label.backgroundColor = backgroundColor;
     return label;
@@ -57,7 +57,7 @@
 + (instancetype)labelWithFont:(UIFont *)font {
     
     UILabel *label = [[UILabel alloc] init];
-    label.textColor = kFontColorBlack;
+    label.textColor = EDFontColorBlack;
     label.font = font;
     return label;
 }
@@ -68,7 +68,7 @@
     
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
-    label.textColor = kFontColorBlack;
+    label.textColor = EDFontColorBlack;
     label.font = font;
     return label;
 }

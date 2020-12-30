@@ -12,13 +12,4 @@
 
 @interface EDNavigationController : UINavigationController
 
-//
-@property (nonatomic, strong) UIColor *barTintColor;
-//
-@property (nonatomic, strong) UIColor *titleColor;
-//
-@property (nonatomic, strong) UIFont *titleFont;
-//底部横线
-@property (nonatomic, strong) UIView *lineView;
-
 @end

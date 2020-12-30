@@ -29,6 +29,9 @@
 
 #import <EDUtils.h>
 
+#import <EDBaseModel.h>
+#import <EDConfiguration.h>
+
 #import <EDBaseView.h>
 #import <EDBaseTableCell.h>
 #import <EDBaseCollectionCell.h>
@@ -37,7 +40,7 @@
 #import <EDBaseViewController.h>
 #import <EDBaseTableViewController.h>
 #import <EDBaseCollectionViewController.h>
-#import <EDBaseNavigationController.h>
+#import <EDNavigationController.h>
 #import <EDCycleScrollView.h>
 #import <EDBaseAlertView.h>
 

@@ -29,4 +29,13 @@ static EasyderManager *manager = nil;
     _themeColor = EDWhiteColor;
 }
 
+- (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock {
+    
+    _navigationConfiguration = [[EDConfiguration alloc] init];
+    
+    if (configurationBlock) {
+        configurationBlock(_navigationConfiguration);
+    }
+}
+
 @end

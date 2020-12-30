@@ -47,7 +47,7 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:kFontColorBlack forState:UIControlStateNormal];
+    [btn setTitleColor:EDFontColorBlack forState:UIControlStateNormal];
     [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
     btn.titleLabel.font = font;
     

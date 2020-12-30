@@ -91,7 +91,7 @@
     
     UITextField *textField = [[UITextField alloc] init];
     textField.font = font;
-    textField.textColor = kFontColorBlack;
+    textField.textColor = EDFontColorBlack;
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     return textField;
@@ -101,7 +101,7 @@
     
     UITextField *textField = [[UITextField alloc] init];
     textField.font = font;
-    textField.textColor = kFontColorBlack;
+    textField.textColor = EDFontColorBlack;
     textField.placeholder = placeholder;
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     
@@ -113,7 +113,7 @@
     UITextField *textField = [[UITextField alloc] init];
     textField.frame = frame;
     textField.font = font;
-    textField.textColor = kFontColorBlack;
+    textField.textColor = EDFontColorBlack;
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     return textField;
@@ -124,7 +124,7 @@
     UITextField *textField = [[UITextField alloc] init];
     textField.frame = frame;
     textField.font = font;
-    textField.textColor = kFontColorBlack;
+    textField.textColor = EDFontColorBlack;
     [textField setPlaceholder:placeholder color:EDHexColor(@"#CCCCCC")];
     textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     

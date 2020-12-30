@@ -6,8 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <EDConfiguration.h>
 
 NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 
 @interface EasyderManager : NSObject
 
@@ -19,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat heightRatio;
 //主题色，默认白色
 @property (nonatomic, strong) UIColor *themeColor;
+//
+@property (nonatomic, strong) EDConfiguration *navigationConfiguration;
+
+- (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;
 
 @end
 
