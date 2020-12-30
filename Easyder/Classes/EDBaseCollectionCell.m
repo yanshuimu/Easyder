@@ -31,7 +31,7 @@
     //子类实现
 }
 
-- (void)setDataDict:(NSDictionary*)dict {
+- (void)edSetDataDict:(NSDictionary*)dict {
     //子类实现
 }
 
