@@ -114,38 +114,6 @@
     }
 }
 
-- (void)showWithAlpha:(CGFloat)alpha
-{
-    UIView *superView = [UIApplication sharedApplication].delegate.window.rootViewController.view;
-    
-    _maskView = [[UIView alloc] initWithFrame:self.bounds];
-    _maskView.backgroundColor = EDColorA(0, 0, 0, alpha);
-    [superView addSubview:_maskView];
-    
-    [superView addSubview:self];
-    
-    EDWeakSelf
-    [UIView animateWithDuration:0.0 animations:^{
-        weakSelf.maskView.backgroundColor = EDColorA(0, 0, 0, weakSelf.backgroundColorAlpha);
-    }];
-}
-
-- (void)showInView:(UIView *)view {
-    
-    _maskView = [[UIView alloc] initWithFrame:view.bounds];
-    _maskView.backgroundColor = EDColorA(0, 0, 0, _backgroundColorAlpha);
-    [view addSubview:_maskView];
-    
-    self.frame = view.bounds;
-    [view addSubview:self];
-    
-    EDWeakSelf
-    [UIView animateWithDuration:0.0 animations:^{
-        
-        weakSelf.maskView.alpha = 1;
-    }];
-}
-
 - (void)hidden
 {
     _maskView.hidden = YES;
@@ -158,10 +126,17 @@
     [self removeFromSuperview];
 }
 
-- (void)hiddenAfter:(NSInteger)duration
+- (void)hiddenAfterDelay:(NSInteger)seconds
 {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self hidden];
+    });
+}
+
+- (void)hiddenWithRemoveAfterDelay:(NSInteger)seconds
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self hiddenWithRemove];
     });
 }
 

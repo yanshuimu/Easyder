@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define EDAlertViewContainerTag 6968
-
 typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
     
     EDAlertViewContentVerticalAlignmentTop,
@@ -46,8 +44,18 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 - (void)hidden;
 
 /**
+ * 延迟隐藏
+ */
+- (void)hiddenAfterDelay:(NSInteger)seconds;
+
+/**
  * 隐藏并移除
  */
 - (void)hiddenWithRemove;
+
+/**
+ * 延迟隐藏并移除
+ */
+- (void)hiddenWithRemoveAfterDelay:(NSInteger)seconds;
 
 @end
