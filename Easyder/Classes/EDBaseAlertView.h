@@ -26,12 +26,12 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 /**
  * 子类重写
  */
-- (void)initialize;
+- (void)edInitialize;
 
 /**
  * 子类重写
  */
-- (void)setupSubviews;
+- (void)edSetupSubviews;
 
 /**
  * 显示

@@ -24,13 +24,18 @@
     
     if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
         
-        [self initialize];
+        [self edInitialize];
     }
     return self;
 }
 
-- (void)initialize {
+- (void)edInitialize {
     
+    [self edSetupSubviews];
+}
+
+- (void)edSetupSubviews {
+    //子类实现
 }
 
 @end

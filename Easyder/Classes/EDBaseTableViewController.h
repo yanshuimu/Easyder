@@ -6,7 +6,7 @@
 //  Copyright © 2017年 easyder. All rights reserved.
 //
 
-#import "EDBaseViewController.h"
+#import <EDBaseViewController.h>
 
 @interface EDBaseTableViewController : EDBaseViewController<UITableViewDataSource, UITableViewDelegate>
 {

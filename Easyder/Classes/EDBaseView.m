@@ -12,7 +12,7 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self initialize];
+        [self edInitialize];
     }
     return self;
 }
@@ -20,11 +20,16 @@
 + (instancetype)createViewFromNib {
     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
     id view = [nibView objectAtIndex:0];
-    [view initialize];
+    [view edInitialize];
     return view;
 }
 
-- (void)initialize {
+- (void)edInitialize {
+    
+    [self edSetupSubviews];
+}
+
+- (void)edSetupSubviews {
     //子类实现
 }
 

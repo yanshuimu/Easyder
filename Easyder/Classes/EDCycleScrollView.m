@@ -21,16 +21,16 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self initialize];
+        [self edInitialize];
     }
     return self;
 }
 
-- (void)initialize {
-    [self setupSubviews];
+- (void)edInitialize {
+    [self edSetupSubviews];
 }
 
-- (void)setupSubviews {
+- (void)edSetupSubviews {
     
     CGFloat x = 0;
     CGFloat y = 0;

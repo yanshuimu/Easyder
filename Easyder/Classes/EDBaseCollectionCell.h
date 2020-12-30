@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)dequeueCellWithCollectionView:(UICollectionView*)collectionView indexPath:(NSIndexPath*)indexPath;
 
-- (void)initialize;
+- (void)edInitialize;
+
+- (void)edSetupSubviews;
 
 - (void)setDataDict:(NSDictionary*)dict;
 

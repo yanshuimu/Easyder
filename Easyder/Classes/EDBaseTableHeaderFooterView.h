@@ -14,7 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)createHeaderFooterView:(UITableView*)tableView;
 
-- (void)initialize;
+- (void)edInitialize;
+
+- (void)edSetupSubviews;
 
 @end
 

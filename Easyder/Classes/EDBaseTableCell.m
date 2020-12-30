@@ -21,12 +21,17 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        [self initialize];
+        [self edInitialize];
     }
     return self;
 }
 
-- (void)initialize {
+- (void)edInitialize {
+    
+    [self edSetupSubviews];
+}
+
+- (void)edSetupSubviews {
     //子类实现
 }
 

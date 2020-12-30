@@ -17,12 +17,17 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
-        [self initialize];
+        [self edInitialize];
     }
     return self;
 }
 
-- (void)initialize {
+- (void)edInitialize {
+    
+    [self edSetupSubviews];
+}
+
+- (void)edSetupSubviews {
     //子类实现
 }
 

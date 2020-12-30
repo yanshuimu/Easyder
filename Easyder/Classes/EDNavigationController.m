@@ -27,10 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initialize];
+    [self edInitialize];
 }
 
-- (void)initialize {
+- (void)edInitialize {
     
     [self configuration];
     

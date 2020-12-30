@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 //裁剪图片
 @property (nonatomic, strong) UIImage *clipedAvatarImage;
 
+/**
+ * 模型转字典忽略指定Keys
+ */
 + (NSArray*)mj_keyValuesIgnoredKeys;
 
 @end

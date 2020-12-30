@@ -12,6 +12,8 @@
 
 + (instancetype)createViewFromNib;
 
-- (void)initialize;
+- (void)edInitialize;
+
+- (void)edSetupSubviews;
 
 @end

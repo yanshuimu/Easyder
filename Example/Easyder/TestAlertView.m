@@ -10,7 +10,7 @@
 
 @implementation TestAlertView
 
-- (void)setupSubviews {
+- (void)edSetupSubviews {
     
     EDRectDefine
     
