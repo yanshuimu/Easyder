@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Easyder/Classes/*.{h,m}'
   
   s.subspec 'Resources' do |ss|
-      ss.source_files = ''
+      ss.source_files = 'Easyder.bundle'
   end
   
   s.subspec 'Base' do |ss|
