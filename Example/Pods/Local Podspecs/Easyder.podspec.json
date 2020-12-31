@@ -17,7 +17,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "Easyder/Classes/Easyder.h",
+  "source_files": "Easyder/Classes/*.{h,m}",
   "dependencies": {
     "MJRefresh": [
 
@@ -36,6 +36,10 @@
     ]
   },
   "subspecs": [
+    {
+      "name": "EDBase",
+      "source_files": "Easyder/Classes/EDBase/*.{h,m}"
+    },
     {
       "name": "EDExtension",
       "source_files": "Easyder/Classes/EDExtension/*.{h,m}"
