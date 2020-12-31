@@ -17,6 +17,10 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source_files = 'Easyder/Classes/*.{h,m}'
   
+  s.subspec 'Resources' do |ss|
+      ss.source_files = ''
+  end
+  
   s.subspec 'Base' do |ss|
       ss.source_files = 'Easyder/Classes/Base/*.{h,m}'
   end
