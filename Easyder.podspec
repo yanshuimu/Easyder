@@ -15,7 +15,12 @@ Pod::Spec.new do |s|
   s.author           = { 'yanshuimu' => '593692553@qq.com' }
   s.source           = { :git => 'https://github.com/yanshuimu/Easyder.git', :tag => "#{s.version}" }
   s.ios.deployment_target = '9.0'
-  s.source_files = 'Easyder/Classes/**/*'
+  s.source_files = 'Easyder/Classes/Easyder.h'
+  
+  s.subspec 'EDExtension' do |ss|
+      ss.source_files = 'Easyder/Classes/*.{h,m}'
+  end
+  
   s.dependency 'MJRefresh'
   s.dependency 'MBProgressHUD'
   s.dependency 'SDCycleScrollView'
