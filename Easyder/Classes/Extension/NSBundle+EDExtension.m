@@ -13,7 +13,9 @@
     
     static NSBundle *easyderBundle = nil;
     if (easyderBundle == nil) {
-        easyderBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"Easyder" ofType:@"bundle"]];
+        NSBundle *bundle = [NSBundle bundleForClass:NSClassFromString(@"Easyder")];
+        NSString *path = [bundle pathForResource:@"Easyder" ofType:@"bundle"];
+        easyderBundle = [NSBundle bundleWithPath:path];
     }
     return easyderBundle;
 }

@@ -42,7 +42,7 @@
     [manager makeNavigationConfiguration:^(EDConfiguration * _Nullable configuration) {
         configuration.barTintColor = EDHexColor(@"#303642");
         configuration.barTitleColor = EDWhiteColor;
-        configuration.barReturnImageName = @"return2";
+//        configuration.barReturnImageName = @"return2";
     }];
     
     //配置EDBaseAlertView属性

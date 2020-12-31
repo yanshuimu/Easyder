@@ -26,6 +26,7 @@
 #import <UIImageView+EDExtension.h>
 #import <UIImage+EDExtension.h>
 #import <UILabel+EDExtension.h>
+#import <NSBundle+EDExtension.h>
 
 #import <EDUtils.h>
 

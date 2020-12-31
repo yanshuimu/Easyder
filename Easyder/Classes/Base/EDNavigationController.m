@@ -8,6 +8,7 @@
 
 #import "EDNavigationController.h"
 #import <EDConfiguration.h>
+#import <Easyder/NSBundle+EDExtension.h>
 
 @interface EDNavigationController ()
 //底部横线
@@ -93,7 +94,7 @@
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         
         UIImageView *backImgV = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 9, 17)];
-        backImgV.image = [UIImage imageNamed:_returnImageName];
+        backImgV.image = EDStringIsEmpty(_returnImageName) ? [NSBundle imageFromEasyderBundleWithName:@"nav_return"] : [UIImage imageNamed:_returnImageName];
         [backImgV setCenterY:btn.centerY];
         [btn addSubview:backImgV];
         

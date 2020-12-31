@@ -29,6 +29,7 @@
 #import "EDConfiguration.h"
 #import "NSArray+EDExtension.h"
 #import "NSAttributedString+EDExtension.h"
+#import "NSBundle+EDExtension.h"
 #import "NSDate+EDExtension.h"
 #import "NSDictionary+EDExtension.h"
 #import "NSString+EDExtension.h"
