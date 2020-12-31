@@ -61,6 +61,7 @@
 		27AF30228412B2B2C75E0241650C2ECB /* EDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 923C73E00AFD9DB6CEDF15E52F143FA5 /* EDUtils.m */; };
 		287A5B7FD6E8A2B8C83303CD6DB37B9B /* NSBundle+EDExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A6B04BFB1E24D685C58C5746F613C8DA /* NSBundle+EDExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28AFD7A0BD82B0BBD26C7DF39AF3C0BE /* EDBaseCollectionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 22F971F232D502B27E6B66BF67C4F062 /* EDBaseCollectionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29906FAC7CB0FC5BF064F2E924F3FED8 /* Easyder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 48F679B9A00C2C799B4D493320E9E6BC /* Easyder.bundle */; };
 		29CC2ABDEB10CBD7BFE370E136A45014 /* MJRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30020C7617B1E4D30DE1FE70BF5E580 /* MJRefresh.framework */; };
 		29FAEF94671832357BDF857F1B6C080F /* SDAnimatedImageRep.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC89D93828229ED2C9AD1CE3739DE29 /* SDAnimatedImageRep.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C09E825C7A1793A781602B53CF993B8 /* SDImageLoadersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DCAAE91B198FB4F623ED79FF1B97E0 /* SDImageLoadersManager.m */; };
@@ -127,7 +128,6 @@
 		5A7D5F50C370564459C0A120CA4B5841 /* EDBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3347B8523C37B21E30D1D930C2064AAC /* EDBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BC93A80E0DEBB21D2E606D909A04E6A /* SDAssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 011115BD3B2F206FF6F006D19028157E /* SDAssociatedObject.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		5CAF149063DF525C50E923827B5B70C0 /* UIImage+ExtendedCacheData.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B286D9D737F325A87FA1C92ECCE561 /* UIImage+ExtendedCacheData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5E2A5AF5E301DC2C28B7B0D6FC908DA4 /* Easyder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 77F815170728661CAFD6F68C44F06774 /* Easyder.bundle */; };
 		5E8EB32B93ED6BBEB2C37F64ECFD14DB /* NSDictionary+EDExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1EC310C1810FFF9CD7AAEC51308538 /* NSDictionary+EDExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5E9D20DE5A1EF11C681B3876003534DE /* EasyderManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDA5136FC87CFD91CAC5057B08A1D84 /* EasyderManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6203BA5BCEF5A6CA6E833E577F8B1ABE /* NSBezierPath+SDRoundedCorners.h in Headers */ = {isa = PBXBuildFile; fileRef = DB74348E71DC2CED318C6094705D71D9 /* NSBezierPath+SDRoundedCorners.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -540,6 +540,7 @@
 		463AA78281202B52F7804D464627E9B5 /* UIScrollView+EDExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+EDExtension.h"; path = "Easyder/Classes/Extension/UIScrollView+EDExtension.h"; sourceTree = "<group>"; };
 		471B1797250DF65E6ECDFB67B3EA843B /* UIImageView+EDExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+EDExtension.m"; path = "Easyder/Classes/Extension/UIImageView+EDExtension.m"; sourceTree = "<group>"; };
 		47BCDEAE27A4B027E4583986C4D7E70E /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
+		48F679B9A00C2C799B4D493320E9E6BC /* Easyder.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Easyder.bundle; path = Easyder/Classes/Easyder.bundle; sourceTree = "<group>"; };
 		4973E43F61BE41653E641AD32339F50B /* Pods-Easyder_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Easyder_Example-Info.plist"; sourceTree = "<group>"; };
 		4A0310918FC467CE6D0EB7210957FC30 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloader.h; path = SDWebImage/Core/SDWebImageDownloader.h; sourceTree = "<group>"; };
 		4A349654699F1F89112CAF6E7A18B437 /* SDImageCacheDefine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageCacheDefine.m; path = SDWebImage/Core/SDImageCacheDefine.m; sourceTree = "<group>"; };
@@ -608,7 +609,6 @@
 		760C6AC3536D7B017DC3873B28DC3D2A /* FDFullscreenPopGesture-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FDFullscreenPopGesture-prefix.pch"; sourceTree = "<group>"; };
 		761A2397B598B12AC8684CE343BE98EC /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MultiFormat.h"; path = "SDWebImage/Core/UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		76B9F17DDF4F4D620F0506617973BE46 /* SDImageAWebPCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageAWebPCoder.h; path = SDWebImage/Core/SDImageAWebPCoder.h; sourceTree = "<group>"; };
-		77F815170728661CAFD6F68C44F06774 /* Easyder.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Easyder.bundle; path = Easyder/Resources/Easyder.bundle; sourceTree = "<group>"; };
 		78E6B36F30642CAB72C5592CDD056A88 /* SDImageFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageFrame.m; path = SDWebImage/Core/SDImageFrame.m; sourceTree = "<group>"; };
 		7928B87A87DD95B13FC3F0D3BCA83A91 /* SDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDiskCache.h; path = SDWebImage/Core/SDDiskCache.h; sourceTree = "<group>"; };
 		796DDC1672ECEEACF0677F11F042E4EC /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImagePrefetcher.m; path = SDWebImage/Core/SDWebImagePrefetcher.m; sourceTree = "<group>"; };
@@ -1219,6 +1219,14 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		5015DC9A456D85672D64CBEA91F344F0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48F679B9A00C2C799B4D493320E9E6BC /* Easyder.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		6983EBF33745C6DF89204044271D09DA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1278,7 +1286,7 @@
 				3E1D43FA83CEB23B27A60BEDE4CC19FE /* Extension */,
 				717B43E68A9DDB1E36102A383D65B07F /* Lib */,
 				DABA2CE8FD70D8BFD99A9ACFBA6B5B8C /* Pod */,
-				D6DD1DAD6403894CCCFA717282501816 /* Resources */,
+				5015DC9A456D85672D64CBEA91F344F0 /* Resources */,
 				226FDBF6C13DEE9CE3F8845BE7992010 /* Support Files */,
 				41895EF9C6D99720B508E2336D14F365 /* Utils */,
 			);
@@ -1427,14 +1435,6 @@
 				8D3DF4F982D46E89E54593DBD1103B44 /* Security.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		D6DD1DAD6403894CCCFA717282501816 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				77F815170728661CAFD6F68C44F06774 /* Easyder.bundle */,
-			);
-			name = Resources;
 			sourceTree = "<group>";
 		};
 		D789B06CF9E3DF809B69D20C1D9C3B3A /* SDCycleScrollView */ = {
@@ -2038,7 +2038,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2A5AF5E301DC2C28B7B0D6FC908DA4 /* Easyder.bundle in Resources */,
+				29906FAC7CB0FC5BF064F2E924F3FED8 /* Easyder.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

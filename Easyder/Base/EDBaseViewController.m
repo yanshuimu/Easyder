@@ -46,7 +46,7 @@
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    NSLog(@"%@:内存回收", NSStringFromClass([self class]));
+    //NSLog(@"%@:内存回收", NSStringFromClass([self class]));
 }
 
 @end
