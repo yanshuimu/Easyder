@@ -37,20 +37,20 @@
   },
   "subspecs": [
     {
-      "name": "EDBase",
-      "source_files": "Easyder/Classes/EDBase/*.{h,m}"
+      "name": "Base",
+      "source_files": "Easyder/Classes/Base/*.{h,m}"
     },
     {
-      "name": "EDExtension",
-      "source_files": "Easyder/Classes/EDExtension/*.{h,m}"
+      "name": "Extension",
+      "source_files": "Easyder/Classes/Extension/*.{h,m}"
     },
     {
-      "name": "EDUtils",
-      "source_files": "Easyder/Classes/EDUtils/*.{h,m}"
+      "name": "Utils",
+      "source_files": "Easyder/Classes/Utils/*.{h,m}"
     },
     {
-      "name": "EDConfig",
-      "source_files": "Easyder/Classes/EDConfig/*.{h,m}"
+      "name": "Config",
+      "source_files": "Easyder/Classes/Config/*.{h,m}"
     }
   ]
 }

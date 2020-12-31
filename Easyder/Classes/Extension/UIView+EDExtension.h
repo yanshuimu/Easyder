@@ -443,4 +443,71 @@ typedef void(^OptimizeCompletionBlock)(UIImage *sourceImage, UIImage * _Nullable
 
 @end
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typedef NS_ENUM(NSInteger, EaseBlankPageType)
+{
+    EaseBlankPageTypeView = 0,
+    EaseBlankPageTypeConsume,
+    EaseBlankPageTypeSearch,
+    EaseBlankPageTypeShoppingCart,
+    EaseBlankPageTypeShoppingCartMemberSearch
+};
+
+@interface UIView (LYEmptyView)
+
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
+
+@end
+
 NS_ASSUME_NONNULL_END
