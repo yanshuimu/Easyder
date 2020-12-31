@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046CE9B4259DD487000F9DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B3259DD487000F9DE3 /* AppDelegate.m */; };
+		046CE9B7259DD487000F9DE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B6259DD487000F9DE3 /* SceneDelegate.m */; };
+		046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B9259DD487000F9DE3 /* ViewController.m */; };
+		046CE9BD259DD487000F9DE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9BB259DD487000F9DE3 /* Main.storyboard */; };
+		046CE9BF259DD48A000F9DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9BE259DD48A000F9DE3 /* Assets.xcassets */; };
+		046CE9C2259DD48A000F9DE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9C0259DD48A000F9DE3 /* LaunchScreen.storyboard */; };
+		046CE9C5259DD48A000F9DE3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9C4259DD48A000F9DE3 /* main.m */; };
+		046CEA27259DD5D9000F9DE3 /* UILabel+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9D0259DD5D9000F9DE3 /* UILabel+EDExtension.m */; };
+		046CEA28259DD5D9000F9DE3 /* UIButton+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */; };
+		046CEA29259DD5D9000F9DE3 /* NSBundle+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9D5259DD5D9000F9DE3 /* NSBundle+EDExtension.m */; };
+		046CEA2A259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9D8259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m */; };
+		046CEA2B259DD5D9000F9DE3 /* UIAlertController+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9DC259DD5D9000F9DE3 /* UIAlertController+EDExtension.m */; };
+		046CEA2C259DD5D9000F9DE3 /* UITableView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9DD259DD5D9000F9DE3 /* UITableView+EDExtension.m */; };
+		046CEA2D259DD5D9000F9DE3 /* NSDate+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9DE259DD5D9000F9DE3 /* NSDate+EDExtension.m */; };
+		046CEA2E259DD5D9000F9DE3 /* EDNullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */; };
+		046CEA2F259DD5D9000F9DE3 /* UIImage+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */; };
+		046CEA30259DD5D9000F9DE3 /* NSDictionary+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E2259DD5D9000F9DE3 /* NSDictionary+EDExtension.m */; };
+		046CEA31259DD5D9000F9DE3 /* UIView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E3259DD5D9000F9DE3 /* UIView+EDExtension.m */; };
+		046CEA32259DD5D9000F9DE3 /* UIImageView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E6259DD5D9000F9DE3 /* UIImageView+EDExtension.m */; };
+		046CEA33259DD5D9000F9DE3 /* UITextField+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9E7259DD5D9000F9DE3 /* UITextField+EDExtension.m */; };
+		046CEA34259DD5D9000F9DE3 /* UICollectionView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */; };
+		046CEA35259DD5D9000F9DE3 /* NSArray+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */; };
+		046CEA36259DD5D9000F9DE3 /* UIScrollView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */; };
+		046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */; };
+		046CEA38259DD5D9000F9DE3 /* UITextView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */; };
+		046CEA39259DD5D9000F9DE3 /* EDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */; };
+		046CEA3A259DD5D9000F9DE3 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9F6259DD5D9000F9DE3 /* .gitkeep */; };
+		046CEA3B259DD5D9000F9DE3 /* EasyderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */; };
+		046CEA3C259DD5D9000F9DE3 /* Easyder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */; };
+		046CEA3D259DD5D9000F9DE3 /* EDKeyChainUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */; };
+		046CEA3E259DD5D9000F9DE3 /* EDUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9FC259DD5D9000F9DE3 /* EDUtils.m */; };
+		046CEA3F259DD5D9000F9DE3 /* LYEmptyBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */; };
+		046CEA40259DD5D9000F9DE3 /* UIView+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */; };
+		046CEA41259DD5D9000F9DE3 /* UIView+LYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */; };
+		046CEA42259DD5D9000F9DE3 /* LYEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */; };
+		046CEA43259DD5D9000F9DE3 /* EDBaseCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA0B259DD5D9000F9DE3 /* EDBaseCollectionCell.m */; };
+		046CEA44259DD5D9000F9DE3 /* EDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA10259DD5D9000F9DE3 /* EDCycleScrollView.m */; };
+		046CEA45259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA12259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m */; };
+		046CEA46259DD5D9000F9DE3 /* EDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */; };
+		046CEA47259DD5D9000F9DE3 /* EDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA18259DD5D9000F9DE3 /* EDBaseTableViewController.m */; };
+		046CEA48259DD5D9000F9DE3 /* EDBaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA19259DD5D9000F9DE3 /* EDBaseAlertView.m */; };
+		046CEA49259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA1B259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m */; };
+		046CEA4A259DD5D9000F9DE3 /* EDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA1D259DD5D9000F9DE3 /* EDBaseView.m */; };
+		046CEA4B259DD5D9000F9DE3 /* EDBaseTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA1F259DD5D9000F9DE3 /* EDBaseTableCell.m */; };
+		046CEA4C259DD5D9000F9DE3 /* EDBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA20259DD5D9000F9DE3 /* EDBaseModel.m */; };
+		046CEA4D259DD5D9000F9DE3 /* EDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA22259DD5D9000F9DE3 /* EDBaseCollectionViewController.m */; };
+		046CEA4E259DD5D9000F9DE3 /* EDBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA23259DD5D9000F9DE3 /* EDBaseWebViewController.m */; };
+		046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA25259DD5D9000F9DE3 /* EDBaseViewController.m */; };
+		046CEA58259DD699000F9DE3 /* TestNextPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */; };
+		046CEA59259DD699000F9DE3 /* TestTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */; };
+		046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA56259DD699000F9DE3 /* TestAlertView.m */; };
+		046CEA66259DDAAF000F9DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CEA65259DDAAF000F9DE3 /* Info.plist */; };
+		CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7FECD8470F905579034BD /* libPods-Easyder.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		046CE9AF259DD487000F9DE3 /* Easyder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046CE9B2259DD487000F9DE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		046CE9B3259DD487000F9DE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		046CE9B5259DD487000F9DE3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		046CE9B6259DD487000F9DE3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		046CE9B8259DD487000F9DE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		046CE9B9259DD487000F9DE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		046CE9BC259DD487000F9DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046CE9BE259DD48A000F9DE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		046CE9C1259DD48A000F9DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		046CE9C4259DD48A000F9DE3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		046CE9D0259DD5D9000F9DE3 /* UILabel+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9D1259DD5D9000F9DE3 /* UIImageView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9D3259DD5D9000F9DE3 /* UIView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9D4259DD5D9000F9DE3 /* NSDictionary+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9D5259DD5D9000F9DE3 /* NSBundle+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9D6259DD5D9000F9DE3 /* UITextField+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9D7259DD5D9000F9DE3 /* NSString+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9D8259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9D9259DD5D9000F9DE3 /* UIScrollView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9DB259DD5D9000F9DE3 /* UICollectionView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9DC259DD5D9000F9DE3 /* UIAlertController+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9DD259DD5D9000F9DE3 /* UITableView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9DE259DD5D9000F9DE3 /* NSDate+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9DF259DD5D9000F9DE3 /* UITextView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDNullSafe.m; sourceTree = "<group>"; };
+		046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9E2259DD5D9000F9DE3 /* NSDictionary+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9E3259DD5D9000F9DE3 /* UIView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9E4259DD5D9000F9DE3 /* UIButton+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9E5259DD5D9000F9DE3 /* UILabel+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9E6259DD5D9000F9DE3 /* UIImageView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9E7259DD5D9000F9DE3 /* UITextField+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9E8259DD5D9000F9DE3 /* NSBundle+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9E9259DD5D9000F9DE3 /* UITableView+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9EA259DD5D9000F9DE3 /* UIAlertController+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9EE259DD5D9000F9DE3 /* NSAttributedString+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+EDExtension.m"; sourceTree = "<group>"; };
+		046CE9F2259DD5D9000F9DE3 /* NSDate+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+EDExtension.h"; sourceTree = "<group>"; };
+		046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDConfiguration.m; sourceTree = "<group>"; };
+		046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDConfiguration.h; sourceTree = "<group>"; };
+		046CE9F6259DD5D9000F9DE3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyderManager.m; sourceTree = "<group>"; };
+		046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Easyder.bundle; sourceTree = "<group>"; };
+		046CE9FA259DD5D9000F9DE3 /* EDUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDUtils.h; sourceTree = "<group>"; };
+		046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDKeyChainUtil.m; sourceTree = "<group>"; };
+		046CE9FC259DD5D9000F9DE3 /* EDUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDUtils.m; sourceTree = "<group>"; };
+		046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDKeyChainUtil.h; sourceTree = "<group>"; };
+		046CE9FE259DD5D9000F9DE3 /* Easyder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Easyder.h; sourceTree = "<group>"; };
+		046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyBaseView.m; sourceTree = "<group>"; };
+		046CEA02259DD5D9000F9DE3 /* LYEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyView.h; sourceTree = "<group>"; };
+		046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Empty.m"; sourceTree = "<group>"; };
+		046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LYExtension.m"; sourceTree = "<group>"; };
+		046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyBaseView.h; sourceTree = "<group>"; };
+		046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEmptyViewHeader.h; sourceTree = "<group>"; };
+		046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEmptyView.m; sourceTree = "<group>"; };
+		046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LYExtension.h"; sourceTree = "<group>"; };
+		046CEA09259DD5D9000F9DE3 /* UIView+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Empty.h"; sourceTree = "<group>"; };
+		046CEA0B259DD5D9000F9DE3 /* EDBaseCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseCollectionCell.m; sourceTree = "<group>"; };
+		046CEA0C259DD5D9000F9DE3 /* EDBaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseAlertView.h; sourceTree = "<group>"; };
+		046CEA0D259DD5D9000F9DE3 /* EDBaseCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseCollectionReusableView.h; sourceTree = "<group>"; };
+		046CEA0E259DD5D9000F9DE3 /* EDBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseModel.h; sourceTree = "<group>"; };
+		046CEA0F259DD5D9000F9DE3 /* EDBaseTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseTableCell.h; sourceTree = "<group>"; };
+		046CEA10259DD5D9000F9DE3 /* EDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCycleScrollView.m; sourceTree = "<group>"; };
+		046CEA11259DD5D9000F9DE3 /* EDBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseView.h; sourceTree = "<group>"; };
+		046CEA12259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseTableHeaderFooterView.m; sourceTree = "<group>"; };
+		046CEA13259DD5D9000F9DE3 /* EDBaseMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseMacroDefine.h; sourceTree = "<group>"; };
+		046CEA14259DD5D9000F9DE3 /* EDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseViewController.h; sourceTree = "<group>"; };
+		046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDNavigationController.m; sourceTree = "<group>"; };
+		046CEA16259DD5D9000F9DE3 /* EDBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseWebViewController.h; sourceTree = "<group>"; };
+		046CEA17259DD5D9000F9DE3 /* EDBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseCollectionViewController.h; sourceTree = "<group>"; };
+		046CEA18259DD5D9000F9DE3 /* EDBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseTableViewController.m; sourceTree = "<group>"; };
+		046CEA19259DD5D9000F9DE3 /* EDBaseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseAlertView.m; sourceTree = "<group>"; };
+		046CEA1A259DD5D9000F9DE3 /* EDBaseCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseCollectionCell.h; sourceTree = "<group>"; };
+		046CEA1B259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseCollectionReusableView.m; sourceTree = "<group>"; };
+		046CEA1C259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseTableHeaderFooterView.h; sourceTree = "<group>"; };
+		046CEA1D259DD5D9000F9DE3 /* EDBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseView.m; sourceTree = "<group>"; };
+		046CEA1E259DD5D9000F9DE3 /* EDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCycleScrollView.h; sourceTree = "<group>"; };
+		046CEA1F259DD5D9000F9DE3 /* EDBaseTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseTableCell.m; sourceTree = "<group>"; };
+		046CEA20259DD5D9000F9DE3 /* EDBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseModel.m; sourceTree = "<group>"; };
+		046CEA21259DD5D9000F9DE3 /* EDBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseTableViewController.h; sourceTree = "<group>"; };
+		046CEA22259DD5D9000F9DE3 /* EDBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseCollectionViewController.m; sourceTree = "<group>"; };
+		046CEA23259DD5D9000F9DE3 /* EDBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseWebViewController.m; sourceTree = "<group>"; };
+		046CEA24259DD5D9000F9DE3 /* EDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDNavigationController.h; sourceTree = "<group>"; };
+		046CEA25259DD5D9000F9DE3 /* EDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseViewController.m; sourceTree = "<group>"; };
+		046CEA26259DD5D9000F9DE3 /* EasyderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasyderManager.h; sourceTree = "<group>"; };
+		046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCtrl.h; sourceTree = "<group>"; };
+		046CEA53259DD699000F9DE3 /* TestAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAlertView.h; sourceTree = "<group>"; };
+		046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNextPageCtrl.m; sourceTree = "<group>"; };
+		046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCtrl.m; sourceTree = "<group>"; };
+		046CEA56259DD699000F9DE3 /* TestAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAlertView.m; sourceTree = "<group>"; };
+		046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNextPageCtrl.h; sourceTree = "<group>"; };
+		046CEA65259DDAAF000F9DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
+		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
+		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046CE9AC259DD487000F9DE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046CE9A6259DD487000F9DE3 = {
+			isa = PBXGroup;
+			children = (
+				046CE9B1259DD487000F9DE3 /* EasyderExample */,
+				046CE9B0259DD487000F9DE3 /* Products */,
+				C31B0EE3191A51D05CC7C441 /* Pods */,
+				82A3F65E5505E162C0862902 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		046CE9B0259DD487000F9DE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9AF259DD487000F9DE3 /* Easyder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046CE9B1259DD487000F9DE3 /* EasyderExample */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA65259DDAAF000F9DE3 /* Info.plist */,
+				046CEA51259DD699000F9DE3 /* Classes */,
+				046CE9CE259DD5D9000F9DE3 /* Easyder */,
+				046CE9B2259DD487000F9DE3 /* AppDelegate.h */,
+				046CE9B3259DD487000F9DE3 /* AppDelegate.m */,
+				046CE9B5259DD487000F9DE3 /* SceneDelegate.h */,
+				046CE9B6259DD487000F9DE3 /* SceneDelegate.m */,
+				046CE9B8259DD487000F9DE3 /* ViewController.h */,
+				046CE9B9259DD487000F9DE3 /* ViewController.m */,
+				046CE9BB259DD487000F9DE3 /* Main.storyboard */,
+				046CE9BE259DD48A000F9DE3 /* Assets.xcassets */,
+				046CE9C0259DD48A000F9DE3 /* LaunchScreen.storyboard */,
+				046CE9C4259DD48A000F9DE3 /* main.m */,
+			);
+			path = EasyderExample;
+			sourceTree = "<group>";
+		};
+		046CE9CE259DD5D9000F9DE3 /* Easyder */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9CF259DD5D9000F9DE3 /* Extension */,
+				046CE9F3259DD5D9000F9DE3 /* Config */,
+				046CE9F6259DD5D9000F9DE3 /* .gitkeep */,
+				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
+				046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */,
+				046CE9F9259DD5D9000F9DE3 /* Utils */,
+				046CE9FE259DD5D9000F9DE3 /* Easyder.h */,
+				046CE9FF259DD5D9000F9DE3 /* Lib */,
+				046CEA0A259DD5D9000F9DE3 /* Base */,
+				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
+			);
+			path = Easyder;
+			sourceTree = SOURCE_ROOT;
+		};
+		046CE9CF259DD5D9000F9DE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9D0259DD5D9000F9DE3 /* UILabel+EDExtension.m */,
+				046CE9D1259DD5D9000F9DE3 /* UIImageView+EDExtension.h */,
+				046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */,
+				046CE9D3259DD5D9000F9DE3 /* UIView+EDExtension.h */,
+				046CE9D4259DD5D9000F9DE3 /* NSDictionary+EDExtension.h */,
+				046CE9D5259DD5D9000F9DE3 /* NSBundle+EDExtension.m */,
+				046CE9D6259DD5D9000F9DE3 /* UITextField+EDExtension.h */,
+				046CE9D7259DD5D9000F9DE3 /* NSString+EDExtension.h */,
+				046CE9D8259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m */,
+				046CE9D9259DD5D9000F9DE3 /* UIScrollView+EDExtension.h */,
+				046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */,
+				046CE9DB259DD5D9000F9DE3 /* UICollectionView+EDExtension.h */,
+				046CE9DC259DD5D9000F9DE3 /* UIAlertController+EDExtension.m */,
+				046CE9DD259DD5D9000F9DE3 /* UITableView+EDExtension.m */,
+				046CE9DE259DD5D9000F9DE3 /* NSDate+EDExtension.m */,
+				046CE9DF259DD5D9000F9DE3 /* UITextView+EDExtension.h */,
+				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
+				046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */,
+				046CE9E2259DD5D9000F9DE3 /* NSDictionary+EDExtension.m */,
+				046CE9E3259DD5D9000F9DE3 /* UIView+EDExtension.m */,
+				046CE9E4259DD5D9000F9DE3 /* UIButton+EDExtension.h */,
+				046CE9E5259DD5D9000F9DE3 /* UILabel+EDExtension.h */,
+				046CE9E6259DD5D9000F9DE3 /* UIImageView+EDExtension.m */,
+				046CE9E7259DD5D9000F9DE3 /* UITextField+EDExtension.m */,
+				046CE9E8259DD5D9000F9DE3 /* NSBundle+EDExtension.h */,
+				046CE9E9259DD5D9000F9DE3 /* UITableView+EDExtension.h */,
+				046CE9EA259DD5D9000F9DE3 /* UIAlertController+EDExtension.h */,
+				046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */,
+				046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */,
+				046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */,
+				046CE9EE259DD5D9000F9DE3 /* NSAttributedString+EDExtension.h */,
+				046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */,
+				046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */,
+				046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */,
+				046CE9F2259DD5D9000F9DE3 /* NSDate+EDExtension.h */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		046CE9F3259DD5D9000F9DE3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */,
+				046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		046CE9F9259DD5D9000F9DE3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9FA259DD5D9000F9DE3 /* EDUtils.h */,
+				046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */,
+				046CE9FC259DD5D9000F9DE3 /* EDUtils.m */,
+				046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		046CE9FF259DD5D9000F9DE3 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA00259DD5D9000F9DE3 /* LYEmptyView */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		046CEA00259DD5D9000F9DE3 /* LYEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */,
+				046CEA02259DD5D9000F9DE3 /* LYEmptyView.h */,
+				046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */,
+				046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */,
+				046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */,
+				046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */,
+				046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */,
+				046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */,
+				046CEA09259DD5D9000F9DE3 /* UIView+Empty.h */,
+			);
+			path = LYEmptyView;
+			sourceTree = "<group>";
+		};
+		046CEA0A259DD5D9000F9DE3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA0B259DD5D9000F9DE3 /* EDBaseCollectionCell.m */,
+				046CEA0C259DD5D9000F9DE3 /* EDBaseAlertView.h */,
+				046CEA0D259DD5D9000F9DE3 /* EDBaseCollectionReusableView.h */,
+				046CEA0E259DD5D9000F9DE3 /* EDBaseModel.h */,
+				046CEA0F259DD5D9000F9DE3 /* EDBaseTableCell.h */,
+				046CEA10259DD5D9000F9DE3 /* EDCycleScrollView.m */,
+				046CEA11259DD5D9000F9DE3 /* EDBaseView.h */,
+				046CEA12259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m */,
+				046CEA13259DD5D9000F9DE3 /* EDBaseMacroDefine.h */,
+				046CEA14259DD5D9000F9DE3 /* EDBaseViewController.h */,
+				046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */,
+				046CEA16259DD5D9000F9DE3 /* EDBaseWebViewController.h */,
+				046CEA17259DD5D9000F9DE3 /* EDBaseCollectionViewController.h */,
+				046CEA18259DD5D9000F9DE3 /* EDBaseTableViewController.m */,
+				046CEA19259DD5D9000F9DE3 /* EDBaseAlertView.m */,
+				046CEA1A259DD5D9000F9DE3 /* EDBaseCollectionCell.h */,
+				046CEA1B259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m */,
+				046CEA1C259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.h */,
+				046CEA1D259DD5D9000F9DE3 /* EDBaseView.m */,
+				046CEA1E259DD5D9000F9DE3 /* EDCycleScrollView.h */,
+				046CEA1F259DD5D9000F9DE3 /* EDBaseTableCell.m */,
+				046CEA20259DD5D9000F9DE3 /* EDBaseModel.m */,
+				046CEA21259DD5D9000F9DE3 /* EDBaseTableViewController.h */,
+				046CEA22259DD5D9000F9DE3 /* EDBaseCollectionViewController.m */,
+				046CEA23259DD5D9000F9DE3 /* EDBaseWebViewController.m */,
+				046CEA24259DD5D9000F9DE3 /* EDNavigationController.h */,
+				046CEA25259DD5D9000F9DE3 /* EDBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		046CEA51259DD699000F9DE3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */,
+				046CEA53259DD699000F9DE3 /* TestAlertView.h */,
+				046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */,
+				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
+				046CEA56259DD699000F9DE3 /* TestAlertView.m */,
+				046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		82A3F65E5505E162C0862902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFD7FECD8470F905579034BD /* libPods-Easyder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C31B0EE3191A51D05CC7C441 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */,
+				B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046CE9AE259DD487000F9DE3 /* Easyder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 046CE9C8259DD48A000F9DE3 /* Build configuration list for PBXNativeTarget "Easyder" */;
+			buildPhases = (
+				A39DFF49DDF5739F83BF10EA /* [CP] Check Pods Manifest.lock */,
+				046CE9AB259DD487000F9DE3 /* Sources */,
+				046CE9AC259DD487000F9DE3 /* Frameworks */,
+				046CE9AD259DD487000F9DE3 /* Resources */,
+				014E0A8153E1EE429AE7B510 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Easyder;
+			productName = Easyder;
+			productReference = 046CE9AF259DD487000F9DE3 /* Easyder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046CE9A7259DD487000F9DE3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					046CE9AE259DD487000F9DE3 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 046CE9AA259DD487000F9DE3 /* Build configuration list for PBXProject "Easyder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046CE9A6259DD487000F9DE3;
+			productRefGroup = 046CE9B0259DD487000F9DE3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046CE9AE259DD487000F9DE3 /* Easyder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046CE9AD259DD487000F9DE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046CEA3C259DD5D9000F9DE3 /* Easyder.bundle in Resources */,
+				046CE9C2259DD48A000F9DE3 /* LaunchScreen.storyboard in Resources */,
+				046CEA66259DDAAF000F9DE3 /* Info.plist in Resources */,
+				046CE9BF259DD48A000F9DE3 /* Assets.xcassets in Resources */,
+				046CE9BD259DD487000F9DE3 /* Main.storyboard in Resources */,
+				046CEA3A259DD5D9000F9DE3 /* .gitkeep in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		014E0A8153E1EE429AE7B510 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyder/Pods-Easyder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easyder/Pods-Easyder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easyder/Pods-Easyder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A39DFF49DDF5739F83BF10EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easyder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046CE9AB259DD487000F9DE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046CEA40259DD5D9000F9DE3 /* UIView+Empty.m in Sources */,
+				046CEA39259DD5D9000F9DE3 /* EDConfiguration.m in Sources */,
+				046CEA2D259DD5D9000F9DE3 /* NSDate+EDExtension.m in Sources */,
+				046CEA4D259DD5D9000F9DE3 /* EDBaseCollectionViewController.m in Sources */,
+				046CEA32259DD5D9000F9DE3 /* UIImageView+EDExtension.m in Sources */,
+				046CEA49259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m in Sources */,
+				046CEA30259DD5D9000F9DE3 /* NSDictionary+EDExtension.m in Sources */,
+				046CEA2A259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m in Sources */,
+				046CEA3F259DD5D9000F9DE3 /* LYEmptyBaseView.m in Sources */,
+				046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */,
+				046CEA27259DD5D9000F9DE3 /* UILabel+EDExtension.m in Sources */,
+				046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */,
+				046CEA43259DD5D9000F9DE3 /* EDBaseCollectionCell.m in Sources */,
+				046CEA48259DD5D9000F9DE3 /* EDBaseAlertView.m in Sources */,
+				046CEA28259DD5D9000F9DE3 /* UIButton+EDExtension.m in Sources */,
+				046CEA46259DD5D9000F9DE3 /* EDNavigationController.m in Sources */,
+				046CEA29259DD5D9000F9DE3 /* NSBundle+EDExtension.m in Sources */,
+				046CEA4E259DD5D9000F9DE3 /* EDBaseWebViewController.m in Sources */,
+				046CEA2E259DD5D9000F9DE3 /* EDNullSafe.m in Sources */,
+				046CEA3B259DD5D9000F9DE3 /* EasyderManager.m in Sources */,
+				046CEA34259DD5D9000F9DE3 /* UICollectionView+EDExtension.m in Sources */,
+				046CEA36259DD5D9000F9DE3 /* UIScrollView+EDExtension.m in Sources */,
+				046CEA58259DD699000F9DE3 /* TestNextPageCtrl.m in Sources */,
+				046CEA44259DD5D9000F9DE3 /* EDCycleScrollView.m in Sources */,
+				046CEA3E259DD5D9000F9DE3 /* EDUtils.m in Sources */,
+				046CEA42259DD5D9000F9DE3 /* LYEmptyView.m in Sources */,
+				046CEA38259DD5D9000F9DE3 /* UITextView+EDExtension.m in Sources */,
+				046CEA31259DD5D9000F9DE3 /* UIView+EDExtension.m in Sources */,
+				046CE9B4259DD487000F9DE3 /* AppDelegate.m in Sources */,
+				046CEA4B259DD5D9000F9DE3 /* EDBaseTableCell.m in Sources */,
+				046CEA2C259DD5D9000F9DE3 /* UITableView+EDExtension.m in Sources */,
+				046CEA2B259DD5D9000F9DE3 /* UIAlertController+EDExtension.m in Sources */,
+				046CEA4C259DD5D9000F9DE3 /* EDBaseModel.m in Sources */,
+				046CE9C5259DD48A000F9DE3 /* main.m in Sources */,
+				046CEA3D259DD5D9000F9DE3 /* EDKeyChainUtil.m in Sources */,
+				046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */,
+				046CEA4A259DD5D9000F9DE3 /* EDBaseView.m in Sources */,
+				046CEA41259DD5D9000F9DE3 /* UIView+LYExtension.m in Sources */,
+				046CEA47259DD5D9000F9DE3 /* EDBaseTableViewController.m in Sources */,
+				046CEA35259DD5D9000F9DE3 /* NSArray+EDExtension.m in Sources */,
+				046CEA45259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m in Sources */,
+				046CEA33259DD5D9000F9DE3 /* UITextField+EDExtension.m in Sources */,
+				046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */,
+				046CEA2F259DD5D9000F9DE3 /* UIImage+EDExtension.m in Sources */,
+				046CEA59259DD699000F9DE3 /* TestTableViewCtrl.m in Sources */,
+				046CE9B7259DD487000F9DE3 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		046CE9BB259DD487000F9DE3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046CE9BC259DD487000F9DE3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046CE9C0259DD48A000F9DE3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046CE9C1259DD48A000F9DE3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		046CE9C6259DD48A000F9DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		046CE9C7259DD48A000F9DE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		046CE9C9259DD48A000F9DE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZPQWLDDE8X;
+				INFOPLIST_FILE = EasyderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyder.www.Easyder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		046CE9CA259DD48A000F9DE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZPQWLDDE8X;
+				INFOPLIST_FILE = EasyderExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.easyder.www.Easyder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046CE9AA259DD487000F9DE3 /* Build configuration list for PBXProject "Easyder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046CE9C6259DD48A000F9DE3 /* Debug */,
+				046CE9C7259DD48A000F9DE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		046CE9C8259DD48A000F9DE3 /* Build configuration list for PBXNativeTarget "Easyder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046CE9C9259DD48A000F9DE3 /* Debug */,
+				046CE9CA259DD48A000F9DE3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 046CE9A7259DD487000F9DE3 /* Project object */;
+}

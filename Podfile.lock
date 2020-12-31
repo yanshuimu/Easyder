@@ -1,0 +1,38 @@
+PODS:
+  - FDFullscreenPopGesture (1.1)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.5.0)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.10.2):
+    - SDWebImage/Core (= 5.10.2)
+  - SDWebImage/Core (5.10.2)
+  - UICKeyChainStore (2.2.1)
+
+DEPENDENCIES:
+  - FDFullscreenPopGesture
+  - MBProgressHUD (~> 1.2.0)
+  - MJRefresh (~> 3.5.0)
+  - SDCycleScrollView (~> 1.80)
+  - UICKeyChainStore (~> 2.2.1)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - FDFullscreenPopGesture
+    - MBProgressHUD
+    - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
+    - UICKeyChainStore
+
+SPEC CHECKSUMS:
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
+  SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
+  UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
+
+PODFILE CHECKSUM: eca42712bc613f3dc7030c4a0abefb399aa6adfa
+
+COCOAPODS: 1.9.1
