@@ -25,8 +25,12 @@ Pod::Spec.new do |s|
       ss.source_files = 'Easyder/Classes/EDExtension/*.{h,m}'
   end
   
-  s.subspec 'Utils' do |ss|
-      ss.source_files = 'Easyder/Classes/Utils/*.{h,m}'
+  s.subspec 'EDUtils' do |ss|
+      ss.source_files = 'Easyder/Classes/EDUtils/*.{h,m}'
+  end
+  
+  s.subspec 'EDConfig' do |ss|
+      ss.source_files = 'Easyder/Classes/EDConfig/*.{h,m}'
   end
   
   s.dependency 'MJRefresh'

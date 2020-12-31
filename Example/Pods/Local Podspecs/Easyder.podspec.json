@@ -43,6 +43,10 @@
     {
       "name": "EDExtension",
       "source_files": "Easyder/Classes/EDExtension/*.{h,m}"
+    },
+    {
+      "name": "Utils",
+      "source_files": "Easyder/Classes/Utils/*.{h,m}"
     }
   ]
 }

@@ -12,14 +12,12 @@
 
 #import "Easyder.h"
 #import "EasyderManager.h"
-#import "EDBaseMacroDefine.h"
 #import "EDConfiguration.h"
-#import "EDKeyChainUtil.h"
-#import "EDUtils.h"
 #import "EDBaseAlertView.h"
 #import "EDBaseCollectionCell.h"
 #import "EDBaseCollectionReusableView.h"
 #import "EDBaseCollectionViewController.h"
+#import "EDBaseMacroDefine.h"
 #import "EDBaseModel.h"
 #import "EDBaseTableCell.h"
 #import "EDBaseTableHeaderFooterView.h"
@@ -45,6 +43,8 @@
 #import "UITextField+EDExtension.h"
 #import "UITextView+EDExtension.h"
 #import "UIView+EDExtension.h"
+#import "EDKeyChainUtil.h"
+#import "EDUtils.h"
 
 FOUNDATION_EXPORT double EasyderVersionNumber;
 FOUNDATION_EXPORT const unsigned char EasyderVersionString[];
