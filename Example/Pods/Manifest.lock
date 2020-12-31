@@ -74,7 +74,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: 262d54c5f4c258650ff26ff716503eb17ac058b6
+  Easyder: e63eb6612667a3883192c8febd5d7d2e688769a5
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16

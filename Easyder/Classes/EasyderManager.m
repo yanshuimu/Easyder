@@ -10,6 +10,10 @@
 
 static EasyderManager *manager = nil;
 
+@interface EasyderManager ()
+
+@end
+
 @implementation EasyderManager
 
 + (instancetype)shareManager

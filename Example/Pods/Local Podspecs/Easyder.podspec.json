@@ -18,7 +18,7 @@
     "ios": "9.0"
   },
   "source_files": "Easyder/Classes/*.{h,m}",
-  "resources": "Easyder/Classes/Resources/*.{png,bundle}",
+  "resources": "Easyder/Resources/*.{png,bundle}",
   "dependencies": {
     "MJRefresh": [
 
