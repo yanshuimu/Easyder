@@ -17,8 +17,12 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.source_files = 'Easyder/Classes/Easyder.h'
   
+  s.subspec 'EDBase' do |ss|
+      ss.source_files = 'Easyder/Classes/EDBase/*.{h,m}'
+  end
+  
   s.subspec 'EDExtension' do |ss|
-      ss.source_files = 'Easyder/Classes/*.{h,m}'
+      ss.source_files = 'Easyder/Classes/EDExtension/*.{h,m}'
   end
   
   s.dependency 'MJRefresh'

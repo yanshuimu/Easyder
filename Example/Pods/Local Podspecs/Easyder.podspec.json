@@ -34,5 +34,11 @@
     "UICKeyChainStore": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "EDExtension",
+      "source_files": "Easyder/Classes/EDExtension/*.{h,m}"
+    }
+  ]
 }
