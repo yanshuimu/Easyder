@@ -1,6 +1,0 @@
-framework module Pods_Easyder_Tests {
-  umbrella header "Pods-Easyder_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

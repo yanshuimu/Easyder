@@ -1,6 +1,0 @@
-framework module Easyder {
-  umbrella header "Easyder-umbrella.h"
-
-  export *
-  module * { export * }
-}

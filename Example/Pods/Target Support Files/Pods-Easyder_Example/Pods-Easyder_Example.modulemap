@@ -1,6 +1,0 @@
-framework module Pods_Easyder_Example {
-  umbrella header "Pods-Easyder_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
