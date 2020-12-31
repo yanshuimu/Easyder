@@ -25,6 +25,10 @@ Pod::Spec.new do |s|
       ss.source_files = 'Easyder/Classes/EDExtension/*.{h,m}'
   end
   
+  s.subspec 'Utils' do |ss|
+      ss.source_files = 'Easyder/Classes/Utils/*.{h,m}'
+  end
+  
   s.dependency 'MJRefresh'
   s.dependency 'MBProgressHUD'
   s.dependency 'SDCycleScrollView'
