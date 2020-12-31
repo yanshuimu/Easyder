@@ -51,6 +51,15 @@
     {
       "name": "Config",
       "source_files": "Easyder/Classes/Config/*.{h,m}"
+    },
+    {
+      "name": "Lib",
+      "subspecs": [
+        {
+          "name": "LYEmptyView",
+          "source_files": "Easyder/Classes/Lib/LYEmptyView/*.{h,m}"
+        }
+      ]
     }
   ]
 }

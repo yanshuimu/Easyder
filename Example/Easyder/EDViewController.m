@@ -9,7 +9,8 @@
 #import "EDViewController.h"
 #import <Easyder.h>
 #import "TestAlertView.h"
-#import "NextPageCtrl.h"
+#import "TestNextPageCtrl.h"
+#import "TestTableViewCtrl.h"
 
 @interface EDViewController ()
 //
@@ -61,7 +62,7 @@
     switch (indexPath.row) {
         case 0:
         {
-            NextPageCtrl *ctrl = [[NextPageCtrl alloc] init];
+            TestNextPageCtrl *ctrl = [[TestNextPageCtrl alloc] init];
             [self.navigationController pushViewController:ctrl animated:YES];
         }
             break;
@@ -71,7 +72,12 @@
             [view show];
         }
             break;
-            
+        case 2:
+        {
+            TestTableViewCtrl *ctrl = [[TestTableViewCtrl alloc] init];
+            [self.navigationController pushViewController:ctrl animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -80,7 +86,7 @@
 - (NSArray*)titleArray {
     if (!_titleArray) {
         
-        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView"];
+        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView", @"EDBaseTableViewController"];
     }
     return _titleArray;
 }

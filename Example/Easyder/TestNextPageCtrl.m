@@ -1,18 +1,18 @@
 //
-//  NextPageCtrl.m
+//  TestNextPageCtrl.m
 //  Easyder_Example
 //
 //  Created by mac on 2020/12/31.
 //  Copyright © 2020 yanshuimu. All rights reserved.
 //
 
-#import "NextPageCtrl.h"
+#import "TestNextPageCtrl.h"
 
-@interface NextPageCtrl ()
+@interface TestNextPageCtrl ()
 
 @end
 
-@implementation NextPageCtrl
+@implementation TestNextPageCtrl
 
 - (void)viewDidLoad {
     [super viewDidLoad];

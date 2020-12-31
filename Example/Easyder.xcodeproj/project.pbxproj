@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		046CE866259D62DE000F9DE3 /* NextPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE865259D62DE000F9DE3 /* NextPageCtrl.m */; };
+		046CE866259D62DE000F9DE3 /* TestNextPageCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE865259D62DE000F9DE3 /* TestNextPageCtrl.m */; };
+		046CE8EF259D7B8D000F9DE3 /* TestTableViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE8EE259D7B8D000F9DE3 /* TestTableViewCtrl.m */; };
 		04CF3A2A259C12E000430BB0 /* TestAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CF3A29259C12E000430BB0 /* TestAlertView.m */; };
 		2822F010DAFB12DFB0AE3AEB /* Pods_Easyder_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B282CDFA86D6D737F2F1AFD7 /* Pods_Easyder_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -39,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		046CE864259D62DE000F9DE3 /* NextPageCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextPageCtrl.h; sourceTree = "<group>"; };
-		046CE865259D62DE000F9DE3 /* NextPageCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextPageCtrl.m; sourceTree = "<group>"; };
+		046CE864259D62DE000F9DE3 /* TestNextPageCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNextPageCtrl.h; sourceTree = "<group>"; };
+		046CE865259D62DE000F9DE3 /* TestNextPageCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNextPageCtrl.m; sourceTree = "<group>"; };
+		046CE8ED259D7B8D000F9DE3 /* TestTableViewCtrl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTableViewCtrl.h; sourceTree = "<group>"; };
+		046CE8EE259D7B8D000F9DE3 /* TestTableViewCtrl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCtrl.m; sourceTree = "<group>"; };
 		04CF3A28259C12E000430BB0 /* TestAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAlertView.h; sourceTree = "<group>"; };
 		04CF3A29259C12E000430BB0 /* TestAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAlertView.m; sourceTree = "<group>"; };
 		37FE58D8DA4EBFCD2CACDC5B /* Pods-Easyder_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder_Example.debug.xcconfig"; path = "Target Support Files/Pods-Easyder_Example/Pods-Easyder_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,8 +151,10 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				04CF3A28259C12E000430BB0 /* TestAlertView.h */,
 				04CF3A29259C12E000430BB0 /* TestAlertView.m */,
-				046CE864259D62DE000F9DE3 /* NextPageCtrl.h */,
-				046CE865259D62DE000F9DE3 /* NextPageCtrl.m */,
+				046CE864259D62DE000F9DE3 /* TestNextPageCtrl.h */,
+				046CE865259D62DE000F9DE3 /* TestNextPageCtrl.m */,
+				046CE8ED259D7B8D000F9DE3 /* TestTableViewCtrl.h */,
+				046CE8EE259D7B8D000F9DE3 /* TestTableViewCtrl.m */,
 			);
 			name = "Example for Easyder";
 			path = Easyder;
@@ -393,7 +398,8 @@
 				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
 				04CF3A2A259C12E000430BB0 /* TestAlertView.m in Sources */,
 				6003F5A7195388D20070C39A /* EDViewController.m in Sources */,
-				046CE866259D62DE000F9DE3 /* NextPageCtrl.m in Sources */,
+				046CE866259D62DE000F9DE3 /* TestNextPageCtrl.m in Sources */,
+				046CE8EF259D7B8D000F9DE3 /* TestTableViewCtrl.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

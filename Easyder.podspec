@@ -34,7 +34,9 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Lib' do |ss|
-      ss.source_files = 'Easyder/Classes/Lib/*.{h,m}'
+      ss.subspec 'LYEmptyView' do |sss|
+          sss.source_files = 'Easyder/Classes/Lib/LYEmptyView/*.{h,m}'
+      end
   end
   
   s.dependency 'MJRefresh'

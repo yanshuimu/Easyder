@@ -1036,7 +1036,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
             return;
         }
         self.alpha = 1.0;
-        NSString *imageName, *titleStr, *tipStr;
+        NSString *imageName, *tipStr;
         NSString *buttonTitle;
         if (hasError) {
             //        加载失败
@@ -1075,10 +1075,10 @@ CGFloat CGHeightAutoMake(CGFloat height) {
         
         LYEmptyView *emptyV = [LYEmptyView emptyActionViewWithImageStr:imageName titleStr:tipStr detailStr:nil btnTitleStr:buttonTitle btnClickBlock:block];
         emptyV.autoShowEmptyView = NO;
-        emptyV.actionBtnBackGroundColor = kThemeColor;
-        emptyV.actionBtnTitleColor = KWhiteColor;
-        emptyV.titleLabFont = kFont(12);
-        emptyV.titleLabTextColor = kFontColorLightGray;
+        emptyV.actionBtnBackGroundColor = EDThemeColor;
+        emptyV.actionBtnTitleColor = EDWhiteColor;
+        emptyV.titleLabFont = EDFont(12);
+        emptyV.titleLabTextColor = EDFontColorLightGray;
         self.ly_emptyView = emptyV;
         
         //    布局

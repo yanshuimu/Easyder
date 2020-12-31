@@ -1,5 +1,5 @@
 //
-//  NextPageCtrl.h
+//  TestNextPageCtrl.h
 //  Easyder_Example
 //
 //  Created by mac on 2020/12/31.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NextPageCtrl : EDBaseViewController
+@interface TestNextPageCtrl : EDBaseViewController
 
 @end
 
