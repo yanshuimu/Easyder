@@ -10,14 +10,14 @@
 
 @implementation NSDate (EDUtils)
 
-+ (NSString*)getCurrentTimestamp
++ (NSString*)currentTimestamp
 {
     NSDate *date = [NSDate date];
     NSTimeInterval interval = [date timeIntervalSince1970];
     return [NSString stringWithFormat:@"%ld", ((long)interval * 1000)];
 }
 
-+ (NSString*)getCurrentDateWithFormatter:(NSString*)formatter
++ (NSString*)currentDateWithFormatter:(NSString*)formatter
 {
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

@@ -10,15 +10,29 @@
 
 @interface UILabel (Extension)
 
+/**
+ * frame、font
+ */
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font;
 
+/**
+ * frame、font、textColor
+ */
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font textColor:(UIColor *)textColor;
 
+/**
+ * frame、font、backgroundColor
+ */
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor;
 
+/**
+ * frame、font、textColor、backgroundColor
+ */
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor;
 
-
+/**
+ * frame、text、font、textColor
+ */
 + (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text font:(UIFont*)font textColor:(UIColor *)textColor;
 
 /**
@@ -36,6 +50,9 @@
  */
 + (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor;
 
+/**
+ * font、textColor、backgroundColor
+ */
 + (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor;
 
 /**

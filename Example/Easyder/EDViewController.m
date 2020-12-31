@@ -9,6 +9,7 @@
 #import "EDViewController.h"
 #import <Easyder.h>
 #import "TestAlertView.h"
+#import "NextPageCtrl.h"
 
 @interface EDViewController ()
 //
@@ -29,6 +30,7 @@
 
 - (void)setupSubviews {
     
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -59,6 +61,12 @@
     switch (indexPath.row) {
         case 0:
         {
+            NextPageCtrl *ctrl = [[NextPageCtrl alloc] init];
+            [self.navigationController pushViewController:ctrl animated:YES];
+        }
+            break;
+        case 1:
+        {
             TestAlertView *view = [[TestAlertView alloc] init];
             [view show];
         }
@@ -72,7 +80,7 @@
 - (NSArray*)titleArray {
     if (!_titleArray) {
         
-        _titleArray = @[@"EDBaseAlertView"];
+        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView"];
     }
     return _titleArray;
 }

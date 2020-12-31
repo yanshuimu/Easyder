@@ -13,10 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIImageView (EDCreate)
 
 /**
- * frame
+ * frame、isScaleAspectFill
  */
-+ (instancetype)imageViewWithFrame:(CGRect)frame;
-
 + (instancetype)imageViewWithFrame:(CGRect)frame isScaleAspectFill:(BOOL)isScaleAspectFill;
 
 /**
@@ -29,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)imageViewWithImageName:(NSString*)imageName;
 
+/**
+ * frame、imageName、isScaleAspectFill
+ */
 + (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName isScaleAspectFill:(BOOL)isScaleAspectFill;
 
 /**

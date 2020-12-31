@@ -13,12 +13,12 @@
 /**
  *  获取当前时间戳
  */
-+ (NSString*)getCurrentTimestamp;
++ (NSString*)currentTimestamp;
 
 /**
  *  获取当前时间
  */
-+ (NSString*)getCurrentDateWithFormatter:(NSString*)formatter;
++ (NSString*)currentDateWithFormatter:(NSString*)formatter;
 
 /**
  *  根据时间戳获取时间

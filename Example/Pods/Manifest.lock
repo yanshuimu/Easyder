@@ -1,5 +1,5 @@
 PODS:
-  - Easyder (0.1.3):
+  - Easyder (0.1.4):
     - FDFullscreenPopGesture
     - MBProgressHUD
     - MJRefresh
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: 15c5f7da81443416e2f988f2687864e1612c7c02
+  Easyder: 79250992c74c43fb8ddd6735910e15aaec3d497b
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16

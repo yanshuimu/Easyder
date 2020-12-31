@@ -216,7 +216,7 @@ CGFloat CGHeightAutoMake(CGFloat height);
 /**
  * 自适应大小
  */
-- (CGSize)getAutoFitSize;
+- (CGSize)autoFitSize;
 
 @end
 

@@ -19,6 +19,8 @@
 //
 @property (nonatomic, strong) UIFont *titleFont;
 //
+@property (nonatomic, copy) NSString *returnImageName;
+//
 @property (nonatomic, assign) BOOL bottomLineHidden;
 @end
 
@@ -79,6 +81,7 @@
     _titleFont = EDISNIL(configuration.barTitleFont) ? EDFont(17) : configuration.barTitleFont;
     _titleColor = EDISNIL(configuration.barTitleColor) ? EDFontColorBlack : configuration.barTitleColor;
     _bottomLineHidden = configuration.barBottomLineHidden;
+    _returnImageName = configuration.barReturnImageName;
 }
 
 //重写nav的push方法
@@ -90,7 +93,7 @@
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         
         UIImageView *backImgV = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 9, 17)];
-        backImgV.image = [UIImage imageNamed:@"return_key_while"];
+        backImgV.image = [UIImage imageNamed:_returnImageName];
         [backImgV setCenterY:btn.centerY];
         [btn addSubview:backImgV];
         
@@ -101,12 +104,9 @@
         
         viewController.hidesBottomBarWhenPushed = YES;
         
-    } else {
-        
     }
     
     [super pushViewController:viewController animated:animated];
-    
 }
 
 - (void)leftClick:(UIButton *)sender{

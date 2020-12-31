@@ -485,7 +485,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     }
 }
 
-- (CGSize)getAutoFitSize {
+- (CGSize)autoFitSize {
     [self sizeToFit];
     return self.frame.size;
 }

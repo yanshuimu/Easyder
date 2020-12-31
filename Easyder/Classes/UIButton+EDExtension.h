@@ -18,26 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)buttonWithImageName:(NSString*)imageName;
 
 /**
-* frame、imageName
-*/
-+ (instancetype)buttonWithFrame:(CGRect)frame imageName:(NSString*)imageName;
-
-/**
-* frame、backgroundImageName
-*/
-+ (instancetype)buttonWithFrame:(CGRect)frame backgroundImageName:(NSString*)backgroundImageName;
-
-/**
- * frame、backgroundColor、cornerRadius
- */
-+ (instancetype)buttonWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius;
-
-/**
- * frame、title、titleColor、font
- */
-+ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font;
-
-/**
  * title、titleColor、font
  */
 + (instancetype)buttonWithTitle:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font;
@@ -62,8 +42,29 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)buttonWithTitle:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius;
 
+/**
+* frame、imageName
+*/
++ (instancetype)buttonWithFrame:(CGRect)frame imageName:(NSString*)imageName;
+
+/**
+ * frame、backgroundColor、cornerRadius
+ */
++ (instancetype)buttonWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius;
+
+/**
+ * frame、title、titleColor、font
+ */
++ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font;
+
+/**
+ * frame、titleColor、font
+ */
 + (instancetype)buttonWithFrame:(CGRect)frame titleColor:(UIColor*)titleColor font:(UIFont*)font;
 
+/**
+ * frame、title、titleColor、font、backgroundColor
+ */
 + (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor;
 
 /**

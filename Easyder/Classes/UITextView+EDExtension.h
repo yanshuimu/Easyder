@@ -68,10 +68,19 @@
 
 @interface UITextView (EDCreate)
 
+/**
+ * frame、font
+ */
 + (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font;
 
+/**
+ * frame、font、placeholder
+ */
 + (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder;
 
+/**
+ * frame、font、placeholder、placeholderColor
+ */
 + (instancetype)textViewWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder placeholderColor:(UIColor*)placeholderColor;
 
 @end

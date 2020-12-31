@@ -82,6 +82,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)textFieldWithFont:(UIFont*)font placeholder:(NSString*)placeholder;
 
+/**
+ * frame、font
+ */
 + (instancetype)textFieldWithFrame:(CGRect)frame font:(UIFont*)font;
 
 /**

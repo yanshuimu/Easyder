@@ -12,13 +12,6 @@
 
 @implementation UIImageView (EDCreate)
 
-+ (instancetype)imageViewWithFrame:(CGRect)frame {
-    
-    UIImageView *imageView = [[self alloc] initWithFrame:frame];
-    imageView.contentMode = UIViewContentModeScaleAspectFill;
-    return imageView;
-}
-
 + (instancetype)imageViewWithFrame:(CGRect)frame isScaleAspectFill:(BOOL)isScaleAspectFill {
     
     UIImageView *imageView = [[self alloc] initWithFrame:frame];

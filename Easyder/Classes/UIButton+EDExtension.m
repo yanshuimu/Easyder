@@ -22,38 +22,6 @@
     return btn;
 }
 
-+ (instancetype)buttonWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius {
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = frame;
-    btn.backgroundColor = backgroundColor;
-    [btn addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
-    
-    return btn;
-}
-
-+ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font {
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = frame;
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    btn.titleLabel.font = font;
-    
-    return btn;
-}
-
-+ (instancetype)buttonWithTitle:(NSString*)title font:(UIFont*)font imageName:(NSString*)imageName {
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:EDFontColorBlack forState:UIControlStateNormal];
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
-    btn.titleLabel.font = font;
-    
-    return btn;
-}
-
 + (instancetype)buttonWithTitle:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font imageName:(NSString*)imageName {
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -93,6 +61,38 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = frame;
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
+    btn.titleLabel.font = font;
+    
+    return btn;
+}
+
++ (instancetype)buttonWithFrame:(CGRect)frame backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGSize)cornerRadius {
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = frame;
+    btn.backgroundColor = backgroundColor;
+    [btn addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
+    
+    return btn;
+}
+
++ (instancetype)buttonWithFrame:(CGRect)frame title:(NSString*)title titleColor:(UIColor*)titleColor font:(UIFont*)font {
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = frame;
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:titleColor forState:UIControlStateNormal];
+    btn.titleLabel.font = font;
+    
+    return btn;
+}
+
++ (instancetype)buttonWithTitle:(NSString*)title font:(UIFont*)font imageName:(NSString*)imageName {
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:EDFontColorBlack forState:UIControlStateNormal];
+    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
     btn.titleLabel.font = font;
     
     return btn;
