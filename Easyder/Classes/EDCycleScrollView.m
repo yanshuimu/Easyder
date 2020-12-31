@@ -21,13 +21,16 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        
         [self edInitialize];
+        
+        [self edSetupSubviews];
     }
     return self;
 }
 
 - (void)edInitialize {
-    [self edSetupSubviews];
+    
 }
 
 - (void)edSetupSubviews {

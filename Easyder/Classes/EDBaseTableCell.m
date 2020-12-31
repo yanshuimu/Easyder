@@ -21,22 +21,24 @@
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         [self edInitialize];
+        
+        [self edSetupSubviews];
     }
     return self;
 }
 
 - (void)edInitialize {
-    
-    [self edSetupSubviews];
+    //子类重写
 }
 
 - (void)edSetupSubviews {
-    //子类实现
+    //子类重写
 }
 
 - (void)edSetDataDict:(NSDictionary*)dict {
-    //子类实现
+    //子类重写
 }
 
 - (void)awakeFromNib {

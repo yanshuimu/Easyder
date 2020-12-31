@@ -35,16 +35,18 @@
 - (instancetype)init {
     
     if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)]) {
+        
+        [self configuration];
+        
         [self edInitialize];
+        
+        [self edSetupSubviews];
     }
     return self;
 }
 
 - (void)edInitialize {
-        
-    [self configuration];
-
-    [self edSetupSubviews];
+    //子类重写
 }
 
 - (void)edSetupSubviews {
