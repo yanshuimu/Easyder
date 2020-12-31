@@ -4,7 +4,6 @@ PODS:
     - Easyder/Config (= 0.1.4)
     - Easyder/Extension (= 0.1.4)
     - Easyder/Lib (= 0.1.4)
-    - Easyder/Resources (= 0.1.4)
     - Easyder/Utils (= 0.1.4)
     - FDFullscreenPopGesture
     - MBProgressHUD
@@ -37,12 +36,6 @@ PODS:
     - SDCycleScrollView
     - UICKeyChainStore
   - Easyder/Lib/LYEmptyView (0.1.4):
-    - FDFullscreenPopGesture
-    - MBProgressHUD
-    - MJRefresh
-    - SDCycleScrollView
-    - UICKeyChainStore
-  - Easyder/Resources (0.1.4):
     - FDFullscreenPopGesture
     - MBProgressHUD
     - MJRefresh
@@ -81,7 +74,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Easyder: d60d26c654035d5a9b30fd0b84708734c41fd0d9
+  Easyder: 262d54c5f4c258650ff26ff716503eb17ac058b6
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16

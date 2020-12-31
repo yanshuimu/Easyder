@@ -16,10 +16,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/yanshuimu/Easyder.git', :tag => "#{s.version}" }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Easyder/Classes/*.{h,m}'
-  
-  s.subspec 'Resources' do |ss|
-      ss.source_files = 'Easyder.bundle'
-  end
+  s.resources = "Easyder/Classes/Resources/*.{png,bundle}"
   
   s.subspec 'Base' do |ss|
       ss.source_files = 'Easyder/Classes/Base/*.{h,m}'

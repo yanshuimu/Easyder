@@ -18,6 +18,7 @@
     "ios": "9.0"
   },
   "source_files": "Easyder/Classes/*.{h,m}",
+  "resources": "Easyder/Classes/Resources/*.{png,bundle}",
   "dependencies": {
     "MJRefresh": [
 
@@ -36,10 +37,6 @@
     ]
   },
   "subspecs": [
-    {
-      "name": "Resources",
-      "source_files": ""
-    },
     {
       "name": "Base",
       "source_files": "Easyder/Classes/Base/*.{h,m}"
