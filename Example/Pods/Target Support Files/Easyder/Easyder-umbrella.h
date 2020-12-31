@@ -12,7 +12,6 @@
 
 #import "Easyder.h"
 #import "EasyderManager.h"
-#import "EDConfiguration.h"
 #import "EDBaseAlertView.h"
 #import "EDBaseCollectionCell.h"
 #import "EDBaseCollectionReusableView.h"
@@ -27,6 +26,7 @@
 #import "EDBaseWebViewController.h"
 #import "EDCycleScrollView.h"
 #import "EDNavigationController.h"
+#import "EDConfiguration.h"
 #import "NSArray+EDExtension.h"
 #import "NSAttributedString+EDExtension.h"
 #import "NSDate+EDExtension.h"

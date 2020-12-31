@@ -45,8 +45,12 @@
       "source_files": "Easyder/Classes/EDExtension/*.{h,m}"
     },
     {
-      "name": "Utils",
-      "source_files": "Easyder/Classes/Utils/*.{h,m}"
+      "name": "EDUtils",
+      "source_files": "Easyder/Classes/EDUtils/*.{h,m}"
+    },
+    {
+      "name": "EDConfig",
+      "source_files": "Easyder/Classes/EDConfig/*.{h,m}"
     }
   ]
 }
