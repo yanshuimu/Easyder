@@ -224,10 +224,10 @@
 		046CE9CE259DD5D9000F9DE3 /* Easyder */ = {
 			isa = PBXGroup;
 			children = (
+				04A39AD125A2BBCB007F596E /* Resources */,
 				046CE9F6259DD5D9000F9DE3 /* .gitkeep */,
 				04A39ACE25A2B6F5007F596E /* Base */,
 				04A39AD025A2B86D007F596E /* Config */,
-				046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */,
 				046CE9FE259DD5D9000F9DE3 /* Easyder.h */,
 				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
 				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
@@ -369,6 +369,14 @@
 				046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		04A39AD125A2BBCB007F596E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		82A3F65E5505E162C0862902 /* Frameworks */ = {
