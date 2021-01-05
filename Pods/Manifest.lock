@@ -1,7 +1,5 @@
 PODS:
   - FDFullscreenPopGesture (1.1)
-  - MangoFix (1.4.4):
-    - symdl
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - SDCycleScrollView (1.82):
@@ -9,12 +7,10 @@ PODS:
   - SDWebImage (5.10.2):
     - SDWebImage/Core (= 5.10.2)
   - SDWebImage/Core (5.10.2)
-  - symdl (0.6.0)
   - UICKeyChainStore (2.2.1)
 
 DEPENDENCIES:
   - FDFullscreenPopGesture
-  - MangoFix
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.5.0)
   - SDCycleScrollView (~> 1.80)
@@ -23,24 +19,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - FDFullscreenPopGesture
-    - MangoFix
     - MBProgressHUD
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
-    - symdl
     - UICKeyChainStore
 
 SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
-  MangoFix: 3331b01698e8cf0ef285cbd1e3136652218af20c
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
-  symdl: 1906f396fff3f7530074ecfc226e17006b12d0a0
   UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
 
-PODFILE CHECKSUM: 705b57dea5a6419154e6f4fb1a1d730e900dbe47
+PODFILE CHECKSUM: eca42712bc613f3dc7030c4a0abefb399aa6adfa
 
 COCOAPODS: 1.9.1

@@ -15,7 +15,5 @@ pod 'SDCycleScrollView', '~> 1.80'
 
 pod 'FDFullscreenPopGesture'
 
-pod 'MangoFix'
-
 end
 

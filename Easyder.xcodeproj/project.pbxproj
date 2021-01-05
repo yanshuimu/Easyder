@@ -59,8 +59,6 @@
 		046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA56259DD699000F9DE3 /* TestAlertView.m */; };
 		046CEA66259DDAAF000F9DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CEA65259DDAAF000F9DE3 /* Info.plist */; };
 		04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04A39ACC25A2A854007F596E /* Easyder.podspec */; };
-		04A39B0C25A450A2007F596E /* EDMangoFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39B0B25A450A2007F596E /* EDMangoFix.m */; };
-		04A39B0E25A451EE007F596E /* encrypted_demo.mg in Resources */ = {isa = PBXBuildFile; fileRef = 04A39B0D25A451EE007F596E /* encrypted_demo.mg */; };
 		CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7FECD8470F905579034BD /* libPods-Easyder.a */; };
 /* End PBXBuildFile section */
 
@@ -164,9 +162,6 @@
 		046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNextPageCtrl.h; sourceTree = "<group>"; };
 		046CEA65259DDAAF000F9DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
-		04A39B0A25A450A2007F596E /* EDMangoFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMangoFix.h; sourceTree = "<group>"; };
-		04A39B0B25A450A2007F596E /* EDMangoFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMangoFix.m; sourceTree = "<group>"; };
-		04A39B0D25A451EE007F596E /* encrypted_demo.mg */ = {isa = PBXFileReference; lastKnownFileType = text; path = encrypted_demo.mg; sourceTree = SOURCE_ROOT; };
 		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
 		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,7 +200,6 @@
 		046CE9B1259DD487000F9DE3 /* EasyderExample */ = {
 			isa = PBXGroup;
 			children = (
-				04A39B0D25A451EE007F596E /* encrypted_demo.mg */,
 				04A39ACC25A2A854007F596E /* Easyder.podspec */,
 				046CEA65259DDAAF000F9DE3 /* Info.plist */,
 				046CEA51259DD699000F9DE3 /* Classes */,
@@ -295,7 +289,6 @@
 		046CE9FF259DD5D9000F9DE3 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				04A39B0925A4507C007F596E /* EasyMangoFix */,
 				046CEA00259DD5D9000F9DE3 /* LYEmptyView */,
 			);
 			path = Lib;
@@ -381,15 +374,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		04A39B0925A4507C007F596E /* EasyMangoFix */ = {
-			isa = PBXGroup;
-			children = (
-				04A39B0A25A450A2007F596E /* EDMangoFix.h */,
-				04A39B0B25A450A2007F596E /* EDMangoFix.m */,
-			);
-			path = EasyMangoFix;
-			sourceTree = "<group>";
-		};
 		82A3F65E5505E162C0862902 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,7 +454,6 @@
 				04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */,
 				046CEA66259DDAAF000F9DE3 /* Info.plist in Resources */,
 				046CE9BF259DD48A000F9DE3 /* Assets.xcassets in Resources */,
-				04A39B0E25A451EE007F596E /* encrypted_demo.mg in Resources */,
 				046CE9BD259DD487000F9DE3 /* Main.storyboard in Resources */,
 				046CEA3A259DD5D9000F9DE3 /* .gitkeep in Resources */,
 			);
@@ -537,7 +520,6 @@
 				046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */,
 				046CEA27259DD5D9000F9DE3 /* UILabel+EDExtension.m in Sources */,
 				046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */,
-				04A39B0C25A450A2007F596E /* EDMangoFix.m in Sources */,
 				046CEA43259DD5D9000F9DE3 /* EDBaseCollectionCell.m in Sources */,
 				046CEA48259DD5D9000F9DE3 /* EDBaseAlertView.m in Sources */,
 				046CEA28259DD5D9000F9DE3 /* UIButton+EDExtension.m in Sources */,
