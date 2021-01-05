@@ -10,6 +10,7 @@
 #import "EDBaseMacroDefine.h"
 #import "EDBaseModel.h"
 #import "UIImage+EDExtension.h"
+#import "NSBundle+EDExtension.h"
 #import "EDBaseView.h"
 
 @implementation UIView (EDLayout)
@@ -1036,49 +1037,44 @@ CGFloat CGHeightAutoMake(CGFloat height) {
             return;
         }
         self.alpha = 1.0;
-        NSString *imageName, *tipStr;
-        NSString *buttonTitle;
+        NSString *imageName, *tipStr, *buttonTitle;
+        
+        EDConfiguration *configuration = EDManagerSingleton.emptyViewConfiguration;
+        
         if (hasError) {
             //        加载失败
-            tipStr = @"呀，网络出了问题";
-            imageName = @"empty_jd";
-            buttonTitle = @"重新连接网络";
+            tipStr = EDStringIsEmpty(configuration.networkErrorTitle) ? @"呀，网络出了问题" : configuration.networkErrorTitle;
+            buttonTitle = EDStringIsEmpty(configuration.emptyButtonTitle) ? @"重新连接网络" : configuration.emptyButtonTitle;
+            imageName = configuration.networkErrorImageName;
+            
         }else{
             //        空白数据
             switch (blankPageType) {
-                case EaseBlankPageTypeConsume: {//消费明细
-                    tipStr = @"没有消费记录";
-                }
-                    break;
-                case EaseBlankPageTypeSearch: {//搜索
-                    tipStr = @"没有搜索结果";
-                }
-                    break;
-                case EaseBlankPageTypeShoppingCart: {//购物车
-                    tipStr = @"购物车为空";
-                    imageName = @"transaction6";
-                }
-                    break;
-                case EaseBlankPageTypeShoppingCartMemberSearch: {//购物车搜索
-                    tipStr = @"没有搜索结果";
-                    imageName = @"transaction4_small";
-                }
-                    break;
                 default://其它页面（这里没有提到的页面，都属于其它）
                 {
-                    tipStr = @"暂时没有内容";
+                    tipStr = EDStringIsEmpty(configuration.emptyTitle) ? @"暂时没有内容" : configuration.emptyTitle;
                 }
                     break;
             }
         }
-        imageName = imageName ?: @"details14";
+        imageName = imageName ? imageName : configuration.emptyImageName;
         
         LYEmptyView *emptyV = [LYEmptyView emptyActionViewWithImageStr:imageName titleStr:tipStr detailStr:nil btnTitleStr:buttonTitle btnClickBlock:block];
+        
+        if (EDStringIsEmpty(imageName)) {
+            if (hasError) {
+                emptyV.image = [NSBundle imageFromEasyderBundleWithName:@"network_error"];
+            }
+            else {
+                emptyV.image = [NSBundle imageFromEasyderBundleWithName:@"empty"];
+            }
+        }
+        
         emptyV.autoShowEmptyView = NO;
-        emptyV.actionBtnBackGroundColor = EDThemeColor;
-        emptyV.actionBtnTitleColor = EDWhiteColor;
-        emptyV.titleLabFont = EDFont(12);
-        emptyV.titleLabTextColor = EDFontColorLightGray;
+        emptyV.actionBtnBackGroundColor = configuration.emptyButtonBackgroundColor ? configuration.emptyButtonBackgroundColor : EDWhiteColor;
+        emptyV.actionBtnTitleColor = configuration.emptyButtonTitleColor ? configuration.emptyButtonTitleColor : EDFontColorBlack;
+        emptyV.titleLabFont = configuration.emptyTitleFont ? configuration.emptyTitleFont: EDFont(13);
+        emptyV.titleLabTextColor = configuration.emptyTitleColor ? configuration.emptyTitleColor :  EDFontColorLightGray;
         self.ly_emptyView = emptyV;
         
         //    布局

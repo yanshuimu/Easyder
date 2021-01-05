@@ -31,6 +31,27 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL alertViewAnimated;
 //点击蒙版是否隐藏，默认NO
 @property (nonatomic, assign) BOOL alertViewClickMaskOnTheHidden;
+
+#pragma mark - LYEmptyView
+//空态图片
+@property (nonatomic, copy) NSString *emptyImageName;
+//网络出错图片
+@property (nonatomic, copy) NSString *networkErrorImageName;
+//标题
+@property (nonatomic, copy) NSString *emptyTitle;
+//标题字体
+@property (nonatomic, strong) UIFont *emptyTitleFont;
+//标题字体颜色
+@property (nonatomic, strong) UIColor *emptyTitleColor;
+//按钮标题
+@property (nonatomic, copy) NSString *emptyButtonTitle;
+//网络错误提示
+@property (nonatomic, copy) NSString *networkErrorTitle;
+//按钮标题颜色
+@property (nonatomic, strong) UIColor *emptyButtonTitleColor;
+//按钮背景颜色
+@property (nonatomic, strong) UIColor *emptyButtonBackgroundColor;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,13 +20,19 @@
     return easyderBundle;
 }
 
++ (UIImage*)returnImageFromEasyderBundle {
+    
+    static UIImage *returnImage = nil;
+    if (returnImage == nil) {
+        returnImage = [[UIImage imageWithContentsOfFile:[[self easyderBundle] pathForResource:@"nav_return@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    return returnImage;
+}
+
 + (UIImage*)imageFromEasyderBundleWithName:(NSString*)imageName {
     
-    static UIImage *image = nil;
-    if (image == nil) {
-        imageName = [NSString stringWithFormat:@"%@@2x", imageName];
-        image = [[UIImage imageWithContentsOfFile:[[self easyderBundle] pathForResource:imageName ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-    }
+    imageName = [NSString stringWithFormat:@"%@@2x", imageName];
+    UIImage *image = [[UIImage imageWithContentsOfFile:[[self easyderBundle] pathForResource:imageName ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     return image;
 }
 

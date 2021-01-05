@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		046CE9B4259DD487000F9DE3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B3259DD487000F9DE3 /* AppDelegate.m */; };
-		046CE9B7259DD487000F9DE3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B6259DD487000F9DE3 /* SceneDelegate.m */; };
 		046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9B9259DD487000F9DE3 /* ViewController.m */; };
 		046CE9BD259DD487000F9DE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9BB259DD487000F9DE3 /* Main.storyboard */; };
 		046CE9BF259DD48A000F9DE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9BE259DD48A000F9DE3 /* Assets.xcassets */; };
@@ -67,8 +66,6 @@
 		046CE9AF259DD487000F9DE3 /* Easyder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Easyder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046CE9B2259DD487000F9DE3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		046CE9B3259DD487000F9DE3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		046CE9B5259DD487000F9DE3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		046CE9B6259DD487000F9DE3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		046CE9B8259DD487000F9DE3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		046CE9B9259DD487000F9DE3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		046CE9BC259DD487000F9DE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,7 +161,7 @@
 		046CEA56259DD699000F9DE3 /* TestAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAlertView.m; sourceTree = "<group>"; };
 		046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNextPageCtrl.h; sourceTree = "<group>"; };
 		046CEA65259DDAAF000F9DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = file; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
+		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
 		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
 		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,8 +206,6 @@
 				046CE9CE259DD5D9000F9DE3 /* Easyder */,
 				046CE9B2259DD487000F9DE3 /* AppDelegate.h */,
 				046CE9B3259DD487000F9DE3 /* AppDelegate.m */,
-				046CE9B5259DD487000F9DE3 /* SceneDelegate.h */,
-				046CE9B6259DD487000F9DE3 /* SceneDelegate.m */,
 				046CE9B8259DD487000F9DE3 /* ViewController.h */,
 				046CE9B9259DD487000F9DE3 /* ViewController.m */,
 				046CE9BB259DD487000F9DE3 /* Main.storyboard */,
@@ -241,41 +236,41 @@
 		046CE9CF259DD5D9000F9DE3 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9D0259DD5D9000F9DE3 /* UILabel+EDExtension.m */,
-				046CE9D1259DD5D9000F9DE3 /* UIImageView+EDExtension.h */,
-				046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */,
-				046CE9D3259DD5D9000F9DE3 /* UIView+EDExtension.h */,
-				046CE9D4259DD5D9000F9DE3 /* NSDictionary+EDExtension.h */,
-				046CE9D5259DD5D9000F9DE3 /* NSBundle+EDExtension.m */,
-				046CE9D6259DD5D9000F9DE3 /* UITextField+EDExtension.h */,
-				046CE9D7259DD5D9000F9DE3 /* NSString+EDExtension.h */,
-				046CE9D8259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m */,
-				046CE9D9259DD5D9000F9DE3 /* UIScrollView+EDExtension.h */,
-				046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */,
-				046CE9DB259DD5D9000F9DE3 /* UICollectionView+EDExtension.h */,
-				046CE9DC259DD5D9000F9DE3 /* UIAlertController+EDExtension.m */,
-				046CE9DD259DD5D9000F9DE3 /* UITableView+EDExtension.m */,
-				046CE9DE259DD5D9000F9DE3 /* NSDate+EDExtension.m */,
-				046CE9DF259DD5D9000F9DE3 /* UITextView+EDExtension.h */,
 				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
-				046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */,
-				046CE9E2259DD5D9000F9DE3 /* NSDictionary+EDExtension.m */,
-				046CE9E3259DD5D9000F9DE3 /* UIView+EDExtension.m */,
-				046CE9E4259DD5D9000F9DE3 /* UIButton+EDExtension.h */,
-				046CE9E5259DD5D9000F9DE3 /* UILabel+EDExtension.h */,
-				046CE9E6259DD5D9000F9DE3 /* UIImageView+EDExtension.m */,
-				046CE9E7259DD5D9000F9DE3 /* UITextField+EDExtension.m */,
-				046CE9E8259DD5D9000F9DE3 /* NSBundle+EDExtension.h */,
-				046CE9E9259DD5D9000F9DE3 /* UITableView+EDExtension.h */,
-				046CE9EA259DD5D9000F9DE3 /* UIAlertController+EDExtension.h */,
-				046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */,
+				046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */,
 				046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */,
-				046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */,
 				046CE9EE259DD5D9000F9DE3 /* NSAttributedString+EDExtension.h */,
-				046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */,
-				046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */,
-				046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */,
+				046CE9D8259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m */,
+				046CE9E8259DD5D9000F9DE3 /* NSBundle+EDExtension.h */,
+				046CE9D5259DD5D9000F9DE3 /* NSBundle+EDExtension.m */,
 				046CE9F2259DD5D9000F9DE3 /* NSDate+EDExtension.h */,
+				046CE9DE259DD5D9000F9DE3 /* NSDate+EDExtension.m */,
+				046CE9D4259DD5D9000F9DE3 /* NSDictionary+EDExtension.h */,
+				046CE9E2259DD5D9000F9DE3 /* NSDictionary+EDExtension.m */,
+				046CE9D7259DD5D9000F9DE3 /* NSString+EDExtension.h */,
+				046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */,
+				046CE9EA259DD5D9000F9DE3 /* UIAlertController+EDExtension.h */,
+				046CE9DC259DD5D9000F9DE3 /* UIAlertController+EDExtension.m */,
+				046CE9E4259DD5D9000F9DE3 /* UIButton+EDExtension.h */,
+				046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */,
+				046CE9DB259DD5D9000F9DE3 /* UICollectionView+EDExtension.h */,
+				046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */,
+				046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */,
+				046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */,
+				046CE9D1259DD5D9000F9DE3 /* UIImageView+EDExtension.h */,
+				046CE9E6259DD5D9000F9DE3 /* UIImageView+EDExtension.m */,
+				046CE9E5259DD5D9000F9DE3 /* UILabel+EDExtension.h */,
+				046CE9D0259DD5D9000F9DE3 /* UILabel+EDExtension.m */,
+				046CE9D9259DD5D9000F9DE3 /* UIScrollView+EDExtension.h */,
+				046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */,
+				046CE9E9259DD5D9000F9DE3 /* UITableView+EDExtension.h */,
+				046CE9DD259DD5D9000F9DE3 /* UITableView+EDExtension.m */,
+				046CE9D6259DD5D9000F9DE3 /* UITextField+EDExtension.h */,
+				046CE9E7259DD5D9000F9DE3 /* UITextField+EDExtension.m */,
+				046CE9DF259DD5D9000F9DE3 /* UITextView+EDExtension.h */,
+				046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */,
+				046CE9D3259DD5D9000F9DE3 /* UIView+EDExtension.h */,
+				046CE9E3259DD5D9000F9DE3 /* UIView+EDExtension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -283,10 +278,10 @@
 		046CE9F9259DD5D9000F9DE3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9FA259DD5D9000F9DE3 /* EDUtils.h */,
-				046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */,
-				046CE9FC259DD5D9000F9DE3 /* EDUtils.m */,
 				046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */,
+				046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */,
+				046CE9FA259DD5D9000F9DE3 /* EDUtils.h */,
+				046CE9FC259DD5D9000F9DE3 /* EDUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -302,15 +297,15 @@
 		046CEA00259DD5D9000F9DE3 /* LYEmptyView */ = {
 			isa = PBXGroup;
 			children = (
+				046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */,
 				046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */,
 				046CEA02259DD5D9000F9DE3 /* LYEmptyView.h */,
-				046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */,
-				046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */,
-				046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */,
-				046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */,
 				046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */,
-				046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */,
+				046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */,
 				046CEA09259DD5D9000F9DE3 /* UIView+Empty.h */,
+				046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */,
+				046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */,
+				046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */,
 			);
 			path = LYEmptyView;
 			sourceTree = "<group>";
@@ -318,12 +313,12 @@
 		046CEA51259DD699000F9DE3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */,
 				046CEA53259DD699000F9DE3 /* TestAlertView.h */,
-				046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */,
-				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
 				046CEA56259DD699000F9DE3 /* TestAlertView.m */,
 				046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */,
+				046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */,
+				046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */,
+				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -365,8 +360,8 @@
 		04A39AD025A2B86D007F596E /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */,
 				046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */,
+				046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -558,7 +553,6 @@
 				046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */,
 				046CEA2F259DD5D9000F9DE3 /* UIImage+EDExtension.m in Sources */,
 				046CEA59259DD699000F9DE3 /* TestTableViewCtrl.m in Sources */,
-				046CE9B7259DD487000F9DE3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

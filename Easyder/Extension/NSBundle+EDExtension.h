@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)easyderBundle;
 
++ (UIImage*)returnImageFromEasyderBundle;
+
 + (UIImage*)imageFromEasyderBundleWithName:(NSString*)imageName;
 
 @end

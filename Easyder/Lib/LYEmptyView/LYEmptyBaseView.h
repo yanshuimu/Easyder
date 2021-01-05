@@ -26,6 +26,8 @@ typedef void (^LYActionTapBlock)(void);
 @property (nonatomic, copy) NSString *titleStr;
 @property (nonatomic, copy) NSString *detailStr;
 @property (nonatomic, copy) NSString *btnTitleStr;
+//
+@property (nonatomic, strong) UIImage *image;
 @property (nonatomic, copy) LYActionTapBlock tapContentViewBlock;
 
 /////////属性传递 (这些属性只用来传递，修改无效)

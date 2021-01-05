@@ -61,7 +61,14 @@
     subViweMargin = self.subViewMargin ? self.subViewMargin : kSubViewMargin;
     
     //占位图片
-    UIImage *image = [UIImage imageNamed:self.imageStr];
+    UIImage *image;
+    if (self.image == nil) {
+        image = [UIImage imageNamed:self.imageStr];
+    }
+    else {
+        image = self.image;
+    }
+    
     if (image) {
         [self setupPromptImageView:image];
     }else{

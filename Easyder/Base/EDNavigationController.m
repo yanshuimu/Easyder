@@ -94,7 +94,7 @@
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
         
         UIImageView *backImgV = [[UIImageView alloc] initWithFrame:CGRectMake(5, 0, 9, 17)];
-        backImgV.image = EDStringIsEmpty(_returnImageName) ? [NSBundle imageFromEasyderBundleWithName:@"nav_return"] : [UIImage imageNamed:_returnImageName];
+        backImgV.image = EDStringIsEmpty(_returnImageName) ? [NSBundle returnImageFromEasyderBundle] : [UIImage imageNamed:_returnImageName];
         [backImgV setCenterY:btn.centerY];
         [btn addSubview:backImgV];
         

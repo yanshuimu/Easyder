@@ -26,10 +26,14 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 @property (nonatomic, strong) EDConfiguration *navigationConfiguration;
 //
 @property (nonatomic, strong) EDConfiguration *alertViewConfiguration;
+//
+@property (nonatomic, strong) EDConfiguration *emptyViewConfiguration;
 
 - (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;
 
 - (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock;
+
+- (void)makeEmptyViewConfiguration:(EDConfigurationBlock)configurationBlock;
 
 @end
 

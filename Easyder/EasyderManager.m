@@ -52,4 +52,13 @@ static EasyderManager *manager = nil;
     }
 }
 
+- (void)makeEmptyViewConfiguration:(EDConfigurationBlock)configurationBlock {
+    
+    _emptyViewConfiguration = [[EDConfiguration alloc] init];
+    
+    if (configurationBlock) {
+        configurationBlock(_emptyViewConfiguration);
+    }
+}
+
 @end

@@ -164,6 +164,12 @@
     _btnTitleStr = btnTitleStr;
     [self setNeedsLayout];
 }
+
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    [self setNeedsLayout];
+}
+
 - (void)tapContentView:(UITapGestureRecognizer *)tap{
     if (_tapContentViewBlock) {
         _tapContentViewBlock();

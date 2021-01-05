@@ -31,7 +31,7 @@
     width = height = CGWidthAutoMake(44);
     x = backView.right - width;
     y = backView.top - height;
-    UIButton *closeBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) imageName:@"btn_contactus_cancel"];
+    UIButton *closeBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) imageName:@"btn_cancel"];
     [closeBtn addTarget:self action:@selector(hiddenWithRemove) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:closeBtn];
 }

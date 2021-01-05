@@ -5,9 +5,9 @@
 //  Created by mac on 2020/12/31.
 //
 
-#import <UIKit/UIKit.h>
+#import "EDBaseTableViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : EDBaseTableViewController
 
 
 @end
