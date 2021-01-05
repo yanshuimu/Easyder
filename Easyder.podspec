@@ -37,4 +37,5 @@ Pod::Spec.new do |s|
   s.dependency 'SDCycleScrollView'
   s.dependency 'FDFullscreenPopGesture'
   s.dependency 'UICKeyChainStore'
+  s.dependency 'MangoFix'
 end
