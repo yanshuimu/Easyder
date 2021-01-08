@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Easyder'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'Classes that improve development efficiency'
   s.homepage         = 'https://github.com/yanshuimu/Easyder'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
