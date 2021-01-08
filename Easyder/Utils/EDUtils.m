@@ -7,11 +7,12 @@
 //
 
 #import "EDUtils.h"
-#import<CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonCryptor.h>
 #import <MJRefresh/MJRefresh.h>
-#import "EDBaseMacroDefine.h"
-#import "UIView+EDExtension.h"
+
+#define SCREEN_W ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_H ([UIScreen mainScreen].bounds.size.height)
 
 /* Base64加密表 */
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -55,7 +56,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 }
 
 //判断是否是手机号码
-+(BOOL)isValidateMobile:(NSString *)mobile
++ (BOOL)isValidateMobile:(NSString *)mobile
 {
     if(mobile.length != 11){
         return NO;
@@ -694,7 +695,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 
 // 给label加横线
 + (void)priceAddLine:(UILabel *)priceL lineColor:(NSString *)colorStr{
-    UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(0, priceL.height/2, priceL.width, 0.7)];
+    UILabel *line = [[UILabel alloc]initWithFrame:CGRectMake(0, priceL.frame.size.height/2, priceL.frame.size.width, 0.7)];
     line.backgroundColor = [self colorWithHexString:colorStr alpha:1.0];
     [priceL addSubview:line];
 }
@@ -709,10 +710,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     }else if (SCREEN_W == 320){
         fontSize1 = fontSize-1;
     }
-    CGSize size = EM_MULTILINE_TEXTSIZE(str, fontSize1, cgSize);
+    CGSize size = [self multiLineTextFontSize:str fontSize:fontSize1 maxSize:cgSize];
     NSInteger count = (size.height/fontSize1)-1;
+    frame.size.height = size.height+count*spacInt;
     UILabel *label = [[UILabel alloc]initWithFrame:frame];
-    [label setHeight:size.height+count*spacInt];
     
     label.textColor = [self colorWithHexString:@"#747474" alpha:1.0];
     label.font = [UIFont systemFontOfSize:fontSize1];
@@ -861,9 +862,9 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
 + (NSString*)firstImageUrlFromUrlComponents:(NSString*)urlComponents {
     
     NSString *url = @"";
-    if (!EDStringIsEmpty(urlComponents))
+    if (![self stringIsEmpty:urlComponents])
     {
-        url = [[EDSafeString(urlComponents) componentsSeparatedByString:@";"] firstObject];
+        url = [[[self safeString:urlComponents] componentsSeparatedByString:@";"] firstObject];
     }
     return url;
 }
@@ -1118,6 +1119,29 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     }
     
     return [[NSString alloc] initWithBytesNoCopy:characters length:length encoding:NSASCIIStringEncoding freeWhenDone:YES];
+}
+
++ (BOOL)stringIsEmpty:(NSString*)string {
+    return (string && [[NSString stringWithFormat:@"%@", string] length] > 0 ? NO : YES);
+}
+
++ (NSString*)safeString:(NSString*)string {
+    return [NSString stringWithFormat:@"%@", string];
+}
+
++ (CGSize)multiLineTextFontSize:(NSString*)text fontSize:(CGFloat)fontSize maxSize:(CGSize)maxSize {
+    
+    return [text length] > 0 ? [text
+    boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin)
+    attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} context:nil].size : CGSizeZero;
+}
+
++ (UIFont*)fontMake:(CGFloat)fontSize {
+    return [UIFont systemFontOfSize:fontSize];
+}
+
++ (UIFont*)boldFontMake:(CGFloat)fontSize {
+    return [UIFont boldSystemFontOfSize:fontSize];
 }
 
 @end

@@ -8,7 +8,6 @@
 
 #import "UIImageView+EDExtension.h"
 #import "UIView+EDExtension.h"
-#import "EDBaseMacroDefine.h"
 
 @implementation UIImageView (EDCreate)
 
@@ -29,7 +28,7 @@
 + (instancetype)imageViewWithImageName:(NSString*)imageName {
     
     UIImageView *imageView = [[self alloc] init];
-    imageView.image = IMAGENAME(imageName);
+    imageView.image = [UIImage imageNamed:imageName];
     imageView.contentMode = UIViewContentModeCenter;
     return imageView;
 }
@@ -37,7 +36,7 @@
 + (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName isScaleAspectFill:(BOOL)isScaleAspectFill {
     
     UIImageView *imageView = [[self alloc] initWithFrame:frame];
-    imageView.image = IMAGENAME(imageName);
+    imageView.image = [UIImage imageNamed:imageName];
     imageView.contentMode = isScaleAspectFill ? UIViewContentModeScaleAspectFill : UIViewContentModeScaleAspectFill;
     return imageView;
 }
@@ -45,7 +44,7 @@
 + (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName {
     
     UIImageView *imageView = [[self alloc] initWithFrame:frame];
-    imageView.image = IMAGENAME(imageName);
+    imageView.image = [UIImage imageNamed:imageName];
     imageView.contentMode = UIViewContentModeCenter;
     return imageView;
 }
@@ -61,7 +60,7 @@
 + (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName cornerRadius:(CGSize)cornerRadius {
     
     UIImageView *imageView = [[self alloc] initWithFrame:frame];
-    imageView.image = IMAGENAME(imageName);
+    imageView.image = [UIImage imageNamed:imageName];
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     [imageView addRoundedCorners:UIRectCornerAllCorners withRadii:cornerRadius];
     return imageView;

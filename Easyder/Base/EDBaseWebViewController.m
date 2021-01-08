@@ -8,6 +8,8 @@
 
 #import "EDBaseWebViewController.h"
 #import "EDBaseMacroDefine.h"
+#import "UIColor+EDExtension.h"
+#import "EasyderManager.h"
 
 @interface EDBaseWebViewController ()<WKNavigationDelegate>
 
@@ -32,7 +34,7 @@
     [self.view addSubview:_webView];
     
     self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 2)];
-    self.progressView.progressTintColor = EDThemeColor;
+    self.progressView.progressTintColor = EDManagerSingleton.themeColor;
     self.progressView.trackTintColor = [UIColor clearColor];
     //设置进度条的高度，下面这句代码表示进度条的宽度变为原来的1倍，高度变为原来的1.5倍.
     self.progressView.transform = CGAffineTransformMakeScale(1.0f, 1.5f);

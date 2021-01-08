@@ -7,7 +7,7 @@
 //
 
 #import "UITextView+EDExtension.h"
-#import "EDBaseMacroDefine.h"
+#import "UIColor+EDExtension.h"
 
 @implementation UITextView (EDUtils)
 

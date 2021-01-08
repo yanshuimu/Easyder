@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "EDConfiguration.h"
 
+#define EDManagerSingleton [EasyderManager shareManager]
+
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);

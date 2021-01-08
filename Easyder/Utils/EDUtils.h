@@ -161,4 +161,19 @@ typedef NS_ENUM(NSInteger, TimeAccuracy) {
  */
 + (NSString *)textFromBase64String:(NSString *)base64;
 
+/**
+ * 字符串判空
+ */
++ (BOOL)stringIsEmpty:(NSString*)string;
+
+/**
+ * 安全字符串
+ */
++ (NSString*)safeString:(NSString*)string;
+
+
++ (UIFont*)fontMake:(CGFloat)fontSize;
+
++ (UIFont*)boldFontMake:(CGFloat)fontSize;
+
 @end

@@ -9,6 +9,8 @@
 #import "EDNavigationController.h"
 #import "EDConfiguration.h"
 #import "NSBundle+EDExtension.h"
+#import "UIColor+EDExtension.h"
+#import "EasyderManager.h"
 
 @interface EDNavigationController ()
 //底部横线
@@ -78,7 +80,7 @@
     
     EDConfiguration *configuration = EDManagerSingleton.navigationConfiguration;
     
-    _barTintColor = EDISNIL(configuration.barTintColor) ? EDThemeColor : configuration.barTintColor;
+    _barTintColor = EDISNIL(configuration.barTintColor) ? EDManagerSingleton.themeColor : configuration.barTintColor;
     _titleFont = EDISNIL(configuration.barTitleFont) ? EDFont(17) : configuration.barTitleFont;
     _titleColor = EDISNIL(configuration.barTitleColor) ? EDFontColorBlack : configuration.barTitleColor;
     _bottomLineHidden = configuration.barBottomLineHidden;

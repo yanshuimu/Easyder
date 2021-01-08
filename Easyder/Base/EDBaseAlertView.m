@@ -10,6 +10,9 @@
 #import <objc/runtime.h>
 #import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
+#import "EDConfiguration.h"
+#import "UIColor+EDExtension.h"
+#import "EasyderManager.h"
 
 @interface EDBaseAlertView ()
 //

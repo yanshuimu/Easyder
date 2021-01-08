@@ -9,7 +9,6 @@
 #import "EDKeyChainUtil.h"
 #import <UICKeyChainStore/UICKeyChainStore.h>
 #import "EDUtils.h"
-#import "EDBaseMacroDefine.h"
 
 #define kPassword NSSTRING(((char []) {201, 197, 199, 132, 199, 207, 195, 211, 207, 211, 195, 132, 218, 203, 217, 217, 221, 197, 216, 206, 0}))
 
@@ -20,7 +19,7 @@
  */
 + (void)saveLoginPassword:(NSString*)password username:(NSString*)username
 {
-    if (EDStringIsEmpty(password) || EDStringIsEmpty(username)) {
+    if ([EDUtils stringIsEmpty:password] || [EDUtils stringIsEmpty:username]) {
         return;
     }
     NSString *base64_password = [EDUtils base64StringFromText:password];
@@ -39,7 +38,7 @@
  */
 + (NSString*)getLoginPassword:(NSString*)username
 {
-    if (EDStringIsEmpty(username)) {
+    if ([EDUtils stringIsEmpty:username]) {
         return @"";
     }
     UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[[NSBundle mainBundle] bundleIdentifier]];
@@ -61,7 +60,7 @@
  */
 + (void)clearLoginPassword:(NSString*)username
 {
-    if (EDStringIsEmpty(username)) {
+    if ([EDUtils stringIsEmpty:username]) {
         return;
     }
     UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[[NSBundle mainBundle] bundleIdentifier]];

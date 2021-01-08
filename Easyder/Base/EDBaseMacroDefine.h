@@ -6,7 +6,6 @@
 //  Copyright © 2020 mac. All rights reserved.
 //
 
-#import "EasyderManager.h"
 #import "EDUtils.h"
 
 #ifndef EDBaseMacroDefine_h
@@ -123,8 +122,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 #define EDDispatch_Main(block) dispatch_async(dispatch_get_main_queue(),block)
 
-#define EDManagerSingleton [EasyderManager shareManager]
-
 ///弱指针
 #define EDWeakSelf __weak typeof(self) weakSelf = self;
 
@@ -240,46 +237,5 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 #else
     #define NSLog(FORMAT, ...) fprintf(stderr,"<%s : %d>\n%s\n%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __func__ ,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 #endif
-
-#pragma mark - 颜色
-
-//统一透明度
-#define EDDefaultBackgroundAlpha 0.70
-
-#define EDColorRGB(r,g,b)     [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0]
-
-#define EDColorA(r, g, b, a)  [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-
-#define EDHexColor(string)  [EDUtils colorWithHexString:string alpha:1.0]
-
-//随机颜色
-#define EDRandomColor EDColorRGB(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
-
-//白色
-#define EDWhiteColor [UIColor whiteColor]
-
-//黑色
-#define EDBlackColor [UIColor blackColor]
-
-//透明
-#define EDClearColor [UIColor clearColor]
-
-//背景色
-#define EDDefaultBackgroudColor EDHexColor(@"#F5F5F5")
-
-//线条颜色
-#define EDLineColor EDHexColor(@"#E6E6E6")
-
-//主题颜色
-#define EDThemeColor [EDManagerSingleton themeColor]
-
-//黑色字体，默认字体颜色
-#define EDFontColorBlack EDHexColor(@"#333333")
-
-//浅黑字体，偏次要字体颜色
-#define EDFontColorLightBlack EDHexColor(@"#666666")
-
-//浅灰字体，次要字体颜色，如备注、日期等
-#define EDFontColorLightGray EDHexColor(@"#999999")
 
 #endif /* EDBaseDefine_h */

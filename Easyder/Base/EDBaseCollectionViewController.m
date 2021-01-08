@@ -9,6 +9,7 @@
 #import "EDBaseCollectionViewController.h"
 #import <MJRefresh/MJRefresh.h>
 #import "EDBaseMacroDefine.h"
+#import "UIColor+EDExtension.h"
 
 #define DefaultCollectionCellID @"DefaultCollectionCellID"
 #define DefaultCollectionSectionHeaderID @"DefaultCollectionSectionHeaderID"

@@ -7,7 +7,6 @@
 //
 
 #import "UIImage+EDExtension.h"
-#import "EDBaseMacroDefine.h"
 
 @implementation UIImage (EDUtils)
 
@@ -43,7 +42,7 @@
 //图片只裁剪顶部
 - (UIImage*)alignBottomWithSize:(CGSize)size {
     
-    if (self.size.height < SCREEN_H) {
+    if (self.size.height < [UIScreen mainScreen].bounds.size.height) {
         return self;
     }
     UIGraphicsBeginImageContextWithOptions(size, NO, 2.0);

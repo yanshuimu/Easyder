@@ -31,7 +31,6 @@
 		046CEA36259DD5D9000F9DE3 /* UIScrollView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9ED259DD5D9000F9DE3 /* UIScrollView+EDExtension.m */; };
 		046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9EF259DD5D9000F9DE3 /* NSString+EDExtension.m */; };
 		046CEA38259DD5D9000F9DE3 /* UITextView+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */; };
-		046CEA39259DD5D9000F9DE3 /* EDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */; };
 		046CEA3A259DD5D9000F9DE3 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9F6259DD5D9000F9DE3 /* .gitkeep */; };
 		046CEA3B259DD5D9000F9DE3 /* EasyderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */; };
 		046CEA3C259DD5D9000F9DE3 /* Easyder.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */; };
@@ -59,6 +58,9 @@
 		046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA56259DD699000F9DE3 /* TestAlertView.m */; };
 		046CEA66259DDAAF000F9DE3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 046CEA65259DDAAF000F9DE3 /* Info.plist */; };
 		04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04A39ACC25A2A854007F596E /* Easyder.podspec */; };
+		04A39C9125A7E986007F596E /* EDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9025A7E986007F596E /* EDConfiguration.m */; };
+		04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */; };
+		04A39CA225A826F0007F596E /* UIView+EDBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CA125A826EF007F596E /* UIView+EDBase.m */; };
 		CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7FECD8470F905579034BD /* libPods-Easyder.a */; };
 /* End PBXBuildFile section */
 
@@ -107,8 +109,6 @@
 		046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EDExtension.h"; sourceTree = "<group>"; };
 		046CE9F1259DD5D9000F9DE3 /* UITextView+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+EDExtension.m"; sourceTree = "<group>"; };
 		046CE9F2259DD5D9000F9DE3 /* NSDate+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+EDExtension.h"; sourceTree = "<group>"; };
-		046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDConfiguration.m; sourceTree = "<group>"; };
-		046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDConfiguration.h; sourceTree = "<group>"; };
 		046CE9F6259DD5D9000F9DE3 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasyderManager.m; sourceTree = "<group>"; };
 		046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Easyder.bundle; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 		046CEA10259DD5D9000F9DE3 /* EDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCycleScrollView.m; sourceTree = "<group>"; };
 		046CEA11259DD5D9000F9DE3 /* EDBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseView.h; sourceTree = "<group>"; };
 		046CEA12259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDBaseTableHeaderFooterView.m; sourceTree = "<group>"; };
-		046CEA13259DD5D9000F9DE3 /* EDBaseMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseMacroDefine.h; sourceTree = "<group>"; };
 		046CEA14259DD5D9000F9DE3 /* EDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseViewController.h; sourceTree = "<group>"; };
 		046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDNavigationController.m; sourceTree = "<group>"; };
 		046CEA16259DD5D9000F9DE3 /* EDBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseWebViewController.h; sourceTree = "<group>"; };
@@ -162,6 +161,13 @@
 		046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNextPageCtrl.h; sourceTree = "<group>"; };
 		046CEA65259DDAAF000F9DE3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
+		04A39C8E25A7E7BC007F596E /* EDBaseMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseMacroDefine.h; sourceTree = "<group>"; };
+		04A39C8F25A7E986007F596E /* EDConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDConfiguration.h; sourceTree = "<group>"; };
+		04A39C9025A7E986007F596E /* EDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDConfiguration.m; sourceTree = "<group>"; };
+		04A39C9C25A80E29007F596E /* UIColor+EDExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EDExtension.h"; sourceTree = "<group>"; };
+		04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EDExtension.m"; sourceTree = "<group>"; };
+		04A39CA025A826EF007F596E /* UIView+EDBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+EDBase.h"; sourceTree = "<group>"; };
+		04A39CA125A826EF007F596E /* UIView+EDBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+EDBase.m"; sourceTree = "<group>"; };
 		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
 		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,24 +225,78 @@
 		046CE9CE259DD5D9000F9DE3 /* Easyder */ = {
 			isa = PBXGroup;
 			children = (
-				04A39AD125A2BBCB007F596E /* Resources */,
 				046CE9F6259DD5D9000F9DE3 /* .gitkeep */,
-				04A39ACE25A2B6F5007F596E /* Base */,
-				04A39AD025A2B86D007F596E /* Config */,
+				04A39C9F25A826AA007F596E /* Base */,
+				04A39C9825A7FB70007F596E /* Config */,
 				046CE9FE259DD5D9000F9DE3 /* Easyder.h */,
-				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
-				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
-				046CE9CF259DD5D9000F9DE3 /* Extension */,
-				046CE9FF259DD5D9000F9DE3 /* Lib */,
-				046CE9F9259DD5D9000F9DE3 /* Utils */,
+				04A39C9B25A8095D007F596E /* Extension */,
+				04A39CA325A82C7E007F596E /* Lib */,
+				04A39AD125A2BBCB007F596E /* Resources */,
+				04A39C9925A7FC01007F596E /* Utils */,
 			);
 			path = Easyder;
 			sourceTree = SOURCE_ROOT;
 		};
-		046CE9CF259DD5D9000F9DE3 /* Extension */ = {
+		046CEA51259DD699000F9DE3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
+				046CEA53259DD699000F9DE3 /* TestAlertView.h */,
+				046CEA56259DD699000F9DE3 /* TestAlertView.m */,
+				046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */,
+				046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */,
+				046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */,
+				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04A39AD125A2BBCB007F596E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04A39C9725A7FA64007F596E /* LYEmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */,
+				046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */,
+				046CEA02259DD5D9000F9DE3 /* LYEmptyView.h */,
+				046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */,
+				046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */,
+				046CEA09259DD5D9000F9DE3 /* UIView+Empty.h */,
+				046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */,
+				046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */,
+				046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */,
+			);
+			path = LYEmptyView;
+			sourceTree = "<group>";
+		};
+		04A39C9825A7FB70007F596E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				04A39C8F25A7E986007F596E /* EDConfiguration.h */,
+				04A39C9025A7E986007F596E /* EDConfiguration.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		04A39C9925A7FC01007F596E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */,
+				046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */,
+				046CE9FA259DD5D9000F9DE3 /* EDUtils.h */,
+				046CE9FC259DD5D9000F9DE3 /* EDUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		04A39C9B25A8095D007F596E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
 				046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */,
 				046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */,
 				046CE9EE259DD5D9000F9DE3 /* NSAttributedString+EDExtension.h */,
@@ -255,6 +315,8 @@
 				046CE9D2259DD5D9000F9DE3 /* UIButton+EDExtension.m */,
 				046CE9DB259DD5D9000F9DE3 /* UICollectionView+EDExtension.h */,
 				046CE9EB259DD5D9000F9DE3 /* UICollectionView+EDExtension.m */,
+				04A39C9C25A80E29007F596E /* UIColor+EDExtension.h */,
+				04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */,
 				046CE9F0259DD5D9000F9DE3 /* UIImage+EDExtension.h */,
 				046CE9E1259DD5D9000F9DE3 /* UIImage+EDExtension.m */,
 				046CE9D1259DD5D9000F9DE3 /* UIImageView+EDExtension.h */,
@@ -275,57 +337,13 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		046CE9F9259DD5D9000F9DE3 /* Utils */ = {
+		04A39C9F25A826AA007F596E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */,
-				046CE9FB259DD5D9000F9DE3 /* EDKeyChainUtil.m */,
-				046CE9FA259DD5D9000F9DE3 /* EDUtils.h */,
-				046CE9FC259DD5D9000F9DE3 /* EDUtils.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		046CE9FF259DD5D9000F9DE3 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				046CEA00259DD5D9000F9DE3 /* LYEmptyView */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		046CEA00259DD5D9000F9DE3 /* LYEmptyView */ = {
-			isa = PBXGroup;
-			children = (
-				046CEA05259DD5D9000F9DE3 /* LYEmptyBaseView.h */,
-				046CEA01259DD5D9000F9DE3 /* LYEmptyBaseView.m */,
-				046CEA02259DD5D9000F9DE3 /* LYEmptyView.h */,
-				046CEA07259DD5D9000F9DE3 /* LYEmptyView.m */,
-				046CEA06259DD5D9000F9DE3 /* LYEmptyViewHeader.h */,
-				046CEA09259DD5D9000F9DE3 /* UIView+Empty.h */,
-				046CEA03259DD5D9000F9DE3 /* UIView+Empty.m */,
-				046CEA08259DD5D9000F9DE3 /* UIView+LYExtension.h */,
-				046CEA04259DD5D9000F9DE3 /* UIView+LYExtension.m */,
-			);
-			path = LYEmptyView;
-			sourceTree = "<group>";
-		};
-		046CEA51259DD699000F9DE3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				046CEA53259DD699000F9DE3 /* TestAlertView.h */,
-				046CEA56259DD699000F9DE3 /* TestAlertView.m */,
-				046CEA57259DD699000F9DE3 /* TestNextPageCtrl.h */,
-				046CEA54259DD699000F9DE3 /* TestNextPageCtrl.m */,
-				046CEA52259DD699000F9DE3 /* TestTableViewCtrl.h */,
-				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		04A39ACE25A2B6F5007F596E /* Base */ = {
-			isa = PBXGroup;
-			children = (
+				04A39CA025A826EF007F596E /* UIView+EDBase.h */,
+				04A39CA125A826EF007F596E /* UIView+EDBase.m */,
+				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
+				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
 				046CEA0C259DD5D9000F9DE3 /* EDBaseAlertView.h */,
 				046CEA19259DD5D9000F9DE3 /* EDBaseAlertView.m */,
 				046CEA1A259DD5D9000F9DE3 /* EDBaseCollectionCell.h */,
@@ -334,7 +352,7 @@
 				046CEA1B259DD5D9000F9DE3 /* EDBaseCollectionReusableView.m */,
 				046CEA17259DD5D9000F9DE3 /* EDBaseCollectionViewController.h */,
 				046CEA22259DD5D9000F9DE3 /* EDBaseCollectionViewController.m */,
-				046CEA13259DD5D9000F9DE3 /* EDBaseMacroDefine.h */,
+				04A39C8E25A7E7BC007F596E /* EDBaseMacroDefine.h */,
 				046CEA0E259DD5D9000F9DE3 /* EDBaseModel.h */,
 				046CEA20259DD5D9000F9DE3 /* EDBaseModel.m */,
 				046CEA0F259DD5D9000F9DE3 /* EDBaseTableCell.h */,
@@ -353,25 +371,17 @@
 				046CEA10259DD5D9000F9DE3 /* EDCycleScrollView.m */,
 				046CEA24259DD5D9000F9DE3 /* EDNavigationController.h */,
 				046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */,
+				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		04A39AD025A2B86D007F596E /* Config */ = {
+		04A39CA325A82C7E007F596E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				046CE9F5259DD5D9000F9DE3 /* EDConfiguration.h */,
-				046CE9F4259DD5D9000F9DE3 /* EDConfiguration.m */,
+				04A39C9725A7FA64007F596E /* LYEmptyView */,
 			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		04A39AD125A2BBCB007F596E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				046CE9F8259DD5D9000F9DE3 /* Easyder.bundle */,
-			);
-			path = Resources;
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		82A3F65E5505E162C0862902 /* Frameworks */ = {
@@ -509,7 +519,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				046CEA40259DD5D9000F9DE3 /* UIView+Empty.m in Sources */,
-				046CEA39259DD5D9000F9DE3 /* EDConfiguration.m in Sources */,
 				046CEA2D259DD5D9000F9DE3 /* NSDate+EDExtension.m in Sources */,
 				046CEA4D259DD5D9000F9DE3 /* EDBaseCollectionViewController.m in Sources */,
 				046CEA32259DD5D9000F9DE3 /* UIImageView+EDExtension.m in Sources */,
@@ -517,6 +526,7 @@
 				046CEA30259DD5D9000F9DE3 /* NSDictionary+EDExtension.m in Sources */,
 				046CEA2A259DD5D9000F9DE3 /* NSAttributedString+EDExtension.m in Sources */,
 				046CEA3F259DD5D9000F9DE3 /* LYEmptyBaseView.m in Sources */,
+				04A39C9125A7E986007F596E /* EDConfiguration.m in Sources */,
 				046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */,
 				046CEA27259DD5D9000F9DE3 /* UILabel+EDExtension.m in Sources */,
 				046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */,
@@ -546,9 +556,11 @@
 				046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */,
 				046CEA4A259DD5D9000F9DE3 /* EDBaseView.m in Sources */,
 				046CEA41259DD5D9000F9DE3 /* UIView+LYExtension.m in Sources */,
+				04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */,
 				046CEA47259DD5D9000F9DE3 /* EDBaseTableViewController.m in Sources */,
 				046CEA35259DD5D9000F9DE3 /* NSArray+EDExtension.m in Sources */,
 				046CEA45259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m in Sources */,
+				04A39CA225A826F0007F596E /* UIView+EDBase.m in Sources */,
 				046CEA33259DD5D9000F9DE3 /* UITextField+EDExtension.m in Sources */,
 				046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */,
 				046CEA2F259DD5D9000F9DE3 /* UIImage+EDExtension.m in Sources */,

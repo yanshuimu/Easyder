@@ -7,7 +7,6 @@
 //
 
 #import "NSString+EDExtension.h"
-#import "EDBaseMacroDefine.h"
 
 #define HANZI_START 19968
 #define HANZI_COUNT 20902
@@ -548,7 +547,7 @@ static char firstLetterArray[HANZI_COUNT] =
 
 //适合的宽度 默认 systemFontOfSize:font
 - (CGFloat)widthWithFont:(NSInteger)font h:(CGFloat)h {
-    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, h) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : EDFont(font) } context:nil].size.width;
+    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, h) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:font] } context:nil].size.width;
 }
 
 - (CGFloat)widthWithFont:(UIFont*)font height:(CGFloat)height {

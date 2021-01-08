@@ -7,8 +7,8 @@
 //
 
 #import "UIButton+EDExtension.h"
-#import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
+#import "UIColor+EDExtension.h"
 
 @implementation UIButton (EDCreate)
 
@@ -27,7 +27,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     btn.titleLabel.font = font;
     
     return btn;
@@ -92,7 +92,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:EDFontColorBlack forState:UIControlStateNormal];
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     btn.titleLabel.font = font;
     
     return btn;
@@ -130,8 +130,8 @@
     [btn setTitle:title forState:UIControlStateNormal];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     btn.titleLabel.font = font;
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
-    [btn setBackgroundImage:IMAGENAME(backgroundImageName) forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:backgroundImageName] forState:UIControlStateNormal];
     
     return btn;
 }
@@ -139,7 +139,7 @@
 + (instancetype)buttonWithImageName:(NSString*)imageName {
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     
     return btn;
 }
@@ -148,7 +148,7 @@
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = frame;
-    [btn setImage:IMAGENAME(imageName) forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     
     return btn;
 }

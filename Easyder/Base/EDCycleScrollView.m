@@ -10,6 +10,8 @@
 #import "UIView+EDExtension.h"
 #import "SDCycleScrollView.h"
 #import "EDBaseMacroDefine.h"
+#import "UIColor+EDExtension.h"
+#import "EasyderManager.h"
 
 @interface EDCycleScrollView ()<SDCycleScrollViewDelegate>
 //
@@ -43,7 +45,7 @@
     _cycleScrollView.backgroundColor = [UIColor clearColor];
     _cycleScrollView.hidesForSinglePage = YES;
     _cycleScrollView.pageDotColor = EDWhiteColor;
-    _cycleScrollView.currentPageDotColor = EDThemeColor;
+    _cycleScrollView.currentPageDotColor = EDManagerSingleton.themeColor;
     _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _cycleScrollView.autoScrollTimeInterval = 4.0f;

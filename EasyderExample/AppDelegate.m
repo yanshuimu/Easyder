@@ -10,6 +10,7 @@
 #import "EDNavigationController.h"
 #import "EDBaseViewController.h"
 #import "EasyderManager.h"
+#import "UIColor+EDExtension.h"
 
 @interface AppDelegate ()
 
