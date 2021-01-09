@@ -1,6 +1,6 @@
 //
 //  KeyChainUtil.m
-//  MYYProject
+//  Easyder
 //
 //  Created by mac on 2018/9/13.
 //  Copyright © 2018年 mac. All rights reserved.
@@ -10,67 +10,49 @@
 #import <UICKeyChainStore/UICKeyChainStore.h>
 #import "EDUtils.h"
 
-#define kPassword NSSTRING(((char []) {201, 197, 199, 132, 199, 207, 195, 211, 207, 211, 195, 132, 218, 203, 217, 217, 221, 197, 216, 206, 0}))
-
 @implementation KeyChainUtil
 
-/**
- 保存密码
- */
-+ (void)saveLoginPassword:(NSString*)password username:(NSString*)username
-{
-    if ([EDUtils stringIsEmpty:password] || [EDUtils stringIsEmpty:username]) {
++ (void)setString:(NSString*)string forKey:(NSString*)key {
+    
+    if ([EDUtils stringIsEmpty:string] || [EDUtils stringIsEmpty:key]) {
         return;
     }
-    NSString *base64_password = [EDUtils base64StringFromText:password];
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[[NSBundle mainBundle] bundleIdentifier]];
-    NSError *error;
-    [keychain setString:base64_password forKey:username error:&error];
-    if (error) {
-        //NSLog(@"保存密码失败");
-    } else {
-        //NSLog(@"保存密码成功");
-    }
+    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[self bundleIdentifier]];
+    [keychain setString:string forKey:key];
 }
 
-/**
- 读取密码
- */
-+ (NSString*)getLoginPassword:(NSString*)username
-{
-    if ([EDUtils stringIsEmpty:username]) {
-        return @"";
-    }
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[[NSBundle mainBundle] bundleIdentifier]];
-    NSError *error;
-    NSString *base64_password = [keychain stringForKey:username error:&error];
-    if (error) {
-        //NSLog(@"读取密码失败");
-        return @"";
-    } else {
-        //NSLog(@"读取密码成功");
-        NSString *password = [EDUtils textFromBase64String:base64_password];
-        return password;
-    }
-    return @"";
++ (void)setStringWithBase64Encryption:(NSString*)string forKey:(NSString*)key {
+    
+    NSString *base64String = [EDUtils base64StringFromText:string];
+    [self setString:base64String forKey:key];
 }
 
-/**
- 删除密码
- */
-+ (void)clearLoginPassword:(NSString*)username
-{
-    if ([EDUtils stringIsEmpty:username]) {
++ (NSString*)stringForKey:(NSString*)key {
+    
+    if ([EDUtils stringIsEmpty:key]) {
+        return @"";
+    }
+    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[self bundleIdentifier]];
+    return [keychain stringForKey:key];
+}
+
++ (NSString*)stringForKeyWithBase64Decryption:(NSString*)key {
+    
+    NSString *base64String = [self stringForKey:key];
+    return [EDUtils textFromBase64String:base64String];
+}
+
++ (void)removeItemForKey:(NSString*)key {
+    
+    if ([EDUtils stringIsEmpty:key]) {
         return;
     }
-    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[[NSBundle mainBundle] bundleIdentifier]];
-    NSError *error;
-    [keychain setString:@"" forKey:username error:&error];
-    if (error) {
-        //NSLog(@"清除密码失败");
-    } else {
-        //NSLog(@"清除密码成功");
-    }
+    UICKeyChainStore *keychain = [UICKeyChainStore keyChainStoreWithService:[self bundleIdentifier]];
+    [keychain removeItemForKey:key];
+}
+
++ (NSString*)bundleIdentifier {
+    return [[NSBundle mainBundle] bundleIdentifier];
 }
 
 @end

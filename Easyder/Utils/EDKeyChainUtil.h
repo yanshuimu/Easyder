@@ -1,6 +1,6 @@
 //
 //  KeyChainUtil.h
-//  MYYProject
+//  Easyder
 //
 //  Created by mac on 2018/9/13.
 //  Copyright © 2018年 mac. All rights reserved.
@@ -11,18 +11,28 @@
 @interface KeyChainUtil : NSObject
 
 /**
- 保存密码
+ * setter
  */
-+ (void)saveLoginPassword:(NSString*)password username:(NSString*)username;
++ (void)setString:(NSString*)string forKey:(NSString*)key;
 
 /**
- 读取密码
+ * setter（base64加密）
  */
-+ (NSString*)getLoginPassword:(NSString*)username;
++ (void)setStringWithBase64Encryption:(NSString*)string forKey:(NSString*)key;
 
 /**
- 删除密码
+ * getter
  */
-+ (void)clearLoginPassword:(NSString*)username;
++ (NSString*)stringForKey:(NSString*)key;
+
+/**
+ * getter（base解密）
+ */
++ (NSString*)stringForKeyWithBase64Decryption:(NSString*)key;
+
+/**
+ * 移除
+ */
++ (void)removeItemForKey:(NSString*)key;
 
 @end
