@@ -55,7 +55,7 @@
     }
     
     for (NSString *words in self) {
-        NSString *firstLetter = [words getFirstLetter];
+        NSString *firstLetter = [words firstLetter];
         NSMutableArray *array = dict[firstLetter];
         [array addObject:words];
     }

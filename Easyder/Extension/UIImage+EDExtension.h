@@ -8,30 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (EDUtils)
-
-- (UIImage *)circleImage;
-
-//缩放至指定尺寸
-- (UIImage*)scaleToSize:(CGSize)newsize;
-
-- (UIImage*)alignBottomWithSize:(CGSize)size;
-
-// 根据图片url获取图片尺寸
-+ (CGSize)getImageSizeWithURL:(id)imageURL;
-
-//图片拉伸
-+ (UIImage*)resizableImageWithCapInsets:(UIImage*)originImage;
-
-+ (UIImage *)imageWithColor:(UIColor *)color;
-
-/**
- * 根据父视图尺寸生成带圆角、背景颜色、去除透明通道图片
- */
-- (instancetype)imageWithRoundedSize:(CGSize)roundedSize
-                     backgroundColor:(UIColor*)backgroundColor
-                             corners:(UIRectCorner)corners
-                              radius:(CGFloat)radius;
+@interface UIImage (EDOptimize)
 
 /**
  * 重绘图片，设置背景颜色，去除透明通道
@@ -44,5 +21,46 @@
 - (instancetype)redrawWithRoundedCorners:(UIRectCorner)corners
                                   radius:(CGFloat)radius
                          backgroundColor:(UIColor*)backgroundColor;
+
+/**
+ * 根据父视图尺寸生成带圆角、背景颜色、去除透明通道图片
+ */
+- (instancetype)imageWithRoundedSize:(CGSize)roundedSize
+                     backgroundColor:(UIColor*)backgroundColor
+                             corners:(UIRectCorner)corners
+                              radius:(CGFloat)radius;
+
+@end
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
+@interface UIImage (EDUtils)
+
+/**
+ * 裁剪成圆形
+ */
+- (UIImage *)circleImage;
+
+/**
+ * 改变尺寸
+ */
+- (UIImage*)scaleToSize:(CGSize)newsize;
+
+/**
+ * 裁剪图片，只裁剪顶部
+ */
+- (UIImage*)alignBottomWithSize:(CGSize)size;
+
+/**
+ * 图片拉伸
+ */
++ (UIImage*)resizableImageWithCapInsets:(UIImage*)originImage;
+
+/**
+ * UIColor生成UIImage
+ */
++ (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

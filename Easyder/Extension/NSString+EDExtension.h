@@ -16,57 +16,13 @@
  *如果字符串开头不是汉字和字母, 则直接返回 @"#", 例如: @"&哈哈", 返回 @"#".
  *字符串开头有特殊字符(空格,换行)不影响判定, 例如@"       a啦啦啦", 返回 @"A".
  */
-- (NSString *)getFirstLetter;
+- (NSString *)firstLetter;
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @interface NSString (EDPredicate)
 
@@ -109,85 +65,51 @@
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @interface NSString (EDUtils)
 
-//电话号码中间4位****显示
-- (NSString*)getSecrectStringWithPhoneNumber;
+/**
+ * 电话号码中间4位****显示
+ */
+- (NSString*)secrectStringWithPhoneNumber;
 
-//银行卡号中间8位显示
-- (NSString*)getSecrectStringWithAccountNo:(NSString*)accountNo;
+/**
+ * 银行卡号中间8位显示
+ */
+- (NSString*)secrectStringWithBankCardNo:(NSString*)bankCardNo;
 
-/**抹除运费小数末尾的0*/
-- (NSString*)removeUnwantedZero;
-
-//去掉前后空格
+/**
+ * 去掉前后空格
+ */
 - (NSString*)trimmedString;
 
-/** 适合的高度 默认 font 宽  */
-- (CGFloat)heightWithFont:(NSInteger)font w:(CGFloat)w;
+/**
+ * 计算宽度
+ */
+- (CGFloat)widthWithFontSize:(NSInteger)fontSize height:(CGFloat)height;
 
-/** 适合的宽度 默认 font 高  */
-- (CGFloat)widthWithFont:(NSInteger)font h:(CGFloat)h;
+/**
+ * 计算高度
+ */
+- (CGFloat)heightWithFontSize:(NSInteger)fontSize width:(CGFloat)width;
 
+/**
+ * 计算宽度
+ */
 - (CGFloat)widthWithFont:(UIFont*)font height:(CGFloat)height;
 
+/**
+ * 计算高度
+ */
 - (CGFloat)heightWithFont:(UIFont*)font width:(CGFloat)width;
 
-/** 获取UUID */
+/**
+ * 获取UUID
+ */
 + (NSString *)UUID;
-
-//截取URL中的参数
-- (NSMutableDictionary*)getURLParameters;
 
 @end
 

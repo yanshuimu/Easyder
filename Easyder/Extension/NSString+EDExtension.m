@@ -224,7 +224,7 @@ static char firstLetterArray[HANZI_COUNT] =
 
 @implementation NSString (EDPinYin)
 
-- (NSString *)getFirstLetter
+- (NSString *)firstLetter
 {
     NSString *words = [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (words.length == 0) {
@@ -247,54 +247,9 @@ static char firstLetterArray[HANZI_COUNT] =
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation NSString (EDPredicate)
 
@@ -431,95 +386,32 @@ static char firstLetterArray[HANZI_COUNT] =
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation NSString (EDUtils)
 
-- (NSString*) getSecrectStringWithPhoneNumber
+- (NSString*)secrectStringWithPhoneNumber
 {
     NSMutableString *newStr = [NSMutableString stringWithString:self];
     NSRange range = NSMakeRange(3, 4);
     if (self.length > 10) {
-     [newStr replaceCharactersInRange:range withString:@"****"];
+        [newStr replaceCharactersInRange:range withString:@"****"];
     }
     return newStr;
 }
-- (NSString*) getSecrectStringWithAccountNo:(NSString*)accountNo
+
+- (NSString*)secrectStringWithBankCardNo:(NSString*)bankCardNo
 {
-    NSMutableString *newStr = [NSMutableString stringWithString:accountNo];
+    NSMutableString *newStr = [NSMutableString stringWithString:bankCardNo];
     NSRange range = NSMakeRange(4, 8);
     if (newStr.length>12) {
         [newStr replaceCharactersInRange:range withString:@" **** **** "];
     }
     return newStr;
-    
 }
 
-
-/*抹除运费小数末尾的0*/
-- (NSString *)removeUnwantedZero {
-    if ([[self substringWithRange:NSMakeRange(self.length- 3, 3)] isEqualToString:@"000"]) {
-        return [self substringWithRange:NSMakeRange(0, self.length-4)]; // 多一个小数点
-    } else if ([[self substringWithRange:NSMakeRange(self.length- 2, 2)] isEqualToString:@"00"]) {
-        return [self substringWithRange:NSMakeRange(0, self.length-2)];
-    } else if ([[self substringWithRange:NSMakeRange(self.length- 1, 1)] isEqualToString:@"0"]) {
-        return [self substringWithRange:NSMakeRange(0, self.length-1)];
-    } else {
-        return self;
-    }
-}
-
-/**
- *去掉前后空格
- */
 - (NSString *)trimmedString{
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
@@ -535,142 +427,29 @@ static char firstLetterArray[HANZI_COUNT] =
     return nil;
 }
 
-
-//适合的高度 默认 systemFontOfSize:font
-- (CGFloat)heightWithFont:(NSInteger)font w:(CGFloat)w {
-    return [self boundingRectWithSize:CGSizeMake(w, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:font] } context:nil].size.height;
+- (CGFloat)widthWithFontSize:(NSInteger)fontSize height:(CGFloat)height {
+    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:fontSize] } context:nil].size.width;
 }
 
-- (CGFloat)heightWithFont:(UIFont*)font width:(CGFloat)width {
-    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font} context:nil].size.height;
-}
-
-//适合的宽度 默认 systemFontOfSize:font
-- (CGFloat)widthWithFont:(NSInteger)font h:(CGFloat)h {
-    return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, h) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:font] } context:nil].size.width;
+- (CGFloat)heightWithFontSize:(NSInteger)fontSize width:(CGFloat)width {
+    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : [UIFont systemFontOfSize:fontSize] } context:nil].size.height;
 }
 
 - (CGFloat)widthWithFont:(UIFont*)font height:(CGFloat)height {
     return [self boundingRectWithSize:CGSizeMake(MAXFLOAT, height) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font } context:nil].size.width;
 }
 
-//获取UUID
+- (CGFloat)heightWithFont:(UIFont*)font width:(CGFloat)width {
+    return [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font} context:nil].size.height;
+}
+
 + (NSString *)UUID {
+    
     CFUUIDRef uuidRef = CFUUIDCreate(NULL);
     CFStringRef uuid = CFUUIDCreateString(NULL, uuidRef);
-    
     CFRelease(uuidRef);
-    
     return (__bridge_transfer NSString *) uuid;
 }
-
-//截取URL中的参数
--(NSMutableDictionary*)getURLParameters {
-    
-    NSRange  range = [self  rangeOfString:@"?"];
-    
-    if(range.location==NSNotFound) {
-        
-        return  nil;
-        
-    }
-    
-    NSMutableDictionary  *params = [NSMutableDictionary   dictionary];
-    
-    NSString  *parametersString = [self    substringFromIndex:range.location+1];
-    
-    if([parametersString   containsString:@"&"]) {
-        
-        NSArray  *urlComponents = [parametersString   componentsSeparatedByString:@"&"];
-        
-        for(NSString *keyValuePair in urlComponents) {
-            
-            //生成key/value
-            
-            NSArray *pairComponents = [keyValuePair  componentsSeparatedByString:@"="];
-            
-            NSString *key = [pairComponents.firstObject  stringByRemovingPercentEncoding];
-            
-            NSString*value = [pairComponents.lastObject  stringByRemovingPercentEncoding];
-            
-            //key不能为nil
-            
-            if(key==nil|| value ==nil) {
-                
-                continue;
-                
-            }
-            
-            id existValue = [params valueForKey:key];
-            
-            if(existValue !=nil) {
-                
-                //已存在的值，生成数组。
-                
-                if([existValue  isKindOfClass:[NSArray  class]]) {
-                    
-                    //已存在的值生成数组
-                    
-                    NSMutableArray*items = [NSMutableArray arrayWithArray:existValue];
-                    
-                    [items addObject:value];
-                    
-                    [params setValue:items forKey:key];
-                    
-                }else{
-                    
-                    //非数组
-                    
-                    [params setValue:@[existValue,value]forKey:key];
-                    
-                }
-                
-            }else{
-                
-                //设置值
-                
-                [params setValue:value forKey:key];
-                
-            }
-            
-        }
-        
-    }else{
-        
-        //单个参数生成key/value
-        
-        NSArray *pairComponents = [parametersString  componentsSeparatedByString:@"="];
-        
-        if(pairComponents.count==1) {
-            
-            return nil;
-            
-        }
-        
-        //分隔值
-        
-        NSString *key = [pairComponents.firstObject  stringByRemovingPercentEncoding];
-        
-        NSString *value = [pairComponents.lastObject  stringByRemovingPercentEncoding];
-        
-        //key不能为nil
-        
-        if(key ==nil|| value ==nil) {
-            
-            return nil;
-            
-        }
-        
-        //设置值
-        
-        [params setValue:value forKey:key];
-        
-    }
-    
-    return params;
-    
-}
-
 
 @end
 
