@@ -10,77 +10,58 @@
 
 @implementation NSDate (EDUtils)
 
-+ (NSString*)currentTimestamp
-{
++ (NSString*)currentTimestamp {
+    
     NSDate *date = [NSDate date];
     NSTimeInterval interval = [date timeIntervalSince1970];
     return [NSString stringWithFormat:@"%ld", ((long)interval * 1000)];
 }
 
-+ (NSString*)currentDateWithFormatter:(NSString*)formatter
-{
++ (NSString*)stringWithFormat:(NSString*)format {
+    
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = formatter;
-    
+    dateFormatter.dateFormat = format;
     NSString *systemTime = [dateFormatter stringFromDate:date];
     
     return systemTime;
 }
 
-
-+ (NSString*)changeDateFormatter:(NSString*)oldFormatter
-                    newFormatter:(NSString*)newFormatter
-                      dateString:(NSString*)dateString
-{
-    NSString *tempDateStr = dateString;
-    NSDateFormatter *tempFormatter = [[NSDateFormatter alloc] init];
-    tempFormatter.dateFormat = oldFormatter;
-    NSDate *date = [tempFormatter dateFromString:tempDateStr];
-    tempFormatter.dateFormat = newFormatter;
-    NSString *newDateStr = [tempFormatter stringFromDate:date];
++ (NSString*)stringWithDate:(NSDate*)date format:(NSString*)format {
     
-    return newDateStr;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = format;
+    return [dateFormatter stringFromDate:date];
 }
 
-+ (NSString*)dateStringWithTimestamp:(NSString*)timestamp formatter:(NSString*)formatter
-{
++ (NSString*)stringWithTimestamp:(NSString*)timestamp format:(NSString*)format {
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = formatter;
+    dateFormatter.dateFormat = format;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timestamp.integerValue];
     return [dateFormatter stringFromDate:date];
 }
 
-//传入 秒  得到 xx:xx:xx
-+ (NSString*)getHHMMSSFromSS:(NSString *)totalTime{
-    
-    NSInteger seconds = [totalTime integerValue];
-    
-    //format of hour
-    NSString *str_hour = [NSString stringWithFormat:@"%02ld",seconds/3600];
-    //format of minute
-    NSString *str_minute = [NSString stringWithFormat:@"%02ld",(seconds%3600)/60];
-    //format of second
-    NSString *str_second = [NSString stringWithFormat:@"%02ld",seconds%60];
-    //format of time
-    NSString *format_time = [NSString stringWithFormat:@"%@:%@:%@",str_hour,str_minute,str_second];
-    
-    return format_time;
-    
++ (NSString*)stringChangeFormat:(NSString*)dateString fromFormat:(NSString*)fromFormat toFormat:(NSString*)toFormat
+{
+    NSDate *date = [self dateWithString:dateString format:fromFormat];
+    return [self stringWithDate:date format:toFormat];
 }
 
-
-
-+ (NSDate*)dateWithDateString:(NSString*)dateString formatter:(NSString*)formatter {
++ (NSDate*)dateWithString:(NSString*)dateString format:(NSString*)format {
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = formatter;
+    dateFormatter.dateFormat = format;
     return [dateFormatter dateFromString:dateString];
 }
 
-+ (NSString*)stringWithDate:(NSDate*)date formatter:(NSString*)formatter {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.dateFormat = formatter;
-    return [dateFormatter stringFromDate:date];
++ (NSString*)timeFromSeconds:(NSInteger)seconds {
+        
+    NSString *hour = [NSString stringWithFormat:@"%02ld",seconds/3600];
+    NSString *minute = [NSString stringWithFormat:@"%02ld",(seconds%3600)/60];
+    NSString *second = [NSString stringWithFormat:@"%02ld",seconds%60];
+    NSString *time = [NSString stringWithFormat:@"%@:%@:%@", hour, minute, second];
+    return time;
 }
 
 @end

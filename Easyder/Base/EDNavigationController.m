@@ -87,10 +87,10 @@
     _returnImageName = configuration.barReturnImageName;
 }
 
-//重写nav的push方法
+#pragma mark - Overwrite
+
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
-    ///如果在堆栈控制器数量大于1 加返回按钮
     if (self.viewControllers.count > 0) {
         
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];

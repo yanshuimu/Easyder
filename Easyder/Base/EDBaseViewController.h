@@ -10,6 +10,4 @@
 
 @interface EDBaseViewController : UIViewController
 
-- (void)extendedLayout;
-
 @end

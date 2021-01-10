@@ -19,11 +19,11 @@
     return mutableAttributedString;
 }
 
-- (CGSize)calculateWithTargetSize:(CGSize)targetSize {
+- (CGSize)calculateWithSize:(CGSize)size {
     
     NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
     
-    CGRect rect = [self boundingRectWithSize:targetSize options:options context:nil];
+    CGRect rect = [self boundingRectWithSize:size options:options context:nil];
     
     return rect.size;
 }

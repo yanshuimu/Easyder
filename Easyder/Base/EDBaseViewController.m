@@ -38,14 +38,14 @@
 //    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
--(void)extendedLayout
-{
+-(void)extendedLayout {
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
+    
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     //NSLog(@"%@:内存回收", NSStringFromClass([self class]));
 }

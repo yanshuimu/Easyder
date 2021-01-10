@@ -12,9 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSAttributedString (EDUtils)
 
+/**
+ * 根据text、font、textColor生成NSAttributedString
+ */
 + (instancetype)createWithText:(NSString*)text font:(UIFont*)font textColor:(UIColor*)textColor;
 
-- (CGSize)calculateWithTargetSize:(CGSize)targetSize;
+/**
+ * 计算NSAttributedString的大小
+ */
+- (CGSize)calculateWithSize:(CGSize)size;
 
 @end
 

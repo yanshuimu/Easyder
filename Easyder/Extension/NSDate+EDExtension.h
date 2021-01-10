@@ -11,40 +11,38 @@
 @interface NSDate (EDUtils)
 
 /**
- *  获取当前时间戳
+ *  当前时间戳
  */
 + (NSString*)currentTimestamp;
 
 /**
- *  获取当前时间
+ *  当前日期
  */
-+ (NSString*)currentDateWithFormatter:(NSString*)formatter;
-
-/**
- *  根据时间戳获取时间
- */
-+ (NSString*)dateStringWithTimestamp:(NSString*)timestamp
-                           formatter:(NSString*)formatter;
-
-/**
- *  根据日期字符串获取NSDate
- */
-+ (NSDate*)dateWithDateString:(NSString*)dateString
-                    formatter:(NSString*)formatter;
-
-//传入秒，获取时-分-秒
-+ (NSString*)getHHMMSSFromSS:(NSString *)totalTime;
-
-/**
- *  修改时间格式
- */
-+ (NSString*)changeDateFormatter:(NSString*)oldFormatter
-                    newFormatter:(NSString*)newFormatter
-                      dateString:(NSString*)dateString;
++ (NSString*)stringWithFormat:(NSString*)format;
 
 /**
  * NSDate转NSString
  */
-+ (NSString*)stringWithDate:(NSDate*)date formatter:(NSString*)formatter;
++ (NSString*)stringWithDate:(NSDate*)date format:(NSString*)format;
+
+/**
+ *  timestamp转String
+ */
++ (NSString*)stringWithTimestamp:(NSString*)timestamp format:(NSString*)format;
+
+/**
+ *  fromFormat转toFormat格式
+ */
++ (NSString*)stringChangeFormat:(NSString*)dateString fromFormat:(NSString*)fromFormat toFormat:(NSString*)toFormat;
+
+/**
+ *  String转NSDate
+ */
++ (NSDate*)dateWithString:(NSString*)dateString format:(NSString*)format;
+
+/**
+ * 秒数生成HH:mm:ss格式字符串
+ */
++ (NSString*)timeFromSeconds:(NSInteger)seconds;
 
 @end

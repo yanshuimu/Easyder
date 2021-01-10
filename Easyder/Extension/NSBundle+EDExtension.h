@@ -11,10 +11,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSBundle (EDExtension)
 
+/**
+ * 获取Easyder.bundle
+ */
 + (instancetype)easyderBundle;
 
+/**
+ * 返回按钮图片
+ */
 + (UIImage*)returnImageFromEasyderBundle;
 
+/**
+ * 根据图片名称获取Easyder.bundle中的图片
+ */
 + (UIImage*)imageFromEasyderBundleWithName:(NSString*)imageName;
 
 @end
