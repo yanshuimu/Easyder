@@ -176,4 +176,9 @@ typedef NS_ENUM(NSInteger, TimeAccuracy) {
 
 + (UIFont*)boldFontMake:(CGFloat)fontSize;
 
+/**
+ * 将NSArray中的NSNull类型转化成@""
+ */
++ (id)changeType:(id)myObj;
+
 @end

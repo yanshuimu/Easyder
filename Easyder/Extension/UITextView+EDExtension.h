@@ -12,7 +12,7 @@
 
 @interface UITextView (EDUtils)
 
-- (void)setPlaceholder:(NSString *)placeholdStr placeholdColor:(UIColor *)placeholdColor;
+- (void)setPlaceholder:(NSString *)placeholder placeholdColor:(UIColor *)placeholdColor;
 
 @end
 

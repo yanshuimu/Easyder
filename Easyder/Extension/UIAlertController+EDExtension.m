@@ -46,7 +46,7 @@
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
     
     for (int i = 0; i < titleArray.count; i++) {
-        alertControllerBlock actionBlock = actionArray[i];
+        AlertControllerBlock actionBlock = actionArray[i];
         [vc addAction:[UIAlertAction actionWithTitle:titleArray[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             if (actionBlock) actionBlock();
         }]];

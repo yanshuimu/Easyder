@@ -9,21 +9,9 @@
 #import "NSArray+EDExtension.h"
 #import "NSString+EDExtension.h"
 
-@implementation NSArray (EDUtils)
-
-- (NSArray*)allValuesWithKey:(NSString*)key {
-    
-    NSMutableArray *mutaArray = [NSMutableArray array];
-    for (NSDictionary *dict in self) {
-        [mutaArray addObject:dict[key]];
-    }
-    return mutaArray;
-}
-
-#pragma mark - 打印日志
+@implementation NSArray (EDLog)
 
 ///打印数组时会自动调用这个方法,在分类中重写这个方法时,在使用时不需要导入头文件(因重写)
-
 - (NSString *)descriptionWithLocale:(id)locale indent:(NSUInteger)level
 {
     NSMutableString *mStr = [NSMutableString string];
@@ -97,7 +85,68 @@
 
 
 
-#pragma mark - 拼音
+@implementation NSArray (EDUtils)
+
+- (NSArray*)allValuesWithKey:(NSString*)key {
+    
+    NSMutableArray *mutaArray = [NSMutableArray array];
+    for (NSDictionary *dict in self) {
+        [mutaArray addObject:dict[key]];
+    }
+    return mutaArray;
+}
+
+@end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @implementation NSArray (EDPinYin)
 

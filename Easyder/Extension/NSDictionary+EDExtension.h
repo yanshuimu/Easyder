@@ -10,9 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSDictionary (EDUtils)
+@interface NSDictionary (EDLog)
 
-- (NSDictionary*)replaceNullValueWithWhiteString;
 
 @end
 
@@ -64,11 +63,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-#pragma mark - 防止删除崩溃
 
-@interface NSDictionary (DeleteNull)
 
-+ (id)changeType:(id)myObj;
+@interface NSDictionary (EDUtils)
+
 
 @end
 

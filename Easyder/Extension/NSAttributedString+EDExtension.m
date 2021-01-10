@@ -15,16 +15,13 @@
     NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:text];
     [mutableAttributedString addAttribute:NSFontAttributeName value:font range:NSMakeRange(0, text.length)];
     [mutableAttributedString addAttribute:NSForegroundColorAttributeName value:textColor range:NSMakeRange(0, text.length)];
-    
     return mutableAttributedString;
 }
 
 - (CGSize)calculateWithSize:(CGSize)size {
     
     NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
-    
     CGRect rect = [self boundingRectWithSize:size options:options context:nil];
-    
     return rect.size;
 }
 
