@@ -12,30 +12,14 @@
 
 - (UIImage *)circleImage {
     
-    // 开始图形上下文
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
-    
-    // 获得图形上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-    // 设置一个范围
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    
-    // 根据一个rect创建一个椭圆
     CGContextAddEllipseInRect(ctx, rect);
-    
-    // 裁剪
     CGContextClip(ctx);
-    
-    // 将原照片画到图形上下文
     [self drawInRect:rect];
-    
-    // 从上下文上获取剪裁后的照片
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    // 关闭上下文
     UIGraphicsEndImageContext();
-    
     return newImage;
 }
 
@@ -69,20 +53,6 @@
     NSData *data = UIImageJPEGRepresentation(tempImage, 1.0);
     return [UIImage imageWithData:data];
 }
-
-//- (UIImage*)clipImage
-//{
-//    CGFloat size;
-//    CGFloat delta = self.size.width/self.size.height;
-//    if (self.size.height > 1000) {
-//        CGFloat height = self.size.height
-//        size = CGSizeMake(self.size.height * , <#CGFloat height#>)
-//    }
-//    else if (self.size.height > 1000) {
-//        
-//    }
-//    
-//}
 
 /**
  *  改变图片的大小

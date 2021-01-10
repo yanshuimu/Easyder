@@ -9,6 +9,9 @@
 #import "UIScrollView+EDExtension.h"
 #import <MJRefresh/MJRefresh.h>
 
+#define IPHONE_H [UIScreen mainScreen].bounds.size.height //屏幕的高度
+#define IPHONE_W [UIScreen mainScreen].bounds.size.width // 屏幕的宽度
+
 @implementation UIScrollView (EDRefresh)
 
 - (void)createRefreshHeaderWithTarget:(id)target action:(SEL)action {
@@ -41,60 +44,12 @@
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UIScrollView (EDPanBack)
 
-#define IPHONE_H [UIScreen mainScreen].bounds.size.height //屏幕的高度
-#define IPHONE_W [UIScreen mainScreen].bounds.size.width // 屏幕的宽度
 //是否支持多手势触发，返回YES，则可以多个手势一起触发方法，返回NO则为互斥.
 //是否允许多个手势识别器共同识别，一个控件的手势识别后是否阻断手势识别继续向下传播，默认返回NO；如果为YES，响应者链上层对象触发手势识别后，如果下层对象也添加了手势并成功识别也会继续执行，否则上层对象识别后则不再继续传播
 //一句话总结就是此方法返回YES时，手势事件会一直往下传递，不论当前层次是否对该事件进行响应。
@@ -104,7 +59,6 @@
         return YES;
     }
     return NO;
-    
 }
 
 //location_X可自己定义,其代表的是滑动返回距左边的有效长度
@@ -143,7 +97,6 @@
         return NO;
     }
     return YES;
-    
 }
 
 @end

@@ -13,67 +13,27 @@
 
 -(void)setPlaceholder:(NSString *)placeholder placeholdColor:(UIColor *)placeholdColor
 {
+    UILabel *label = [self viewWithTag:-999];
+    if (label) {
+        [label removeFromSuperview];
+    }
+    
     UILabel *placeHolderLabel = [[UILabel alloc] init];
     placeHolderLabel.text = placeholder;
     placeHolderLabel.numberOfLines = 0;
     placeHolderLabel.textColor = placeholdColor;
     placeHolderLabel.font = self.font;
     [placeHolderLabel sizeToFit];
+    placeHolderLabel.tag = -999;
     [self addSubview:placeHolderLabel];
     [self setValue:placeHolderLabel forKey:@"_placeholderLabel"];
 }
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UITextView (EDCreate)
 

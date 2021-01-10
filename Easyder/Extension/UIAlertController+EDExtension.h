@@ -8,26 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 typedef void(^AlertControllerBlock)(void);
 
 @interface UIAlertController (EDUtils)
 
-+ (UIAlertController*)alertControllerWithTitle:(NSString*)title
-                                       message:(nullable NSString*)message
-                                     leftTitle:(NSString*)leftTitle
-                                    rightTitle:(NSString*)rightTitle
-                                    leftAction:(nullable void(^)(void))leftAction
-                                   rightAction:(void(^)(void))rightAction;
+/**
+ * 警告弹窗
+ */
++ (instancetype)alertControllerWithTitle:(NSString*)title
+                                message:(NSString*)message
+                              leftTitle:(NSString*)leftTitle
+                             rightTitle:(NSString*)rightTitle
+                             leftAction:(AlertControllerBlock)leftAction
+                            rightAction:(AlertControllerBlock)rightAction;
 
-+ (UIAlertController*)actionSheetWithTitle:(NSString*)title
-                                   message:(nullable NSString*)message
-                                titleArray:(NSArray*)titleArray
-                               actionArray:(NSArray*)actionArray
-                               cancelTitle:(NSString*)cancelTitle
-                              cancelAction:(nullable void(^)(void))cancelAction;
+/**
+ * 菜单弹窗
+ */
++ (instancetype)actionSheetWithTitle:(NSString*)title
+                             message:(NSString*)message
+                          titleArray:(NSArray*)titleArray
+                         actionArray:(NSArray*)actionArray
+                         cancelTitle:(NSString*)cancelTitle
+                        cancelAction:(AlertControllerBlock)cancelAction;
 
 @end
-
-NS_ASSUME_NONNULL_END

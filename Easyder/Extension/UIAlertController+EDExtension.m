@@ -10,12 +10,12 @@
 
 @implementation UIAlertController (EDUtils)
 
-+ (UIAlertController*)alertControllerWithTitle:(NSString*)title
-                                       message:(nullable NSString*)message
-                                     leftTitle:(NSString*)leftTitle
-                                    rightTitle:(NSString*)rightTitle
-                                    leftAction:(nullable void(^)(void))leftAction
-                                   rightAction:(void(^)(void))rightAction {
++ (instancetype)alertControllerWithTitle:(NSString*)title
+                                message:(NSString*)message
+                              leftTitle:(NSString*)leftTitle
+                             rightTitle:(NSString*)rightTitle
+                             leftAction:(AlertControllerBlock)leftAction
+                            rightAction:(AlertControllerBlock)rightAction {
     
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
     
@@ -37,11 +37,11 @@
 }
 
 + (UIAlertController*)actionSheetWithTitle:(NSString*)title
-                                   message:(nullable NSString*)message
+                                   message:(NSString*)message
                                 titleArray:(NSArray*)titleArray
                                actionArray:(NSArray*)actionArray
                                cancelTitle:(NSString*)cancelTitle
-                              cancelAction:(nullable void(^)(void))cancelAction
+                              cancelAction:(AlertControllerBlock)cancelAction
 {
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleActionSheet];
     

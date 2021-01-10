@@ -21,6 +21,11 @@
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font textColor:(UIColor *)textColor;
 
 /**
+ * frame、font、text、textColor
+ */
++ (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font text:(NSString *)text textColor:(UIColor *)textColor;
+
+/**
  * frame、font、backgroundColor
  */
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor;
@@ -31,19 +36,14 @@
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor;
 
 /**
- * frame、text、font、textColor
- */
-+ (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text font:(UIFont*)font textColor:(UIColor *)textColor;
-
-/**
  * font
  */
 + (instancetype)labelWithFont:(UIFont *)font;
 
 /**
- * text、font
+ * font、text
  */
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font;
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text;
 
 /**
  * font、textColor
@@ -56,13 +56,13 @@
 + (instancetype)labelWithFont:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor;
 
 /**
- * text、font、textColor
+ * font、text、textColor
  */
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor;
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text textColor:(UIColor *)textColor;
 
 /**
-* text、font、textColor、backgroundColor、cornerRadius
-*/
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius;
+ * font、text、textColor、backgroundColor、cornerRadius
+ */
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius;
 
 @end

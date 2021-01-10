@@ -12,10 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UICollectionView (EDUtils)
 
+/**
+ * 注册UICollectionViewCell
+ */
 - (void)registerForCellWithClass:(Class)clazz;
 
+/**
+ * 注册UICollectionReusableHeaderView
+ */
 - (void)registerForSectionHeaderWithClass:(Class)clazz;
 
+/**
+ * 注册UICollectionReusableFooterView
+ */
 - (void)registerForSectionFooterWithClass:(Class)clazz;
 
 @end

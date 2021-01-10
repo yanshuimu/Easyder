@@ -26,7 +26,7 @@
     height = CGWidthAutoMake(49);
     width = backView.width - x * 2;
     y = backView.height - height - x;
-    UIButton *sureBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) title:@"确定" titleColor:EDWhiteColor font:EDAutoFont(16) backgroundColor:EDManagerSingleton.themeColor cornerRadius:4];
+    UIButton *sureBtn = [UIButton buttonWithFrame:CGRectMake(x, y, width, height) title:@"确定" font:EDAutoFont(16) titleColor:EDWhiteColor backgroundColor:EDManagerSingleton.themeColor cornerRadius:4];
     [backView addSubview:sureBtn];
     [sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
     

@@ -7,10 +7,6 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-#pragma mark - 颜色
-
 //统一透明度
 #define EDDefaultBackgroundAlpha 0.70
 
@@ -47,8 +43,17 @@ NS_ASSUME_NONNULL_BEGIN
 //浅灰字体，次要字体颜色，如备注、日期等
 #define EDFontColorLightGray EDHexColor(@"#999999")
 
+NS_ASSUME_NONNULL_BEGIN
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
 @interface UIColor (EDExtension)
 
+/**
+ * 十六进制颜色码生成UIColor
+ */
 + (UIColor*)colorWithHexString:(NSString*)hexString alpha:(CGFloat)alpha;
 
 @end

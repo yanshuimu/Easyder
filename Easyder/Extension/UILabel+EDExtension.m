@@ -27,15 +27,6 @@
     return label;
 }
 
-+ (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor {
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.textColor = EDFontColorBlack;
-    label.font = font;
-    label.backgroundColor = backgroundColor;
-    return label;
-}
-
 + (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor {
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
@@ -45,7 +36,16 @@
     return label;
 }
 
-+ (instancetype)labelWithFrame:(CGRect)frame text:(NSString *)text font:(UIFont*)font textColor:(UIColor *)textColor {
++ (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font backgroundColor:(UIColor*)backgroundColor {
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.textColor = EDFontColorBlack;
+    label.font = font;
+    label.backgroundColor = backgroundColor;
+    return label;
+}
+
++ (instancetype)labelWithFrame:(CGRect)frame font:(UIFont*)font text:(NSString *)text textColor:(UIColor *)textColor {
     
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
     label.text = text;
@@ -62,9 +62,7 @@
     return label;
 }
 
-
-
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font {
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text {
     
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
@@ -90,7 +88,7 @@
     return label;
 }
 
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor {
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text textColor:(UIColor *)textColor {
     
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
@@ -99,7 +97,7 @@
     return label;
 }
 
-+ (instancetype)labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius {
++ (instancetype)labelWithFont:(UIFont *)font text:(NSString *)text textColor:(UIColor *)textColor backgroundColor:(UIColor*)backgroundColor cornerRadius:(CGFloat)cornerRadius {
     
     UILabel *label = [[UILabel alloc] init];
     label.text = text;
@@ -110,7 +108,5 @@
     label.layer.masksToBounds = YES;
     return label;
 }
-
-
 
 @end

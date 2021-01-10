@@ -12,10 +12,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITableView (EDUtils)
 
+/**
+ * 注册UITableViewCell
+ */
 - (void)registerForCellWithClass:(Class)clazz;
 
+/**
+ * 注册UITableViewCell(xib)
+ */
 - (void)registerForNibWithClass:(Class)clazz;
 
+/*
+ * 注册UITableViewHeaderFooterView
+ */
 - (void)registerForHeaderFooterClass:(Class)clazz;
 
 @end

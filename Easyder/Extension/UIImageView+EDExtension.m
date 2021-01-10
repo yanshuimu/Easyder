@@ -29,7 +29,13 @@
     
     UIImageView *imageView = [[self alloc] init];
     imageView.image = [UIImage imageNamed:imageName];
-    imageView.contentMode = UIViewContentModeCenter;
+    return imageView;
+}
+
++ (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName {
+    
+    UIImageView *imageView = [[self alloc] initWithFrame:frame];
+    imageView.image = [UIImage imageNamed:imageName];
     return imageView;
 }
 
@@ -38,14 +44,6 @@
     UIImageView *imageView = [[self alloc] initWithFrame:frame];
     imageView.image = [UIImage imageNamed:imageName];
     imageView.contentMode = isScaleAspectFill ? UIViewContentModeScaleAspectFill : UIViewContentModeScaleAspectFill;
-    return imageView;
-}
-
-+ (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName {
-    
-    UIImageView *imageView = [[self alloc] initWithFrame:frame];
-    imageView.image = [UIImage imageNamed:imageName];
-    imageView.contentMode = UIViewContentModeCenter;
     return imageView;
 }
 

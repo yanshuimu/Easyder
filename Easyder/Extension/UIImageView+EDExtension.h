@@ -28,14 +28,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)imageViewWithImageName:(NSString*)imageName;
 
 /**
- * frame、imageName、isScaleAspectFill
- */
-+ (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName isScaleAspectFill:(BOOL)isScaleAspectFill;
-
-/**
  * frame、imageName
  */
 + (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName;
+
+/**
+ * frame、imageName、isScaleAspectFill
+ */
++ (instancetype)imageViewWithFrame:(CGRect)frame imageName:(NSString*)imageName isScaleAspectFill:(BOOL)isScaleAspectFill;
 
 /**
  * frame、cornerRadius

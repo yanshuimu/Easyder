@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface UITextField (EDUtils)
 
+/**
+ * 设置占位符
+ */
 - (void)setPlaceholder:(NSString*)placeholder color:(UIColor*)color;
 
+/**
+ * 创建左边视图
+ */
 - (UIView*)createLeftViewWithFrame:(CGRect)frame;
 
+/**
+ * 创建右边视图
+ */
 - (UIView*)createRightViewWithFrame:(CGRect)frame;
 
 @end
@@ -93,5 +100,3 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)textFieldWithFrame:(CGRect)frame font:(UIFont*)font placeholder:(NSString*)placeholder;
 
 @end
-
-NS_ASSUME_NONNULL_END

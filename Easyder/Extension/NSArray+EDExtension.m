@@ -35,118 +35,9 @@
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@implementation NSArray (EDUtils)
-
-- (NSArray*)allValuesWithKey:(NSString*)key {
-    
-    NSMutableArray *mutaArray = [NSMutableArray array];
-    for (NSDictionary *dict in self) {
-        [mutaArray addObject:dict[key]];
-    }
-    return mutaArray;
-}
-
-@end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation NSArray (EDPinYin)
 
@@ -197,6 +88,23 @@
         [resultArray addObject:resultDict];
     }
     return resultArray;
+}
+
+@end
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
+@implementation NSArray (EDUtils)
+
+- (NSArray*)allValuesWithKey:(NSString*)key {
+    
+    NSMutableArray *mutaArray = [NSMutableArray array];
+    for (NSDictionary *dict in self) {
+        [mutaArray addObject:dict[key]];
+    }
+    return mutaArray;
 }
 
 @end
