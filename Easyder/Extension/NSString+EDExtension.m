@@ -253,88 +253,39 @@ static char firstLetterArray[HANZI_COUNT] =
 
 @implementation NSString (EDPredicate)
 
-- (BOOL) isValidMobileNumber {
-    NSString* const MOBILE = @"^1(3|4|5|6|7|8|9)\\d{9}$";
+- (BOOL)isValidMobileNumber {
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    if(self.length != 11) {
+        return NO;
+    }
+    NSString *mobile = @"^1(3|4|5|6|7|8|9)\\d{9}$";
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobile];
     return [predicate evaluateWithObject:self];
 }
 
-- (BOOL) isValidVerifyCode
-{
-    NSString *pattern = @"^[0-9]{4}";
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
-    return [predicate evaluateWithObject:self];
+- (BOOL)isValidEmail {
+    
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:self];
 }
 
-- (BOOL) isValidRealName
-
-{
-    NSString *nicknameRegex = @"^[\u4e00-\u9fa5]{2,8}$";
+- (BOOL)isOnlyChinese {
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",nicknameRegex];
-    
-    return [predicate evaluateWithObject:self];
-}
-
-- (BOOL) isOnlyChinese
-{
     NSString * chineseTest=@"^[\u4e00-\u9fa5]{0,}$";
     NSPredicate*chinesePredicate=[NSPredicate predicateWithFormat:@"SELF MATCHES %@",chineseTest];
     return [chinesePredicate evaluateWithObject:self];
 }
 
-
-- (BOOL) isValidBankCardNumber {
-    NSString* const BANKCARD = @"^(\\d{16}|\\d{19})$";
+- (BOOL)isOnlyEnglish {
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", BANKCARD];
-    return [predicate evaluateWithObject:self];
-}
-
-
-- (BOOL) isValidEmail
-{
-    
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSString *emailRegex = @"[A-Za-z]";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    
     return [emailTest evaluateWithObject:self];
+}
+
+- (BOOL)isOnlyNumber {
     
-}
-- (BOOL) validateNickName
-{
-    NSString *userNameRegex = @"^[A-Za-z0-9\u4e00-\u9fa5]{1,24}+$";
-    
-    NSPredicate *userNamePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",userNameRegex];
-    
-    return [userNamePredicate evaluateWithObject:self];
-}
-- (BOOL) isValidAlphaNumberPassword
-{
-    NSString *regex = @"^(?!\\d+$|[a-zA-Z]+$)\\w{6,12}$";
-    NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
-    return [identityCardPredicate evaluateWithObject:self];
-}
-
-
-- (BOOL) isValidIdentifyFifteen
-{
-    NSString * identifyTest=@"^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$";
-    NSPredicate*identifyPredicate=[NSPredicate predicateWithFormat:@"SELF MATCHES %@",identifyTest];
-    return [identifyPredicate evaluateWithObject:self];
-}
-
-- (BOOL) isValidIdentifyEighteen
-{
-    NSString * identifyTest=@"^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$";
-    NSPredicate*identifyPredicate=[NSPredicate predicateWithFormat:@"SELF MATCHES %@",identifyTest];
-    return [identifyPredicate evaluateWithObject:self];
-}
-
-// 只能输入数字
-- (BOOL) isOnlyNumber
-{
     BOOL res = YES;
     NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
     int i = 0;
@@ -347,12 +298,10 @@ static char firstLetterArray[HANZI_COUNT] =
         }
         i++;
     }
-    
     return res;
 }
 
-// 数字和小数点
-- (BOOL) isOnlyNumberAndDecimal
+- (BOOL)isOnlyNumberAndDecimal
 {
     BOOL res = YES;
     NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:@"0123456789."];
@@ -366,23 +315,36 @@ static char firstLetterArray[HANZI_COUNT] =
         }
         i++;
     }
-    
     return res;
 }
 
-/// 手机号 11位 第一位为1 其他不限制
-- (BOOL)isMobileNumber
-{
-    if (self.length != 11)
-    {
-        return NO;
-    }
-    //    NSString *MOBILE = @"^1(3[0-9]|4[57]|5[0-35-9]|8[0-9]|7[0-9])\\d{8}$";
-    NSString *MOBILE = @"^1([0-9][0-9])\\d{8}$";
-    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
-    return [regextestmobile evaluateWithObject:self];
+- (BOOL)isValidBankCardNumber {
+    
+    NSString* const BANKCARD = @"^(\\d{16}|\\d{19})$";
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", BANKCARD];
+    return [predicate evaluateWithObject:self];
 }
 
+- (BOOL)isValidAlphaNumberPassword {
+    
+    NSString *regex = @"^(?!\\d+$|[a-zA-Z]+$)\\w{6,12}$";
+    NSPredicate *identityCardPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [identityCardPredicate evaluateWithObject:self];
+}
+
+- (BOOL)isValidIdentifyFifteen {
+    
+    NSString * identifyTest=@"^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$";
+    NSPredicate*identifyPredicate=[NSPredicate predicateWithFormat:@"SELF MATCHES %@",identifyTest];
+    return [identifyPredicate evaluateWithObject:self];
+}
+
+- (BOOL)isValidIdentifyEighteen {
+    
+    NSString * identifyTest=@"^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$";
+    NSPredicate*identifyPredicate=[NSPredicate predicateWithFormat:@"SELF MATCHES %@",identifyTest];
+    return [identifyPredicate evaluateWithObject:self];
+}
 
 @end
 

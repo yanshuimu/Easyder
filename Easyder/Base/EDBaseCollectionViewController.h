@@ -23,14 +23,29 @@ NS_ASSUME_NONNULL_BEGIN
 //
 @property (nonatomic, assign) NSInteger page;
 
-- (void)createRefreshHeaderFooter;
-
+/*
+ * 创建下拉刷新视图
+ */
 - (void)createRefreshHeader;
 
+/*
+ * 创建上拉刷新视图
+ */
 - (void)createRefreshFooter;
 
+/*
+ * 同时创建上拉、下拉刷新视图
+ */
+- (void)createRefreshHeaderFooter;
+
+/*
+ * 下拉刷新方法
+ */
 - (void)headerRefreshData;
 
+/*
+ * 上拉加载更多方法
+ */
 - (void)footerRefreshData;
 
 - (UICollectionReusableView*)createDefaultCollectionSectionViewWithKind:(NSString *)kind indexPath:(NSIndexPath*)indexPath;

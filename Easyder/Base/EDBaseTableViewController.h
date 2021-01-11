@@ -40,12 +40,12 @@
 - (void)createRefreshFooter;
 
 /*
- * 刷新下拉 方法 默认为refreshData
+ * 下拉刷新方法
  */
 - (void)headerRefreshData;
 
 /*
- * 刷新上拉 方法 默认为refreshData
+ * 上拉加载更多方法
  */
 - (void)footerRefreshData;
 

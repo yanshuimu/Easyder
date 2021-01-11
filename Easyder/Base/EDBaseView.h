@@ -10,6 +10,9 @@
 
 @interface EDBaseView : UIView
 
+/**
+ * 由xib创建view
+ */
 + (instancetype)createViewFromNib;
 
 - (void)edInitialize;

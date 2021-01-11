@@ -20,9 +20,6 @@
 
 @implementation UIView (EDBase)
 
-/*
- 自动缩放宽高
- */
 CGSize CGSizeAutoMake(CGFloat width, CGFloat height)
 {
     CGSize size;
@@ -31,17 +28,11 @@ CGSize CGSizeAutoMake(CGFloat width, CGFloat height)
     return size;
 }
 
-/*
- 自动缩放宽度
- */
 CGFloat CGWidthAutoMake(CGFloat width) {
     
     return trunc(width * EDManagerSingleton.widthRatio);
 }
 
-/*
- 自动缩放高度
- */
 CGFloat CGHeightAutoMake(CGFloat height) {
     
     return trunc(height * EDManagerSingleton.heightRatio);
@@ -49,54 +40,9 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UIView (LYEmptyView)
 
@@ -154,7 +100,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
         emptyV.autoShowEmptyView = NO;
         emptyV.actionBtnBackGroundColor = configuration.emptyButtonBackgroundColor ? configuration.emptyButtonBackgroundColor : EDWhiteColor;
         emptyV.actionBtnTitleColor = configuration.emptyButtonTitleColor ? configuration.emptyButtonTitleColor : EDFontColorBlack;
-        emptyV.titleLabFont = configuration.emptyTitleFont ? configuration.emptyTitleFont: [EDUtils fontMake:13];
+        emptyV.titleLabFont = configuration.emptyTitleFont ? configuration.emptyTitleFont: [UIFont systemFontOfSize:13];
         emptyV.titleLabTextColor = configuration.emptyTitleColor ? configuration.emptyTitleColor :  EDFontColorLightGray;
         self.ly_emptyView = emptyV;
         
@@ -169,58 +115,11 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 #define kDefaultShowTime 1.5
-
-#pragma mark - Loading
 
 @implementation UIView (Loading)
 
@@ -300,59 +199,17 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 }
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UIView (EDOptimize)
 
 @end
 
-#pragma mark - UILabel
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UILabel (EDOptimize)
 
@@ -364,7 +221,9 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
-#pragma mark - UIImageView
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UIImageView (EDOptimize)
 
@@ -691,69 +550,22 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
 
 @implementation UIView (EDCreate)
-
-+ (instancetype)viewWithFrame:(CGRect)frame {
-    
-    EDBaseView *view = [[self alloc] initWithFrame:frame];
-    return view;
-}
 
 + (instancetype)viewWithBackgroundColor:(UIColor*)backgroundColor {
     
     EDBaseView *view = [[self alloc] init];
     view.backgroundColor = backgroundColor;
+    return view;
+}
+
++ (instancetype)viewWithFrame:(CGRect)frame {
+    
+    EDBaseView *view = [[self alloc] initWithFrame:frame];
     return view;
 }
 

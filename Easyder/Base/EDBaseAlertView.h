@@ -23,14 +23,9 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 @property (nonatomic, assign) BOOL clickMaskOnTheHidden;
 //内容垂直对齐方式
 @property (nonatomic, assign) EDAlertViewContentVerticalAlignment contentVerticalAlignment;
-/**
- * 子类重写
- */
+
 - (void)edInitialize;
 
-/**
- * 子类重写
- */
 - (void)edSetupSubviews;
 
 /**

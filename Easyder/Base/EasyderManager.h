@@ -31,10 +31,19 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 //
 @property (nonatomic, strong) EDConfiguration *emptyViewConfiguration;
 
+/**
+ * 全局配置EDNavigationController
+ */
 - (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;
 
+/**
+ * 全局配置EDBaseAlertView
+ */
 - (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock;
 
+/**
+ * 全局配置LYEmptyView
+ */
 - (void)makeEmptyViewConfiguration:(EDConfigurationBlock)configurationBlock;
 
 @end

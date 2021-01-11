@@ -26,42 +26,55 @@
 
 @interface NSString (EDPredicate)
 
-//有效的电话号码
-- (BOOL) isValidMobileNumber;
+/**
+ * 验证是否有效的手机号
+ */
+- (BOOL)isValidMobileNumber;
 
-//有效的真实姓名
-- (BOOL) isValidRealName;
+/**
+ * 验证是否有效的邮箱
+ */
+- (BOOL)isValidEmail;
 
-//是否只有中文
-- (BOOL) isOnlyChinese;
+/**
+ * 验证是否纯中文
+ */
+- (BOOL)isOnlyChinese;
 
-//有效的验证码(根据自家的验证码位数进行修改)
-- (BOOL) isValidVerifyCode;
+/**
+ * 验证是否纯英文
+ */
+- (BOOL)isOnlyEnglish;
 
-//有效的银行卡号
-- (BOOL) isValidBankCardNumber;
+/**
+ * 验证是否纯数字
+ */
+- (BOOL)isOnlyNumber;
 
-//有效的邮箱
-- (BOOL) isValidEmail;
+/**
+ * 验证是否数字和小数点
+ */
+- (BOOL)isOnlyNumberAndDecimal;
 
-//有效的字母数字密码
-- (BOOL) isValidAlphaNumberPassword;
+/**
+ * 验证是否有效的银行卡号
+ */
+- (BOOL)isValidBankCardNumber;
 
-//检测有效身份证
-//15位
-- (BOOL) isValidIdentifyFifteen;
+/**
+ * 验证是否有效的字母数字密码
+ */
+- (BOOL)isValidAlphaNumberPassword;
 
-//18位
-- (BOOL) isValidIdentifyEighteen;
+/**
+ * 验证有效身份证（15位）
+ */
+- (BOOL)isValidIdentifyFifteen;
 
-//限制只能输入数字
-- (BOOL) isOnlyNumber;
-
-// 数字和小数点
-- (BOOL) isOnlyNumberAndDecimal;
-
-/// 手机号 11位 第一位为1 其他不限制
-- (BOOL)isMobileNumber;
+/**
+ * 验证有效身份证（18位）
+ */
+- (BOOL)isValidIdentifyEighteen;
 
 @end
 

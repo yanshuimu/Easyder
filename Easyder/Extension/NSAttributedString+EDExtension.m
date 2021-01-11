@@ -25,4 +25,46 @@
     return rect.size;
 }
 
++ (instancetype)createWithStringArray:(NSArray*)stringArray colorArray:(NSArray*)colorArray {
+    
+    NSString *string = [self arrayToString:stringArray dotString:@""];
+    NSMutableAttributedString *testStr = [[NSMutableAttributedString alloc] initWithString:string];
+    NSInteger strLength = 0;
+    for (int i = 0 ; i < stringArray.count; i++) {
+        [testStr addAttribute:NSForegroundColorAttributeName value:colorArray[i] range:NSMakeRange(strLength,[stringArray[i] length])];
+        strLength = [stringArray[i] length] + strLength;
+    }
+    return testStr;
+}
+
++ (instancetype)createWithStringArray:(NSArray*)stringArray fontArray:(NSArray*)fontArray {
+    
+    NSString *string = @"";
+    for (int i = 0; i < stringArray.count; i++) {
+        string = [string stringByAppendingString:stringArray[i]];
+    }
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    NSInteger textIndex = 0;
+    for (int i = 0; i < stringArray.count; i++) {
+        [attributedString addAttribute:NSFontAttributeName value:fontArray[i] range:NSMakeRange(textIndex, [stringArray[i] length])];
+        textIndex = textIndex + [stringArray[i] length];
+    }
+    return attributedString;
+}
+
++ (instancetype)createWithString:(NSString*)string lineSpacing:(NSInteger)lineSpacing {
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpacing];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [string length])];
+    return attributedString;
+}
+
++ (NSString *)arrayToString:(NSArray *)arr dotString:(NSString *)dot{
+    NSString *string = [arr componentsJoinedByString:dot];
+    return string;
+}
+
 @end

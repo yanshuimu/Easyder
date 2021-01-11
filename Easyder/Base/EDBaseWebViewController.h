@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 //
 @property (nonatomic, copy) NSString *url;
 
+/**
+ * 加载富文本
+ */
 - (void)loadHtmlContent;
 
 @end
