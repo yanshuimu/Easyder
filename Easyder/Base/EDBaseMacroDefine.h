@@ -163,13 +163,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 /**
  * 通知名称
  */
-//未知网络状态通知
-#define EDNetworkReachabilityStatusUnknown      @"EDNetworkReachabilityStatusUnknown"
-//网络不可用通知
-#define EDNetworkReachabilityStatusNotReachable @"EDNetworkReachabilityStatusNotReachable"
-//网络可用通知
-#define EDNetworkReachabilityStatusReachable    @"EDNetworkReachabilityStatusReachable"
-
 // 注册通知
 #define EDAddObserver(methodName,notificationName,auserInfo) [[NSNotificationCenter defaultCenter] addObserver:self selector:(methodName) name:(notificationName) object:(auserInfo)];
 

@@ -4,6 +4,8 @@ inhibit_all_warnings!
 source 'https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git'
 
 target 'Easyder' do
+  
+pod 'AFNetworking', '~> 4.0.1'
 
 pod 'MBProgressHUD', '~> 1.2.0'
 

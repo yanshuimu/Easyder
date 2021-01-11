@@ -22,8 +22,12 @@ Pod::Spec.new do |s|
       ss.source_files = 'Easyder/Config/*.{h,m}'
   end
   
+  s.subspec 'Network' do |ss|
+      ss.source_files = 'Easyder/Network/*.{h,m}'
+  end
+  
   s.subspec 'Lib' do |ss|
-      ss.source_files = 'Easyder/Lib/LYEmptyView/*.{h,m}'
+      ss.source_files = 'Easyder/Lib/LYEmptyView/*.{h,m}', 'Easyder/Lib/CountingLabel/*.{h,m}', 'Easyder/Lib/HGTimerButton/*.{h,m}'
   end
   
   s.subspec 'Base' do |ss|
@@ -40,4 +44,5 @@ Pod::Spec.new do |s|
   s.dependency 'SDCycleScrollView'
   s.dependency 'FDFullscreenPopGesture'
   s.dependency 'UICKeyChainStore'
+  s.dependency 'AFNetworking'
 end

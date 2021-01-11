@@ -39,7 +39,7 @@
 /**
  * 生成二维码图片
  */
-+ (UIImage*)createQrImage:(NSString*)string;
++ (UIImage*)createQRCodeWithContent:(NSString*)content;
 
 /**
  * 生成黑白图片

@@ -51,7 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *emptyButtonTitleColor;
 //按钮背景颜色
 @property (nonatomic, strong) UIColor *emptyButtonBackgroundColor;
-
 @end
 
 NS_ASSUME_NONNULL_END
