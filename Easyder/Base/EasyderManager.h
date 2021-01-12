@@ -35,6 +35,16 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 @property (nonatomic, strong) EDConfiguration *emptyViewConfiguration;
 
 /**
+ * 开始网络监测
+ */
+- (void)startMoninNet;
+
+/**
+ * 停止网络监测
+ */
+- (void)stopMoninNet;
+
+/**
  * 全局配置EDNavigationController
  */
 - (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;

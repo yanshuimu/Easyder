@@ -34,6 +34,19 @@ static EasyderManager *manager = nil;
     _themeColor = EDWhiteColor;
 }
 
+- (void)startMoninNet {
+    
+    if (!_moninNet) {
+        _moninNet = [[EDMoninNet alloc] init];
+    }
+    [_moninNet startMoninNet];
+}
+
+- (void)stopMoninNet {
+    
+    [_moninNet stopMoninNet];
+}
+
 - (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock {
     
     _navigationConfiguration = [[EDConfiguration alloc] init];

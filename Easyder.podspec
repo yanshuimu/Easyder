@@ -43,6 +43,7 @@ Pod::Spec.new do |s|
       ss.dependency 'Easyder/Utils'
       ss.dependency 'Easyder/Config'
       ss.dependency 'Easyder/Lib'
+      ss.dependency 'Easyder/Network'
       
       ss.source_files = 'Easyder/Base/*.{h,m}'
   end
