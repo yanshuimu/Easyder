@@ -41,6 +41,7 @@
 
 //Network
 #import "EDMoninNet.h"
+#import "EDNetApiManager.h"
 
 //Base
 #import "EDBaseMacroDefine.h"

@@ -69,6 +69,8 @@
         //configuration.emptyTitleColor = [UIColor redColor];
         //configuration.emptyTitleFont = EDAutoFont(13);
     }];
+    
+    [manager startMoninNet];
 }
 
 @end

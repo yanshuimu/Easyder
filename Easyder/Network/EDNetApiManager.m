@@ -19,9 +19,10 @@
 //获取网络状态
 + (BOOL)getNetStaus
 {
-    id manager = ((id (*)(id, SEL))objc_msgSend)(objc_getClass("EasyderManager"), sel_registerName("shareManager"));
+    id manager = EDRequestMsgSendReturnObject(objc_getClass("EasyderManager"), sel_registerName("shareManager"));
     if (manager) {
-        NSInteger netStates = ((NSInteger (*)(id, SEL))objc_msgSend)(manager, sel_registerName("getNetState"));
+        id moninNet = EDRequestMsgSendReturnObject(manager, sel_registerName("moninNet"));
+        NSInteger netStates = EDRequestMsgSendReturnInteger(moninNet, sel_registerName("getNetState"));
         if (netStates == AFNetworkReachabilityStatusNotReachable) {
             return FALSE;
         }

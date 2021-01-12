@@ -47,7 +47,17 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 @implementation UIView (LYEmptyView)
 
 - (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+    
     [self configBlankPage:blankPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
+}
+
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+    
+    [self configBlankPage:blankPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
+    
+    if ([self isKindOfClass:[UIScrollView class]]) {
+        [EDUtils configRefreshWithScrollView:(UIScrollView*)self hasMoreData:hasMoreData hasError:hasError];
+    }
 }
 
 - (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{

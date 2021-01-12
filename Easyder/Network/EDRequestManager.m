@@ -48,7 +48,7 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
 }
 
 + (void)requestWithEnty:(EDRequestEnty *)requestEnty
-{
+{    
     EDRequestLog(requestEnty, @"url == %@\n",requestEnty.requestUrl);
     
     if (requestEnty.requestType == 0) { //请求方式 0:get

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define EDRequestMsgSendReturnObject(...) ((id (*)(id, SEL))objc_msgSend)(__VA_ARGS__)
+#define EDRequestMsgSendReturnInteger(...) ((NSInteger (*)(id, SEL))objc_msgSend)(__VA_ARGS__)
+
 typedef void(^response)(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject);
 
 @interface EDNetApiManager : NSObject

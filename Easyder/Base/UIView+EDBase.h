@@ -47,6 +47,8 @@ typedef NS_ENUM(NSInteger, EaseBlankPageType)
 
 - (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
 
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+
 - (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
 
 @end
