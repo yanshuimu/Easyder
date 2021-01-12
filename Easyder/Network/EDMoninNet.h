@@ -1,5 +1,5 @@
 //
-//  MoninNet.h
+//  EDMoninNet.h
 //  Qin
 //
 //  Created by SPIwsx on 2017/7/25.
@@ -15,7 +15,7 @@
 //网络可用通知
 #define EDNetworkReachabilityStatusReachable    @"EDNetworkReachabilityStatusReachable"
 
-@interface MoninNet : NSObject
+@interface EDMoninNet : NSObject
 
 /**
  * 开始网络监测

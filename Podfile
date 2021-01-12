@@ -11,6 +11,8 @@ pod 'MBProgressHUD', '~> 1.2.0'
 
 pod 'MJRefresh', '~> 3.5.0'
 
+pod 'MJExtension', '~> 3.2.2'
+
 pod 'UICKeyChainStore', '~> 2.2.1'
 
 pod 'SDCycleScrollView', '~> 1.80'

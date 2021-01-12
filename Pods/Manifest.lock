@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - FDFullscreenPopGesture (1.1)
   - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.2)
   - MJRefresh (3.5.0)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - AFNetworking (~> 4.0.1)
   - FDFullscreenPopGesture
   - MBProgressHUD (~> 1.2.0)
+  - MJExtension (~> 3.2.2)
   - MJRefresh (~> 3.5.0)
   - SDCycleScrollView (~> 1.80)
   - UICKeyChainStore (~> 2.2.1)
@@ -37,6 +39,7 @@ SPEC REPOS:
     - AFNetworking
     - FDFullscreenPopGesture
     - MBProgressHUD
+    - MJExtension
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
@@ -46,11 +49,12 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: d9b9c74cbdeb724c1e9ecbb157b318276e62e876
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: b969dcfc02c40a5da71eac0b03b8f1a0c794a86f
   UICKeyChainStore: ba3bff2c762b12db1e516f395c837dd25298b05e
 
-PODFILE CHECKSUM: c499aebfcdba8e5731618dfd2fdd96bb9abccd43
+PODFILE CHECKSUM: 1f185fec7b113d973e3d8d0de7720a57d9aaa18f
 
 COCOAPODS: 1.9.1

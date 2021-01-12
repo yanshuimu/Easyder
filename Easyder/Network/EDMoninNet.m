@@ -1,20 +1,20 @@
 //
-//  MoninNet.m
+//  EDMoninNet.m
 //  Qin
 //
 //  Created by SPIwsx on 2017/7/25.
 //  Copyright (c) 2015年 SPIwsx. All rights reserved.
 //
 
-#import "MoninNet.h"
+#import "EDMoninNet.h"
 
-@interface MoninNet()
+@interface EDMoninNet()
 
 @property(nonatomic,strong)AFNetworkReachabilityManager* net;
 
 @end
 
-@implementation MoninNet
+@implementation EDMoninNet
 
 
 - (id)init

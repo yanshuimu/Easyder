@@ -9,6 +9,7 @@
 #define Easyder_h
 
 #import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+#import <MJExtension/MJExtension.h>
 
 //Extension
 #import "UIView+EDExtension.h"
@@ -39,7 +40,7 @@
 #import "EDConfiguration.h"
 
 //Network
-#import "MoninNet.h"
+#import "EDMoninNet.h"
 
 //Base
 #import "EDBaseMacroDefine.h"

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EDConfiguration.h"
+#import "EDMoninNet.h"
 
 #define EDManagerSingleton [EasyderManager shareManager]
 
@@ -18,6 +19,8 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 
 + (instancetype)shareManager;
 
+//网络状态监听
+@property (nonatomic, strong) EDMoninNet *moninNet;
 //水平缩放比例
 @property (nonatomic, assign) CGFloat widthRatio;
 //垂直缩放比例

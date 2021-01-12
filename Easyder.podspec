@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Easyder'
-  s.version          = '0.1.7'
+  s.version          = '0.1.8'
   s.summary          = 'Classes that improve development efficiency'
   s.homepage         = 'https://github.com/yanshuimu/Easyder'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -27,7 +27,15 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Lib' do |ss|
-      ss.source_files = 'Easyder/Lib/LYEmptyView/*.{h,m}', 'Easyder/Lib/CountingLabel/*.{h,m}', 'Easyder/Lib/HGTimerButton/*.{h,m}'
+      ss.subspec 'LYEmptyView' do |sss|
+          sss.source_files = 'Easyder/Lib/LYEmptyView/*.{h,m}'
+      end
+      ss.subspec 'CountingLabel' do |sss|
+          sss.source_files = 'Easyder/Lib/CountingLabel/*.{h,m}'
+      end
+      ss.subspec 'HGTimerButton' do |sss|
+          sss.source_files = 'Easyder/Lib/HGTimerButton/*.{h,m}'
+      end
   end
   
   s.subspec 'Base' do |ss|
@@ -45,4 +53,5 @@ Pod::Spec.new do |s|
   s.dependency 'FDFullscreenPopGesture'
   s.dependency 'UICKeyChainStore'
   s.dependency 'AFNetworking'
+  s.dependency 'MJExtension'
 end
