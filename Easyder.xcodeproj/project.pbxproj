@@ -63,7 +63,7 @@
 		04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04A39ACC25A2A854007F596E /* Easyder.podspec */; };
 		04A39C9125A7E986007F596E /* EDConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9025A7E986007F596E /* EDConfiguration.m */; };
 		04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */; };
-		04A39CA225A826F0007F596E /* UIView+EDBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CA125A826EF007F596E /* UIView+EDBase.m */; };
+		04A39CA225A826F0007F596E /* EDBase+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CA125A826EF007F596E /* EDBase+Extension.m */; };
 		04A39CBE25ABF88D007F596E /* EDLanguageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CBD25ABF88C007F596E /* EDLanguageUtil.m */; };
 		04A39CC225ABFB7A007F596E /* EDMoninNet.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC125ABFB7A007F596E /* EDMoninNet.m */; };
 		04A39CC625AC003E007F596E /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC525AC003E007F596E /* UICountingLabel.m */; };
@@ -182,8 +182,8 @@
 		04A39C9025A7E986007F596E /* EDConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDConfiguration.m; sourceTree = "<group>"; };
 		04A39C9C25A80E29007F596E /* UIColor+EDExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EDExtension.h"; sourceTree = "<group>"; };
 		04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+EDExtension.m"; sourceTree = "<group>"; };
-		04A39CA025A826EF007F596E /* UIView+EDBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+EDBase.h"; sourceTree = "<group>"; };
-		04A39CA125A826EF007F596E /* UIView+EDBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+EDBase.m"; sourceTree = "<group>"; };
+		04A39CA025A826EF007F596E /* EDBase+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EDBase+Extension.h"; sourceTree = "<group>"; };
+		04A39CA125A826EF007F596E /* EDBase+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EDBase+Extension.m"; sourceTree = "<group>"; };
 		04A39CBC25ABF877007F596E /* EDLanguageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDLanguageUtil.h; sourceTree = "<group>"; };
 		04A39CBD25ABF88C007F596E /* EDLanguageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDLanguageUtil.m; sourceTree = "<group>"; };
 		04A39CC025ABFB7A007F596E /* EDMoninNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMoninNet.h; sourceTree = "<group>"; };
@@ -374,8 +374,8 @@
 		04A39C9F25A826AA007F596E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				04A39CA025A826EF007F596E /* UIView+EDBase.h */,
-				04A39CA125A826EF007F596E /* UIView+EDBase.m */,
+				04A39CA025A826EF007F596E /* EDBase+Extension.h */,
+				04A39CA125A826EF007F596E /* EDBase+Extension.m */,
 				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
 				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
 				046CEA0C259DD5D9000F9DE3 /* EDBaseAlertView.h */,
@@ -640,7 +640,7 @@
 				046CEA47259DD5D9000F9DE3 /* EDBaseTableViewController.m in Sources */,
 				046CEA35259DD5D9000F9DE3 /* NSArray+EDExtension.m in Sources */,
 				046CEA45259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.m in Sources */,
-				04A39CA225A826F0007F596E /* UIView+EDBase.m in Sources */,
+				04A39CA225A826F0007F596E /* EDBase+Extension.m in Sources */,
 				046CEA33259DD5D9000F9DE3 /* UITextField+EDExtension.m in Sources */,
 				04A39D8A25AC3103007F596E /* EDMangoFixUtil.m in Sources */,
 				046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */,

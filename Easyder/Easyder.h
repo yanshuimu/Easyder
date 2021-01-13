@@ -59,7 +59,7 @@
 #import "EDNavigationController.h"
 #import "EDCycleScrollView.h"
 #import "EDBaseAlertView.h"
-#import "UIView+EDBase.h"
+#import "EDBase+Extension.h"
 
 //Lib
 #import "LYEmptyViewHeader.h"

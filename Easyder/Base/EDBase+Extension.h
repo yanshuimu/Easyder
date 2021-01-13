@@ -208,5 +208,36 @@ typedef void(^OptimizeCompletionBlock)(UIImage *sourceImage, UIImage * _Nullable
 
 @end
 
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
+@interface NSObject (Network)
+
+typedef void(^NetworkResponse)(id responseObject);
+
+typedef void(^NetworkPaginationResponse)(NSInteger page, id responseObject);
+
+/**
+ * Post，成功不显示提示信息
+ */
+- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
+
+/**
+ * Post
+ */
+- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+
+/**
+ * Post，httpBody方式，成功不显示提示信息
+ */
+- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
+
+/**
+ * Post，httpBody方式
+ */
+- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+
+@end
 
 NS_ASSUME_NONNULL_END

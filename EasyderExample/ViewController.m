@@ -10,6 +10,7 @@
 #import "TestAlertView.h"
 #import "TestNextPageCtrl.h"
 #import "TestTableViewCtrl.h"
+#import "EDBase+Extension.h"
 
 @interface ViewController ()
 //
@@ -88,24 +89,15 @@
 
 - (void)headerRefreshData {
     
-    [self.view showLoading];
     NSString *url = @"http://www.meiyeyi.com/meiyi-web/api/login.ed";
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"empno"] = @"10285";
     params[@"password"] = @"myy123456";
     
-    [EDNetApiManager requestPostWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
-            
-        if (netSuccess && dataSuccess) {
-            [self.view hideLoading];
-        }
-        else {
-            [self.view showLoadingMeg:msg];
-        }
-        [self.tableView configBlankPage:0 hasData:YES hasMoreData:YES hasError:!netSuccess reloadButtonBlock:^{
-                    
-        }];
+    [self requestPostWithParams:params url:url response:^(id  _Nonnull responseObject) {
+        
+        
     }];
 }
 

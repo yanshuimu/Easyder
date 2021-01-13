@@ -5,7 +5,7 @@
 //  Created by mac on 2021/1/8.
 //
 
-#import "UIView+EDBase.h"
+#import "EDBase+Extension.h"
 #import <SDWebImage/SDWebImage.h>
 #import "EasyderManager.h"
 #import "EDUtils.h"
@@ -17,6 +17,9 @@
 #import "EDBaseView.h"
 #import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
+#import "EDNetApiManager.h"
+#import "EDBaseTableViewController.h"
+#import "EDBaseCollectionViewController.h"
 
 @implementation UIView (EDBase)
 
@@ -594,6 +597,197 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     [view addRoundedCorners:UIRectCornerAllCorners withRadii:CGSizeMake(cornerRadius, cornerRadius)];
     
     return view;
+}
+
+@end
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
+@implementation NSObject (Network)
+
+- (UIView*)findLoadingView {
+    
+    UIView *view = nil;
+    if ([self isKindOfClass:UIViewController.class]) {
+        view = ((UIViewController*)self).view;
+    }
+    else if ([self isKindOfClass:UIView.class]) {
+        view = (UIView*)self;
+    }
+    return view;
+}
+
+- (NSInteger)findTotalCountWithKeyPathArray:(NSArray*)keyPathArray responseObject:(NSDictionary*)responseObject {
+    
+    id dict = nil;
+    NSInteger total = 0;
+    for (int i = 0; i < keyPathArray.count; i++) {
+        
+        NSString *key = keyPathArray[i];
+        if (i < keyPathArray.count - 1) {
+            dict = responseObject[key];
+        }
+        else if (i == 0 && i == keyPathArray.count - 1) {
+            total = [dict[key] integerValue];
+        }
+        else {
+            total = [responseObject[key] integerValue];
+        }
+    }
+    return total;
+}
+
+- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
+    
+    [self requestPostWithParams:params url:url showMsg:NO httpBody:NO response:response];
+}
+
+- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
+    
+    [self requestPostWithParams:params url:url showMsg:showMsg httpBody:NO response:response];
+}
+
+- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
+    
+    [self requestPostWithParams:params url:url showMsg:NO httpBody:YES response:response];
+}
+
+- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
+    
+    [self requestPostWithParams:params url:url showMsg:showMsg httpBody:YES response:response];
+}
+
+- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg httpBody:(BOOL)httpBody response:(NetworkResponse)response {
+    
+    UIView *view = [self findLoadingView];
+    
+    [view showLoading];
+        
+    if (httpBody) {
+        
+        [EDNetApiManager requestPostHttpBodyWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+                
+            if (netSuccess && dataSuccess) {
+                
+                showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
+                
+                if (response) response(responseObject);
+            }
+            else {
+                
+                [view showLoadingMeg:msg];
+            }
+        }];
+    }
+    else {
+        
+        [EDNetApiManager requestPostWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+                
+            if (netSuccess && dataSuccess) {
+                
+                showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
+                
+                if (response) response(responseObject);
+            }
+            else {
+                
+                [view showLoadingMeg:msg];
+            }
+        }];
+    }
+}
+
+- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+    
+    
+    if ([self isKindOfClass:EDBaseTableViewController.class]) {
+        
+        EDBaseTableViewController *ctrl = (EDBaseTableViewController*)self;
+        
+        [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:ctrl.tableView dataArray:ctrl.dataArray reloadSelector:reloadSelector response:response];
+    }
+    else if ([self isKindOfClass:EDBaseCollectionViewController.class]) {
+        
+        EDBaseCollectionViewController *ctrl = (EDBaseCollectionViewController*)self;
+        
+        [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:ctrl.collectionView dataArray:ctrl.dataArray reloadSelector:reloadSelector response:response];
+    }
+}
+
+- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+    
+    [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:scrollView dataArray:dataArray reloadSelector:reloadSelector response:response];
+}
+
+- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage totalKeyPath:(NSArray*)totalKeyPath scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+    
+    [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:totalKeyPath scrollView:scrollView dataArray:dataArray reloadSelector:reloadSelector response:response];
+}
+
+- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url httpBody:(BOOL)httpBody currentPage:(NSInteger)currentPage totalKeyPath:(NSArray*)totalKeyPath scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    UIView *view = [self findLoadingView];
+    
+    [view showLoading];
+        
+    if (httpBody) {
+        
+        [EDNetApiManager requestPostHttpBodyWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+                
+            NSInteger total = 0;
+            if (netSuccess && dataSuccess) {
+                
+                [view hideLoading];
+                
+                if (currentPage == 1) {
+                    [dataArray removeAllObjects];
+                }
+                
+                total = [self findTotalCountWithKeyPathArray:totalKeyPath responseObject:responseObject];
+                
+                if (response) response((currentPage + 1), responseObject);
+            }
+            else {
+                
+                [view showLoadingMeg:msg];
+            }
+            
+            [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:(dataArray.count != total) hasError:!netSuccess reloadButtonBlock:^{
+                [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
+            }];
+        }];
+    }
+    else {
+        
+        [EDNetApiManager requestPostWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+            
+            NSInteger total = 0;
+            if (netSuccess && dataSuccess) {
+                
+                [view hideLoading];
+                
+                if (currentPage == 1) {
+                    [dataArray removeAllObjects];
+                }
+                
+                total = [self findTotalCountWithKeyPathArray:totalKeyPath responseObject:responseObject];
+                
+                if (response) response((currentPage + 1), responseObject);
+            }
+            else {
+                
+                [view showLoadingMeg:msg];
+            }
+            
+            [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:(dataArray.count != total) hasError:!netSuccess reloadButtonBlock:^{
+                [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
+            }];
+        }];
+    }
 }
 
 @end
