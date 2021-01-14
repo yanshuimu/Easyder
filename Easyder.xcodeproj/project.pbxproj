@@ -197,6 +197,7 @@
 		04A39D7825AC2C52007F596E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A39D8825AC3103007F596E /* EDMangoFixUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMangoFixUtil.h; sourceTree = "<group>"; };
 		04A39D8925AC3103007F596E /* EDMangoFixUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMangoFixUtil.m; sourceTree = "<group>"; };
+		04D7F86625AFE806001E439A /* EDProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDProtocol.h; sourceTree = "<group>"; };
 		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
 		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,6 +407,7 @@
 				046CEA24259DD5D9000F9DE3 /* EDNavigationController.h */,
 				046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */,
 				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
+				04D7F86625AFE806001E439A /* EDProtocol.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";

@@ -7,18 +7,16 @@
 //
 
 #import "EDBaseViewController.h"
+#import "EDProtocol.h"
 
-@interface EDBaseTableViewController : EDBaseViewController<UITableViewDataSource, UITableViewDelegate>
-{
-    UITableView *_tableView;
-    NSMutableArray *_dataArray;
-    NSInteger _page;
-}
+@interface EDBaseTableViewController : EDBaseViewController<UITableViewDataSource, UITableViewDelegate, EDPaginationDelegate>
+
 @property (nonatomic,strong) UITableView     *tableView;
 @property (nonatomic,strong) NSMutableArray  *dataArray;
 //
-@property (nonatomic, assign) NSInteger page;
-
+@property (nonatomic, assign) __block NSInteger page;
+//
+@property (nonatomic, weak) id<EDPaginationDelegate> paginationDelegate;
 /*
  * 更换TableViewStyle 想用 UITableViewStylePlain 在继承视图中重写此方法
  */

@@ -6,6 +6,7 @@
 //
 
 #import "EDBase+Extension.h"
+#import <objc/message.h>
 #import <SDWebImage/SDWebImage.h>
 #import "EasyderManager.h"
 #import "EDUtils.h"
@@ -619,114 +620,59 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     return view;
 }
 
-- (NSInteger)findTotalCountWithKeyPathArray:(NSArray*)keyPathArray responseObject:(NSDictionary*)responseObject {
-    
-    id dict = nil;
-    NSInteger total = 0;
-    for (int i = 0; i < keyPathArray.count; i++) {
-        
-        NSString *key = keyPathArray[i];
-        if (i < keyPathArray.count - 1) {
-            dict = responseObject[key];
-        }
-        else if (i == 0 && i == keyPathArray.count - 1) {
-            total = [dict[key] integerValue];
-        }
-        else {
-            total = [responseObject[key] integerValue];
-        }
-    }
-    return total;
-}
-
 - (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
     
-    [self requestPostWithParams:params url:url showMsg:NO httpBody:NO response:response];
+    [self requestPostWithParams:params url:url showMsg:NO response:response];
 }
 
 - (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
-    
-    [self requestPostWithParams:params url:url showMsg:showMsg httpBody:NO response:response];
-}
-
-- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
-    
-    [self requestPostWithParams:params url:url showMsg:NO httpBody:YES response:response];
-}
-
-- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
-    
-    [self requestPostWithParams:params url:url showMsg:showMsg httpBody:YES response:response];
-}
-
-- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg httpBody:(BOOL)httpBody response:(NetworkResponse)response {
     
     UIView *view = [self findLoadingView];
     
     [view showLoading];
         
-    if (httpBody) {
-        
-        [EDNetApiManager requestPostHttpBodyWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
-                
-            if (netSuccess && dataSuccess) {
-                
-                showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
-                
-                if (response) response(responseObject);
-            }
-            else {
-                
-                [view showLoadingMeg:msg];
-            }
-        }];
-    }
-    else {
-        
-        [EDNetApiManager requestPostWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
-                
-            if (netSuccess && dataSuccess) {
-                
-                showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
-                
-                if (response) response(responseObject);
-            }
-            else {
-                
-                [view showLoadingMeg:msg];
-            }
-        }];
-    }
+    [EDNetApiManager requestPostWithParams:params url:url response:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+            
+        if (netSuccess && dataSuccess) {
+            
+            showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
+            
+            if (response) response(responseObject);
+        }
+        else {
+            
+            [view showLoadingMeg:msg];
+        }
+    }];
 }
 
-- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
     
-    
-    if ([self isKindOfClass:EDBaseTableViewController.class]) {
-        
-        EDBaseTableViewController *ctrl = (EDBaseTableViewController*)self;
-        
-        [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:ctrl.tableView dataArray:ctrl.dataArray reloadSelector:reloadSelector response:response];
-    }
-    else if ([self isKindOfClass:EDBaseCollectionViewController.class]) {
-        
-        EDBaseCollectionViewController *ctrl = (EDBaseCollectionViewController*)self;
-        
-        [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:ctrl.collectionView dataArray:ctrl.dataArray reloadSelector:reloadSelector response:response];
-    }
+    [self requestPostWithBodyParams:params url:url showMsg:NO response:response];
 }
 
-- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
     
-    [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:@[@"rows", @"total"] scrollView:scrollView dataArray:dataArray reloadSelector:reloadSelector response:response];
+    UIView *view = [self findLoadingView];
+    
+    [view showLoading];
+        
+    [EDNetApiManager requestPostWithBodyParams:params url:url response:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+            
+        if (netSuccess && dataSuccess) {
+            
+            showMsg ? [view showLoadingMeg:msg] : [view hideLoading];
+            
+            if (response) response(responseObject);
+        }
+        else {
+            
+            [view showLoadingMeg:msg];
+        }
+    }];
 }
 
-- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url currentPage:(NSInteger)currentPage totalKeyPath:(NSArray*)totalKeyPath scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
-    
-    [self requestPostPaginationWithParams:params url:url httpBody:NO currentPage:currentPage totalKeyPath:totalKeyPath scrollView:scrollView dataArray:dataArray reloadSelector:reloadSelector response:response];
-}
-
-- (void)requestPostPaginationWithParams:(id)params url:(NSString *)url httpBody:(BOOL)httpBody currentPage:(NSInteger)currentPage totalKeyPath:(NSArray*)totalKeyPath scrollView:(UIScrollView*)scrollView dataArray:(NSMutableArray*)dataArray reloadSelector:(SEL)reloadSelector response:(NetworkPaginationResponse)response {
+- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response {
     
     __weak typeof(self) weakSelf = self;
     
@@ -734,60 +680,118 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     
     [view showLoading];
         
-    if (httpBody) {
+    [EDNetApiManager requestPostWithParams:params url:url response:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
         
-        [EDNetApiManager requestPostHttpBodyWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
-                
-            NSInteger total = 0;
-            if (netSuccess && dataSuccess) {
-                
-                [view hideLoading];
-                
-                if (currentPage == 1) {
-                    [dataArray removeAllObjects];
-                }
-                
-                total = [self findTotalCountWithKeyPathArray:totalKeyPath responseObject:responseObject];
-                
-                if (response) response((currentPage + 1), responseObject);
-            }
-            else {
-                
-                [view showLoadingMeg:msg];
-            }
-            
-            [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:(dataArray.count != total) hasError:!netSuccess reloadButtonBlock:^{
-                [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
-            }];
-        }];
-    }
-    else {
+        BOOL hasMoreData = NO;
+        NSInteger currentPage = 0;
+        UIScrollView *scrollView = nil;
+        NSMutableArray *dataArray = nil;
+        id<EDPaginationDelegate> paginationDelegate = nil;
         
-        [EDNetApiManager requestPostWithParamDict:params Url:url withHandle:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+        if ([weakSelf conformsToProtocol:@protocol(EDPaginationDelegate)]) {
+            paginationDelegate = ((id (*)(id, SEL))objc_msgSend)(self, sel_registerName("paginationDelegate"));
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(dataArrayForPagination)]) {
+            dataArray = [paginationDelegate dataArrayForPagination];
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(currentPageForPagination)]) {
+            currentPage = [paginationDelegate currentPageForPagination];
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(scrollViewForPagination)]) {
+            scrollView = [paginationDelegate scrollViewForPagination];
+        }
+        
+        if (netSuccess && dataSuccess) {
             
-            NSInteger total = 0;
-            if (netSuccess && dataSuccess) {
-                
-                [view hideLoading];
-                
-                if (currentPage == 1) {
-                    [dataArray removeAllObjects];
-                }
-                
-                total = [self findTotalCountWithKeyPathArray:totalKeyPath responseObject:responseObject];
-                
-                if (response) response((currentPage + 1), responseObject);
-            }
-            else {
-                
-                [view showLoadingMeg:msg];
+            [view hideLoading];
+            
+            if (currentPage == 1) {
+                [dataArray removeAllObjects];
             }
             
-            [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:(dataArray.count != total) hasError:!netSuccess reloadButtonBlock:^{
-                [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
-            }];
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(didPaginationIncrementPage)]) {
+                [paginationDelegate didPaginationIncrementPage];
+            }
+                     
+            if (response) response(responseObject);
+            
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(hasMoreDataForPagination:)]) {
+                hasMoreData = [paginationDelegate hasMoreDataForPagination:responseObject];
+            }
+        }
+        else {
+            
+            [view showLoadingMeg:msg];
+        }
+        
+        [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
+            [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
         }];
-    }
+    }];
+}
+
+- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    UIView *view = [self findLoadingView];
+    
+    [view showLoading];
+        
+    [EDNetApiManager requestPostWithBodyParams:params url:url response:^(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject) {
+        
+        BOOL hasMoreData = NO;
+        NSInteger currentPage = 0;
+        UIScrollView *scrollView = nil;
+        NSMutableArray *dataArray = nil;
+        id<EDPaginationDelegate> paginationDelegate = nil;
+        
+        if ([weakSelf conformsToProtocol:@protocol(EDPaginationDelegate)]) {
+            paginationDelegate = ((id (*)(id, SEL))objc_msgSend)(self, sel_registerName("paginationDelegate"));
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(dataArrayForPagination)]) {
+            dataArray = [paginationDelegate dataArrayForPagination];
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(currentPageForPagination)]) {
+            currentPage = [paginationDelegate currentPageForPagination];
+        }
+        
+        if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(scrollViewForPagination)]) {
+            scrollView = [paginationDelegate scrollViewForPagination];
+        }
+        
+        if (netSuccess && dataSuccess) {
+            
+            [view hideLoading];
+            
+            if (currentPage == 1) {
+                [dataArray removeAllObjects];
+            }
+            
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(didPaginationIncrementPage)]) {
+                [paginationDelegate didPaginationIncrementPage];
+            }
+                     
+            if (response) response(responseObject);
+            
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(hasMoreDataForPagination:)]) {
+                hasMoreData = [paginationDelegate hasMoreDataForPagination:responseObject];
+            }
+        }
+        else {
+            
+            [view showLoadingMeg:msg];
+        }
+        
+        [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
+            [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
+        }];
+    }];
 }
 
 @end

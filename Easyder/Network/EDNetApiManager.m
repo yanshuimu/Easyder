@@ -59,55 +59,55 @@
 
 #pragma mark -- GET
 
-+ (void)requestGetWithParamDict:(id)paramer
-                             Url:(NSString *)url
-                      withHandle:(response)responseHandle
++ (void)requestGetWithParams:(id)params
+                         url:(NSString *)url
+                    response:(response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:GetRequestType
-                                                withParamDict:paramer
-                                                   withHandle:responseHandle];
+                                                withParamDict:params
+                                                   withHandle:response];
     [EDRequestManager requestWithEnty:enty];
 }
 
 #pragma mark -- POST
 
-+ (void)requestPostWithParamDict:(id)paramer
-                             Url:(NSString *)url
-                       withHandle:(response)responseHandle
++ (void)requestPostWithParams:(id)params
+                          url:(NSString *)url
+                     response:(response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:PostRequestType
-                                                withParamDict:paramer
-                                                   withHandle:responseHandle];
+                                                withParamDict:params
+                                                   withHandle:response];
     [EDRequestManager requestWithEnty:enty];
 }
 
-+ (void)requestPostHttpBodyWithParamDict:(id)paramer
-                                     Url:(NSString *)url
-                              withHandle:(response)responseHandle
++ (void)requestPostWithBodyParams:(id)params
+                              url:(NSString *)url
+                         response:(response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:PostHttpBodyRequestType
-                                                withParamDict:paramer
-                                                  withHandle:responseHandle];
+                                                withParamDict:params
+                                                  withHandle:response];
     [EDRequestManager requestWithEnty:enty];
 }
 
 #pragma mark -- POST_IMG
 
-+ (void)requestSingleImgWithDict:(NSDictionary *)paramer
-                             Img:(UIImage *)uploadImg
-                    uploadImgKey:(NSString *)uploadImgKey
-                             Url:(NSString *)url
-                      withHandle:(response)responseHandle
++ (void)requestSingleImageWithParams:(NSDictionary *)params
+                               image:(UIImage *)uploadImage
+                      uploadImageKey:(NSString *)uploadImageKey
+                                 url:(NSString *)url
+                            response:(response)response
 {
     EDRequestEnty * enty = [self createEntyWithAppendURLString:url
                                                withRequestEnty:SingleImageUploadRequestType
-                                                 withParamDict:paramer
-                                                    withHandle:responseHandle];
-    enty.singleImage = uploadImg;
-    enty.singleImageName = uploadImgKey;
+                                                 withParamDict:params
+                                                    withHandle:response];
+    enty.singleImage = uploadImage;
+    enty.singleImageName = uploadImageKey;
     [EDRequestManager requestWithEnty:enty];
 }
 

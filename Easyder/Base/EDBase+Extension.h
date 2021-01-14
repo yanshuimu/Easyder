@@ -212,11 +212,9 @@ typedef void(^OptimizeCompletionBlock)(UIImage *sourceImage, UIImage * _Nullable
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
-@interface NSObject (Network)
-
 typedef void(^NetworkResponse)(id responseObject);
 
-typedef void(^NetworkPaginationResponse)(NSInteger page, id responseObject);
+@interface NSObject (Network)
 
 /**
  * Post，成功不显示提示信息
@@ -229,14 +227,24 @@ typedef void(^NetworkPaginationResponse)(NSInteger page, id responseObject);
 - (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
 
 /**
- * Post，httpBody方式，成功不显示提示信息
+ * Post，参数通过httpBody传递，成功不显示提示信息
  */
-- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
 
 /**
- * Post，httpBody方式
+ * Post，参数通过httpBody传递
  */
-- (void)requestPostHttpBodyWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+
+/**
+ * Post，分页
+ */
+- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response;
+
+/**
+ * Post，分页，参数通过httpBody传递
+ */
+- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response;
 
 @end
 

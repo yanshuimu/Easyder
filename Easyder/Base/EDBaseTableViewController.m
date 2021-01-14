@@ -16,10 +16,6 @@
 
 @implementation EDBaseTableViewController
 
-@synthesize dataArray = _dataArray;
-@synthesize tableView = _tableView;
-@synthesize page = _page;
-
 // 更换TableViewStyle 想用 UITableViewStylePlain 在继承视图中重写此方法
 -(UITableViewStyle)tableViewStyle
 {
@@ -49,6 +45,7 @@
     
     _dataArray = [NSMutableArray array];
     _page = 1;
+    _paginationDelegate = self;
     
     [self.view addSubview:self.tableView];
     [self.view sendSubviewToBack:self.tableView];
@@ -140,6 +137,34 @@
 - (void)footerRefreshData
 {
     
+}
+
+#pragma mark - EDPaginationDelegate
+
+- (BOOL)hasMoreDataForPagination:(NSDictionary*)responseObject {
+    
+    NSInteger total = [responseObject[@"rows"][@"total"] integerValue];
+    return self.dataArray.count != total;
+}
+
+- (UIScrollView*)scrollViewForPagination {
+    
+    return self.tableView;
+}
+
+- (NSInteger)currentPageForPagination {
+    
+    return self.page;
+}
+
+- (NSMutableArray*)dataArrayForPagination {
+    
+    return self.dataArray;
+}
+
+- (void)didPaginationIncrementPage {
+    
+    self.page++;
 }
 
 @end

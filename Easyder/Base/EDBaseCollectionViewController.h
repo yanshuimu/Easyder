@@ -7,22 +7,19 @@
 //
 
 #import "EDBaseViewController.h"
+#import "EDProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EDBaseCollectionViewController : EDBaseViewController
-{
-    UICollectionView *_collectionView;
-    NSMutableArray *_dataArray;
-    NSInteger _page;
-}
+@interface EDBaseCollectionViewController : EDBaseViewController <EDPaginationDelegate>
 //
 @property (nonatomic, strong) UICollectionView *collectionView;
 //
 @property (nonatomic, strong) NSMutableArray *dataArray;
 //
-@property (nonatomic, assign) NSInteger page;
-
+@property (nonatomic, assign) __block NSInteger page;
+//
+@property (nonatomic, weak) id<EDPaginationDelegate> paginationDelegate;
 /*
  * 创建下拉刷新视图
  */

@@ -21,10 +21,6 @@
 
 @implementation EDBaseCollectionViewController
 
-@synthesize collectionView = _collectionView;
-@synthesize dataArray = _dataArray;
-@synthesize page = _page;
-
 - (UICollectionView*)collectionView {
     if (!_collectionView) {
         CGFloat x = 0;
@@ -52,6 +48,8 @@
     // Do any additional setup after loading the view.
     _page = 1;
     _dataArray = [NSMutableArray array];
+    _paginationDelegate = self;
+    
     [self.view addSubview:self.collectionView];
     [self.view sendSubviewToBack:self.collectionView];
     self.view.backgroundColor = EDDefaultBackgroudColor;
@@ -167,6 +165,34 @@
 - (void)footerRefreshData
 {
     
+}
+
+#pragma mark - EDPaginationDelegate
+
+- (BOOL)hasMoreDataForPagination:(NSDictionary*)responseObject {
+    
+    NSInteger total = [responseObject[@"rows"][@"total"] integerValue];
+    return self.dataArray.count != total;
+}
+
+- (UIScrollView*)scrollViewForPagination {
+    
+    return self.collectionView;
+}
+
+- (NSInteger)currentPageForPagination {
+    
+    return self.page;
+}
+
+- (NSMutableArray*)dataArrayForPagination {
+    
+    return self.dataArray;
+}
+
+- (void)didPaginationIncrementPage {
+    
+    self.page++;
 }
 
 @end

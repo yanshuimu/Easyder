@@ -34,10 +34,11 @@
 - (void)setupSubviews {
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    [self createRefreshHeaderFooter];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.titleArray.count;
+    return self.dataArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -54,7 +55,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = self.titleArray[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"row->%ld", (indexPath.row)];
     
     return cell;
 }
@@ -89,15 +90,32 @@
 
 - (void)headerRefreshData {
     
-    NSString *url = @"http://www.meiyeyi.com/meiyi-web/api/login.ed";
+    self.page = 1;
+    [self loadData];
+}
+
+- (void)footerRefreshData {
+    
+    [self loadData];
+}
+
+- (void)loadData {
+    
+    //NSString *url = @"http://www.meiyeyi.com/meiyi-web/api/login.ed";
+    NSString *url = @"http://172.16.0.20:82/meiyi-web/api/saleOrderList4App.ed";
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"empno"] = @"10285";
-    params[@"password"] = @"myy123456";
+//    params[@"empno"] = @"10285";
+//    params[@"password"] = @"myy123456";
+    params[@"customercode"] = @"775";
+    params[@"sid"] = @"2decb9c88261412c9540e24a81c0146d";
+    params[@"page"] = @(self.page);
+    params[@"rows"] = @"10";
     
-    [self requestPostWithParams:params url:url response:^(id  _Nonnull responseObject) {
+    [self requestPaginationWithParams:params url:url reloadSelector:@selector(headerRefreshData) response:^(id  _Nonnull responseObject) {
         
-        
+        [self.dataArray addObjectsFromArray:responseObject[@"rows"][@"data"]];
+        [self.tableView reloadData];
     }];
 }
 
