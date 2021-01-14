@@ -70,6 +70,7 @@
 		04A39CCC25AC0124007F596E /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC825AC0124007F596E /* HWWeakTimer.m */; };
 		04A39CCD25AC0124007F596E /* HGTimerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC925AC0124007F596E /* HGTimerButton.m */; };
 		04A39D8A25AC3103007F596E /* EDMangoFixUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39D8925AC3103007F596E /* EDMangoFixUtil.m */; };
+		04D7F86A25B03E81001E439A /* EDBasePaginationAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */; };
 		CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7FECD8470F905579034BD /* libPods-Easyder.a */; };
 /* End PBXBuildFile section */
 
@@ -198,6 +199,8 @@
 		04A39D8825AC3103007F596E /* EDMangoFixUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMangoFixUtil.h; sourceTree = "<group>"; };
 		04A39D8925AC3103007F596E /* EDMangoFixUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMangoFixUtil.m; sourceTree = "<group>"; };
 		04D7F86625AFE806001E439A /* EDProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDProtocol.h; sourceTree = "<group>"; };
+		04D7F86825B03E81001E439A /* EDBasePaginationAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDBasePaginationAlertView.h; sourceTree = "<group>"; };
+		04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDBasePaginationAlertView.m; sourceTree = "<group>"; };
 		B07B8D31E64503514CCD63B7 /* Pods-Easyder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.release.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.release.xcconfig"; sourceTree = "<group>"; };
 		EC64EF92B8465DF8D0E9D9BC /* Pods-Easyder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easyder.debug.xcconfig"; path = "Target Support Files/Pods-Easyder/Pods-Easyder.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -408,6 +411,8 @@
 				046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */,
 				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
 				04D7F86625AFE806001E439A /* EDProtocol.h */,
+				04D7F86825B03E81001E439A /* EDBasePaginationAlertView.h */,
+				04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -612,6 +617,7 @@
 				046CEA29259DD5D9000F9DE3 /* NSBundle+EDExtension.m in Sources */,
 				046CEA4E259DD5D9000F9DE3 /* EDBaseWebViewController.m in Sources */,
 				04A39CC225ABFB7A007F596E /* EDMoninNet.m in Sources */,
+				04D7F86A25B03E81001E439A /* EDBasePaginationAlertView.m in Sources */,
 				046CEA2E259DD5D9000F9DE3 /* EDNullSafe.m in Sources */,
 				046CEA3B259DD5D9000F9DE3 /* EasyderManager.m in Sources */,
 				046CEA34259DD5D9000F9DE3 /* UICollectionView+EDExtension.m in Sources */,

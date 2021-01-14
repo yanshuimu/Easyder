@@ -1,0 +1,158 @@
+//
+//  EDBasePaginationAlertView.m
+//  Easyder
+//
+//  Created by mac on 2021/1/14.
+//
+
+#import "EDBasePaginationAlertView.h"
+#import <MJRefresh/MJRefresh.h>
+#import "EDBaseMacroDefine.h"
+
+@interface EDBasePaginationAlertView ()
+
+@end
+
+@implementation EDBasePaginationAlertView
+
+// 更换TableViewStyle 想用 UITableViewStylePlain 在继承视图中重写此方法
+-(UITableViewStyle)tableViewStyle
+{
+    return UITableViewStyleGrouped;
+}
+
+//默认风格
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        CGFloat defa_x = 0.0f , defa_y = 0 , defa_w = SCREEN_W , defa_h = SCREEN_H - EDNavBar_H - EDViewBottom_H;
+        CGRect rect = CGRectMake(defa_x, defa_y, defa_w, defa_h);
+        _tableView = [[UITableView alloc] initWithFrame:rect style:[self tableViewStyle]];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.showsHorizontalScrollIndicator = NO;
+    }
+    return _tableView;
+}
+
+- (void)edSetupSubviews {
+    
+    _dataArray = [NSMutableArray array];
+    _page = 1;
+    _paginationDelegate = self;
+ 
+    [self tableView];
+    self.tableView.backgroundColor = [UIColor clearColor];
+}
+
+#pragma mark - UITableViewDelegate & DataSource Method
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return [[UIView alloc] init];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[UIView alloc] init];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *baseCellIdentifier = @"baseCellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:baseCellIdentifier];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:baseCellIdentifier];
+    }
+    return cell;
+}
+
+#pragma mark - Custom Method
+
+- (void)createRefreshHeaderFooter {
+    
+    [self createRefreshHeader];
+    [self createRefreshFooter];
+}
+
+//创建下拉刷新试图
+- (void)createRefreshHeader
+{
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
+    refreshingAction:@selector(preHeaderRefreshData)];
+}
+
+//创建上拉加载试图
+- (void)createRefreshFooter
+{
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self
+    refreshingAction:@selector(footerRefreshData)];
+    self.tableView.mj_footer.hidden = YES;
+}
+
+#pragma - RefreshData
+
+- (void)preHeaderRefreshData
+{
+    self.page = 1;
+    [self headerRefreshData];
+}
+
+- (void)headerRefreshData
+{
+    
+}
+
+- (void)footerRefreshData
+{
+    
+}
+
+#pragma mark - EDPaginationDelegate
+
+- (BOOL)hasMoreDataForPagination:(NSDictionary*)responseObject {
+    
+    NSInteger total = [responseObject[@"rows"][@"total"] integerValue];
+    return self.dataArray.count != total;
+}
+
+- (UIScrollView*)scrollViewForPagination {
+    
+    return self.tableView;
+}
+
+- (NSInteger)currentPageForPagination {
+    
+    return self.page;
+}
+
+- (NSMutableArray*)dataArrayForPagination {
+    
+    return self.dataArray;
+}
+
+- (void)incrementPageForPagination {
+    
+    self.page++;
+}
+
+@end

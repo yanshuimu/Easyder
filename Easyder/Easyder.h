@@ -11,6 +11,9 @@
 #import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 #import <MJExtension/MJExtension.h>
 
+//Protocol
+#import "EDProtocol.h"
+
 //Extension
 #import "UIView+EDExtension.h"
 #import "UIButton+EDExtension.h"
@@ -59,6 +62,7 @@
 #import "EDNavigationController.h"
 #import "EDCycleScrollView.h"
 #import "EDBaseAlertView.h"
+#import "EDBasePaginationAlertView.h"
 #import "EDBase+Extension.h"
 
 //Lib

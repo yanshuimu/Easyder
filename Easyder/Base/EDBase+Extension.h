@@ -212,39 +212,39 @@ typedef void(^OptimizeCompletionBlock)(UIImage *sourceImage, UIImage * _Nullable
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
-typedef void(^NetworkResponse)(id responseObject);
+typedef void(^NetResponse)(id responseObject);
 
 @interface NSObject (Network)
 
 /**
  * Post，成功不显示提示信息
  */
-- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
+- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetResponse)response;
 
 /**
  * Post
  */
-- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetResponse)response;
 
 /**
  * Post，参数通过httpBody传递，成功不显示提示信息
  */
-- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetworkResponse)response;
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetResponse)response;
 
 /**
  * Post，参数通过httpBody传递
  */
-- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response;
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetResponse)response;
 
 /**
  * Post，分页
  */
-- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response;
+- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetResponse)response;
 
 /**
  * Post，分页，参数通过httpBody传递
  */
-- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response;
+- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetResponse)response;
 
 @end
 

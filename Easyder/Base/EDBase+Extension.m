@@ -620,12 +620,12 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     return view;
 }
 
-- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
+- (void)requestPostWithParams:(id)params url:(NSString *)url response:(NetResponse)response {
     
     [self requestPostWithParams:params url:url showMsg:NO response:response];
 }
 
-- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
+- (void)requestPostWithParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetResponse)response {
     
     UIView *view = [self findLoadingView];
     
@@ -646,12 +646,12 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     }];
 }
 
-- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetworkResponse)response {
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url response:(NetResponse)response {
     
     [self requestPostWithBodyParams:params url:url showMsg:NO response:response];
 }
 
-- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetworkResponse)response {
+- (void)requestPostWithBodyParams:(id)params url:(NSString *)url showMsg:(BOOL)showMsg response:(NetResponse)response {
     
     UIView *view = [self findLoadingView];
     
@@ -672,7 +672,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     }];
 }
 
-- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response {
+- (void)requestPaginationWithParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetResponse)response {
     
     __weak typeof(self) weakSelf = self;
     
@@ -733,7 +733,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     }];
 }
 
-- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetworkResponse)response {
+- (void)requestPaginationWithBodyParams:(id)params url:(NSString *)url reloadSelector:(SEL)reloadSelector response:(NetResponse)response {
     
     __weak typeof(self) weakSelf = self;
     
