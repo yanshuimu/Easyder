@@ -116,7 +116,7 @@
 - (void)createRefreshHeader
 {
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
-    refreshingAction:@selector(headerRefreshData)];
+    refreshingAction:@selector(preHeaderRefreshData)];
 }
 
 //创建上拉加载试图
@@ -128,6 +128,12 @@
 }
 
 #pragma - RefreshData
+
+- (void)preHeaderRefreshData
+{
+    self.page = 1;
+    [self headerRefreshData];
+}
 
 - (void)headerRefreshData
 {
@@ -162,7 +168,7 @@
     return self.dataArray;
 }
 
-- (void)didPaginationIncrementPage {
+- (void)incrementPageForPagination {
     
     self.page++;
 }

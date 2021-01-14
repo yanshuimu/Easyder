@@ -64,7 +64,7 @@
 
 - (void)createRefreshHeader
 {
-    _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshData)];
+    _collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(preHeaderRefreshData)];
 }
 
 - (void)createRefreshFooter
@@ -157,6 +157,12 @@
     return CGSizeZero;
 }
 
+- (void)preHeaderRefreshData
+{
+    self.page = 1;
+    [self headerRefreshData];
+}
+
 - (void)headerRefreshData
 {
     
@@ -190,7 +196,7 @@
     return self.dataArray;
 }
 
-- (void)didPaginationIncrementPage {
+- (void)incrementPageForPagination {
     
     self.page++;
 }

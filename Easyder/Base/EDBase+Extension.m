@@ -712,8 +712,8 @@ CGFloat CGHeightAutoMake(CGFloat height) {
                 [dataArray removeAllObjects];
             }
             
-            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(didPaginationIncrementPage)]) {
-                [paginationDelegate didPaginationIncrementPage];
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(incrementPageForPagination)]) {
+                [paginationDelegate incrementPageForPagination];
             }
                      
             if (response) response(responseObject);
@@ -773,8 +773,8 @@ CGFloat CGHeightAutoMake(CGFloat height) {
                 [dataArray removeAllObjects];
             }
             
-            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(didPaginationIncrementPage)]) {
-                [paginationDelegate didPaginationIncrementPage];
+            if (paginationDelegate && [paginationDelegate respondsToSelector:@selector(incrementPageForPagination)]) {
+                [paginationDelegate incrementPageForPagination];
             }
                      
             if (response) response(responseObject);

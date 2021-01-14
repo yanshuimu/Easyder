@@ -90,7 +90,6 @@
 
 - (void)headerRefreshData {
     
-    self.page = 1;
     [self loadData];
 }
 
