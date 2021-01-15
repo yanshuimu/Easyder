@@ -42,6 +42,18 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)evalLocalMangoScript;
 
+/**
+ * 执行本地未加密补丁
+ * 补丁文件名：demo.mg
+ */
+- (void)evalLocalUnEncryptedMangoScriptWithPublicKey:(NSString*)publicKey;
+
+/**
+ * 加密补丁，保存至沙盒
+ * 返回加密补丁路径
+ */
+- (NSString*)encryptPlainScirptToDocumentWithPublicKey:(NSString*)publicKey;
+
 @end
 
 NS_ASSUME_NONNULL_END

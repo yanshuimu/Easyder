@@ -108,6 +108,75 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
     }
 }
 
+- (void)evalLocalUnEncryptedMangoScriptWithPublicKey:(NSString*)publicKey {
+        
+    if ([EDUtils stringIsEmpty:_privateKey]) {
+        NSLog(@"privateKey is null or empty");
+        return;
+    }
+    
+    id context = ((id (*) (id, SEL))objc_msgSend)(objc_getClass("MFContext"), sel_registerName("alloc"));
+    ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("initWithRSAPrivateKey:"), _privateKey);
+    
+    NSString *script = [self encryptScirptWithPublicKey:publicKey];
+    if (script && script.length > 0) {
+        ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("evalMangoScriptWithRSAEncryptedBase64String:"), script);
+        NSLog(@"eval local script success!");
+    }
+    else {
+        NSLog(@"script is null or empty");
+    }
+}
+
+- (NSString*)encryptScirptWithPublicKey:(NSString*)publicKey {
+    
+    NSString *result = nil;
+    NSError *outErr = nil;
+    
+    NSURL *scriptUrl = [[NSBundle mainBundle] URLForResource:@"demo" withExtension:@"mg"];
+    NSString *planScriptString = [NSString stringWithContentsOfURL:scriptUrl encoding:NSUTF8StringEncoding error:&outErr];
+    if (outErr) goto err;
+    {
+        NSString *encodePublicKey = [NSString stringWithCString:[publicKey UTF8String] encoding:NSUTF8StringEncoding];
+        if (outErr) goto err;
+        
+        result = ((NSString * (*)(id, SEL, NSString *, NSString *))objc_msgSend)(objc_getClass("MFRSA"), sel_registerName("encryptString:publicKey:"), planScriptString, encodePublicKey);
+    }
+    
+    err:
+    if (outErr) NSLog(@"%@",outErr);
+    return result;
+}
+
+- (NSString*)encryptPlainScirptToDocumentWithPublicKey:(NSString*)publicKey {
+    
+    NSError *outErr = nil;
+    BOOL writeResult = NO;
+    NSString * encryptedPath = nil;
+    
+    NSURL *scriptUrl = [[NSBundle mainBundle] URLForResource:@"demo" withExtension:@"mg"];
+    NSString *planScriptString = [NSString stringWithContentsOfURL:scriptUrl encoding:NSUTF8StringEncoding error:&outErr];
+    if (outErr) goto err;
+    
+    {
+        NSString *encodePublicKey = [NSString stringWithCString:[publicKey UTF8String] encoding:NSUTF8StringEncoding];
+        if (outErr) goto err;
+        NSString *encryptedScriptString = ((NSString * (*)(id, SEL, NSString *, NSString *))objc_msgSend)(objc_getClass("MFRSA"), sel_registerName("encryptString:publicKey:"), planScriptString, encodePublicKey);
+        
+        encryptedPath= [(NSString *)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"encrypted_demo.mg"];
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        if (![fileManager fileExistsAtPath:encryptedPath]) {
+            [fileManager createFileAtPath:encryptedPath contents:nil attributes:nil];
+        }
+        NSLog(@"file path: %@", encryptedPath);
+        writeResult = [encryptedScriptString writeToFile:encryptedPath atomically:YES encoding:NSUTF8StringEncoding error:&outErr];
+    }
+    
+    err:
+    if (outErr) NSLog(@"%@",outErr);
+    return encryptedPath;
+}
+
 - (NSString*)fixFileDirectory {
     return [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
 }
