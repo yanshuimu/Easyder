@@ -34,10 +34,10 @@
     
     [self configuration];
     
-    [self edInitialize];
+    [self initialize];
 }
 
-- (void)edInitialize {
+- (void)initialize {
         
     //设置为不透明
     [[UINavigationBar appearance] setTranslucent:NO];

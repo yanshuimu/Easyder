@@ -13,9 +13,9 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         
-        [self edInitialize];
+        [self initialize];
         
-        [self edSetupSubviews];
+        [self setupSubviews];
     }
     return self;
 }
@@ -24,18 +24,18 @@
     NSArray* nibView =  [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil];
     id view = [nibView objectAtIndex:0];
     
-    [view edInitialize];
+    [view initialize];
     
-    [view edSetupSubviews];
+    [view setupSubviews];
     
     return view;
 }
 
-- (void)edInitialize {
+- (void)initialize {
     //子类重写
 }
 
-- (void)edSetupSubviews {
+- (void)setupSubviews {
     //子类重写
 }
 

@@ -39,7 +39,7 @@
     return _tableView;
 }
 
-- (void)edSetupSubviews {
+- (void)setupSubviews {
     
     _dataArray = [NSMutableArray array];
     _page = 1;

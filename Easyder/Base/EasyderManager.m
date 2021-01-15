@@ -22,12 +22,12 @@ static EasyderManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[EasyderManager alloc] init];
-        [manager edInitialize];
+        [manager initialize];
     });
     return manager;
 }
 
-- (void)edInitialize {
+- (void)initialize {
     
     _widthRatio = SCREEN_W/375.0;
     _heightRatio = SCREEN_H/667.0;

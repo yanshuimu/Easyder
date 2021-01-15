@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)dequeueSectionFooterWithCollectionView:(UICollectionView*)collectionView indexPath:(NSIndexPath*)indexPath;
 
-- (void)edInitialize;
+- (void)initialize;
 
-- (void)edSetupSubviews;
+- (void)setupSubviews;
 
 @end
 

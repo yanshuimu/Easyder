@@ -24,9 +24,9 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 //内容垂直对齐方式
 @property (nonatomic, assign) EDAlertViewContentVerticalAlignment contentVerticalAlignment;
 
-- (void)edInitialize;
+- (void)initialize;
 
-- (void)edSetupSubviews;
+- (void)setupSubviews;
 
 /**
  * 显示

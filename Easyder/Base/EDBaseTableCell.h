@@ -12,9 +12,9 @@
 
 + (instancetype)createTableCell:(UITableView*)tableView;
 
-- (void)edInitialize;
+- (void)initialize;
 
-- (void)edSetupSubviews;
+- (void)setupSubviews;
 
 - (void)edSetDataDict:(NSDictionary*)dict;
 
