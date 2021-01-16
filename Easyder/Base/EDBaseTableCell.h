@@ -16,6 +16,6 @@
 
 - (void)setupSubviews;
 
-- (void)edSetDataDict:(NSDictionary*)dict;
+- (void)setDataDict:(NSDictionary*)dict;
 
 @end

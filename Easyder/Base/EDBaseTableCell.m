@@ -37,7 +37,7 @@
     //子类重写
 }
 
-- (void)edSetDataDict:(NSDictionary*)dict {
+- (void)setDataDict:(NSDictionary*)dict {
     //子类重写
 }
 

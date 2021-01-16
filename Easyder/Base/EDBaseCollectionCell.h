@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setupSubviews;
 
-- (void)edSetDataDict:(NSDictionary*)dict;
+- (void)setDataDict:(NSDictionary*)dict;
 
 @end
 
