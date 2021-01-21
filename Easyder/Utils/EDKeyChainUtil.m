@@ -10,7 +10,7 @@
 #import <UICKeyChainStore/UICKeyChainStore.h>
 #import "EDUtils.h"
 
-@implementation KeyChainUtil
+@implementation EDKeyChainUtil
 
 + (void)setString:(NSString*)string forKey:(NSString*)key {
     

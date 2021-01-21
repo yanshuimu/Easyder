@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface KeyChainUtil : NSObject
+@interface EDKeyChainUtil : NSObject
 
 /**
  * 以key-value键值对储存至钥匙串
