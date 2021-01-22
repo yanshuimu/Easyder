@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat height;
 
 @property (assign, nonatomic) CGSize size;
+//兼容旧项目，将会移除
+@property (assign, nonatomic) CGFloat x;
+//兼容旧项目，将会移除
+@property (assign, nonatomic) CGFloat y;
 
 @end
 
@@ -86,6 +90,11 @@ NS_ASSUME_NONNULL_BEGIN
  * 自适应大小
  */
 - (CGSize)autoFitSize;
+
+/**
+ * 截取当前view的内容，生成指定尺寸的图片
+ */
+- (UIImage *)snapshotContentToImageWithSize:(CGSize)size;
 
 @end
 

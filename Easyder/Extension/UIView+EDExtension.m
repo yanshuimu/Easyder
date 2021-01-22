@@ -16,6 +16,8 @@
 @dynamic width;
 @dynamic height;
 @dynamic size;
+@dynamic x;
+@dynamic y;
 
 - (CGFloat)top
 {
@@ -137,6 +139,30 @@
     self.frame = frame;
 }
 
+- (CGFloat)x
+{
+    return self.frame.origin.x;
+}
+
+- (void)setX:(CGFloat)value
+{
+    CGRect frame = self.frame;
+    frame.origin.x = value;
+    self.frame = frame;
+}
+
+- (CGFloat)y
+{
+    return self.frame.origin.y;
+}
+
+- (void)setY:(CGFloat)value
+{
+    CGRect frame = self.frame;
+    frame.origin.y = value;
+    self.frame = frame;
+}
+
 @end
 
 ///***************************************************************************************//
@@ -214,6 +240,16 @@
 - (CGSize)autoFitSize {
     [self sizeToFit];
     return self.frame.size;
+}
+
+- (UIImage *)snapshotContentToImageWithSize:(CGSize)size
+{
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return snapshotImage;
 }
 
 @end

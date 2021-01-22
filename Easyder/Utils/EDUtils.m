@@ -400,7 +400,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     {
         id obj = [myDic objectForKey:keyArr[i]];
         
-        obj = [self changeType:obj];
+        obj = [self replaceNullWithWhiteString:obj];
         
         [resDic setObject:obj forKey:keyArr[i]];
     }
@@ -414,7 +414,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     {
         id obj = myArr[i];
         
-        obj = [self changeType:obj];
+        obj = [self replaceNullWithWhiteString:obj];
         
         [resArr addObject:obj];
     }
@@ -431,7 +431,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     return @"";
 }
 
-+ (id)changeType:(id)myObj
++ (id)replaceNullWithWhiteString:(id)myObj
 {
     if ([myObj isKindOfClass:[NSDictionary class]])
     {

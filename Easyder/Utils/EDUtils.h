@@ -49,7 +49,7 @@
 /**
  * 将NSArray中的NSNull类型转化成@""
  */
-+ (id)changeType:(id)myObj;
++ (id)replaceNullWithWhiteString:(id)myObj;
 
 /**
  * 16进制颜色码转UIColor
