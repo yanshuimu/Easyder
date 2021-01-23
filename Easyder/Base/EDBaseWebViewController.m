@@ -9,6 +9,7 @@
 #import "EDBaseWebViewController.h"
 #import "EDBaseMacroDefine.h"
 #import "UIColor+EDExtension.h"
+#import "EDUtils.h"
 #import "EasyderManager.h"
 
 @interface EDBaseWebViewController ()<WKNavigationDelegate>
@@ -25,7 +26,7 @@
     self.navigationItem.title = self.navTitle;
     
     _webView = [[WKWebView alloc] init];
-    _webView.frame = CGRectMake(0, 0, SCREEN_W, SCREEN_H - EDNavBar_H - EDViewBottom_H);
+    _webView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - EDNavBar_H - EDViewBottom_H);
     _webView.backgroundColor = [UIColor clearColor];
     _webView.opaque = NO;
     _webView.scrollView.showsVerticalScrollIndicator = NO;
@@ -33,7 +34,7 @@
     _webView.navigationDelegate = self;
     [self.view addSubview:_webView];
     
-    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_W, 2)];
+    self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 2)];
     self.progressView.progressTintColor = EDManagerSingleton.themeColor;
     self.progressView.trackTintColor = [UIColor clearColor];
     //设置进度条的高度，下面这句代码表示进度条的宽度变为原来的1倍，高度变为原来的1.5倍.
@@ -41,13 +42,13 @@
     [self.view addSubview:self.progressView];
     [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
     
-    if (!EDStringIsEmpty(_htmlString))
+    if (![EDUtils stringIsEmpty:_htmlString])
     {
         [self loadHtmlContent];
     }
-    else if (!EDStringIsEmpty(_url))
+    else if (![EDUtils stringIsEmpty:_url])
     {
-        NSURLRequest *request = [NSURLRequest requestWithURL:EDUrlWithString(_url)];
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_url]];
         [_webView loadRequest:request];
     }
 }
@@ -74,7 +75,7 @@
                       "}\n"
                       "</script>\n"
                       "</body>\n"
-                      "</html>", EDSafeString(_htmlString)];
+                      "</html>", [NSString stringWithFormat:@"%@", _htmlString]];
     [_webView loadHTMLString:temp baseURL:nil];
 }
 

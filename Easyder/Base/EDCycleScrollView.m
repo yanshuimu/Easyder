@@ -9,7 +9,6 @@
 #import "EDCycleScrollView.h"
 #import "UIView+EDExtension.h"
 #import "SDCycleScrollView.h"
-#import "EDBaseMacroDefine.h"
 #import "UIColor+EDExtension.h"
 #import "EasyderManager.h"
 
@@ -39,12 +38,12 @@
     
     CGFloat x = 0;
     CGFloat y = 0;
-    CGFloat width = SCREEN_W;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
     CGFloat height = self.height;
-    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(x, y, width, height) delegate:self placeholderImage:IMAGENAME(DEFAULT_IMAGE_RECTANGLE)];
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(x, y, width, height) delegate:self placeholderImage:[UIImage imageNamed:DEFAULT_IMAGE_RECTANGLE]];
     _cycleScrollView.backgroundColor = [UIColor clearColor];
     _cycleScrollView.hidesForSinglePage = YES;
-    _cycleScrollView.pageDotColor = EDWhiteColor;
+    _cycleScrollView.pageDotColor = [UIColor whiteColor];
     _cycleScrollView.currentPageDotColor = EDManagerSingleton.themeColor;
     _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
     _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;

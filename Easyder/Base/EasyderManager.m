@@ -6,7 +6,6 @@
 //
 
 #import "EasyderManager.h"
-#import "EDBaseMacroDefine.h"
 #import "UIColor+EDExtension.h"
 
 static EasyderManager *manager = nil;
@@ -29,9 +28,9 @@ static EasyderManager *manager = nil;
 
 - (void)initialize {
     
-    _widthRatio = SCREEN_W/375.0;
-    _heightRatio = SCREEN_H/667.0;
-    _themeColor = EDWhiteColor;
+    _widthRatio = [UIScreen mainScreen].bounds.size.width/375.0;
+    _heightRatio = [UIScreen mainScreen].bounds.size.height/667.0;
+    _themeColor = [UIColor whiteColor];
 }
 
 - (void)startMoninNet {

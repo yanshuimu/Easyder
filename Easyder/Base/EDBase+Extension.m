@@ -48,23 +48,23 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
-@implementation UIView (LYEmptyView)
+@implementation UIView (EDEmptyView)
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
     
-    [self configBlankPage:blankPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
+    [self configEmptyPage:emptyPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
 }
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
     
-    [self configBlankPage:blankPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
+    [self configEmptyPage:emptyPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
     
     if ([self isKindOfClass:[UIScrollView class]]) {
         [EDUtils configRefreshWithScrollView:(UIScrollView*)self hasMoreData:hasMoreData hasError:hasError];
     }
 }
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{
     if (hasData) {
         if (self.ly_emptyView) {
             [self ly_hideEmptyView];
@@ -90,7 +90,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
             
         }else{
             //        空白数据
-            switch (blankPageType) {
+            switch (emptyPageType) {
                 default://其它页面（这里没有提到的页面，都属于其它）
                 {
                     tipStr = [EDUtils stringIsEmpty:configuration.emptyTitle] ? @"暂时没有内容" : configuration.emptyTitle;
@@ -727,7 +727,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
             [view showLoadingMeg:msg];
         }
         
-        [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
+        [scrollView configEmptyPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
             [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
         }];
     }];
@@ -788,7 +788,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
             [view showLoadingMeg:msg];
         }
         
-        [scrollView configBlankPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
+        [scrollView configEmptyPage:0 hasData:dataArray.count > 0 hasMoreData:hasMoreData hasError:!netSuccess reloadButtonBlock:^{
             [weakSelf performSelectorOnMainThread:reloadSelector withObject:nil waitUntilDone:NO];
         }];
     }];

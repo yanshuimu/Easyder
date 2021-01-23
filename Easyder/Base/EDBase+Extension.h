@@ -34,22 +34,22 @@ CGFloat CGHeightAutoMake(CGFloat height);
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
-typedef NS_ENUM(NSInteger, EaseBlankPageType)
+typedef NS_ENUM(NSInteger, EDEmptyPageType)
 {
-    EaseBlankPageTypeView = 0,
-    EaseBlankPageTypeConsume,
-    EaseBlankPageTypeSearch,
-    EaseBlankPageTypeShoppingCart,
-    EaseBlankPageTypeShoppingCartMemberSearch
+    EDEmptyPageTypeView = 0,
+    EDEmptyPageTypeConsume,
+    EDEmptyPageTypeSearch,
+    EDEmptyPageTypeShoppingCart,
+    EDEmptyPageTypeShoppingCartMemberSearch
 };
 
-@interface UIView (LYEmptyView)
+@interface UIView (EDEmptyView)
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
 
-- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
 
 @end
 

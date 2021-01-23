@@ -16,6 +16,10 @@
 
 @implementation EDBaseTableViewController
 
+@synthesize tableView = _tableView;
+@synthesize dataArray = _dataArray;
+@synthesize page = _page;
+
 // 更换TableViewStyle 想用 UITableViewStylePlain 在继承视图中重写此方法
 -(UITableViewStyle)tableViewStyle
 {

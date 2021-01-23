@@ -10,7 +10,11 @@
 #import "EDProtocol.h"
 
 @interface EDBaseTableViewController : EDBaseViewController<UITableViewDataSource, UITableViewDelegate, EDPaginationDelegate>
-
+{
+    UITableView *_tableView;
+    NSMutableArray  *_dataArray;
+    __block NSInteger _page;
+}
 @property (nonatomic,strong) UITableView     *tableView;
 @property (nonatomic,strong) NSMutableArray  *dataArray;
 //
