@@ -33,6 +33,8 @@
 #import "NSBundle+EDExtension.h"
 #import "UIImage+EDExtension.h"
 #import "UIAlertController+EDExtension.h"
+#import "UIViewController+EDExtension.h"
+#import "UINavigationController+EDExtension.h"
 
 //Utils
 #import "EDUtils.h"

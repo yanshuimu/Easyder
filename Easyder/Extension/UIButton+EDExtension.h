@@ -79,4 +79,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
+@interface UIButton (EDUtils)
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;
+
+@end
+
 NS_ASSUME_NONNULL_END

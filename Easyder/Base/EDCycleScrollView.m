@@ -7,6 +7,7 @@
 //
 
 #import "EDCycleScrollView.h"
+#import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
 #import "SDCycleScrollView.h"
 #import "UIColor+EDExtension.h"

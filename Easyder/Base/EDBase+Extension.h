@@ -75,6 +75,26 @@ typedef NS_ENUM(NSInteger, EDEmptyPageType)
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
+@interface MBProgressHUD (EDExtension)
+
++ (void)showLoading;
+
++ (void)showLoadingMeg:(NSString *)meg;
+
++ (void)showLoadingMeg:(NSString *)meg time:(NSUInteger)time;
+
++ (void)hideLoading;
+
++ (void)hideLoadingAfterDelay:(NSTimeInterval)delay;
+
++ (void)setLoadingUserInterfaceEnable:(BOOL)enable;
+
+@end
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
 @class EDBaseModel;
 
 typedef void(^OptimizeCompletionBlock)(UIImage *sourceImage, UIImage * _Nullable clipedImage, NSError * _Nullable error);

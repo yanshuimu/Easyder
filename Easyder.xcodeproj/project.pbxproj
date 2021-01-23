@@ -72,6 +72,8 @@
 		EF1343DA25BB0D9E00B68293 /* EDNetApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D225BB0D9C00B68293 /* EDNetApiManager.m */; };
 		EF1343DB25BB0D9E00B68293 /* EDMoninNet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D325BB0D9D00B68293 /* EDMoninNet.m */; };
 		EF1343DC25BB0D9E00B68293 /* EDNetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D425BB0D9D00B68293 /* EDNetInstance.m */; };
+		EF5528BA25BC4C98008BE20B /* UIViewController+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5528B625BC4C97008BE20B /* UIViewController+EDExtension.m */; };
+		EF5528BB25BC4C98008BE20B /* UINavigationController+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5528B725BC4C97008BE20B /* UINavigationController+EDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +206,10 @@
 		EF1343D525BB0D9D00B68293 /* EDRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDRequestManager.h; sourceTree = "<group>"; };
 		EF1343D625BB0D9D00B68293 /* EDNetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDNetInstance.h; sourceTree = "<group>"; };
 		EF1343D725BB0D9E00B68293 /* EDMoninNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMoninNet.h; sourceTree = "<group>"; };
+		EF5528B625BC4C97008BE20B /* UIViewController+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EDExtension.m"; sourceTree = "<group>"; };
+		EF5528B725BC4C97008BE20B /* UINavigationController+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+EDExtension.m"; sourceTree = "<group>"; };
+		EF5528B825BC4C98008BE20B /* UINavigationController+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+EDExtension.h"; sourceTree = "<group>"; };
+		EF5528B925BC4C98008BE20B /* UIViewController+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EDExtension.h"; sourceTree = "<group>"; };
 		EFD7FECD8470F905579034BD /* libPods-Easyder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Easyder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -337,6 +343,10 @@
 		04A39C9B25A8095D007F596E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EF5528B825BC4C98008BE20B /* UINavigationController+EDExtension.h */,
+				EF5528B725BC4C97008BE20B /* UINavigationController+EDExtension.m */,
+				EF5528B925BC4C98008BE20B /* UIViewController+EDExtension.h */,
+				EF5528B625BC4C97008BE20B /* UIViewController+EDExtension.m */,
 				046CE9DA259DD5D9000F9DE3 /* NSArray+EDExtension.h */,
 				046CE9EC259DD5D9000F9DE3 /* NSArray+EDExtension.m */,
 				046CE9EE259DD5D9000F9DE3 /* NSAttributedString+EDExtension.h */,
@@ -614,6 +624,7 @@
 				046CEA37259DD5D9000F9DE3 /* NSString+EDExtension.m in Sources */,
 				046CEA27259DD5D9000F9DE3 /* UILabel+EDExtension.m in Sources */,
 				046CE9BA259DD487000F9DE3 /* ViewController.m in Sources */,
+				EF5528BA25BC4C98008BE20B /* UIViewController+EDExtension.m in Sources */,
 				EF1343DC25BB0D9E00B68293 /* EDNetInstance.m in Sources */,
 				046CEA43259DD5D9000F9DE3 /* EDBaseCollectionCell.m in Sources */,
 				046CEA48259DD5D9000F9DE3 /* EDBaseAlertView.m in Sources */,
@@ -657,6 +668,7 @@
 				046CEA2F259DD5D9000F9DE3 /* UIImage+EDExtension.m in Sources */,
 				04A39CCD25AC0124007F596E /* HGTimerButton.m in Sources */,
 				046CEA59259DD699000F9DE3 /* TestTableViewCtrl.m in Sources */,
+				EF5528BB25BC4C98008BE20B /* UINavigationController+EDExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

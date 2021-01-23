@@ -217,6 +217,53 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
+@implementation MBProgressHUD (EDExtension)
+
++ (void)showLoading
+{
+    [EDKeyWindow showLoading];
+}
+
++ (void)showLoadingMeg:(NSString *)meg
+{
+    [EDKeyWindow showLoadingMeg:meg time:kDefaultShowTime];
+}
+
++ (void)showLoadingMeg:(NSString *)meg time:(NSUInteger)time
+{
+    [EDKeyWindow showLoadingMeg:meg time:time];
+}
+
++ (void)showLoadingMeg:(NSString *)meg withImageName:(NSString *)imageName time:(NSUInteger)time
+{
+    [EDKeyWindow showLoadingMeg:meg withImageName:imageName time:time];
+}
+
++ (void)hideLoading
+{
+    [EDKeyWindow hideLoading];
+}
+
++ (void)delayHideLoading
+{
+    [EDKeyWindow delayHideLoading];
+}
+
++ (void)hideLoadingAfterDelay:(NSTimeInterval)delay
+{
+    [EDKeyWindow hideLoadingAfterDelay:delay];
+}
+
++ (void)setLoadingUserInterfaceEnable:(BOOL)enable
+{
+    [EDKeyWindow setLoadingUserInterfaceEnable:enable];
+}
+
+@end
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
 @implementation UIView (EDOptimize)
 
 @end
