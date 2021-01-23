@@ -11,7 +11,7 @@
 #define EDRequestMsgSendReturnObject(...) ((id (*)(id, SEL))objc_msgSend)(__VA_ARGS__)
 #define EDRequestMsgSendReturnInteger(...) ((NSInteger (*)(id, SEL))objc_msgSend)(__VA_ARGS__)
 
-typedef void(^response)(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject);
+typedef void(^Response)(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id responseObject);
 
 @interface EDNetApiManager : NSObject
 
@@ -27,21 +27,21 @@ typedef void(^response)(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id res
  */
 + (void)requestGetWithParams:(id)params
                          url:(NSString *)url
-                    response:(response)response;
+                    response:(Response)response;
 
 /**
  * Post请求，x-www-form-urlencoded方式
  */
 + (void)requestPostWithParams:(id)params
                           url:(NSString *)url
-                     response:(response)response;
+                     response:(Response)response;
 
 /**
  * Post请求，参数通过httpBody传递
  */
 + (void)requestPostWithBodyParams:(id)params
                               url:(NSString *)url
-                         response:(response)response;
+                         response:(Response)response;
 
 /**
  * 单张图片上传
@@ -50,7 +50,7 @@ typedef void(^response)(BOOL netSuccess, BOOL dataSuccess, NSString *msg, id res
                                image:(UIImage *)uploadImage
                       uploadImageKey:(NSString *)uploadImageKey
                                  url:(NSString *)url
-                            response:(response)response;
+                            response:(Response)response;
 
 
 @end

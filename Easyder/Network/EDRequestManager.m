@@ -296,7 +296,7 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
         NSString *state = [NSString stringWithFormat:@"%@", responseObject[@"state"]];
         NSString *msg = responseObject[@"msg"];
         BOOL dataSuccess = [state isEqualToString:@"success"];
-        requestEnty.responseHandle(YES, dataSuccess, msg, responseObject);
+        requestEnty.response(YES, dataSuccess, msg, responseObject);
     }
 }
 
@@ -312,7 +312,7 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
     else {
         
         NSString *errorStr = [self returnStringWithError:error];
-        requestEnty.responseHandle(NO, NO, errorStr, nil);
+        requestEnty.response(NO, NO, errorStr, nil);
     }
 }
 

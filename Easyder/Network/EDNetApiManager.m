@@ -35,7 +35,7 @@
 +(EDRequestEnty *)createEntyWithAppendURLString:(NSString *)appendURLString
                                  withRequestEnty:(RequestType)requestType
                                    withParamDict:(id)paramer
-                                      withHandle:(response)responseHandle
+                                      withHandle:(Response)responseHandle
 {
     EDRequestEnty * enty = [[EDNetInstance shareInstance] commonRequestEnty:requestType withAppendUrlString:appendURLString];  //通用请求配置
     NSMutableDictionary *paramsDict = [[[EDNetInstance shareInstance] basicParameter] mutableCopy];                          //公共请求参数
@@ -51,7 +51,7 @@
     else if ([paramer isKindOfClass:NSString.class]) {
         enty.params = paramer;
     }
-    enty.responseHandle = responseHandle;
+    enty.response = responseHandle;
     enty.httpHeaderParams = [[[EDNetInstance shareInstance] basicHttpHeaderParameter] mutableCopy];
     
     return enty;
@@ -61,7 +61,7 @@
 
 + (void)requestGetWithParams:(id)params
                          url:(NSString *)url
-                    response:(response)response
+                    response:(Response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:GetRequestType
@@ -74,7 +74,7 @@
 
 + (void)requestPostWithParams:(id)params
                           url:(NSString *)url
-                     response:(response)response
+                     response:(Response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:PostRequestType
@@ -85,7 +85,7 @@
 
 + (void)requestPostWithBodyParams:(id)params
                               url:(NSString *)url
-                         response:(response)response
+                         response:(Response)response
 {
     EDRequestEnty *enty = [self createEntyWithAppendURLString:url
                                               withRequestEnty:PostHttpBodyRequestType
@@ -100,7 +100,7 @@
                                image:(UIImage *)uploadImage
                       uploadImageKey:(NSString *)uploadImageKey
                                  url:(NSString *)url
-                            response:(response)response
+                            response:(Response)response
 {
     EDRequestEnty * enty = [self createEntyWithAppendURLString:url
                                                withRequestEnty:SingleImageUploadRequestType

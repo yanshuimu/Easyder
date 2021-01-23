@@ -30,7 +30,7 @@
 @property (nonatomic, assign) BOOL openLog;
 
 //回调block
-@property (nonatomic,copy) response responseHandle;
+@property (nonatomic,copy) Response response;
 
 
 /************************************************************/
