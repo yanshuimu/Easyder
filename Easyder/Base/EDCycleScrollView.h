@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SDCycleScrollView.h"
+#import <SDCycleScrollView/SDCycleScrollView.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
