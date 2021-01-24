@@ -45,4 +45,9 @@
  */
 + (NSString*)timeFromSeconds:(NSInteger)seconds;
 
+/**
+ * 从某个日期往前或往后N天
+ */
++ (NSDate*)prevOrNextDateWithDays:(double)days fromDate:(NSDate*)fromDate;
+
 @end

@@ -64,4 +64,11 @@
     return time;
 }
 
++ (NSDate*)prevOrNextDateWithDays:(double)days fromDate:(NSDate*)fromDate {
+    
+    NSTimeInterval timeInterval = days * 24.0 * 60.0 * 60.0;
+    NSDate *date = [fromDate initWithTimeInterval:timeInterval sinceDate:fromDate];
+    return date;
+}
+
 @end

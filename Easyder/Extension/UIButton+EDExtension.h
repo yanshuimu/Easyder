@@ -83,6 +83,26 @@ NS_ASSUME_NONNULL_BEGIN
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
+#define DefaultTouchInterval .5  //默认时间间隔
+
+@interface UIButton (EDTouch)
+
+/**
+ * 设置点击时间间隔
+ */
+@property (nonatomic, assign) NSTimeInterval timeInterval;
+
+/**
+ *  用于设置单个按钮不需要被hook
+ */
+@property (nonatomic, assign) BOOL isIgnore;
+
+@end
+
+///***************************************************************************************//
+///*****************************************分割线*****************************************//
+///***************************************************************************************//
+
 @interface UIButton (EDUtils)
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor forState:(UIControlState)state;

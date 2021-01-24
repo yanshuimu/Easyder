@@ -9,13 +9,10 @@
 #import "EDCycleScrollView.h"
 #import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
-#import "SDCycleScrollView.h"
 #import "UIColor+EDExtension.h"
 #import "EasyderManager.h"
 
 @interface EDCycleScrollView ()<SDCycleScrollViewDelegate>
-//
-@property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 
 @end
 
@@ -55,6 +52,10 @@
 
 - (void)setImageUrls:(NSArray*)imageUrls {
     _cycleScrollView.imageURLStringsGroup = imageUrls;
+}
+
+- (void)setPlaceholderImage:(UIImage*)placeholderImage {
+    _cycleScrollView.placeholderImage = placeholderImage;
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
