@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Easyder'
-  s.version          = '0.2.1'
-  s.summary          = 'Classes that improve development efficiency'
+  s.version          = '0.2.2'
+  s.summary          = 'Classes that improve development efficiency and simplify the project framework'
   s.homepage         = 'https://github.com/yanshuimu/Easyder'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'yanshuimu' => '593692553@qq.com' }
