@@ -31,10 +31,10 @@
 //背景色
 #define EDDefaultBackgroudColor EDHexColor(@"#F5F5F5")
 
-//线条颜色
+//线条颜色 230, 230, 230
 #define EDLineColor EDHexColor(@"#E6E6E6")
 
-//黑色字体，默认字体颜色
+//黑色字体，默认字体颜色 51,51,51
 #define EDFontColorBlack EDHexColor(@"#333333")
 
 //浅黑字体，偏次要字体颜色

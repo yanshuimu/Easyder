@@ -28,7 +28,7 @@
     
     [self setupSubviews];
     
-    [self headerRefreshData];
+    //[self headerRefreshData];
 }
 
 - (void)setupSubviews {
@@ -38,7 +38,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataArray.count;
+    return self.titleArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -55,7 +55,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"row->%ld", (indexPath.row)];
+    //cell.textLabel.text = [NSString stringWithFormat:@"row->%ld", (indexPath.row)];
+    cell.textLabel.text = self.titleArray[indexPath.row];
     
     return cell;
 }

@@ -72,6 +72,7 @@
 		EF1343DA25BB0D9E00B68293 /* EDNetApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D225BB0D9C00B68293 /* EDNetApiManager.m */; };
 		EF1343DB25BB0D9E00B68293 /* EDMoninNet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D325BB0D9D00B68293 /* EDMoninNet.m */; };
 		EF1343DC25BB0D9E00B68293 /* EDNetInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343D425BB0D9D00B68293 /* EDNetInstance.m */; };
+		EF3E5CF825C04F7A00097D47 /* EDNavigationConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3E5CF725C04F7A00097D47 /* EDNavigationConfiguration.m */; };
 		EF5528BA25BC4C98008BE20B /* UIViewController+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5528B625BC4C97008BE20B /* UIViewController+EDExtension.m */; };
 		EF5528BB25BC4C98008BE20B /* UINavigationController+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5528B725BC4C97008BE20B /* UINavigationController+EDExtension.m */; };
 /* End PBXBuildFile section */
@@ -206,6 +207,8 @@
 		EF1343D525BB0D9D00B68293 /* EDRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDRequestManager.h; sourceTree = "<group>"; };
 		EF1343D625BB0D9D00B68293 /* EDNetInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDNetInstance.h; sourceTree = "<group>"; };
 		EF1343D725BB0D9E00B68293 /* EDMoninNet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMoninNet.h; sourceTree = "<group>"; };
+		EF3E5CF625C04F7900097D47 /* EDNavigationConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDNavigationConfiguration.h; sourceTree = "<group>"; };
+		EF3E5CF725C04F7A00097D47 /* EDNavigationConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDNavigationConfiguration.m; sourceTree = "<group>"; };
 		EF5528B625BC4C97008BE20B /* UIViewController+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EDExtension.m"; sourceTree = "<group>"; };
 		EF5528B725BC4C97008BE20B /* UINavigationController+EDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+EDExtension.m"; sourceTree = "<group>"; };
 		EF5528B825BC4C98008BE20B /* UINavigationController+EDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+EDExtension.h"; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 			children = (
 				04A39C8F25A7E986007F596E /* EDConfiguration.h */,
 				04A39C9025A7E986007F596E /* EDConfiguration.m */,
+				EF3E5CF625C04F7900097D47 /* EDNavigationConfiguration.h */,
+				EF3E5CF725C04F7A00097D47 /* EDNavigationConfiguration.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -634,6 +639,7 @@
 				046CEA4E259DD5D9000F9DE3 /* EDBaseWebViewController.m in Sources */,
 				04D7F86A25B03E81001E439A /* EDBasePaginationAlertView.m in Sources */,
 				046CEA2E259DD5D9000F9DE3 /* EDNullSafe.m in Sources */,
+				EF3E5CF825C04F7A00097D47 /* EDNavigationConfiguration.m in Sources */,
 				046CEA3B259DD5D9000F9DE3 /* EasyderManager.m in Sources */,
 				046CEA34259DD5D9000F9DE3 /* UICollectionView+EDExtension.m in Sources */,
 				046CEA36259DD5D9000F9DE3 /* UIScrollView+EDExtension.m in Sources */,

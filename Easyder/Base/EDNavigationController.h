@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+EDExtension.h"
-#import "EDBaseMacroDefine.h"
+#import "EDNavigationConfiguration.h"
 
 @interface EDNavigationController : UINavigationController
+
+//
+@property (nonatomic, strong) EDNavigationConfiguration *configuration;
 
 @end
