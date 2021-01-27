@@ -40,7 +40,7 @@
 //浅黑字体，偏次要字体颜色
 #define EDFontColorLightBlack EDHexColor(@"#666666")
 
-//浅灰字体，次要字体颜色，如备注、日期等
+//浅灰字体，次要字体颜色，如备注、日期等 153,153,153
 #define EDFontColorLightGray EDHexColor(@"#999999")
 
 NS_ASSUME_NONNULL_BEGIN

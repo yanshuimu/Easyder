@@ -6,14 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EDConfiguration.h"
 #import "EDMoninNet.h"
 
 #define EDManagerSingleton [EasyderManager shareManager]
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 
 @interface EasyderManager : NSObject
 
@@ -27,12 +24,6 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
 @property (nonatomic, assign) CGFloat heightRatio;
 //主题色，默认白色
 @property (nonatomic, strong) UIColor *themeColor;
-//
-@property (nonatomic, strong) EDConfiguration *navigationConfiguration;
-//
-@property (nonatomic, strong) EDConfiguration *alertViewConfiguration;
-//
-@property (nonatomic, strong) EDConfiguration *emptyViewConfiguration;
 
 /**
  * 开始网络监测
@@ -43,21 +34,6 @@ typedef void(^EDConfigurationBlock)(EDConfiguration  * _Nullable configuration);
  * 停止网络监测
  */
 - (void)stopMoninNet;
-
-/**
- * 全局配置EDNavigationController
- */
-- (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock;
-
-/**
- * 全局配置EDBaseAlertView
- */
-- (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock;
-
-/**
- * 全局配置LYEmptyView
- */
-- (void)makeEmptyViewConfiguration:(EDConfigurationBlock)configurationBlock;
 
 @end
 

@@ -50,12 +50,12 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 @implementation UIView (EDEmptyView)
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
     
     [self configEmptyPage:emptyPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
 }
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block{
     
     [self configEmptyPage:emptyPageType hasData:hasData hasError:hasError offsetY:0 reloadButtonBlock:block];
     
@@ -64,7 +64,13 @@ CGFloat CGHeightAutoMake(CGFloat height) {
     }
 }
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block {
+    
+    [self configEmptyPage:emptyPageType style:[[EDEmptyViewStyle alloc] init] hasData:hasData hasError:hasError offsetY:offsetY reloadButtonBlock:block];
+}
+
+- (void)configEmptyPage:(NSInteger)emptyPageType style:(EDEmptyViewStyle*)style hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{
+    
     if (hasData) {
         if (self.ly_emptyView) {
             [self ly_hideEmptyView];
@@ -79,28 +85,23 @@ CGFloat CGHeightAutoMake(CGFloat height) {
         }
         self.alpha = 1.0;
         NSString *imageName, *tipStr, *buttonTitle;
-        
-        EDConfiguration *configuration = EDManagerSingleton.emptyViewConfiguration;
-        
+                
         if (hasError) {
-            //        加载失败
-            tipStr = [EDUtils stringIsEmpty:configuration.networkErrorTitle] ? @"呀，网络出了问题" : configuration.networkErrorTitle;
-            buttonTitle = [EDUtils stringIsEmpty:configuration.emptyButtonTitle] ? @"重新连接网络" : configuration.emptyButtonTitle;
-            imageName = configuration.networkErrorImageName;
+            //加载失败
+            tipStr = style.networkErrorTitle;
+            buttonTitle = style.networkErrorButtonTitle;
+            imageName = style.networkErrorImageName;
             
         }else{
-            //        空白数据
-            switch (emptyPageType) {
-                default://其它页面（这里没有提到的页面，都属于其它）
-                {
-                    tipStr = [EDUtils stringIsEmpty:configuration.emptyTitle] ? @"暂时没有内容" : configuration.emptyTitle;
-                }
-                    break;
+            //block中自定义判断逻辑
+            if (style.conditionsBlock) {
+                style.conditionsBlock(emptyPageType);
             }
         }
-        imageName = imageName ? imageName : configuration.emptyImageName;
+        imageName = imageName ? : style.imageName;
+        buttonTitle = buttonTitle ? : style.buttonTitle;
         
-        LYEmptyView *emptyV = [LYEmptyView emptyActionViewWithImageStr:imageName titleStr:tipStr detailStr:nil btnTitleStr:buttonTitle btnClickBlock:block];
+        LYEmptyView *emptyV = [LYEmptyView emptyActionViewWithImageStr:imageName titleStr:style.title detailStr:nil btnTitleStr:buttonTitle btnClickBlock:block];
         
         if ([EDUtils stringIsEmpty:imageName]) {
             if (hasError) {
@@ -112,10 +113,15 @@ CGFloat CGHeightAutoMake(CGFloat height) {
         }
         
         emptyV.autoShowEmptyView = NO;
-        emptyV.actionBtnBackGroundColor = configuration.emptyButtonBackgroundColor ? configuration.emptyButtonBackgroundColor : EDWhiteColor;
-        emptyV.actionBtnTitleColor = configuration.emptyButtonTitleColor ? configuration.emptyButtonTitleColor : EDFontColorBlack;
-        emptyV.titleLabFont = configuration.emptyTitleFont ? configuration.emptyTitleFont: [UIFont systemFontOfSize:13];
-        emptyV.titleLabTextColor = configuration.emptyTitleColor ? configuration.emptyTitleColor :  EDFontColorLightGray;
+        emptyV.actionBtnBackGroundColor = style.buttonBackgroundColor;
+        emptyV.actionBtnTitleColor = style.buttonTitleColor;
+        emptyV.titleLabFont = style.titleFont;
+        emptyV.titleLabTextColor = style.titleColor;
+        emptyV.actionBtnHeight = style.buttonHeight;
+        emptyV.actionBtnCornerRadius = style.buttonCornerRadius;
+        emptyV.actionBtnBorderWidth = style.buttonBorderWidth;
+        emptyV.actionBtnBorderColor = style.buttonBorderColor;
+        
         self.ly_emptyView = emptyV;
         
         //    布局

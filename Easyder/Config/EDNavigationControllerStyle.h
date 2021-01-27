@@ -1,5 +1,5 @@
 //
-//  EDNavigationConfiguration.h
+//  EDNavigationControllerStyle.h
 //  Easyder
 //
 //  Created by 许鸿桂 on 2021/1/26.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EDNavigationConfiguration : NSObject
+@interface EDNavigationControllerStyle : NSObject
 
 //背景色，默认白色
 @property (nonatomic, strong) UIColor *barTintColor;
@@ -29,7 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *bottomLineColor;
 //底部线条是否隐藏，默认NO
 @property (nonatomic, assign) BOOL bottomLineHidden;
-
+//返回按钮x偏移值，默认值为5
+@property (nonatomic, assign) CGFloat returnButtonOffsetX;
 @end
 
 NS_ASSUME_NONNULL_END

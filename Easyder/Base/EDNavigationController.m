@@ -8,13 +8,31 @@
 
 #import "EDNavigationController.h"
 #import "NSBundle+EDExtension.h"
-#import "UIColor+EDExtension.h"
 
 @interface EDNavigationController ()
-
+//
+@property (nonatomic, strong) UIView *line;
 @end
 
 @implementation EDNavigationController
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController style:(EDNavigationControllerStyle*)style {
+    
+    if (self = [super initWithRootViewController:rootViewController]) {
+        
+        [self setStyle:style];
+    }
+    return self;
+}
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
+    
+    if (self = [super initWithRootViewController:rootViewController]) {
+        
+        [self setStyle:[[EDNavigationControllerStyle alloc] init]];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,24 +49,32 @@
     [navigationBar setShadowImage:[UIImage new]];
     [navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     
-    navigationBar.barTintColor = _configuration.barTintColor;
+    
+    _line = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, [UIScreen mainScreen].bounds.size.width, 0.5)];
+    [self.navigationBar addSubview:_line];
+}
+
+- (void)setStyle:(EDNavigationControllerStyle *)style {
+    
+    _style = style;
+    
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    
+    navigationBar.barTintColor = _style.barTintColor;
     NSMutableDictionary *barTitleTextAttributes = [NSMutableDictionary dictionary];
-    barTitleTextAttributes[NSFontAttributeName] = _configuration.barTitleFont;
-    barTitleTextAttributes[NSForegroundColorAttributeName] = _configuration.barTitleColor;
+    barTitleTextAttributes[NSFontAttributeName] = _style.barTitleFont;
+    barTitleTextAttributes[NSForegroundColorAttributeName] = _style.barTitleColor;
     navigationBar.titleTextAttributes = barTitleTextAttributes;
     
-    //barItem属性
     UIBarButtonItem *item = [UIBarButtonItem appearance];
-    item.tintColor = _configuration.itemTintColor;
+    item.tintColor = _style.itemTintColor;
     NSMutableDictionary *itemTitleTextAttributes = [NSMutableDictionary dictionary];
-    itemTitleTextAttributes[NSFontAttributeName] = _configuration.itemTitleFont;
-    itemTitleTextAttributes[NSForegroundColorAttributeName] = _configuration.itemTitleColor;
+    itemTitleTextAttributes[NSFontAttributeName] = _style.itemTitleFont;
+    itemTitleTextAttributes[NSForegroundColorAttributeName] = _style.itemTitleColor;
     [item setTitleTextAttributes:itemTitleTextAttributes forState:UIControlStateNormal];
     
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 43.5, [UIScreen mainScreen].bounds.size.width, 0.5)];
-    line.backgroundColor = _configuration.bottomLineColor;
-    [self.navigationBar addSubview:line];
-    line.hidden = _configuration.bottomLineHidden;
+    _line.backgroundColor = _style.bottomLineColor;
+    _line.hidden = _style.bottomLineHidden;
 }
 
 #pragma mark - Overwrite
@@ -66,12 +92,16 @@
         
         UIImageView *backImageView = [[UIImageView alloc] init];
         
-        UIImage *image = _configuration.returnImageName ? [UIImage imageNamed:_configuration.returnImageName] : [NSBundle returnImageFromEasyderBundle];
-        backImageView.image = image;
+        if (_style.returnImageName) {
+            backImageView.image = [UIImage imageNamed:_style.returnImageName];
+        }
+        else {
+            backImageView.image = [NSBundle returnImageFromEasyderBundle];
+        }
         
-        width = image.size.width;
-        height = image.size.height;
-        x = 5;
+        width = backImageView.image.size.width;
+        height = backImageView.image.size.height;
+        x = _style.returnButtonOffsetX;
         y = btn.frame.size.height/2 - height/2;
         backImageView.frame = CGRectMake(x, y, width, height);
         [btn addSubview:backImageView];

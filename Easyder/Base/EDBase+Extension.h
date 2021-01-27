@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "LYEmptyViewHeader.h"
+#import "EDEmptyViewStyle.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,22 +35,15 @@ CGFloat CGHeightAutoMake(CGFloat height);
 ///*****************************************分割线*****************************************//
 ///***************************************************************************************//
 
-typedef NS_ENUM(NSInteger, EDEmptyPageType)
-{
-    EDEmptyPageTypeView = 0,
-    EDEmptyPageTypeConsume,
-    EDEmptyPageTypeSearch,
-    EDEmptyPageTypeShoppingCart,
-    EDEmptyPageTypeShoppingCartMemberSearch
-};
-
 @interface UIView (EDEmptyView)
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasMoreData:(BOOL)hasMoreData hasError:(BOOL)hasError reloadButtonBlock:(LYActionTapBlock)block;
 
-- (void)configEmptyPage:(EDEmptyPageType)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
+- (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
+
+- (void)configEmptyPage:(NSInteger)emptyPageType style:(EDEmptyViewStyle*)style hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block;
 
 @end
 

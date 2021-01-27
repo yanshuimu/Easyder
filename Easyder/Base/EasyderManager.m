@@ -46,32 +46,4 @@ static EasyderManager *manager = nil;
     [_moninNet stopMoninNet];
 }
 
-- (void)makeNavigationConfiguration:(EDConfigurationBlock)configurationBlock {
-    
-    _navigationConfiguration = [[EDConfiguration alloc] init];
-    
-    if (configurationBlock) {
-        configurationBlock(_navigationConfiguration);
-    }
-}
-
-- (void)makeAlertViewConfiguration:(EDConfigurationBlock)configurationBlock {
-    
-    _alertViewConfiguration = [[EDConfiguration alloc] init];
-    _alertViewConfiguration.alertViewAnimated = YES;
-    
-    if (configurationBlock) {
-        configurationBlock(_alertViewConfiguration);
-    }
-}
-
-- (void)makeEmptyViewConfiguration:(EDConfigurationBlock)configurationBlock {
-    
-    _emptyViewConfiguration = [[EDConfiguration alloc] init];
-    
-    if (configurationBlock) {
-        configurationBlock(_emptyViewConfiguration);
-    }
-}
-
 @end

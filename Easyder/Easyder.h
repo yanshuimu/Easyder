@@ -42,7 +42,9 @@
 #import "EDLanguageUtil.h"
 
 //Config
-#import "EDConfiguration.h"
+#import "EDNavigationControllerStyle.h"
+#import "EDBaseAlertViewStyle.h"
+#import "EDEmptyViewStyle.h"
 
 //Network
 #import "EDMoninNet.h"

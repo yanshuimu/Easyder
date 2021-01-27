@@ -25,7 +25,7 @@
 
 - (void)setupSubviews {
  
-    [self.tableView configEmptyPage:0 hasData:NO hasError:YES reloadButtonBlock:^{
+    [self.tableView configEmptyPage:2 hasData:NO hasError:NO reloadButtonBlock:^{
         
     }];
 }

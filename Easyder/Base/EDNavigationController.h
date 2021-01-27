@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EDNavigationConfiguration.h"
+#import "EDNavigationControllerStyle.h"
 
 @interface EDNavigationController : UINavigationController
 
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController style:(EDNavigationControllerStyle*)style;
+
 //
-@property (nonatomic, strong) EDNavigationConfiguration *configuration;
+@property (nonatomic, strong) EDNavigationControllerStyle *style;
 
 @end

@@ -44,32 +44,6 @@
     EasyderManager *manager = [EasyderManager shareManager];
     manager.themeColor = EDHexColor(@"#303642");
     
-    //配置EDNavigationController属性
-    [manager makeNavigationConfiguration:^(EDConfiguration * _Nullable configuration) {
-        configuration.barTintColor = EDHexColor(@"#303642");
-        configuration.barTitleColor = EDWhiteColor;
-        //configuration.barReturnImageName = @"return2";
-    }];
-    
-    //配置EDBaseAlertView属性
-    [manager makeAlertViewConfiguration:^(EDConfiguration * _Nullable configuration) {
-        configuration.backgroundColorAlpha = 0.7;
-        configuration.alertViewClickMaskOnTheHidden = YES;
-    }];
-    
-    //配置LYEmptyView属性
-    [manager makeEmptyViewConfiguration:^(EDConfiguration * _Nullable configuration) {
-        //configuration.emptyImageName = @"details14";
-        //configuration.networkErrorImageName = @"network_error";
-        //configuration.emptyTitle = @"暂无记录";
-        //configuration.networkErrorTitle = @"呀，服务器不见了";
-        //configuration.emptyButtonTitle = @"点击刷新";
-        //configuration.emptyButtonBackgroundColor = EDThemeColor;
-        //configuration.emptyButtonTitleColor = EDWhiteColor;
-        //configuration.emptyTitleColor = [UIColor redColor];
-        //configuration.emptyTitleFont = EDAutoFont(13);
-    }];
-    
     [manager startMoninNet];
 }
 

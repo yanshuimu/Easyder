@@ -10,9 +10,7 @@
 #import <objc/runtime.h>
 #import "EDBaseMacroDefine.h"
 #import "UIView+EDExtension.h"
-#import "EDConfiguration.h"
 #import "UIColor+EDExtension.h"
-#import "EasyderManager.h"
 
 @interface EDBaseAlertView ()
 //
@@ -28,16 +26,33 @@
 //内容位置
 @property (nonatomic, assign) CGFloat contentOffsetY;
 //
-@property (nonatomic, assign) CGFloat backgroundColorAlpha;
-//
 @property (nonatomic, assign) CGFloat animationDuration;
+//
+@property (nonatomic, strong) EDBaseAlertViewStyle *style;
 @end
 
 @implementation EDBaseAlertView
 
+- (instancetype)initWithStyle:(EDBaseAlertViewStyle*)style {
+    
+    if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)]) {
+        
+        _style = style;
+        
+        [self configuration];
+        
+        [self initialize];
+        
+        [self setupSubviews];
+    }
+    return self;
+}
+
 - (instancetype)init {
     
     if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)]) {
+        
+        _style = [[EDBaseAlertViewStyle alloc] init];
         
         [self configuration];
         
@@ -57,15 +72,10 @@
 }
 
 - (void)configuration {
-    
-    EDConfiguration *configuration = EDManagerSingleton.alertViewConfiguration;
-    
+        
     _contentOffsetY = -1;
     _contentVerticalAlignment = EDAlertViewContentVerticalAlignmentCenter;
     _animationDuration = 0.4;
-    _backgroundColorAlpha = configuration.backgroundColorAlpha > 0 ? configuration.backgroundColorAlpha : EDDefaultBackgroundAlpha;
-    _animated = configuration.alertViewAnimated;
-    _clickMaskOnTheHidden = configuration.alertViewClickMaskOnTheHidden;
 }
 
 - (void)show
@@ -80,7 +90,7 @@
         UIView *superView = [UIApplication sharedApplication].delegate.window.rootViewController.view;
         
         _maskView = [[UIView alloc] initWithFrame:self.bounds];
-        _maskView.backgroundColor = EDColorA(0, 0, 0, _backgroundColorAlpha);
+        _maskView.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:_style.backgroundColorAlpha];
         [superView addSubview:_maskView];
         [superView addSubview:self];
         
@@ -98,7 +108,7 @@
         
         [self calcContentOffsetY];
         
-        if (_animated) {
+        if (_style.animated) {
             
             EDWeakSelf
             [UIView animateWithDuration:_animationDuration animations:^{
@@ -113,7 +123,7 @@
             _container.alpha = 1.0;
         }
         
-        if (_clickMaskOnTheHidden) {
+        if (_style.clickMaskWithHidden) {
             [_hiddenBtn addTarget:self action:@selector(hiddenBtnClick) forControlEvents:UIControlEventTouchUpInside];
         }
     }
@@ -185,11 +195,17 @@
 
 - (void)transferSubviewsToContainer {
     
+    Class class = objc_getClass("MBProgressHUD");
+    
     for (UIView *view in self.subviews) {
-        if (view != _container) {
-            [view removeFromSuperview];
-            [_container addSubview:view];
+        if (class && [view isKindOfClass:class]) {
+            continue;
         }
+        if (view == _container) {
+            continue;
+        }
+        [view removeFromSuperview];
+        [_container addSubview:view];
     }
 }
 

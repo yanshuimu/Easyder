@@ -1,13 +1,13 @@
 //
-//  EDNavigationConfiguration.m
+//  EDNavigationControllerStyle.m
 //  Easyder
 //
 //  Created by 许鸿桂 on 2021/1/26.
 //
 
-#import "EDNavigationConfiguration.h"
+#import "EDNavigationControllerStyle.h"
 
-@implementation EDNavigationConfiguration
+@implementation EDNavigationControllerStyle
 
 - (instancetype)init
 {
@@ -24,6 +24,8 @@
         
         _bottomLineColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
         _bottomLineHidden = NO;
+        
+        _returnButtonOffsetX = 5;
     }
     return self;
 }

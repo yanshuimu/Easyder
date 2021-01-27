@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDBaseAlertViewStyle.h"
 
 typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
     
@@ -17,12 +18,10 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 
 @interface EDBaseAlertView : UIView
 
-//是否执行动画，默认NO
-@property (nonatomic, assign) BOOL animated;
-//点击蒙版是否隐藏，默认NO
-@property (nonatomic, assign) BOOL clickMaskOnTheHidden;
 //内容垂直对齐方式
 @property (nonatomic, assign) EDAlertViewContentVerticalAlignment contentVerticalAlignment;
+
+- (instancetype)initWithStyle:(EDBaseAlertViewStyle*)style;
 
 - (void)initialize;
 
