@@ -170,7 +170,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define EDPostNotification(notificationName,auserInfo) [[NSNotificationCenter defaultCenter] postNotificationName:(notificationName) object:self userInfo:(auserInfo)];
 
 // 移除通知
-#define RemoveNotification(notificationName,auserInfo) [[NSNotificationCenter defaultCenter]removeObserver:self name:(notificationName) object:auserInfo];
+#define EDRemoveNotification(notificationName,auserInfo) [[NSNotificationCenter defaultCenter]removeObserver:self name:(notificationName) object:auserInfo];
 
 //UserDefaults存取
 #pragma NSUserDefaults
