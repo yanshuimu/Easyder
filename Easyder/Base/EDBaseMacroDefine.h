@@ -7,6 +7,7 @@
 //
 
 #import "EDUtils.h"
+#import "GHConsole.h"
 
 #ifndef EDBaseMacroDefine_h
 #define EDBaseMacroDefine_h
@@ -70,6 +71,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define EDLoginAccount     @"LoginAccount"
 //自动登录
 #define EDAutoLogin     @"AutoLogin"
+//
+#define EDConsoleEnabled @"EDConsoleEnabled"
 
 /// 第一个参数是当下的控制器适配iOS11 一下的，第二个参数表示scrollview或子类
 #define AdjustsScrollViewInsetNever(controller,view) if(@available(iOS 11.0, *)) {view.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;} else if([controller isKindOfClass:[UIViewController class]]) {controller.automaticallyAdjustsScrollViewInsets = false;}
@@ -226,9 +229,9 @@ sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
 
 // 正式环境屏蔽控制台打印
 #ifdef RELEASE
-    #define NSLog(FORMAT, ...) nil
+#define NSLog(FORMAT, ...) if([EDUserDefaults valueForKey:EDConsoleEnabled]) {GGLog(FORMAT, ##__VA_ARGS__);} else {((void)0);}
 #else
-    #define NSLog(FORMAT, ...) fprintf(stderr,"<%s : %d>\n%s\n%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __func__ ,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#define NSLog(FORMAT, ...) if([EDUserDefaults valueForKey:EDConsoleEnabled]) {GGLog(FORMAT, ##__VA_ARGS__);} else {fprintf(stderr,"<%s : %d>\n%s\n%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, __func__ ,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);}
 #endif
 
 #endif /* EDBaseDefine_h */

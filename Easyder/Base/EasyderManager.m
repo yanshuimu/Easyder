@@ -6,6 +6,8 @@
 //
 
 #import "EasyderManager.h"
+#import "EDBaseMacroDefine.h"
+#import "GHConsole.h"
 
 static EasyderManager *manager = nil;
 
@@ -43,6 +45,20 @@ static EasyderManager *manager = nil;
 - (void)stopMoninNet {
     
     [_moninNet stopMoninNet];
+}
+
+- (void)setConsoleEnable:(BOOL)consoleEnable {
+    
+    if (consoleEnable) {
+        [EDUserDefaults setValue:@"1" forKey:EDConsoleEnabled];
+        [EDUserDefaults synchronize];
+        [[GHConsole sharedConsole] startPrintLog];
+    }
+    else {
+        [EDUserDefaults removeObjectForKey:EDConsoleEnabled];
+        [EDUserDefaults synchronize];
+        [[GHConsole sharedConsole] stopPrinting];
+    }
 }
 
 @end

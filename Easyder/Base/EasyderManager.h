@@ -24,7 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGFloat heightRatio;
 //主题色，默认白色
 @property (nonatomic, strong) UIColor *themeColor;
-
+//是否打开控制台
+@property (nonatomic, assign) BOOL consoleEnable;
 /**
  * 开始网络监测
  */

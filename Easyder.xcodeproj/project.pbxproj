@@ -61,6 +61,8 @@
 		046F2FD025C398AA00824C91 /* EDConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F2FCF25C398A900824C91 /* EDConfig.m */; };
 		046F30B125C3F88000824C91 /* EDSwitchDomainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */; };
 		046F30B625C3F88C00824C91 /* EDSwitchDomainControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F30B525C3F88C00824C91 /* EDSwitchDomainControllerConfig.m */; };
+		046F30C825C4171B00824C91 /* GHConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F30C525C4171B00824C91 /* GHConsole.m */; };
+		046F30C925C4171B00824C91 /* GHConsole.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 046F30C725C4171B00824C91 /* GHConsole.bundle */; };
 		04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04A39ACC25A2A854007F596E /* Easyder.podspec */; };
 		04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */; };
 		04A39CA225A826F0007F596E /* EDBase+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CA125A826EF007F596E /* EDBase+Extension.m */; };
@@ -186,6 +188,9 @@
 		046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSwitchDomainController.m; sourceTree = "<group>"; };
 		046F30B425C3F88C00824C91 /* EDSwitchDomainControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSwitchDomainControllerConfig.h; sourceTree = "<group>"; };
 		046F30B525C3F88C00824C91 /* EDSwitchDomainControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSwitchDomainControllerConfig.m; sourceTree = "<group>"; };
+		046F30C525C4171B00824C91 /* GHConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHConsole.m; sourceTree = "<group>"; };
+		046F30C625C4171B00824C91 /* GHConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHConsole.h; sourceTree = "<group>"; };
+		046F30C725C4171B00824C91 /* GHConsole.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GHConsole.bundle; sourceTree = "<group>"; };
 		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
 		04A39C8E25A7E7BC007F596E /* EDBaseMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseMacroDefine.h; sourceTree = "<group>"; };
 		04A39C9C25A80E29007F596E /* UIColor+EDExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EDExtension.h"; sourceTree = "<group>"; };
@@ -303,6 +308,16 @@
 				046CEA55259DD699000F9DE3 /* TestTableViewCtrl.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		046F30C425C4171B00824C91 /* GHConsole */ = {
+			isa = PBXGroup;
+			children = (
+				046F30C525C4171B00824C91 /* GHConsole.m */,
+				046F30C625C4171B00824C91 /* GHConsole.h */,
+				046F30C725C4171B00824C91 /* GHConsole.bundle */,
+			);
+			path = GHConsole;
 			sourceTree = "<group>";
 		};
 		04A39AD125A2BBCB007F596E /* Resources */ = {
@@ -455,6 +470,7 @@
 		04A39CA325A82C7E007F596E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				046F30C425C4171B00824C91 /* GHConsole */,
 				04A39CC725AC0124007F596E /* HGTimerButton */,
 				04A39CC325AC003E007F596E /* CountingLabel */,
 				04A39C9725A7FA64007F596E /* LYEmptyView */,
@@ -578,6 +594,7 @@
 				046CE9C2259DD48A000F9DE3 /* LaunchScreen.storyboard in Resources */,
 				04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */,
 				046CE9BF259DD48A000F9DE3 /* Assets.xcassets in Resources */,
+				046F30C925C4171B00824C91 /* GHConsole.bundle in Resources */,
 				046CE9BD259DD487000F9DE3 /* Main.storyboard in Resources */,
 				046CEA3A259DD5D9000F9DE3 /* .gitkeep in Resources */,
 			);
@@ -632,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046F30C825C4171B00824C91 /* GHConsole.m in Sources */,
 				046CEA40259DD5D9000F9DE3 /* UIView+Empty.m in Sources */,
 				046CEA2D259DD5D9000F9DE3 /* NSDate+EDExtension.m in Sources */,
 				046CEA4D259DD5D9000F9DE3 /* EDBaseCollectionViewController.m in Sources */,

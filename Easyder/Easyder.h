@@ -75,5 +75,6 @@
 #import "LYEmptyViewHeader.h"
 #import "UICountingLabel.h"
 #import "HGTimerButton.h"
+#import "GHConsole.h"
 
 #endif /* Easyder_h */
