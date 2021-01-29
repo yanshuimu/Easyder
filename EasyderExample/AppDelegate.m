@@ -43,7 +43,7 @@
     
     EasyderManager *manager = [EasyderManager shareManager];
     manager.themeColor = EDHexColor(@"#303642");
-    
+    manager.consoleEnable = YES;
     [manager startMoninNet];
 }
 
