@@ -29,7 +29,7 @@
     
     if (self = [super initWithRootViewController:rootViewController]) {
         
-        [self setStyle:[[EDNavigationControllerStyle alloc] init]];
+        [self setStyle:[EDConfig navigationControllerStyle]];
     }
     return self;
 }

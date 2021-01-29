@@ -66,7 +66,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
 
 - (void)configEmptyPage:(NSInteger)emptyPageType hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block {
     
-    [self configEmptyPage:emptyPageType style:[[EDEmptyViewStyle alloc] init] hasData:hasData hasError:hasError offsetY:offsetY reloadButtonBlock:block];
+    [self configEmptyPage:emptyPageType style:[EDConfig emptyViewStyle] hasData:hasData hasError:hasError offsetY:offsetY reloadButtonBlock:block];
 }
 
 - (void)configEmptyPage:(NSInteger)emptyPageType style:(EDEmptyViewStyle*)style hasData:(BOOL)hasData hasError:(BOOL)hasError offsetY:(CGFloat)offsetY reloadButtonBlock:(LYActionTapBlock)block{

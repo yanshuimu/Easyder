@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EDBaseAlertViewStyle.h"
+#import "EDConfig.h"
 
 typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
     

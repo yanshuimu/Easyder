@@ -45,6 +45,7 @@
 #import "EDNavigationControllerStyle.h"
 #import "EDBaseAlertViewStyle.h"
 #import "EDEmptyViewStyle.h"
+#import "EDSwitchDomainControllerConfig.h"
 
 //Network
 #import "EDMoninNet.h"
@@ -67,6 +68,7 @@
 #import "EDCycleScrollView.h"
 #import "EDBaseAlertView.h"
 #import "EDBasePaginationAlertView.h"
+#import "EDSwitchDomainController.h"
 #import "EDBase+Extension.h"
 
 //Lib

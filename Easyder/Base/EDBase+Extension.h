@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "LYEmptyViewHeader.h"
-#import "EDEmptyViewStyle.h"
+#import "EDConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

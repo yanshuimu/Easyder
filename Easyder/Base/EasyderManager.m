@@ -6,7 +6,6 @@
 //
 
 #import "EasyderManager.h"
-#import "UIColor+EDExtension.h"
 
 static EasyderManager *manager = nil;
 

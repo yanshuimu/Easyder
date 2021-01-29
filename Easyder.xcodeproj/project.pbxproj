@@ -58,6 +58,9 @@
 		046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CEA56259DD699000F9DE3 /* TestAlertView.m */; };
 		046F2ECD25C0F4E900824C91 /* EDBaseAlertViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F2ECC25C0F4E900824C91 /* EDBaseAlertViewStyle.m */; };
 		046F2ED125C0F7EA00824C91 /* EDEmptyViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F2ED025C0F7EA00824C91 /* EDEmptyViewStyle.m */; };
+		046F2FD025C398AA00824C91 /* EDConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F2FCF25C398A900824C91 /* EDConfig.m */; };
+		046F30B125C3F88000824C91 /* EDSwitchDomainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */; };
+		046F30B625C3F88C00824C91 /* EDSwitchDomainControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 046F30B525C3F88C00824C91 /* EDSwitchDomainControllerConfig.m */; };
 		04A39ACD25A2A854007F596E /* Easyder.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 04A39ACC25A2A854007F596E /* Easyder.podspec */; };
 		04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39C9D25A80E29007F596E /* UIColor+EDExtension.m */; };
 		04A39CA225A826F0007F596E /* EDBase+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CA125A826EF007F596E /* EDBase+Extension.m */; };
@@ -177,6 +180,12 @@
 		046F2ECC25C0F4E900824C91 /* EDBaseAlertViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDBaseAlertViewStyle.m; sourceTree = "<group>"; };
 		046F2ECF25C0F7EA00824C91 /* EDEmptyViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDEmptyViewStyle.h; sourceTree = "<group>"; };
 		046F2ED025C0F7EA00824C91 /* EDEmptyViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDEmptyViewStyle.m; sourceTree = "<group>"; };
+		046F2FCE25C398A900824C91 /* EDConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDConfig.h; sourceTree = "<group>"; };
+		046F2FCF25C398A900824C91 /* EDConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDConfig.m; sourceTree = "<group>"; };
+		046F30AF25C3F87F00824C91 /* EDSwitchDomainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSwitchDomainController.h; sourceTree = "<group>"; };
+		046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSwitchDomainController.m; sourceTree = "<group>"; };
+		046F30B425C3F88C00824C91 /* EDSwitchDomainControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSwitchDomainControllerConfig.h; sourceTree = "<group>"; };
+		046F30B525C3F88C00824C91 /* EDSwitchDomainControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSwitchDomainControllerConfig.m; sourceTree = "<group>"; };
 		04A39ACC25A2A854007F596E /* Easyder.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Easyder.podspec; sourceTree = SOURCE_ROOT; };
 		04A39C8E25A7E7BC007F596E /* EDBaseMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDBaseMacroDefine.h; sourceTree = "<group>"; };
 		04A39C9C25A80E29007F596E /* UIColor+EDExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+EDExtension.h"; sourceTree = "<group>"; };
@@ -323,12 +332,16 @@
 		04A39C9825A7FB70007F596E /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				046F30B425C3F88C00824C91 /* EDSwitchDomainControllerConfig.h */,
+				046F30B525C3F88C00824C91 /* EDSwitchDomainControllerConfig.m */,
 				EF3E5CF625C04F7900097D47 /* EDNavigationControllerStyle.h */,
 				EF3E5CF725C04F7A00097D47 /* EDNavigationControllerStyle.m */,
 				046F2ECB25C0F4E900824C91 /* EDBaseAlertViewStyle.h */,
 				046F2ECC25C0F4E900824C91 /* EDBaseAlertViewStyle.m */,
 				046F2ECF25C0F7EA00824C91 /* EDEmptyViewStyle.h */,
 				046F2ED025C0F7EA00824C91 /* EDEmptyViewStyle.m */,
+				046F2FCE25C398A900824C91 /* EDConfig.h */,
+				046F2FCF25C398A900824C91 /* EDConfig.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -398,6 +411,8 @@
 		04A39C9F25A826AA007F596E /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				046F30AF25C3F87F00824C91 /* EDSwitchDomainController.h */,
+				046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */,
 				04A39CA025A826EF007F596E /* EDBase+Extension.h */,
 				04A39CA125A826EF007F596E /* EDBase+Extension.m */,
 				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
@@ -649,6 +664,7 @@
 				04A39CBE25ABF88D007F596E /* EDLanguageUtil.m in Sources */,
 				046CEA58259DD699000F9DE3 /* TestNextPageCtrl.m in Sources */,
 				046CEA44259DD5D9000F9DE3 /* EDCycleScrollView.m in Sources */,
+				046F30B625C3F88C00824C91 /* EDSwitchDomainControllerConfig.m in Sources */,
 				046CEA3E259DD5D9000F9DE3 /* EDUtils.m in Sources */,
 				046CEA42259DD5D9000F9DE3 /* LYEmptyView.m in Sources */,
 				046CEA38259DD5D9000F9DE3 /* UITextView+EDExtension.m in Sources */,
@@ -661,11 +677,13 @@
 				046CEA4C259DD5D9000F9DE3 /* EDBaseModel.m in Sources */,
 				046CE9C5259DD48A000F9DE3 /* main.m in Sources */,
 				046CEA3D259DD5D9000F9DE3 /* EDKeyChainUtil.m in Sources */,
+				046F30B125C3F88000824C91 /* EDSwitchDomainController.m in Sources */,
 				04A39CC625AC003E007F596E /* UICountingLabel.m in Sources */,
 				046CEA5A259DD699000F9DE3 /* TestAlertView.m in Sources */,
 				04A39CCC25AC0124007F596E /* HWWeakTimer.m in Sources */,
 				046CEA4A259DD5D9000F9DE3 /* EDBaseView.m in Sources */,
 				046CEA41259DD5D9000F9DE3 /* UIView+LYExtension.m in Sources */,
+				046F2FD025C398AA00824C91 /* EDConfig.m in Sources */,
 				04A39C9E25A80E29007F596E /* UIColor+EDExtension.m in Sources */,
 				046CEA47259DD5D9000F9DE3 /* EDBaseTableViewController.m in Sources */,
 				046CEA35259DD5D9000F9DE3 /* NSArray+EDExtension.m in Sources */,

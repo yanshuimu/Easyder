@@ -17,7 +17,7 @@ static AFHTTPSessionManager *manager;
 static AFURLSessionManager *urlManager;
 
 
-void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
+void EDLog(EDRequestEnty *requestEnty, NSString *format, ...)
 {
     if (requestEnty && requestEnty.openLog) {
         
@@ -49,11 +49,11 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
 
 + (void)requestWithEnty:(EDRequestEnty *)requestEnty
 {    
-    EDRequestLog(requestEnty, @"url == %@\n",requestEnty.requestUrl);
+    EDLog(requestEnty, @"url == %@\n",requestEnty.requestUrl);
     
     if (requestEnty.requestType == 0) { //请求方式 0:get
         
-        EDRequestLog(requestEnty, @"GET params == %@",requestEnty.params);
+        EDLog(requestEnty, @"GET params == %@",requestEnty.params);
         
         AFHTTPSessionManager *manager = [self initHttpManager];
         
@@ -63,20 +63,20 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            EDRequestLog(requestEnty, @"%@", responseObject);
+            EDLog(requestEnty, @"%@", responseObject);
             
             [self commonRequestSuccessWithResponseObject:responseObject requestEnty:requestEnty];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            EDRequestLog(requestEnty, @"%@",task.response);
+            EDLog(requestEnty, @"%@",task.response);
             
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];
     }
     else if (requestEnty.requestType == 1){//请求方式 1:post
         
-        EDRequestLog(requestEnty, @"POST params == %@",requestEnty.params);
+        EDLog(requestEnty, @"POST params == %@",requestEnty.params);
         
         AFHTTPSessionManager *manager = [self initHttpManager];
         
@@ -86,20 +86,20 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            EDRequestLog(requestEnty, @"%@", responseObject);
+            EDLog(requestEnty, @"%@", responseObject);
             
             [self commonRequestSuccessWithResponseObject:responseObject requestEnty:requestEnty];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            EDRequestLog(requestEnty, @"%@",task.response);
+            EDLog(requestEnty, @"%@",task.response);
             
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];
     }
     else if (requestEnty.requestType == 2) { //请求方式 1:post
         
-        EDRequestLog(requestEnty, @"POST params == %@",requestEnty.params);
+        EDLog(requestEnty, @"POST params == %@",requestEnty.params);
         
         AFURLSessionManager *manager = [self initUrlManager];
         
@@ -138,13 +138,13 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
                 NSData *data = responseObject;
                 NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
                 
-                EDRequestLog(requestEnty, @"%@", jsonDict);
+                EDLog(requestEnty, @"%@", jsonDict);
                 
                 [self commonRequestSuccessWithResponseObject:jsonDict requestEnty:requestEnty];
                 
             } else {
                 
-                EDRequestLog(requestEnty, @"%@", response);
+                EDLog(requestEnty, @"%@", response);
                 
                 [self commonRequestFailureWithError:error requestEnty:requestEnty];
             }
@@ -153,7 +153,7 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
     }
     else if (requestEnty.requestType == 3){// 2:上传单张图片
         
-        EDRequestLog(requestEnty, @"单张图片上传params == %@",requestEnty.params);
+        EDLog(requestEnty, @"单张图片上传params == %@",requestEnty.params);
         
         AFHTTPSessionManager *manager = [self initHttpManager];
         
@@ -173,20 +173,20 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            EDRequestLog(requestEnty, @"%@", responseObject);
+            EDLog(requestEnty, @"%@", responseObject);
             
             [self commonRequestSuccessWithResponseObject:responseObject requestEnty:requestEnty];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            EDRequestLog(requestEnty, @"%@",task.response);
+            EDLog(requestEnty, @"%@",task.response);
             
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];
     }
     else if (requestEnty.requestType == 4){//3:上传多张图片
            
-        EDRequestLog(requestEnty, @"多张图片上传params == %@",requestEnty.params);
+        EDLog(requestEnty, @"多张图片上传params == %@",requestEnty.params);
            
         AFHTTPSessionManager *manager = [self initHttpManager];
         
@@ -231,20 +231,20 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
            
        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
            
-           EDRequestLog(requestEnty, @"%@", responseObject);
+           EDLog(requestEnty, @"%@", responseObject);
            
            [self commonRequestSuccessWithResponseObject:responseObject requestEnty:requestEnty];
            
        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            
-           EDRequestLog(requestEnty, @"%@",task.response);
+           EDLog(requestEnty, @"%@",task.response);
            
            [self commonRequestFailureWithError:error requestEnty:requestEnty];
        }];
     }
     else if (requestEnty.requestType == 5){//4:上传单个视频文件
             
-        EDRequestLog(requestEnty, @"单个视频上传params == %@",requestEnty.params);
+        EDLog(requestEnty, @"单个视频上传params == %@",requestEnty.params);
             
         AFHTTPSessionManager *manager = [self initHttpManager];
         
@@ -267,13 +267,13 @@ void EDRequestLog(EDRequestEnty *requestEnty, NSString *format, ...)
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             
-            EDRequestLog(requestEnty, @"%@", responseObject);
+            EDLog(requestEnty, @"%@", responseObject);
             
             [self commonRequestSuccessWithResponseObject:responseObject requestEnty:requestEnty];
             
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             
-            EDRequestLog(requestEnty, @"%@",task.response);
+            EDLog(requestEnty, @"%@",task.response);
             
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];

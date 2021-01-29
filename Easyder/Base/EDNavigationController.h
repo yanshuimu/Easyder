@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EDNavigationControllerStyle.h"
+#import "EDConfig.h"
 
 @interface EDNavigationController : UINavigationController
 

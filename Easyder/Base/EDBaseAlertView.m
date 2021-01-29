@@ -52,7 +52,7 @@
     
     if (self = [super initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_H)]) {
         
-        _style = [[EDBaseAlertViewStyle alloc] init];
+        _style = [EDConfig baseAlertViewStyle];
         
         [self configuration];
         
