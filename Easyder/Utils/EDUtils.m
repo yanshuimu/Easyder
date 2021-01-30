@@ -11,8 +11,8 @@
 #import <CommonCrypto/CommonCryptor.h>
 #import <MJRefresh/MJRefresh.h>
 
-#define SCREEN_W ([UIScreen mainScreen].bounds.size.width)
-#define SCREEN_H ([UIScreen mainScreen].bounds.size.height)
+#define EDUtilScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define EDUtilScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
 /* Base64加密表 */
 static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -268,10 +268,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     
     NSRange headRange = [html rangeOfString:@"<head>"];
     if (headRange.length>0) {
-        html = [NSString stringWithFormat:@"%@<style>img{width:%.fpx !important;}</style>%@",[html substringToIndex:headRange.location+headRange.length],SCREEN_W-30,[html substringFromIndex:headRange.location+headRange.length]];
+        html = [NSString stringWithFormat:@"%@<style>img{width:%.fpx !important;}</style>%@",[html substringToIndex:headRange.location+headRange.length],EDUtilScreenWidth-30,[html substringFromIndex:headRange.location+headRange.length]];
     }
     else{
-        html = [NSString stringWithFormat:@"<head><style>img{max-width:%.fpx !important;}</style></head>%@",SCREEN_W-30,html];
+        html = [NSString stringWithFormat:@"<head><style>img{max-width:%.fpx !important;}</style></head>%@",EDUtilScreenWidth-30,html];
     }
     headRange = [html rangeOfString:@"</head>"];
     htmlBefore = [htmlBefore stringByAppendingString:[html substringToIndex:headRange.location+headRange.length]];
@@ -281,10 +281,10 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     NSRange bodyRange = [html rangeOfString:@"<body"];
     if (bodyRange.length>0) {
         NSRange range = [[html substringFromIndex:bodyRange.location] rangeOfString:@">"];
-        html = [NSString stringWithFormat:@"<body width=%.fpx style=/\"word-wrap:break-word; font-family:Arial; text-align:center;/\">%@",SCREEN_W-20,[html substringFromIndex:bodyRange.location+range.location+range.length]];
+        html = [NSString stringWithFormat:@"<body width=%.fpx style=/\"word-wrap:break-word; font-family:Arial; text-align:center;/\">%@",EDUtilScreenWidth-20,[html substringFromIndex:bodyRange.location+range.location+range.length]];
     }
     else{
-        html = [NSString stringWithFormat:@"<body width=%.fpx style=/\"word-wrap:break-word; font-family:Arial; text-align:center;/\">%@</body>",SCREEN_W-20,html];
+        html = [NSString stringWithFormat:@"<body width=%.fpx style=/\"word-wrap:break-word; font-family:Arial; text-align:center;/\">%@</body>",EDUtilScreenWidth-20,html];
     }
     
     html = [NSString stringWithFormat:@"%@%@%@",htmlBefore,html,htmlAfter];

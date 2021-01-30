@@ -6,7 +6,6 @@
 //  Copyright © 2017年 easyder. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @interface EDUtils : NSObject
