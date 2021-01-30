@@ -400,6 +400,16 @@
     _isShowConsole = NO;
 }
 
+- (void)setIsSilent:(BOOL)isSilent {
+    
+    if (isSilent) {
+        self.consoleWindow.hidden = YES;
+    }
+    else {
+        self.consoleWindow.hidden = YES;
+    }
+}
+
 - (void)saveText {
     if (self.logStingArray.count<1) {
         return;

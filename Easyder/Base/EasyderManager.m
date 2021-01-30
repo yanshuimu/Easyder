@@ -49,15 +49,34 @@ static EasyderManager *manager = nil;
 
 - (void)setConsoleEnable:(BOOL)consoleEnable {
     
+    GHConsole *console = [GHConsole sharedConsole];
+    
     if (consoleEnable) {
         [EDUserDefaults setValue:@"1" forKey:EDConsoleEnabled];
         [EDUserDefaults synchronize];
-        [[GHConsole sharedConsole] startPrintLog];
+        [console startPrintLog];
     }
     else {
         [EDUserDefaults removeObjectForKey:EDConsoleEnabled];
         [EDUserDefaults synchronize];
-        [[GHConsole sharedConsole] stopPrinting];
+        [console stopPrinting];
+    }
+}
+
+- (void)setConsoleEnableBySilent:(BOOL)consoleEnableBySilent {
+    
+    GHConsole *console = [GHConsole sharedConsole];
+    
+    if (consoleEnableBySilent) {
+        [EDUserDefaults setValue:@"1" forKey:EDConsoleEnabled];
+        [EDUserDefaults synchronize];
+        [console startPrintLog];
+        [console setIsSilent:YES];
+    }
+    else {
+        [EDUserDefaults removeObjectForKey:EDConsoleEnabled];
+        [EDUserDefaults synchronize];
+        [console stopPrinting];
     }
 }
 

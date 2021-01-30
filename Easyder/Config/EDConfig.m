@@ -54,33 +54,10 @@
     style.buttonHeight = 40.0;
     style.buttonCornerRadius = 5.0;
     
-    /**
-     * 示例
-     *
-     __weak typeof(style) weakStyle = style;
+    //在block中根据emptyPageType枚举值处理不同情况界面展示
      style.conditionsBlock = ^(NSInteger emptyPageType) {
          
          switch (emptyPageType) {
-             case EaseBlankPageTypeServiceItem: {//收银项目列表
-                 weakStyle.buttonTitle = @"添加商品";
-             }
-                 break;
-             case EaseBlankPageTypeProduct: {//收银产品列表
-                 weakStyle.buttonTitle = @"添加商品";
-             }
-                 break;
-             case EaseBlankPageTypeProductManager: {//产品管理
-                 weakStyle.buttonTitle = @"添加产品";
-             }
-                 break;
-             case EaseBlankPageTypeItemManager: {//项目管理
-                 weakStyle.buttonTitle = @"添加项目";
-             }
-                 break;
-             case EaseBlankPageTypeCardManager: {//卡管理
-                 weakStyle.buttonTitle = @"添加卡";
-             }
-                 break;
              default://其它页面（这里没有提到的页面，都属于其它）
              {
                  
@@ -88,7 +65,6 @@
                  break;
          }
      };
-     */
      
     return style;
 }
@@ -101,10 +77,12 @@
     
     config.domainRemarkArray = @[];
     
+    //调用自动登录方法
     config.autoLoginBlock = ^{
         
     };
     
+    //调用回到登录界面方法
     config.reLoginBlock = ^{
         
     };

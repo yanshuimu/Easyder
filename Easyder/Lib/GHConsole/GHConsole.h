@@ -76,6 +76,8 @@ typedef void (^readTextBlock)(void);
 + (instancetype)sharedConsole;
 
 @property (nonatomic,strong) GHConsoleWindow *consoleWindow;
+//是否静默打印
+@property (nonatomic, assign) BOOL isSilent;
 
 - (void)startPrintLog;
 

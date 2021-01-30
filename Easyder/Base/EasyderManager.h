@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIColor *themeColor;
 //是否打开控制台
 @property (nonatomic, assign) BOOL consoleEnable;
+//是否静默打开控制台，用户无感知，适用于远程日志
+@property (nonatomic, assign) BOOL consoleEnableBySilent;
 /**
  * 开始网络监测
  */

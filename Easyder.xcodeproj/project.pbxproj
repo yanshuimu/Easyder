@@ -426,12 +426,10 @@
 		04A39C9F25A826AA007F596E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				046F30AF25C3F87F00824C91 /* EDSwitchDomainController.h */,
-				046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */,
-				04A39CA025A826EF007F596E /* EDBase+Extension.h */,
-				04A39CA125A826EF007F596E /* EDBase+Extension.m */,
 				046CEA26259DD5D9000F9DE3 /* EasyderManager.h */,
 				046CE9F7259DD5D9000F9DE3 /* EasyderManager.m */,
+				04A39CA025A826EF007F596E /* EDBase+Extension.h */,
+				04A39CA125A826EF007F596E /* EDBase+Extension.m */,
 				046CEA0C259DD5D9000F9DE3 /* EDBaseAlertView.h */,
 				046CEA19259DD5D9000F9DE3 /* EDBaseAlertView.m */,
 				046CEA1A259DD5D9000F9DE3 /* EDBaseCollectionCell.h */,
@@ -443,6 +441,8 @@
 				04A39C8E25A7E7BC007F596E /* EDBaseMacroDefine.h */,
 				046CEA0E259DD5D9000F9DE3 /* EDBaseModel.h */,
 				046CEA20259DD5D9000F9DE3 /* EDBaseModel.m */,
+				04D7F86825B03E81001E439A /* EDBasePaginationAlertView.h */,
+				04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */,
 				046CEA0F259DD5D9000F9DE3 /* EDBaseTableCell.h */,
 				046CEA1F259DD5D9000F9DE3 /* EDBaseTableCell.m */,
 				046CEA1C259DD5D9000F9DE3 /* EDBaseTableHeaderFooterView.h */,
@@ -461,8 +461,8 @@
 				046CEA15259DD5D9000F9DE3 /* EDNavigationController.m */,
 				046CE9E0259DD5D9000F9DE3 /* EDNullSafe.m */,
 				04D7F86625AFE806001E439A /* EDProtocol.h */,
-				04D7F86825B03E81001E439A /* EDBasePaginationAlertView.h */,
-				04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */,
+				046F30AF25C3F87F00824C91 /* EDSwitchDomainController.h */,
+				046F30B025C3F87F00824C91 /* EDSwitchDomainController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
