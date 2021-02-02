@@ -97,7 +97,7 @@ void EDLog(EDRequestEnty *requestEnty, NSString *format, ...)
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];
     }
-    else if (requestEnty.requestType == 2) { //请求方式 1:post
+    else if (requestEnty.requestType == 2) { //请求方式 2:post
         
         EDLog(requestEnty, @"POST params == %@",requestEnty.params);
         
@@ -151,7 +151,7 @@ void EDLog(EDRequestEnty *requestEnty, NSString *format, ...)
             
         }] resume];
     }
-    else if (requestEnty.requestType == 3){// 2:上传单张图片
+    else if (requestEnty.requestType == 3){// 3:上传单张图片
         
         EDLog(requestEnty, @"单张图片上传params == %@",requestEnty.params);
         
@@ -184,7 +184,7 @@ void EDLog(EDRequestEnty *requestEnty, NSString *format, ...)
             [self commonRequestFailureWithError:error requestEnty:requestEnty];
         }];
     }
-    else if (requestEnty.requestType == 4){//3:上传多张图片
+    else if (requestEnty.requestType == 4){//4:上传多张图片
            
         EDLog(requestEnty, @"多张图片上传params == %@",requestEnty.params);
            
@@ -242,7 +242,7 @@ void EDLog(EDRequestEnty *requestEnty, NSString *format, ...)
            [self commonRequestFailureWithError:error requestEnty:requestEnty];
        }];
     }
-    else if (requestEnty.requestType == 5){//4:上传单个视频文件
+    else if (requestEnty.requestType == 5){//5:上传单个视频文件
             
         EDLog(requestEnty, @"单个视频上传params == %@",requestEnty.params);
             

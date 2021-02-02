@@ -9,4 +9,15 @@
 
 @implementation EDBaseAlertViewStyle
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        
+        _backgroundColorAlpha = 0.7;
+        _animated = YES;
+        _clickMaskWithHidden = NO;
+    }
+    return self;
+}
+
 @end
