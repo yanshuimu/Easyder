@@ -2,8 +2,8 @@
 //  UIImage+Extension.m
 //  TT
 //
-//  Created by mac on 2018/2/11.
-//  Copyright © 2018年 mac. All rights reserved.
+//  Created by xuhonggui on 2018/2/11.
+//  Copyright © 2018年 xuhonggui. All rights reserved.
 //
 
 #import "UIImage+EDExtension.h"

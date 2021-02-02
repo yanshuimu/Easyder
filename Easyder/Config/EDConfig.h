@@ -2,7 +2,7 @@
 //  EDConfig.h
 //  Easyder
 //
-//  Created by mac on 2021/1/29.
+//  Created by xuhonggui on 2021/1/29.
 //
 
 /*

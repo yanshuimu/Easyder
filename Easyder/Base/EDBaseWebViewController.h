@@ -2,8 +2,8 @@
 //  EDBaseWebViewController.h
 //  Kehouyi
 //
-//  Created by mac on 2019/12/20.
-//  Copyright © 2019 mac. All rights reserved.
+//  Created by xuhonggui on 2019/12/20.
+//  Copyright © 2019 xuhonggui. All rights reserved.
 //
 
 #import "EDBaseViewController.h"

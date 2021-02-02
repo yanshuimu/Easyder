@@ -2,7 +2,7 @@
 //  EDBasePaginationAlertView.h
 //  Easyder
 //
-//  Created by mac on 2021/1/14.
+//  Created by xuhonggui on 2021/1/14.
 //
 
 #import "EDBaseAlertView.h"

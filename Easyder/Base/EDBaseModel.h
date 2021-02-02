@@ -1,9 +1,9 @@
 //
 //  EDBaseModel.h
-//  VClub
+//  Easyder
 //
-//  Created by mac on 2020/12/10.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/12/10.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

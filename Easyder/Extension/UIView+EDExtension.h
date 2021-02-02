@@ -2,7 +2,7 @@
 //  UIView+EDExtension.h
 //  EasyderDemo
 //
-//  Created by mac on 2020/12/25.
+//  Created by xuhonggui on 2020/12/25.
 //
 
 #import <UIKit/UIKit.h>

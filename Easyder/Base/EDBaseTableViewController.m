@@ -2,8 +2,8 @@
 //  DLCBaseTableViewController.m
 //  NewtonFitness
 //
-//  Created by mac on 2017/7/10.
-//  Copyright © 2017年 easyder. All rights reserved.
+//  Created by xuhonggui on 2017/7/10.
+//  Copyright © 2017年 xuhonggui. All rights reserved.
 //
 
 #import "EDBaseTableViewController.h"

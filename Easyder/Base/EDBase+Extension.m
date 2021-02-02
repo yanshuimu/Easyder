@@ -2,7 +2,7 @@
 //  UIView+EDBase.m
 //  Easyder
 //
-//  Created by mac on 2021/1/8.
+//  Created by xuhonggui on 2021/1/8.
 //
 
 #import "EDBase+Extension.h"

@@ -2,7 +2,7 @@
 //  TestTableViewCtrl.m
 //  Easyder_Example
 //
-//  Created by mac on 2020/12/31.
+//  Created by xuhonggui on 2020/12/31.
 //  Copyright © 2020 yanshuimu. All rights reserved.
 //
 

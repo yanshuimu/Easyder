@@ -3,7 +3,7 @@
 //  Kehouyi
 //
 //  Created by apple on 2019/8/16.
-//  Copyright © 2019 mac. All rights reserved.
+//  Copyright © 2019 xuhonggui. All rights reserved.
 //
 
 #import "EDSwitchDomainController.h"
@@ -30,8 +30,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #define EDSwitchDomainFontColorLightGray [UIColor colorWithRed:153.0/255.0 green:153.0/255.0 blue:153.0/255.0 alpha:1.0]
 
 #define EDSwitchDomainDefaultBackgroudColor [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0]
-
-#define EDSwitchDomainThemeColor [UIColor whiteColor]
 
 #define EDSwitchDomainStringIsEmpty(str) (str && [NSString stringWithFormat:@"%@", str].length > 0 ? NO : YES)
 
@@ -144,14 +142,17 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     UIButton *sureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     sureBtn.frame = CGRectMake(x, y, width, height);
     [sureBtn setTitle:@"进入应用" forState:UIControlStateNormal];
-    sureBtn.backgroundColor = [self themeColor];
     sureBtn.titleLabel.font = [UIFont systemFontOfSize:16];
-    [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     sureBtn.layer.cornerRadius = 4;
-    if (!self.navigationController) {
+    if ([self themeColor]) {
+        sureBtn.backgroundColor = [self themeColor];
+        [sureBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    }
+    else {
+        sureBtn.backgroundColor = [UIColor whiteColor];
+        [sureBtn setTitleColor:EDSwitchDomainFontColorDefault forState:UIControlStateNormal];
         sureBtn.layer.borderWidth = 0.5;
         sureBtn.layer.borderColor = EDSwitchDomainFontColorLightGray.CGColor;
-        [sureBtn setTitleColor:EDSwitchDomainFontColorDefault forState:UIControlStateNormal];
     }
     [_scrollView addSubview:sureBtn];
     [sureBtn addTarget:self action:@selector(sureBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -188,7 +189,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     NSString *lastDomain = [EDSwitchDomainUserDefaults valueForKey:EDSwitchDomainLastDomain];
     if (!EDSwitchDomainStringIsEmpty(lastDomain)) {
         _textField.text = lastDomain;
-        if (self.navigationController) {
+        if ([self themeColor]) {
             for (int i = 0; i < _domainArray.count; i++) {
                 NSString *domain = _domainArray[i];
                 if ([domain isEqualToString:lastDomain]) {
@@ -213,13 +214,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (UIColor*)themeColor {
     
     if (!self.navigationController) {
-        return EDSwitchDomainThemeColor;
+        return nil;
     }
     
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     UIColor *color = navigationBar.barTintColor;
-    if (color == nil) {
-        color = EDSwitchDomainThemeColor;
+    if (CGColorEqualToColor(color.CGColor, [UIColor whiteColor].CGColor)) {
+        return nil;
     }
     return color;
 }
@@ -232,6 +233,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         EDSwitchDomainTipAlert(@"请点击备选域名或输入域名");
         return;
     }
+    
+    [self.view endEditing:YES];
     
     NSString *lastDomain = [EDSwitchDomainUserDefaults valueForKey:EDSwitchDomainLastDomain];
     if (!EDSwitchDomainStringIsEmpty(lastDomain)) {
@@ -272,7 +275,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     for (UIButton *btn in _btnArray) {
         [btn setTitleColor:EDSwitchDomainFontColorDefault forState:UIControlStateNormal];
     }
-    if (self.navigationController) {
+    
+    if ([self themeColor]) {
         [sender setTitleColor:[self themeColor] forState:UIControlStateNormal];
     }
 }

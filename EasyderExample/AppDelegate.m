@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  Easyder
 //
-//  Created by mac on 2020/12/31.
+//  Created by xuhonggui on 2020/12/31.
 //
 
 #import "AppDelegate.h"

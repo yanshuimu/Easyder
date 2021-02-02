@@ -3,7 +3,7 @@
 //  PowerRamp
 //
 //  Created by apple on 2020/6/14.
-//  Copyright © 2020 mac. All rights reserved.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import "EDLanguageUtil.h"

@@ -2,7 +2,7 @@
 //  ViewController.m
 //  Easyder
 //
-//  Created by mac on 2020/12/31.
+//  Created by xuhonggui on 2020/12/31.
 //
 
 #import "ViewController.h"
@@ -11,6 +11,7 @@
 #import "TestNextPageCtrl.h"
 #import "TestTableViewCtrl.h"
 #import "EDBase+Extension.h"
+#import "EDSwitchDomainController.h"
 
 @interface ViewController ()
 //
@@ -82,6 +83,12 @@
             [self.navigationController pushViewController:ctrl animated:YES];
         }
             break;
+        case 3:
+        {
+            EDSwitchDomainController *ctrl = [[EDSwitchDomainController alloc] init];
+            [self.navigationController pushViewController:ctrl animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -122,7 +129,7 @@
 - (NSArray*)titleArray {
     if (!_titleArray) {
         
-        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView", @"EDBaseTableViewController"];
+        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView", @"EDBaseTableViewController", @"EDSwitchDomainController"];
     }
     return _titleArray;
 }

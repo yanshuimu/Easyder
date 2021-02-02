@@ -2,8 +2,8 @@
 //  UILabel+Extension.m
 //  RedWine
 //
-//  Created by mac on 2018/4/24.
-//  Copyright © 2018年 mac. All rights reserved.
+//  Created by xuhonggui on 2018/4/24.
+//  Copyright © 2018年 xuhonggui. All rights reserved.
 //
 
 #import "UILabel+EDExtension.h"

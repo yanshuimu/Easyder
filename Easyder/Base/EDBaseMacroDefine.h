@@ -2,8 +2,8 @@
 //  EDBaseDefine.h
 //  PowerRamp
 //
-//  Created by mac on 2020/6/12.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/6/12.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import "EDUtils.h"

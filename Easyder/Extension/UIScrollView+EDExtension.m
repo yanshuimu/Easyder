@@ -1,9 +1,9 @@
 //
 //  UIScrollView+MJRefresh.m
-//  MYYManager
+//  Easyder
 //
-//  Created by mac on 2020/10/16.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/10/16.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import "UIScrollView+EDExtension.h"

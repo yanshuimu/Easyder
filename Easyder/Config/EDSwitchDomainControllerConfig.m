@@ -1,9 +1,9 @@
 //
 //  EDSwitchDomainControllerConfig.m
-//  MYYManager
+//  Easyder
 //
-//  Created by mac on 2021/1/29.
-//  Copyright © 2021 mac. All rights reserved.
+//  Created by xuhonggui on 2021/1/29.
+//  Copyright © 2021 xuhonggui. All rights reserved.
 //
 
 #import "EDSwitchDomainControllerConfig.h"

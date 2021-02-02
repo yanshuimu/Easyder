@@ -2,7 +2,7 @@
 //  UIAlertController+EDExtension.m
 //  AnJiaKe
 //
-//  Created by mac on 2020/5/23.
+//  Created by xuhonggui on 2020/5/23.
 //  Copyright © 2020 xuhonggui. All rights reserved.
 //
 

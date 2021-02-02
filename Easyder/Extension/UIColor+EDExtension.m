@@ -2,7 +2,7 @@
 //  UIColor+EDExtension.m
 //  Easyder
 //
-//  Created by mac on 2021/1/8.
+//  Created by xuhonggui on 2021/1/8.
 //
 
 #import "UIColor+EDExtension.h"

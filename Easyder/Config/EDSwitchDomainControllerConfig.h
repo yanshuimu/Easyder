@@ -1,9 +1,9 @@
 //
 //  EDSwitchDomainControllerConfig.h
-//  MYYManager
+//  Easyder
 //
-//  Created by mac on 2021/1/29.
-//  Copyright © 2021 mac. All rights reserved.
+//  Created by xuhonggui on 2021/1/29.
+//  Copyright © 2021 xuhonggui. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //域名
 @property (nonatomic, strong) NSArray *domainArray;
-//域名备注
+//域名备注，可选
 @property (nonatomic, strong) NSArray *domainRemarkArray;
 //自动登录
 @property (nonatomic, copy) void (^autoLoginBlock)(void);

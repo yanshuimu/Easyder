@@ -1,9 +1,9 @@
 //
 //  EDBaseTableHeaderFooterView.m
-//  VClub
+//  Easyder
 //
-//  Created by mac on 2020/11/26.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/11/26.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import "EDBaseTableHeaderFooterView.h"

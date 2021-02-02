@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Easyder'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'Classes that improve development efficiency and simplify the project framework'
   s.homepage         = 'https://github.com/yanshuimu/Easyder'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -35,6 +35,10 @@ Pod::Spec.new do |s|
       end
       ss.subspec 'HGTimerButton' do |sss|
           sss.source_files = 'Easyder/Lib/HGTimerButton/*.{h,m}'
+      end
+      ss.subspec 'GHConsole' do |sss|
+          sss.source_files = 'Easyder/Lib/GHConsole/*.{h,m}'
+          sss.resource = 'Easyder/Lib/GHConsole/*.{png,bundle}'
       end
   end
   

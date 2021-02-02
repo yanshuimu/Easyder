@@ -2,8 +2,8 @@
 //  NSDate+Extension.m
 //  DYLRopeSkipping
 //
-//  Created by mac on 2017/8/23.
-//  Copyright © 2017年 easyder. All rights reserved.
+//  Created by xuhonggui on 2017/8/23.
+//  Copyright © 2017年 xuhonggui. All rights reserved.
 //
 
 #import "NSDate+EDExtension.h"

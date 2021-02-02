@@ -1,20 +1,15 @@
 //
 //  EDMangoFix.m
-//  MYYManager
+//  Easyder
 //
-//  Created by mac on 2020/4/9.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/4/9.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import "EDMangoFixUtil.h"
 #import <objc/message.h>
-#import "EDUtils.h"
 
-#define ED_MANGOFIX_BASE_URL @"http://47.115.42.149:8080/mangofix"
-
-#define ED_MANGOFIX_PATCH_URL_PATH @"/api/getmangofile"
-
-#define ED_MANGOFIX_GETMANGOFILE_URL [NSString stringWithFormat:@"%@%@", ED_MANGOFIX_BASE_URL, ED_MANGOFIX_PATCH_URL_PATH]
+#define EDStringIsEmpty(str) (str && [[NSString stringWithFormat:@"%@", str] length] > 0 ? NO : YES)
 
 typedef void(^CompleteBlock)(NSDictionary *dict);
 
@@ -29,7 +24,7 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 
 @implementation EDMangoFixUtil
 
-+ (instancetype)sharedInstance
++ (instancetype)sharedUtil
 {
     static EDMangoFixUtil *mangoFixUtil = nil;
     static dispatch_once_t predicate;
@@ -47,6 +42,7 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 }
 
 - (void)startWithAppId:(NSString*)appId privateKey:(NSString*)privateKey {
+    
     [self startWithAppId:appId privateKey:privateKey debug:NO];
 }
 
@@ -59,22 +55,23 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 
 - (void)evalRemoteMangoScript {
     
-    if ([EDUtils stringIsEmpty:_privateKey]) {
+    if (EDStringIsEmpty(_privateKey)) {
         NSLog(@"privateKey is null or empty");
         return;
     }
-    
-    id context = ((id (*) (id, SEL))objc_msgSend)(objc_getClass("MFContext"), sel_registerName("alloc"));
-    ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("initWithRSAPrivateKey:"), _privateKey);
-    
+        
     [self checkRemoteFixWithCompletion:^(NSDictionary *dict) {
+        
         NSString *fileName = @"demo.mg";
         NSString *fileDirectory = [self fixFileDirectory];
         NSString *filePath = [fileDirectory stringByAppendingPathComponent:fileName];
+        
         if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            
             NSString *script = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
             if (script && script.length > 0) {
-                ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("evalMangoScriptWithRSAEncryptedBase64String:"), script);
+                
+                [self evalMangoScriptWithRSAEncryptedBase64String:script context:[self context]];
                 NSLog(@"eval remote script success!");
             }
             else {
@@ -89,18 +86,16 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 
 - (void)evalLocalMangoScript {
         
-    if ([EDUtils stringIsEmpty:_privateKey]) {
+    if (EDStringIsEmpty(_privateKey)) {
         NSLog(@"privateKey is null or empty");
         return;
     }
-    
-    id context = ((id (*) (id, SEL))objc_msgSend)(objc_getClass("MFContext"), sel_registerName("alloc"));
-    ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("initWithRSAPrivateKey:"), _privateKey);
-    
+        
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"encrypted_demo" ofType:@"mg"];
     NSString *script = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    if (script && script.length > 0) {
-        ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("evalMangoScriptWithRSAEncryptedBase64String:"), script);
+    if (!EDStringIsEmpty(script)) {
+        
+        [self evalMangoScriptWithRSAEncryptedBase64String:script context:[self context]];
         NSLog(@"eval local script success!");
     }
     else {
@@ -110,17 +105,15 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 
 - (void)evalLocalUnEncryptedMangoScriptWithPublicKey:(NSString*)publicKey {
         
-    if ([EDUtils stringIsEmpty:_privateKey]) {
+    if (EDStringIsEmpty(_privateKey)) {
         NSLog(@"privateKey is null or empty");
         return;
     }
-    
-    id context = ((id (*) (id, SEL))objc_msgSend)(objc_getClass("MFContext"), sel_registerName("alloc"));
-    ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("initWithRSAPrivateKey:"), _privateKey);
-    
+        
     NSString *script = [self encryptScirptWithPublicKey:publicKey];
-    if (script && script.length > 0) {
-        ((void (*) (id, SEL, NSString *))objc_msgSend)(context, sel_registerName("evalMangoScriptWithRSAEncryptedBase64String:"), script);
+    if (!EDStringIsEmpty(script)) {
+        
+        [self evalMangoScriptWithRSAEncryptedBase64String:script context:[self context]];
         NSLog(@"eval local script success!");
     }
     else {
@@ -139,8 +132,7 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
     {
         NSString *encodePublicKey = [NSString stringWithCString:[publicKey UTF8String] encoding:NSUTF8StringEncoding];
         if (outErr) goto err;
-        
-        result = ((NSString * (*)(id, SEL, NSString *, NSString *))objc_msgSend)(objc_getClass("MFRSA"), sel_registerName("encryptString:publicKey:"), planScriptString, encodePublicKey);
+        result = [self encryptString:planScriptString publicKey:encodePublicKey];
     }
     
     err:
@@ -161,7 +153,7 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
     {
         NSString *encodePublicKey = [NSString stringWithCString:[publicKey UTF8String] encoding:NSUTF8StringEncoding];
         if (outErr) goto err;
-        NSString *encryptedScriptString = ((NSString * (*)(id, SEL, NSString *, NSString *))objc_msgSend)(objc_getClass("MFRSA"), sel_registerName("encryptString:publicKey:"), planScriptString, encodePublicKey);
+        NSString *encryptedScriptString = [self encryptString:planScriptString publicKey:encodePublicKey];;
         
         encryptedPath= [(NSString *)[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"encrypted_demo.mg"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -187,15 +179,41 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
     return [infoDict valueForKey:@"CFBundleShortVersionString"];
 }
 
-- (NSString*)mangoFixPatchUrl {
+#pragma mark - objc
+
+/**
+ * 获取MFContext
+ */
+- (id)context {
     
-    if (![EDUtils stringIsEmpty:_baseUrl] && ![EDUtils stringIsEmpty:_patchUrlPath]) {
-        return [NSString stringWithFormat:@"%@%@", _baseUrl, _patchUrlPath];
+    id context = ((id (*) (id, SEL))objc_msgSend)(objc_getClass("MFContext"), sel_registerName("alloc"));
+    
+    if (!context) {
+        return nil;
     }
-    else if (![EDUtils stringIsEmpty:_baseUrl]) {
-        return [NSString stringWithFormat:@"%@%@", _baseUrl, ED_MANGOFIX_PATCH_URL_PATH];
+    
+    ((void (*) (id, SEL, id))objc_msgSend)(context, sel_registerName("initWithRSAPrivateKey:"), _privateKey);
+    
+    return context;
+}
+
+/**
+ * 执行补丁
+ */
+- (void)evalMangoScriptWithRSAEncryptedBase64String:(NSString*)script context:(id)context {
+    
+    if (!context) {
+        return;
     }
-    return ED_MANGOFIX_GETMANGOFILE_URL;
+    ((void (*) (id, SEL, id))objc_msgSend)(context, sel_registerName("evalMangoScriptWithRSAEncryptedBase64String:"), script);
+}
+
+/**
+ * 加密字符串
+ */
+- (id)encryptString:(NSString*)string publicKey:(NSString*)publicKey {
+    
+    return ((id (*)(id, SEL, id, id))objc_msgSend)(objc_getClass("MFRSA"), sel_registerName("encryptString:publicKey:"), string, publicKey);
 }
 
 #pragma mark - 网络请求
@@ -219,7 +237,12 @@ typedef void(^CompleteBlock)(NSDictionary *dict);
 {
     __weak typeof(self) weakSelf = self;
     
-    NSURL *url = [NSURL URLWithString:[self mangoFixPatchUrl]];
+    if (EDStringIsEmpty(_url)) {
+        NSLog(@"url is null or empty");
+        return;
+    }
+    
+    NSURL *url = [NSURL URLWithString:_url];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";

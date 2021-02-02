@@ -2,7 +2,7 @@
 //  EasyderManager.m
 //  Easyder
 //
-//  Created by mac on 2020/12/29.
+//  Created by xuhonggui on 2020/12/29.
 //
 
 #import "EasyderManager.h"

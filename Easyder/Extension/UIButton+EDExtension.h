@@ -1,9 +1,9 @@
 //
 //  UIButton+EDCreate.h
-//  VClub
+//  Easyder
 //
-//  Created by 许鸿桂 on 2020/11/20.
-//  Copyright © 2020 mac. All rights reserved.
+//  Created by xuhonggui on 2020/11/20.
+//  Copyright © 2020 xuhonggui. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

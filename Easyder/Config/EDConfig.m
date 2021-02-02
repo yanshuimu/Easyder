@@ -2,7 +2,7 @@
 //  EDConfig.m
 //  Easyder
 //
-//  Created by mac on 2021/1/29.
+//  Created by xuhonggui on 2021/1/29.
 //
 
 #import "EDConfig.h"
@@ -73,9 +73,9 @@
     
     EDSwitchDomainControllerConfig *config = [[EDSwitchDomainControllerConfig alloc] init];
     
-    config.domainArray = @[];
+    config.domainArray = @[@"http://www.xxx.com"];
     
-    config.domainRemarkArray = @[];
+    config.domainRemarkArray = @[@"示例"];
     
     //调用自动登录方法
     config.autoLoginBlock = ^{

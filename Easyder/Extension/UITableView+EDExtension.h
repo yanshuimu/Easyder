@@ -2,8 +2,8 @@
 //  UITableView+Extension.h
 //  Yisica
 //
-//  Created by mac on 2019/5/20.
-//  Copyright © 2019 mac. All rights reserved.
+//  Created by xuhonggui on 2019/5/20.
+//  Copyright © 2019 xuhonggui. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
