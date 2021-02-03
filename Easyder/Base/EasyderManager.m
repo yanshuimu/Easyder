@@ -9,6 +9,10 @@
 #import "EDBaseMacroDefine.h"
 #import "GHConsole.h"
 
+#define ED_IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+#define ED_IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterfaceIdiomPad)
+
 static EasyderManager *manager = nil;
 
 @interface EasyderManager ()
@@ -29,9 +33,17 @@ static EasyderManager *manager = nil;
 
 - (void)initialize {
     
-    _widthRatio = [UIScreen mainScreen].bounds.size.width/375.0;
-    _heightRatio = [UIScreen mainScreen].bounds.size.height/667.0;
+    if (ED_IS_PAD) {
+        _widthRatio = [UIScreen mainScreen].bounds.size.width/1024.0;
+        _heightRatio = [UIScreen mainScreen].bounds.size.height/768.0;
+    }
+    else {
+        _widthRatio = [UIScreen mainScreen].bounds.size.width/375.0;
+        _heightRatio = [UIScreen mainScreen].bounds.size.height/667.0;
+    }
     _themeColor = [UIColor whiteColor];
+    
+    [EDUserDefaults removeObjectForKey:EDConsoleEnabled];
 }
 
 - (void)startMoninNet {

@@ -121,6 +121,7 @@ CGFloat CGHeightAutoMake(CGFloat height) {
         emptyV.actionBtnCornerRadius = style.buttonCornerRadius;
         emptyV.actionBtnBorderWidth = style.buttonBorderWidth;
         emptyV.actionBtnBorderColor = style.buttonBorderColor;
+        emptyV.actionBtnFont = style.buttonTitleFont;
         
         self.ly_emptyView = emptyV;
         

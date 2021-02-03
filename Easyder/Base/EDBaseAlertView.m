@@ -27,8 +27,6 @@
 @property (nonatomic, assign) CGFloat contentOffsetY;
 //
 @property (nonatomic, assign) CGFloat animationDuration;
-//
-@property (nonatomic, strong) EDBaseAlertViewStyle *style;
 @end
 
 @implementation EDBaseAlertView

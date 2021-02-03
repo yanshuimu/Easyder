@@ -20,6 +20,8 @@ typedef NS_ENUM(NSInteger, EDAlertViewContentVerticalAlignment) {
 
 //内容垂直对齐方式
 @property (nonatomic, assign) EDAlertViewContentVerticalAlignment contentVerticalAlignment;
+//
+@property (nonatomic, strong) EDBaseAlertViewStyle *style;
 
 - (instancetype)initWithStyle:(EDBaseAlertViewStyle*)style;
 

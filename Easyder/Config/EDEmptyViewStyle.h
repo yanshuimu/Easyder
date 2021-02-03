@@ -31,6 +31,8 @@ typedef void (^ConditionsBlock)(NSInteger emptyPageType);
 @property (nonatomic, copy) NSString *networkErrorTitle;
 //按钮标题颜色
 @property (nonatomic, strong) UIColor *buttonTitleColor;
+//按钮标题字体
+@property (nonatomic, strong) UIFont *buttonTitleFont;
 //按钮背景颜色
 @property (nonatomic, strong) UIColor *buttonBackgroundColor;
 //按钮高度，默认40.0
