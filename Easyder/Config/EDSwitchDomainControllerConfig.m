@@ -16,7 +16,7 @@
         
         _domainArray = @[@"http://www.xxx.com"];
         
-        _domainRemarkArray = @[@"示例"];
+        //_domainRemarkArray = @[@"示例"];
         
         //调用自动登录方法
         _autoLoginBlock = ^{

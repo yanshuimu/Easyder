@@ -12,6 +12,7 @@
 #import "TestTableViewCtrl.h"
 #import "EDBase+Extension.h"
 #import "EDSwitchDomainController.h"
+#import "PickPhotoCtrl.h"
 
 @interface ViewController ()
 //
@@ -89,6 +90,12 @@
             [self.navigationController pushViewController:ctrl animated:YES];
         }
             break;
+        case 4:
+        {
+            PickPhotoCtrl *ctrl = [[PickPhotoCtrl alloc] init];
+            [self.navigationController pushViewController:ctrl animated:YES];
+        }
+            break;
         default:
             break;
     }
@@ -129,7 +136,7 @@
 - (NSArray*)titleArray {
     if (!_titleArray) {
         
-        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView", @"EDBaseTableViewController", @"EDSwitchDomainController"];
+        _titleArray = @[@"EDNavigationController", @"EDBaseAlertView", @"EDBaseTableViewController", @"EDSwitchDomainController", @"EDPickPhotoView"];
     }
     return _titleArray;
 }
