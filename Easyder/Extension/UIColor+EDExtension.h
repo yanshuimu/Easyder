@@ -28,10 +28,10 @@
 //透明
 #define EDClearColor [UIColor clearColor]
 
-//背景色
+//背景色 245,245,245
 #define EDDefaultBackgroudColor EDHexColor(@"#F5F5F5")
 
-//线条颜色 230, 230, 230
+//线条颜色 230,230,230
 #define EDLineColor EDHexColor(@"#E6E6E6")
 
 //黑色字体，默认字体颜色 51,51,51

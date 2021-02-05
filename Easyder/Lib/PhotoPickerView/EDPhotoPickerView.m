@@ -1,36 +1,38 @@
 //
-//  EDSelectPhotoView.m
+//  EDPhotoPickerView.m
 //  DYLRopeSkipping
 //
 //  Created by 许鸿桂 on 2017/7/22.
 //  Copyright © 2017年 DLC. All rights reserved.
 //
 
-#import "EDSelectPhotoView.h"
+#import "EDPhotoPickerView.h"
+#import <SDWebImage/SDWebImage.h>
 #import "LGPhoto.h"
-#import "AddPhotoCollectionCell.h"
 
 #define SCREEN_W ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_H ([UIScreen mainScreen].bounds.size.height)
 
-@interface EDSelectPhotoView ()
+@interface EDPhotoPickerView ()
 <
-LGPhotoPickerViewControllerDelegate,
 UICollectionViewDelegate,
 UICollectionViewDataSource,
 UICollectionViewDelegateFlowLayout,
-UIActionSheetDelegate,
 UIImagePickerControllerDelegate,
-UINavigationControllerDelegate
+UINavigationControllerDelegate,
+LGPhotoPickerViewControllerDelegate,
+LGPhotoPickerBrowserViewControllerDelegate,
+LGPhotoPickerBrowserViewControllerDataSource
 >
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 //
-@property (nonatomic, strong) NSArray *localImageArray;
-
+@property (nonatomic, strong) NSMutableArray *photoBrowserDataArray;
+//
+@property (nonatomic, copy) NSString *cellIdentifier;
 @end
 
-@implementation EDSelectPhotoView
+@implementation EDPhotoPickerView
 
 - (UICollectionView*)collectionView
 {
@@ -45,7 +47,8 @@ UINavigationControllerDelegate
         collectionView.backgroundColor = [UIColor clearColor];
         [collectionView setScrollEnabled:NO];
         
-        [collectionView registerClass:[AddPhotoCollectionCell class] forCellWithReuseIdentifier:@"AddPhotoCollectionCellID"];
+        _cellIdentifier = @"EDBasePhotoPickerCell";
+        [collectionView registerClass:[EDBasePhotoPickerCell class] forCellWithReuseIdentifier:_cellIdentifier];
         _collectionView = collectionView;
     }
     return _collectionView;
@@ -60,12 +63,24 @@ UINavigationControllerDelegate
     return self;
 }
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        [self initialize];
+    }
+    return self;
+}
+
 - (void)initialize {
     
+    _modalPresentationStyle = UIModalPresentationFullScreen;
     _horizontalItemCount = 3;
     _insetForSection = UIEdgeInsetsMake(13.0, 13.0, 13.0, 13.0);
     _minimumInteritemSpacing = 10.0;
     _minimumLineSpacing = 10.0;
+    
+    _photoBrowserDataArray = [NSMutableArray array];
     
     [self addSubview:self.collectionView];
 }
@@ -84,8 +99,8 @@ UINavigationControllerDelegate
     
     [super setFrame:frame];
     
-    if (_delegate && [_delegate respondsToSelector:@selector(photoViewDidFrameChange:frame:)]) {
-        [_delegate photoViewDidFrameChange:self frame:self.collectionView.frame];
+    if (_delegate && [_delegate respondsToSelector:@selector(photoPickerView:didFrameChanged:)]) {
+        [_delegate photoPickerView:self didFrameChanged:self.collectionView.frame];
     }
 }
 
@@ -113,12 +128,38 @@ UINavigationControllerDelegate
     [self updateFrame];
 }
 
-- (void)setLocalImageArray:(NSArray*)imageArray
-{
-    _localImageArray = [imageArray copy];
+- (void)setDataArray:(NSArray *)dataArray {
+    
+    _dataArray = [dataArray copy];
     
     [self updateFrame];
     [_collectionView reloadData];
+    
+    [_photoBrowserDataArray removeAllObjects];
+    
+    for (int i = 0; i < _dataArray.count; i++) {
+        id image = _dataArray[i];
+        if ([image isKindOfClass:[NSString class]]) {
+            LGPhotoPickerBrowserPhoto *photo = [[LGPhotoPickerBrowserPhoto alloc] init];
+            photo.photoURL = image;
+            [_photoBrowserDataArray addObject:photo];
+        }
+        else if ([image isKindOfClass:[UIImage class]]) {
+            LGPhotoPickerBrowserPhoto *photo = [[LGPhotoPickerBrowserPhoto alloc] init];
+            photo.photoImage = image;
+            [_photoBrowserDataArray addObject:photo];
+        }
+    }
+}
+
+- (void)setDelegate:(id<EDPhotoPickerViewDelegate>)delegate {
+    _delegate = delegate;
+    
+    if ([_delegate respondsToSelector:@selector(photoPickerView:cellClassForCollectionView:)]) {
+        Class class = [_delegate photoPickerView:self cellClassForCollectionView:self.collectionView];
+        _cellIdentifier = NSStringFromClass(class);
+        [self.collectionView registerClass:class forCellWithReuseIdentifier:_cellIdentifier];
+    }
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
@@ -139,51 +180,40 @@ UINavigationControllerDelegate
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _localImageArray.count < _maxImageNumber ? (_localImageArray.count + 1) : _localImageArray.count;;
+    return _dataArray.count < _maxCount ? (_dataArray.count + 1) : _dataArray.count;;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     __weak typeof(self) weakSelf = self;
     
-    AddPhotoCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AddPhotoCollectionCellID" forIndexPath:indexPath];
+    EDBasePhotoPickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:_cellIdentifier forIndexPath:indexPath];
     
-    if (indexPath.row == _localImageArray.count) {
-        
-        [cell.profilePhoto setImage:[UIImage imageNamed:@"details5eb"]];
-        cell.closeButton.hidden = YES;
-        [cell showPlaceholderView];
+    if (indexPath.row == _dataArray.count) {
+                
+        cell.defaultViewHidden = NO;
     }
     else{
         
-        id image = _localImageArray[indexPath.item];
+        id image = _dataArray[indexPath.item];
         
         if ([image isKindOfClass:[NSString class]]) {
-            NSLog(@"NSString格式 -- %ld", [indexPath item]);
             
-//            [cell.profilePhoto sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:[UIImage imageNamed:@""] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-//                @strongify(self)
-////                [self.localImageArray replaceObjectAtIndex:[indexPath item] withObject:cell.profilePhoto.image];
-//            }];
-            
+            [cell.photoView sd_setImageWithURL:[NSURL URLWithString:image] placeholderImage:_placeholderImage];
         }
         else if ([image isKindOfClass:[UIImage class]]) {
-            NSLog(@"图片格式-- %ld", [indexPath item]);
-            [cell.profilePhoto setImage:image];
+            
+            [cell.photoView setImage:image];
         }
-        cell.closeButton.hidden = NO;
         
-        [cell hidePlaceholderView];
+        cell.defaultViewHidden = YES;
     }
-    
-    cell.profilePhoto.tag = [indexPath item];
-    cell.closeButton.tag = [indexPath item];
-    
-    [cell setDeleteButtonCallback:^(UIButton *deleteButton) {
+        
+    [cell setDeleteButtonCallback:^{
         
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(photoView:didDeleteImageAtIndex:)]) {
-            [strongSelf.delegate photoView:self didDeleteImageAtIndex:deleteButton.tag];
+        if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(photoPickerView:didDeleteImageAtIndex:)]) {
+            [strongSelf.delegate photoPickerView:self didDeleteImageAtIndex:indexPath.item];
         }
     }];
     
@@ -192,7 +222,7 @@ UINavigationControllerDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.item == (_localImageArray.count)) {
+    if (indexPath.item == (_dataArray.count)) {
         
         __weak typeof(self) weakSelf = self;
         
@@ -224,14 +254,7 @@ UINavigationControllerDelegate
     }
     else {
             
-        
-//        YKLookPhotoViewController *lookPhoto = [[YKLookPhotoViewController alloc] init];
-//        lookPhoto.bigImages = _localImageArray;
-//        lookPhoto.num = indexPath.item;
-//        UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:lookPhoto];
-//        nc.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-//        [_targetCtrl presentViewController:nc animated:YES completion:nil];
-         
+        [self pushPhotoBroswerWithStyle:LGShowImageTypeImageBroswer];
     }
 }
 
@@ -244,15 +267,15 @@ UINavigationControllerDelegate
     if (_horizontalItemCount == 0) {
         return 0.0;
     }
-    if (_localImageArray.count % _horizontalItemCount == 0 && _localImageArray.count > 0) {
-        rows = _localImageArray.count/_horizontalItemCount;
+    if (_dataArray.count % _horizontalItemCount == 0 && _dataArray.count > 0) {
+        rows = _dataArray.count/_horizontalItemCount;
         //加上占位图片
-        if (_localImageArray.count < _maxImageNumber) {
+        if (_dataArray.count < _maxCount) {
             rows++;
         }
     }
     else {
-        rows = _localImageArray.count/_horizontalItemCount + 1;
+        rows = _dataArray.count/_horizontalItemCount + 1;
     }
     return _insetForSection.top + _insetForSection.bottom + rows * itemHeight + (rows - 1) * _minimumLineSpacing;
 }
@@ -273,10 +296,21 @@ UINavigationControllerDelegate
 - (void)presentPhotoPickerViewControllerWithStyle:(LGShowImageType)style {
     
     LGPhotoPickerViewController *pickerCtrl = [[LGPhotoPickerViewController alloc] initWithShowType:style];
+    pickerCtrl.modalPresentationStyle = _modalPresentationStyle;
     pickerCtrl.status = PickerViewShowStatusCameraRoll;
-    pickerCtrl.maxCount = _maxImageNumber - _localImageArray.count; // 最多能选*张图片
+    pickerCtrl.maxCount = _maxCount - _dataArray.count;
     pickerCtrl.delegate = self;
     [pickerCtrl showPickerVc:_targetCtrl];
+}
+
+- (void)pushPhotoBroswerWithStyle:(LGShowImageType)style {
+    
+    LGPhotoPickerBrowserViewController *broswerCtrl = [[LGPhotoPickerBrowserViewController alloc] init];
+    broswerCtrl.modalPresentationStyle = _modalPresentationStyle;
+    broswerCtrl.delegate = self;
+    broswerCtrl.dataSource = self;
+    broswerCtrl.showType = style;
+    [self.targetCtrl presentViewController:broswerCtrl animated:YES completion:nil];
 }
 
 #pragma mark - LGPhotoPickerViewControllerDelegate
@@ -284,11 +318,20 @@ UINavigationControllerDelegate
 - (void)pickerViewControllerDoneAsstes:(NSArray *)assets isOriginal:(BOOL)original {
     
     for (LGPhotoAssets *photo in assets) {
-                
-        if (_delegate && [_delegate respondsToSelector:@selector(photoView:didPickImage:)]) {
-            [_delegate photoView:self didPickImage:photo.originImage];
+        if (_delegate && [_delegate respondsToSelector:@selector(photoPickerView:didPickImage:)]) {
+            [_delegate photoPickerView:self didPickImage:photo.originImage];
         }
     }
+}
+
+#pragma mark - LGPhotoPickerBrowserViewControllerDataSource
+
+- (NSInteger)photoBrowser:(LGPhotoPickerBrowserViewController *)photoBrowser numberOfItemsInSection:(NSUInteger)section {
+    return self.photoBrowserDataArray.count;
+}
+
+- (id<LGPhotoPickerBrowserPhoto>)photoBrowser:(LGPhotoPickerBrowserViewController *)pickerBrowser photoAtIndexPath:(NSIndexPath *)indexPath{
+    return self.photoBrowserDataArray[indexPath.item];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -311,8 +354,8 @@ UINavigationControllerDelegate
             image = [info valueForKey:UIImagePickerControllerOriginalImage];
         }
         
-        if (_delegate && [_delegate respondsToSelector:@selector(photoView:didPickImage:)]) {
-            [_delegate photoView:self didPickImage:image];
+        if (_delegate && [_delegate respondsToSelector:@selector(photoPickerView:didPickImage:)]) {
+            [_delegate photoPickerView:self didPickImage:image];
         }
                 
         [picker dismissViewControllerAnimated:YES completion:nil];
