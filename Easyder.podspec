@@ -40,6 +40,10 @@ Pod::Spec.new do |s|
           sss.source_files = 'Easyder/Lib/GHConsole/*.{h,m}'
           sss.resource = 'Easyder/Lib/GHConsole/*.{png,bundle}'
       end
+      ss.subspec 'PhotoPickerView' do |sss|
+          sss.source_files = 'Easyder/Lib/PhotoPickerView/**/*.{h,m}'
+          sss.resource = 'Easyder/Lib/PhotoPickerView/LGPhotoBrowser/LGPhotoImage/*.{png,bundle}'
+      end
   end
   
   s.subspec 'Base' do |ss|
