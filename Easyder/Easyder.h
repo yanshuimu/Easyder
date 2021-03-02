@@ -45,7 +45,6 @@
 #import "EDUtils.h"
 #import "EDKeyChainUtil.h"
 #import "EDLanguageUtil.h"
-#import "EDMangoFixUtil.h"
 
 //Config
 #import "EDNavigationControllerStyle.h"
@@ -83,5 +82,6 @@
 #import "UICountingLabel.h"
 #import "HGTimerButton.h"
 #import "GHConsole.h"
+#import "EDPhotoPickerView.h"
 
 #endif /* Easyder_h */

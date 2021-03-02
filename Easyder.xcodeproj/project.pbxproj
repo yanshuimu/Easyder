@@ -115,7 +115,6 @@
 		04A39CC625AC003E007F596E /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC525AC003E007F596E /* UICountingLabel.m */; };
 		04A39CCC25AC0124007F596E /* HWWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC825AC0124007F596E /* HWWeakTimer.m */; };
 		04A39CCD25AC0124007F596E /* HGTimerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39CC925AC0124007F596E /* HGTimerButton.m */; };
-		04A39D8A25AC3103007F596E /* EDMangoFixUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A39D8925AC3103007F596E /* EDMangoFixUtil.m */; };
 		04D7F86A25B03E81001E439A /* EDBasePaginationAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */; };
 		CE6EB53C083B55ED18F7B325 /* libPods-Easyder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD7FECD8470F905579034BD /* libPods-Easyder.a */; };
 		EF1343D825BB0D9E00B68293 /* EDRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1343CF25BB0D9C00B68293 /* EDRequestManager.m */; };
@@ -329,8 +328,6 @@
 		04A39CCA25AC0124007F596E /* HGTimerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGTimerButton.h; sourceTree = "<group>"; };
 		04A39CCB25AC0124007F596E /* HWWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWWeakTimer.h; sourceTree = "<group>"; };
 		04A39D7825AC2C52007F596E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04A39D8825AC3103007F596E /* EDMangoFixUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMangoFixUtil.h; sourceTree = "<group>"; };
-		04A39D8925AC3103007F596E /* EDMangoFixUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMangoFixUtil.m; sourceTree = "<group>"; };
 		04D7F86625AFE806001E439A /* EDProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDProtocol.h; sourceTree = "<group>"; };
 		04D7F86825B03E81001E439A /* EDBasePaginationAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDBasePaginationAlertView.h; sourceTree = "<group>"; };
 		04D7F86925B03E81001E439A /* EDBasePaginationAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EDBasePaginationAlertView.m; sourceTree = "<group>"; };
@@ -676,8 +673,6 @@
 			children = (
 				046F355A25CA7BF900824C91 /* EDCacheUtil.h */,
 				046F355925CA7BF900824C91 /* EDCacheUtil.m */,
-				04A39D8825AC3103007F596E /* EDMangoFixUtil.h */,
-				04A39D8925AC3103007F596E /* EDMangoFixUtil.m */,
 				04A39CBC25ABF877007F596E /* EDLanguageUtil.h */,
 				04A39CBD25ABF88C007F596E /* EDLanguageUtil.m */,
 				046CE9FD259DD5D9000F9DE3 /* EDKeyChainUtil.h */,
@@ -1062,7 +1057,6 @@
 				04A39CA225A826F0007F596E /* EDBase+Extension.m in Sources */,
 				046F35F325CA978C00824C91 /* ZLCameraImageView.m in Sources */,
 				046CEA33259DD5D9000F9DE3 /* UITextField+EDExtension.m in Sources */,
-				04A39D8A25AC3103007F596E /* EDMangoFixUtil.m in Sources */,
 				046CEA4F259DD5D9000F9DE3 /* EDBaseViewController.m in Sources */,
 				046F35FB25CA978C00824C91 /* LGPhotoPickerViewController.m in Sources */,
 				046F2ECD25C0F4E900824C91 /* EDBaseAlertViewStyle.m in Sources */,
